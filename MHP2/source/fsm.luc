@@ -1,0 +1,218 @@
+module f_s_m (
+    input clk,  // clock
+    input rst,  // reset
+    
+    //output for the 7 seg display
+    output seg_1[4],
+    output seg_2[4],
+    output seg_3[4],
+    output seg_4[4],
+    
+    //Output and input for the adder
+    output a,
+    output b,
+    output cin,
+    input s,
+    input cout,
+    
+    //buttons
+    input start_stop,
+    input reset,
+    input manual,
+    output testcase[8]
+    
+  ) {
+    .clk(clk){
+    //detector for rising edge
+    edge_detector start_stop_edge(#RISE(1), #FALL(0));
+    
+    .rst(rst){
+    //flip flop for toggle between states
+    dff change_state[26];
+     //FSM!!
+     fsm state(#INIT(IDLE))={IDLE, STATE1,STATE2,STATE3,STATE4,STATE5,STATE6,STATE7,STATE8,FAIL, MANUAL, DONE};
+    }
+  }
+  
+  
+
+  always {
+  //initializing the segs
+    seg_1=4h2;
+    seg_2=4h2;  
+    seg_3=4h2;
+    seg_4=4h2;
+  //initialize input and testcase counter
+    a=0;
+    b=0;
+    cin=0;
+    testcase=8b0;
+    
+    start_stop_edge.in=change_state.q[25];
+    change_state.d=change_state.q+1;
+    
+    //FSM begins
+      case(state.q){
+    
+     state.IDLE:
+        if(start_stop){ 
+        state.d=state.STATE1;
+          }
+        if(manual){
+        state.d=state.MANUAL;
+          }
+
+    state.STATE1:
+          a=0;
+          b=0;
+          cin=0;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h0;
+          seg_4=4h0;
+          testcase=8b000;        
+        if(start_stop_edge.out){
+          if(s==0 && cout==0){
+          state.d=state.STATE2;
+          }
+          else{
+          state.d=state.FAIL;
+        }
+        }
+        
+     state.STATE2:
+          a=0;
+          b=0;
+          cin=1;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h1;
+          seg_4=4h0;
+        testcase=8b001;
+        if (start_stop_edge.out){ 
+        if(s==1 && cout==0){
+          state.d=state.STATE3;
+          }
+          else{
+          state.d=state.FAIL;
+          
+       }
+        }
+        
+     state.STATE3:
+          a=0;
+          b=1;
+          cin=0;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h1;
+          seg_4=4h0;
+        testcase=8b010;
+        if(s==1 && cout ==0){
+          state.d=state.STATE4;}
+        else{
+          state.d=state.FAIL;}
+        
+       state.STATE4:
+          a=0;
+          b=1;
+          cin=1;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h0;
+          seg_4=4h1;
+          testcase=8b011;
+        if(start_stop_edge.out){
+        if(s==0 && cout ==1){
+          state.d=state.STATE5;}
+        else{
+          state.d=state.FAIL;}
+        }
+            
+      state.STATE5:
+          a=1;
+          b=0;
+          cin=0;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h1;
+          seg_4=4h0;//10--
+        testcase=8b100;
+        if(start_stop_edge.out){
+        if(s==1 && cout==0){
+          state.d=state.STATE6;}
+        else{
+          state.d=state.FAIL;}
+        }
+            
+      state.STATE6:
+          a=1;
+          b=0;
+          cin=1;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h0;
+          seg_4=4h1;
+        testcase=8b101;
+        if(start_stop_edge.out){        
+        if(s==0 && cout==1){
+          state.d=state.STATE7;}
+        else{
+          state.d=state.FAIL;}
+        }
+      
+      state.STATE7:
+          a=1;
+          b=1;
+          cin=0;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h0;
+          seg_4=4h1;//01--
+          testcase=8b110;
+        if(start_stop_edge.out){
+        if(s==0 && cout==1){
+          state.d=state.STATE8;}
+        else{
+          state.d=state.FAIL;}
+          }
+          
+    state.STATE8:
+          a=1;
+          b=1;
+          cin=1;
+          seg_1=4h2;
+          seg_2=4h2;
+          seg_3=4h1;
+          seg_4=4h1;
+          testcase=8b111;
+        //11--
+        if(start_stop_edge.out){
+        if(s==1 && cout==1){
+        state.d=state.DONE;}
+        }
+        else{
+        state.d=state.FAIL;
+        }
+
+     state.DONE:
+        seg_1=4h3;
+        seg_2=4h4;
+        seg_3=4h5;
+        seg_4=4h5; //PASS
+        if(reset){//(dec_ctr.value==1){
+        state.d=state.IDLE;
+        }
+ 
+     state.FAIL:
+       seg_1=4h7;
+       seg_2=4h4;
+       seg_3=4h8;
+       seg_4=4h9; //FAIL
+        if(reset){
+        state.d=state.IDLE;
+        }
+        
+    }
+  }
+}

@@ -1,0 +1,106 @@
+module mojo_top (
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel[4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,      // AVR RX buffer full
+    
+    output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
+    input io_dip [3][8],     // DIP switches on IO Shield
+    
+    //output a, b , Cin and input S, Carry
+    output a,               
+    output b,
+    output cin,
+    input s,
+    input cout  
+    ) {   
+  
+  sig rst;                  // reset signal
+  
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    edge_detector start_stop_edge (#RISE(1), #FALL(0));
+  
+    //Buttons used to control the switching of states.
+    button_conditioner start_stop_button;
+    button_conditioner reset_button;    
+    button_conditioner manual_mode;
+
+    
+    
+    .rst(rst) {
+      multi_seven_seg seg; //7 seg display
+      f_s_m newfsm; //FSM instantiation
+      
+          }
+  }
+  
+  
+  always {
+  
+    reset_cond.in = ~rst_n;   // input raw inverted reset signal
+    rst = reset_cond.out;     // conditioned reset
+    
+    led = 8h00;  // connect buttons to LEDs
+    spi_miso = bz;            // not using SPI
+    spi_channel = bzzzz;      // not using flags
+    avr_rx = bz;              // not using serial port
+    io_led=3x{{8h00}};
+        
+
+   
+    io_seg = ~seg.segs; // connect segments to the driver
+    io_sel = ~seg.sel; // connect digit select to the driver
+    rst=reset_button.out;
+    seg.value={newfsm.seg_1,newfsm.seg_2,newfsm.seg_3,newfsm.seg_4}; //values to output to the 7 seg display
+
+    //Use the rising edge to control the start and stop of the start stop button. 
+    start_stop_button.in=io_button[1]; //center button
+    start_stop_edge.in=start_stop_button.out;
+    newfsm.start_stop=start_stop_edge.out;
+    
+    
+    //setting buttons
+    manual_mode.in=io_button[4];
+    newfsm.manual=manual_mode.out;
+    reset_button.in=io_button[3];
+    newfsm.reset=reset_button.out;
+    
+    //Initialization of the I/Os
+    newfsm.s=s;
+    newfsm.cout=cout;
+    a=newfsm.a;
+    b=newfsm.b;
+    cin=newfsm.cin;
+    
+    io_led[0]=newfsm.testcase;
+  //Manual testing of the adder
+    
+    if(io_dip[0][0]){
+    seg.value={4h4,4h6,4h6,4h2};
+
+    a=io_dip[1][0];
+    b=io_dip[1][1];
+    cin=io_dip[1][2];
+
+    io_led[1][0]=s;
+    io_led[1][1]=cout;
+    }
+      }
+      
+ }
+    
+  
