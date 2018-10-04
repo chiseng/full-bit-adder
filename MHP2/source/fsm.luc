@@ -37,7 +37,7 @@ module f_s_m (
   
 
   always {
-  //initializing the segs
+  //initializing the segs which will pass the hex to the decoder to input into the display
     seg_1=4h2;
     seg_2=4h2;  
     seg_3=4h2;
@@ -66,17 +66,17 @@ module f_s_m (
           a=0;
           b=0;
           cin=0;
-          seg_1=4h2;
-          seg_2=4h2;
-          seg_3=4h0;
-          seg_4=4h0;
-          testcase=8b000;        
+          seg_1=4h2; //-
+          seg_2=4h2; //-
+          seg_3=4h0; //0
+          seg_4=4h0; //0
+          testcase=8b000;
         if(start_stop_edge.out){
           if(s==0 && cout==0){
-          state.d=state.STATE2;
+          state.d=state.STATE2; //transit to next state
           }
           else{
-          state.d=state.FAIL;
+          state.d=state.FAIL; //proceed to fail state if incorrect sum/carry
         }
         }
         
@@ -189,7 +189,7 @@ module f_s_m (
         //11--
         if(start_stop_edge.out){
         if(s==1 && cout==1){
-        state.d=state.DONE;}
+        state.d=state.DONE;} //Final state, transits upon completion
         }
         else{
         state.d=state.FAIL;
