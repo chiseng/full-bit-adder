@@ -17,22 +17,23 @@ module alu (
 
   always {
     out = 0;
-    add.alufn=alufn[0];
-    mult.alufn=alufn[0];
-    boole.alufn=alufn[3:1];
-    comp.alufn=alufn[2:1];
-    shift.alufn=alufn[1:0];
+    add.alufn=alufn[5:0];
+    mult.alufn=alufn[5:0];
+    boole.alufn=alufn[5:0];
+    comp.alufn=alufn[5:0];
+    shift.alufn=alufn[5:0];
       
     case(alufn[5:4]){
-        0:
-        if(alufn[1:0]==0 || alufn[1:0]==1){
+        b00:
+        if(alufn[0]==0 || alufn[0]==1){
         out=add.out;
           }
         else{ out=mult.out;}
         
-        1: out=boole.out;
-        2: out=shift.c;
-        3: out=comp.cmp;
+        b01:
+        out=boole.out;
+        b10: out=shift.c;
+        b11: out=comp.cmp;
       }
     }
     
