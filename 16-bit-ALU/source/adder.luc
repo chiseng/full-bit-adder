@@ -2,19 +2,48 @@ module adder (
     input alufn[6],
     input a[16],
     input b[16],
-    output out[16]
+    output out[16],
+    output z,
+    output v,
+    output n
   ) {
 
+  sig tempresult[16];
+  sig xb;
+  
+  
   always {
+    // initialise output array
     out = 0;
+    z = 0;
+    v = 0;
+    n = 0;
     
-    case (alufn[0]){
-      
-      0:
+    case (alufn[5:0]){
+      // if alufn is 000000 => Add a with b
+      b000000:
         out = $signed(a) + $signed(b);
+        tempresult = $signed(a) + $signed(b);
       
-      1:
+      // if alufn is 000001 => Subtract b from a
+      b000001:
         out = $signed(a) - $signed(b);
+        tempresult = $signed(a) - $signed(b);
+        
+        
+    // creating the value of xb[15] (b[15] xor alufn[0])
+    xb = b[15] ^ alufn[0];
+        
+    // Assigning values of z, v, n flags
+    if (tempresult == 0) z = 1;
+    else  z = 0;
+    
+    n = tempresult[15];
+        
+    v = (a[15] & xb & (~tempresult[15]))  |  (~a[15] & ~xb & tempresult[15]);
+    
+    
+        
     }
   }
 }

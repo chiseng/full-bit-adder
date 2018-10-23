@@ -19,22 +19,15 @@ module mojo_top (
   ) {
   
   sig rst;                  // reset signal
-  sig lookatA[16];
-  sig a[16];
-  sig b[16];
-  sig alufn[6];
-
+  
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
   }
   
+  
   always {
-    a = 16x{0};
-    b = 16x{0};
-    alufn = 6x{0};
-    lookatA = 16x{0};
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     
@@ -46,70 +39,7 @@ module mojo_top (
     io_led = 3x{{8h00}};    // turn LEDs off
     io_seg = 8hff;          // turn segments off
     io_sel = 4hf;           // select no digits
-
-    
-    // value of a
-    if(io_dip[2][7] == 1)
-      {
-      // io_seg = 7b1110111;//A
-      a = io_dip[1] + io_dip[0]; // 00000000 00000000
-      lookatA = io_dip[1] + io_dip[0];
-      }
-    
-    else if(io_dip[2][7] == 0)
-      {
-      // io_seg = 7b0011111;//b
-      b = io_dip[1] + io_dip[0];
-      }
-    
-    alufn = io_dip[2][5:0];
     
     
-    
-    /*
-    if(lookatA[0] == 1)
-      {
-      io_led[0][0] = 1;
-    }
-    if(lookatA[1] == 1)
-      {
-      io_led[0][1] = 1;
-    }
-        if(lookatA[2] == 1)
-      {
-      io_led[0][2] = 1;
-    }
-        if(lookatA[3] == 1)
-      {
-      io_led[0][3] = 1;
-    }
-        if(lookatA[4] == 1)
-      {
-      io_led[0][4] = 1;
-    }
-        if(lookatA[5] == 1)
-      {
-      io_led[0][5] = 1;
-    }
-        if(lookatA[6] == 1)
-      {
-      io_led[0][6] = 1;
-    }
-        if(lookatA[7] == 1)
-      {
-      io_led[0][7] = 1;
-    }
-        if(lookatA[8] == 1)
-      {
-      io_led[1][0] = 1;
-    }
-        if(lookatA[9] == 1)
-      {
-      io_led[1][1] = 1;
-    }
-    */
-    
-    
-
   }
 }

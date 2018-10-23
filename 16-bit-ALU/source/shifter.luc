@@ -9,10 +9,13 @@ module shifter (
   always {
     case (alufn[5:0]){
       b100000:
-        c = a <<< b[2:0];
+      // shift left
+        c = a << b[2:0];
       b100001:
-        c = a >>> b[2:0];
+      // shift right
+        c = a >> b[2:0];
       b100011:
+      //shift right arithmetic
         c = $signed(a) >>> b[2:0];
       default:
         c = a;
