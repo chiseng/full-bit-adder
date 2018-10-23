@@ -23,6 +23,9 @@ module mojo_top (
   var a[16];
   var b[16];
   sig alufn[6];
+  var afinal[16];
+  var bfinal[16];
+ 
 
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
@@ -34,7 +37,7 @@ module mojo_top (
 
   
   always {
-    compute_button.in=io_button[1];
+    //compute_button.in=io_button[1];
       
     //a = 16x{0};
     //b = 16x{0};
@@ -59,21 +62,25 @@ module mojo_top (
       // io_seg = 7b1110111;//A
       a = io_dip[1] + io_dip[0]; // 00000000 00000000
       // lookatA = io_dip[1] + io_dip[0];
-
-      alu16bit.a  = a;
+      // alu16bit.a  = a;
+      afinal = a;
       }
     
-    else if(io_dip[2][7] == 0)
+    else if(io_dip[2][6] == 1)
       {
       // io_seg = 7b0011111;//b
       b = io_dip[1] + io_dip[0];
-      alu16bit.b = b;
+      //alu16bit.b = b;
+      bfinal = b;
       }
+    
+    alu16bit.a = afinal;
+    alu16bit.b = bfinal;
     
     alufn = io_dip[2][5:0];
     alu16bit.alufn = alufn;
     
-    if(io_dip[2][6]){
+    if(io_dip[2][6] == 0 && io_dip[2][7] == 0){
     io_led[1] = alu16bit.out[15:8];
     io_led[0] = alu16bit.out[7:0];
     }
