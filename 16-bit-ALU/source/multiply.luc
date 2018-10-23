@@ -6,13 +6,16 @@ module multiply (
   ) {
 
   always {
+  
+    // initialise output array
     out = 0;
     
     case (alufn[5:0]){
-    
+      // if alufn is 000010 => Multiply a with b    
       b000010:
         out = a * b;
       
+      // if alufn is 000011 => Divide a by b
       b000011:
         out = a / b;
   }
