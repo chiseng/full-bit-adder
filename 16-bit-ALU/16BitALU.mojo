@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="16BitALU" board="Mojo V3" language="Lucid">
   <files>
+    <src>multiply.luc</src>
     <src>boolean.luc</src>
     <src>shifter.luc</src>
     <src>compare16.luc</src>
