@@ -1,0 +1,20 @@
+module multiply (
+    input alufn[6],
+    input a[16],
+    input b[16],
+    output out[16]
+  ) {
+
+  always {
+    out = 0;
+    
+    case (alufn[5:0]){
+    
+      b000010:
+        out = a * b;
+      
+      b000011:
+        out = a / b;
+  }
+}
+}
