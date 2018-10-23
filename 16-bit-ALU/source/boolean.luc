@@ -1,0 +1,24 @@
+module boolean (
+    output out[16],
+    input alufn[6],
+    input a[16],
+    input b[16]
+    
+    
+  ) {
+
+  always {
+    out = 16hxx;
+    case(alufn){
+      011000: 
+      out=a&b ;
+      
+      011110:
+      out= a|b;
+      
+      010110:
+      out= a^b;
+    
+    }
+  }
+}
