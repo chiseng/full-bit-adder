@@ -13,8 +13,8 @@ module compare16 (
         cmp[0] = z;
       b10: // LSB = n xor v
         cmp[0] = n ^ v;
-      b11:
-        cmp[0] = z + (n ^ v);
+      b11: // LSB = z or (n xor v)
+        cmp[0] = z | (n ^ v);
       default:
         cmp[0] = 0;
     }
