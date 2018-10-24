@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="16BitALU" board="Mojo V3" language="Lucid">
   <files>
+    <src>mojo_top_backup.luc</src>
     <src>multiply.luc</src>
-    <src>alu.luc</src>
     <src>boolean.luc</src>
+    <src>alu.luc</src>
     <src>shifter.luc</src>
     <src>seven_seg.luc</src>
     <src>compare16.luc</src>
