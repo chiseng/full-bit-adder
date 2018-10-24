@@ -10,14 +10,18 @@ module boolean (
   always {
     out = 16hxx;
     case(alufn){
-      011000: 
+      b011000: 
       out=a&b ;
       
-      011110:
+      b011110:
       out= a|b;
       
-      010110:
+      b010110:
       out= a^b;
+      
+      b011010:
+      out=a;
+      
     
     }
   }

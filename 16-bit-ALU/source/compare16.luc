@@ -16,6 +16,7 @@ module compare16 (
       cmp=a<=b;
       default:
         cmp = 0;
+      
     }
     
   }

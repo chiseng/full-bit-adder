@@ -19,25 +19,29 @@ module mojo_top (
   ) {
   
   sig rst;                  // reset signal
-  // sig lookatA[16];
-  var a[16];
-  var b[16];
   sig alufn[6];
-  var afinal[16];
-  var bfinal[16];
  
 
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
+    button_conditioner sum;
+    button_conditioner reset_button;   
+    dff afinal[16];
+    dff bfinal[16];
   }
   
   alu alu16bit;
+  
 
   
   always {
+    sum.in=io_button[1]; //centre button
     //compute_button.in=io_button[1];
+    alu16bit.a=16x{0};
+    alu16bit.b=16x{0};
+    alu16bit.alufn=16x{0};
       
     //a = 16x{0};
     //b = 16x{0};
@@ -45,6 +49,8 @@ module mojo_top (
     // lookatA = 16x{0};
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
+    reset_button.in=io_button[3]; //left button
+    rst=reset_button.out;
     
     led = 8h00;             // turn LEDs off
     spi_miso = bz;          // not using SPI
@@ -57,80 +63,29 @@ module mojo_top (
 
     
     // value of a
-    if(io_dip[2][7] == 1)
-      {
-      // io_seg = 7b1110111;//A
-      a = io_dip[1] + io_dip[0]; // 00000000 00000000
-      // lookatA = io_dip[1] + io_dip[0];
-      // alu16bit.a  = a;
-      afinal = a;
+     if(io_dip[2][7] == 1){
+      io_led[2][0]=1;
+      io_led[1]=io_dip[1];
+      io_led[0]=io_dip[0];
+      afinal.d = io_dip[1] + io_dip[0]; // 00000000 00000000
       }
-    
-    else if(io_dip[2][6] == 1)
-      {
-      // io_seg = 7b0011111;//b
-      b = io_dip[1] + io_dip[0];
-      //alu16bit.b = b;
-      bfinal = b;
+      
+      if(io_dip[2][6] == 1){
+      io_led[2][1]=1;
+      io_led[1]=io_dip[1];
+      io_led[0]=io_dip[0];
+      bfinal.d =io_dip[1] + io_dip[0];
+      
+      io_led[2][2]=1;    
+      alu16bit.a = afinal.q;
+      alu16bit.b = bfinal.q;
+      alufn = io_dip[2][5:0];
+      alu16bit.alufn = alufn;
+      io_led[1] = alu16bit.out[15:8];
+      io_led[0] = alu16bit.out[7:0];
       }
-    
-    alu16bit.a = afinal;
-    alu16bit.b = bfinal;
-    
-    alufn = io_dip[2][5:0];
-    alu16bit.alufn = alufn;
-    
-    if(io_dip[2][6] == 0 && io_dip[2][7] == 0){
-    io_led[1] = alu16bit.out[15:8];
-    io_led[0] = alu16bit.out[7:0];
-    }
-    
-    
-    
-    /*
-    if(lookatA[0] == 1)
-      {
-      io_led[0][0] = 1;
-    }
-    if(lookatA[1] == 1)
-      {
-      io_led[0][1] = 1;
-    }
-        if(lookatA[2] == 1)
-      {
-      io_led[0][2] = 1;
-    }
-        if(lookatA[3] == 1)
-      {
-      io_led[0][3] = 1;
-    }
-        if(lookatA[4] == 1)
-      {
-      io_led[0][4] = 1;
-    }
-        if(lookatA[5] == 1)
-      {
-      io_led[0][5] = 1;
-    }
-        if(lookatA[6] == 1)
-      {
-      io_led[0][6] = 1;
-    }
-        if(lookatA[7] == 1)
-      {
-      io_led[0][7] = 1;
-    }
-        if(lookatA[8] == 1)
-      {
-      io_led[1][0] = 1;
-    }
-        if(lookatA[9] == 1)
-      {
-      io_led[1][1] = 1;
-    }
-    */
-    
-    
 
+      
+    
   }
 }
