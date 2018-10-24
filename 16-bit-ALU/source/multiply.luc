@@ -1,4 +1,4 @@
-module multiply (
+ module multiply (
     input alufn[6],
     input a[16],
     input b[16],

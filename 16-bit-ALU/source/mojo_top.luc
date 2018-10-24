@@ -58,7 +58,6 @@ module mojo_top (
     io_sel = 4hf;           // select no digits
 
     
-    // value of a
     case(do_ur_thang.q){
       do_ur_thang.IDLE:
       io_led[1][1]=1;

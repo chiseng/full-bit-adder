@@ -25,10 +25,11 @@ module alu (
       
     case(alufn[5:4]){
         b00:
-        if(alufn[0]==0 || alufn[0]==1){
+        if(alufn[1]==0){
         out=add.out;
           }
-        else{ out=mult.out;}
+        else
+          {out=mult.out;}
         
         b01:
         out=boole.out;
