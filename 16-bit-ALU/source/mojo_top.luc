@@ -39,15 +39,10 @@ module mojo_top (
   
   always {
     sum.in=io_button[1]; //centre button
-    //compute_button.in=io_button[1];
     alu16bit.a=16x{0};
     alu16bit.b=16x{0};
     alu16bit.alufn=16x{0};
-      
-    //a = 16x{0};
-    //b = 16x{0};
     alufn = 6x{0};
-    // lookatA = 16x{0};
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     reset_button.in=io_button[3]; //left button
