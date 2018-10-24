@@ -3,7 +3,10 @@
   <files>
     <src>multiply.luc</src>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f798110cd609edf62e0a7e04be888c83b8b5e3f8
 	<!-- <src>mojo_top_backup.luc</src>-->
     <src>alu.luc</src>
 >>>>>>> f798110cd609edf62e0a7e04be888c83b8b5e3f8
@@ -13,7 +16,11 @@
     <src>seven_seg.luc</src>
     <src>compare16.luc</src>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <src>autotester.luc</src>
+=======
+    <src>auto_test.luc</src>
+>>>>>>> f798110cd609edf62e0a7e04be888c83b8b5e3f8
 =======
     <src>auto_test.luc</src>
 >>>>>>> f798110cd609edf62e0a7e04be888c83b8b5e3f8
