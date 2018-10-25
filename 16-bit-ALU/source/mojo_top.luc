@@ -59,10 +59,12 @@ module mojo_top (
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     reset_button.in=io_button[3]; //left button
-    start_stop_button.in=io_button[4]; //right button
-    rst=reset_button.out;
     auto.reset=reset_button.out;
+    start_stop_button.in=io_button[4]; //right button
     auto.start_stop=start_stop_button.out;
+    rst=reset_button.out;
+    
+    
     
     led = 8h00;             // turn LEDs off
     spi_miso = bz;          // not using SPI
@@ -80,6 +82,12 @@ module mojo_top (
       io_led[1][1]=1;
       if(io_dip[2][7]){
         do_ur_thang.d=do_ur_thang.STOREA;}
+      //========================================
+      //push right to switch to autotesting state
+      if(start_stop_button.out){
+        do_ur_thang.d = do_ur_thang.AUTO;
+        }
+      //=========================================
        
       do_ur_thang.STOREA:
       io_led[2][0]=1;
@@ -118,6 +126,17 @@ module mojo_top (
       if(rst){
           do_ur_thang.d=do_ur_thang.IDLE;
         }
+        
+      //=======================================================
+      //Autotester state start
+      do_ur_thang.AUTO:
+        //the right button should also have triggered the 
+        //autotester fsm, so no logic here
+            if(rst){
+          do_ur_thang.d=do_ur_thang.IDLE;
+        }
+      //Autotester state end
+      //=======================================================
     }
     
   }
