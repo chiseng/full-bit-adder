@@ -25,15 +25,23 @@ module mojo_top (
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
-    fsm do_ur_thang={IDLE, STOREA,STOREB,COMPUTE};
+    fsm do_ur_thang={IDLE, STOREA,STOREB,COMPUTE, AUTO};
     reset_conditioner reset_cond;
     button_conditioner sum;
     button_conditioner reset_button;   
+    button_conditioner start_stop_button;
     dff afinal[16];
     dff bfinal[16];
+    .rst(rst){
+      autotester auto;
+      multi_seven_seg segs;
+      
+      
+    }
   }
   
   alu alu16bit;
+
   
 
   
@@ -51,7 +59,10 @@ module mojo_top (
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     reset_button.in=io_button[3]; //left button
+    start_stop_button.in=io_button[4]; //right button
     rst=reset_button.out;
+    auto.reset=reset_button.out;
+    auto.start_stop=start_stop_button.out;
     
     led = 8h00;             // turn LEDs off
     spi_miso = bz;          // not using SPI
@@ -62,14 +73,14 @@ module mojo_top (
     io_seg = 8hff;          // turn segments off
     io_sel = 4hf;           // select no digits
 
-    
+    segs.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4};
     // value of a
     case(do_ur_thang.q){
       do_ur_thang.IDLE:
       io_led[1][1]=1;
       if(io_dip[2][7]){
-        do_ur_thang.d=do_ur_thang.STOREA;
-        }
+        do_ur_thang.d=do_ur_thang.STOREA;}
+       
       do_ur_thang.STOREA:
       io_led[2][0]=1;
       io_led[1]=io_dip[1];
@@ -108,7 +119,6 @@ module mojo_top (
           do_ur_thang.d=do_ur_thang.IDLE;
         }
     }
-      
     
   }
 }
