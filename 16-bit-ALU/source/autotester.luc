@@ -8,10 +8,10 @@ module autotester (
     output a[16],
     output b[16],
     output out[16],
-    output seg1[4],
-    output seg2[4],
-    output seg3[4],
-    output seg4[4]
+    output seg1[8],
+    output seg2[8],
+    output seg3[8],
+    output seg4[8]
 
   ) {
   
@@ -53,10 +53,10 @@ module autotester (
     alu.alufn = 6b000000;
     alu.a = 16hxx;
     alu.b = 16hxx;
-    seg1=4h2;
-    seg2=4h2;
-    seg3=4h2;
-    seg4=4h2;
+    seg1=8h2;
+    seg2=8h2;
+    seg3=8h2;
+    seg4=8h2;
     
     case (state.q){
     
@@ -71,6 +71,10 @@ module autotester (
         alu.alufn = ADD;
         alu.a = 16b0000000010010110;
         alu.b = 16b0000000000011110;
+        seg1=8h4;
+        seg2=8h6;
+        seg3=8h6;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000010110100){
           state.d = state.ADD2;
@@ -85,6 +89,10 @@ module autotester (
         alu.a = 16b0000000010010110;
         alu.b = 16b0000000000011110;
         change_state.d = change_state.q+1;
+        seg1=8h4;
+        seg2=8h6;
+        seg3=8h6;
+        seg4=8hA;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b000000001111000){
@@ -100,6 +108,10 @@ module autotester (
         alu.a = 16b1111111101101010;
         alu.b = 16b0000000000011110;
         change_state.d = change_state.q+1;
+        seg1=8h4;
+        seg2=8h6;
+        seg3=8h6;
+        seg4=8hB;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b1111111110001000){
@@ -115,6 +127,10 @@ module autotester (
         alu.a = 16b0000000000000000;
         alu.b = 16b0000000000000000;
         change_state.d = change_state.q+1;
+        seg1=8h4;
+        seg2=8h6;
+        seg3=8h6;
+        seg4=8hC;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -130,6 +146,10 @@ module autotester (
         alu.a = 16b0000000010010110;
         alu.b = 16b0000000000011110;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8hD;
+        seg3=8hE;
+        seg4=8h0;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000001111000){
@@ -145,6 +165,10 @@ module autotester (
         alu.a = 16b0000000010010110;
         alu.b = 16b1111111111100010;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8hD;
+        seg3=8hE;
+        seg4=8hA;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000010110100){
@@ -160,6 +184,10 @@ module autotester (
         alu.a = 16b1111111101101010;
         alu.b = 16b0000000000011110;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8hD;
+        seg3=8hE;
+        seg4=8hB;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b1111111101001100){
@@ -175,6 +203,10 @@ module autotester (
         alu.a = 16b1111111101101010;
         alu.b = 16b1111111111100010;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8hD;
+        seg3=8hE;
+        seg4=8hC;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b1111111110001000){
@@ -189,6 +221,10 @@ module autotester (
         alu.a = 16b0000000011110001;
         alu.b = 16b0000000011111100;
         change_state.d = change_state.q+1;
+        seg1=8h4;
+        seg2=8hF;
+        seg3=8h6;
+        seg4=8h0;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000011110000){
@@ -203,6 +239,10 @@ module autotester (
         alu.a = 16b0000000000000001;
         alu.b = 16b0000000011111111;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8hD;
+        seg3=8hE;
+        seg4=8hA;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -217,6 +257,10 @@ module autotester (
         alu.a = 16b0000000000000001;
         alu.b = 16b0000000011111111;
         change_state.d = change_state.q+1;
+        seg1=8h10;
+        seg2=8h11;
+        seg3=8h0;
+        seg4=8h2;
         if(change_state.q==4999999){
         change_state.d=0;
         if (alu.out == 16b0000000011111111){
@@ -232,6 +276,10 @@ module autotester (
         alu.a = 16b0000000000000001;
         alu.b = 16b0000000000001110;
         change_state.d = change_state.q+1;
+        seg1=8h10;
+        seg2=8h11;
+        seg3=8hA;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000001111){
           state.d = state.XOR1;
@@ -245,6 +293,10 @@ module autotester (
         alu.a = 16b0000000000000001;
         alu.b = 16b0000000000001111;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h10;
+        seg3=8h11;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000001110){
           state.d = state.XOR2;
@@ -259,6 +311,10 @@ module autotester (
         alu.a = 16b0000000000001111;
         alu.b = 16b0000000000001111;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h10;
+        seg3=8h11;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.LDR1;
@@ -272,6 +328,10 @@ module autotester (
         alu.a = 16b0000000000000011;
         alu.b = 16b0000000000001111;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h6;
+        seg3=8h11;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000011){
           state.d = state.LDR2;
@@ -285,6 +345,10 @@ module autotester (
         alu.a = 16b0000000011110011;
         alu.b = 16b0000000000001111;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h6;
+        seg3=8h11;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000011110011){
           state.d = state.SHL1;
@@ -298,6 +362,10 @@ module autotester (
         alu.a = 16b0000000000001111;
         alu.b = 16b0000000000000000;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h13;
+        seg3=8h8;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000001111){
           state.d = state.SHL2;
@@ -311,6 +379,10 @@ module autotester (
         alu.a = 16b0000000000001111;
         alu.b = 16b0000000000000100;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h13;
+        seg3=8h8;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000011110000){
           state.d = state.SHR1;
@@ -324,6 +396,10 @@ module autotester (
         alu.a = 16b0000000000001111;
         alu.b = 16b0000000000000000;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h13;
+        seg3=8h11;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000001111){
           state.d = state.SHR2;
@@ -337,6 +413,10 @@ module autotester (
         alu.a = 16b0110111100001111;
         alu.b = 16b0000000000001000;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h13;
+        seg3=8h11;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000001101111){
           state.d = state.SRA1;
@@ -350,6 +430,10 @@ module autotester (
         alu.a = 16b1110111100001111;
         alu.b = 16b0000000000000100;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h11;
+        seg3=8h4;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b1111111111101111){
           state.d = state.SRA2;
@@ -363,6 +447,10 @@ module autotester (
         alu.a = 16b0110111100001111;
         alu.b = 16b0000000000000100;
         change_state.d = change_state.q+1;
+        seg1=8h5;
+        seg2=8h11;
+        seg3=8h4;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000001101111){
           state.d = state.CMPEQ1;
@@ -376,6 +464,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h14;
+        seg2=8h15;
+        seg3=8h0;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000001){
           state.d = state.CMPEQ2;
@@ -389,6 +481,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000000000001;
         change_state.d = change_state.q+1;
+        seg1=8h14;
+        seg2=8h15;
+        seg3=8hA;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.CMPEQ2;
@@ -402,6 +498,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h16;
+        seg3=8h0;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.CMPLT2;
@@ -415,6 +515,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000001101110;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h16;
+        seg3=8hA;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000001){
           state.d = state.CMPLT3;
@@ -428,6 +532,10 @@ module autotester (
         alu.a = 16b0000000001101110;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h16;
+        seg3=8hB;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.CMPLE1;
@@ -441,6 +549,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h14;
+        seg3=8h0;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000001){
           state.d = state.CMPLE2;
@@ -454,6 +566,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000001101110;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h14;
+        seg3=8hA;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000001){
           state.d = state.CMPLE3;
@@ -467,6 +583,10 @@ module autotester (
         alu.a = 16b0000000001101110;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h9;
+        seg2=8h14;
+        seg3=8hB;
+        seg4=8h2;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.MUL1;
@@ -480,6 +600,10 @@ module autotester (
         alu.a = 16b0000000000000011;
         alu.b = 16b0000000001100100;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h2;
+        seg3=8h2;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000100101100){
           state.d = state.MUL2;
@@ -493,6 +617,10 @@ module autotester (
         alu.a = 16b0000000000000011;
         alu.b = 16b1111111110011100;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h2;
+        seg3=8h2;
+        seg4=8hA;
         if(change_state.q==4999999){
         if (alu.out == 16b1111111011010100){
           state.d = state.MUL3;
@@ -506,6 +634,10 @@ module autotester (
         alu.a = 16b1111111111111101;
         alu.b = 16b1111111110011100;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h2;
+        seg3=8h2;
+        seg4=8hB;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000100101100){
           state.d = state.MUL4;
@@ -520,6 +652,10 @@ module autotester (
         alu.a = 16b0000000000001010;
         alu.b = 16b0000000000000000;
         change_state.d = change_state.q+1;
+        seg1=8h12;
+        seg2=8h2;
+        seg3=8h2;
+        seg4=8hC;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000000000){
           state.d = state.DIV1;
@@ -533,6 +669,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b0000000000000100;
         change_state.d = change_state.q+1;
+        seg1=8h6;
+        seg2=8h8;
+        seg3=8hD;
+        seg4=8h0;
         if(change_state.q==4999999){
         if (alu.out == 16b0000000000011001){
           state.d = state.DIV2;
@@ -546,6 +686,10 @@ module autotester (
         alu.a = 16b0000000001100100;
         alu.b = 16b1111111111111100;
         change_state.d = change_state.q+1;
+        seg1=8h6;
+        seg2=8h8;
+        seg3=8hD;
+        seg4=8hA;
         if (alu.out == 16b1111111111100111){
           state.d = state.DIV3;
           }
@@ -558,6 +702,10 @@ module autotester (
         alu.a = 16b1111111110011100;
         alu.b = 16b1111111111111100;
         change_state.d = change_state.q+1;
+        seg1=8h6;
+        seg2=8h8;
+        seg3=8hD;
+        seg4=8hB;
         if (alu.out == 16b0000000000011001){
           state.d = state.PASS;
           }
@@ -567,17 +715,17 @@ module autotester (
         */
         
       state.PASS:
-        seg1=4h3;
-        seg2=4h4;
-        seg3=4h5;
-        seg4=4h5;
+        seg1=8h3;
+        seg2=8h4;
+        seg3=8h5;
+        seg4=8h5;
       
         
       state.ERR:
-      seg1=4h7;
-      seg2=4h4;
-      seg3=4h8;
-      seg4=4h9;
+      seg1=8h7;
+      seg2=8h4;
+      seg3=8h8;
+      seg4=8h9;
       if(reset){
         state.d=state.IDLE;
         }
