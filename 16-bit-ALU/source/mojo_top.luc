@@ -16,109 +16,64 @@ module mojo_top (
     output io_sel [4],      // Digit select on IO Shield
     input io_button [5],    // 5 buttons on IO Shield
     input io_dip [3][8]     // DIP switches on IO Shield
+
   ) {
   
   sig rst;                  // reset signal
-  sig alufn[6];
  
 
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
-    fsm do_ur_thang={IDLE, STOREA,STOREB,COMPUTE, AUTO};
     reset_conditioner reset_cond;
-    button_conditioner sum;
-    button_conditioner reset_button;   
-    button_conditioner start_stop_button;
-    dff afinal[16];
-    dff bfinal[16];
     .rst(rst){
       autotester auto;
-      multi_seven_seg segs;
+      multi_seven_seg seg;
       
       
     }
   }
   
-  alu alu16bit;
-
-  
-
-  
   always {
-    sum.in=io_button[1]; //centre button
-    //compute_button.in=io_button[1];
-    alu16bit.a=16x{0};
-    alu16bit.b=16x{0};
-    alu16bit.alufn=16x{0};
-      
-    //a = 16x{0};
-    //b = 16x{0};
-    alufn = 6x{0};
-    // lookatA = 16x{0};
-    reset_cond.in = ~rst_n; // input raw inverted reset signal
-    rst = reset_cond.out;   // conditioned reset
-    reset_button.in=io_button[3]; //left button
-    start_stop_button.in=io_button[4]; //right button
-    rst=reset_button.out;
-    auto.reset=reset_button.out;
-    auto.start_stop=start_stop_button.out;
+  io_seg = 8hff;          // turn segments off    
+  io_sel = 4hf;           // select no digits    
+  auto.io_button=io_button;
+  auto.io_dip=io_dip;  
+  seg.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4};
+  io_seg=~seg.segs;
+  io_sel=~seg.sel;
+  
+  //compute_button.in=io_button[];
+//  alu16bit.a=16x{0};
+//  alu16bit.b=16x{0};
+//  alu16bit.alufn=16x{0};    
     
-    led = 8h00;             // turn LEDs off
-    spi_miso = bz;          // not using SPI
-    spi_channel = bzzzz;    // not using flags
-    avr_rx = bz;            // not using serial port
-    
-    io_led = 3x{{8h00}};    // turn LEDs off
-    io_seg = 8hff;          // turn segments off
-    io_sel = 4hf;           // select no digits
+  //a = 16x{0};
+  //b = 16x{0};    
+  // lookatA = 16x{0};    
+  reset_cond.in = ~rst_n; // input raw inverted reset signal
+  rst = reset_cond.out;   // conditioned reset
+//  reset_button.in=io_button[3]; //left button
+//  start_stop_button.in=io_button[4]; //right button
+//  rst=reset_button.out;
+  
+//  auto.reset=reset_button.out;
+//  auto.start_stop=start_stop_button.out;
+  
+  led = 8h00;             // turn LEDs off
+  spi_miso = bz;          // not using SPI
+  spi_channel = bzzzz;    // not using flags
+  avr_rx = bz;            // not using serial port
+  
+  io_led = 3x{{8h00}};    // turn LEDs off
 
-    segs.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4};
-    // value of a
-    case(do_ur_thang.q){
-      do_ur_thang.IDLE:
-      io_led[1][1]=1;
-      if(io_dip[2][7]){
-        do_ur_thang.d=do_ur_thang.STOREA;}
-       
-      do_ur_thang.STOREA:
-      io_led[2][0]=1;
-      io_led[1]=io_dip[1];
-      io_led[0]=io_dip[0];
-      afinal.d = io_dip[1] + io_dip[0]; // 00000000 00000000
-        if(io_dip[2][6]){
-        do_ur_thang.d=do_ur_thang.STOREB;}
-      
-      else if(rst){
-          do_ur_thang.d=do_ur_thang.IDLE;}
-            
-          
-      do_ur_thang.STOREB:    
-      io_led[2][1]=1;
-      io_led[1]=io_dip[1];
-      io_led[0]=io_dip[0];
-      bfinal.d =io_dip[1] + io_dip[0];
-      if(sum.out){
-        do_ur_thang.d=do_ur_thang.COMPUTE;
-          }
-      if(rst){
-          do_ur_thang.d=do_ur_thang.IDLE;}
-      if (io_dip[2][7]){
-        do_ur_thang.d=do_ur_thang.STOREA;
-        }
-          
-      do_ur_thang.COMPUTE:
-      io_led[2][2]=1;              
-      alu16bit.a = afinal.q;
-      alu16bit.b = bfinal.q;
-      alufn = io_dip[2][5:0];
-      alu16bit.alufn = alufn;
-      io_led[1] = alu16bit.out[15:8];
-      io_led[0] = alu16bit.out[7:0];
-      if(rst){
-          do_ur_thang.d=do_ur_thang.IDLE;
-        }
-    }
+  io_led[0]=auto.io_ledtemp;
+  io_led[1]=auto.io_ledtempZ;
+  io_led[2]=auto.io_ledtempX;
+  
     
+
+  // value of a
+  
   }
 }
