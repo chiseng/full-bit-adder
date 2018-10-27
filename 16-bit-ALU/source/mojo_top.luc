@@ -67,12 +67,11 @@ module mojo_top (
   
   io_led = 3x{{8h00}};    // turn LEDs off
 
-  io_led[0]=auto.io_ledtemp;
-  io_led[1]=auto.io_ledtempZ;
+  io_led[1]=auto.io_ledtemp;
+  io_led[0]=auto.io_ledtempZ;
   io_led[2]=auto.io_ledtempX;
   
     
-
   // value of a
   
   }
