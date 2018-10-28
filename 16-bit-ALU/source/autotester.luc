@@ -98,7 +98,7 @@ module autotester (
       if(fail_button.out)
         state.d=state.FAIL;
       
-      /*
+      
       state.STOREA:
       io_ledtempX=8b010;
       io_ledtempZ=io_dip[1];
@@ -106,8 +106,6 @@ module autotester (
       afinal.d = io_dip[1] + io_dip[0]; // 00000000 00000000
         if(io_dip[2][6]){
         state.d=state.STOREB;}
-        if(fail_button.out)
-        state.d=state.FAIL;
       
         if(reset_button.out){
           state.d=state.IDLE;}
@@ -852,7 +850,7 @@ module autotester (
           state.d = state.ERR;
           }
         }
-        */
+        
       state.MUL1:    //  Multiply a positive number with a positive number: 3 x 100 = 300
         alu.alufn = MUL;
         alu.a = 16b0000000000000011;
@@ -1011,17 +1009,21 @@ module autotester (
         }
         
       state.FAIL:
+      seg1=8hE;
+      seg2=8h10;
+      seg3=8h6;
+      seg4=8h30;
       alu.alufn=ADD;
       alu.a=16b10;
       alu.b=16b11;
       if(change_state.q[24]==1){
         io_ledtempZ=alu.out[7:0]; //shows correct result
        if(change_state.q[29]==1){
-          if(alu.out==16b11) //should give 3
+          if(alu.out==16b11) //wrong comparison here :(
             state.d=state.PASS;
           }
           else{
-          state.d=state.FAIL;
+          state.d=state.FAIL; //will jump to fail
           }
         }
        
