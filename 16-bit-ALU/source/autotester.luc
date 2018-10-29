@@ -112,7 +112,11 @@ module autotester (
       /* Manual testing that takes in 16bit inputs, transfers them to the operation modules and returns 
         the output displayed on LED*/
       state.STOREA:
-      io_ledtempX=8b010;
+      seg1=8h5;
+      seg2=8h16;
+      seg3=8h0;
+      seg3=8h4;
+      io_ledtempX=8b001;
       io_ledtemp=io_dip[1];
       io_ledtempZ=io_dip[0];
       afinal.d = io_dip[1] + io_dip[0]; // 00000000 00000000
@@ -123,7 +127,11 @@ module autotester (
           state.d=state.IDLE;}
       
       state.STOREB:
-      io_ledtempX=8b011;
+      seg1=8h5;
+      seg2=8h16;
+      seg3=8h0;
+      seg3=8hE;
+      io_ledtempX=8b010;
       io_ledtemp=io_dip[1];
       io_ledtempZ=io_dip[0];
       bfinal.d = io_dip[1] + io_dip[0]; // writing to stored values
@@ -134,6 +142,10 @@ module autotester (
           state.d=state.IDLE;}
              
       state.COMPUTE:
+      seg1=8h0;
+      seg2=8h3;
+      seg3=8h12;
+      seg3=8h19;
       io_ledtempX=8b100;              
       alu.a = afinal.q; //reading stored values
       alu.b = bfinal.q;
