@@ -27,6 +27,8 @@ module autotester (
 
     .rst(rst) {
     //states for the test cases, dff counter which switches between states at a specific time interval.
+    //All states have a corresponding ERR state to go to if the output is not as expected (aka if the test case fails)
+    //Having an error state for each function allows us to debug faster when any test cases fail! 
       dff change_state[30];
           fsm state = {IDLE, STOREA, STOREB, COMPUTE, ADD1, ADD2, ADD3, ADD4,  SUB1, SUB2, SUB3, SUB4,
           AND1, AND2, OR1, OR2, XOR1, XOR2, LDR1, LDR2, B1, B2,
@@ -43,7 +45,7 @@ module autotester (
  
           } 
   }
-  //constants for ease of operation assignment for the test cases
+  //constants for ease of operation assignment for the test cases (Refers to ALUFN for each function)
     const ADD   = 6b000000;
     const SUB   = 6b000001;
     const AND   = 6b011000; 
@@ -142,15 +144,15 @@ module autotester (
           state.d=state.IDLE;
         } 
         
-      /*Test cases for each operation. We added more test cases such as DIV, MUL. Test cases include fail states
+      /*Test cases for each operation. We added more functions (MUL/DIV/B/NAND/NOR). Test cases include fail states
         to help catch bad operations 
         */     
       
       state.ADD1:    // add 2 positive numbers: 150 + 30 = 180
-        seg1=8h4;
-        seg2=8h6;
-        seg3=8h6;  
-        seg4=8h1;
+        seg1=8h4;  //A
+        seg2=8h6;  //d  
+        seg3=8h6;  //d  
+        seg4=8h1;  //1
         alu.a = 16b10010110;
         alu.b = 16b11110;
         alu.alufn=ADD;
@@ -171,10 +173,10 @@ module autotester (
         alu.b = 16b1111111111100010;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h4;
-        seg2=8h6;
-        seg3=8h6;
-        seg4=8hA;
+        seg1=8h4;  //A  
+        seg2=8h6;  //d  
+        seg3=8h6;  //d  
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
         change_state.d=0;        
         if (alu.out == 16b1111000){
@@ -191,10 +193,10 @@ module autotester (
         alu.b = 16b11110;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h4;
-        seg2=8h6;
-        seg3=8h6;
-        seg4=8hB;
+        seg1=8h4;  //A  
+        seg2=8h6;  //d  
+        seg3=8h6;  //d  
+        seg4=8hB;  //3
         if(change_state.q[26]==1){
         change_state.d=0;        
         if (alu.out == 16b1111111110001000){
@@ -212,10 +214,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h4;
-        seg2=8h6;
-        seg3=8h6;
-        seg4=8hC;
+        seg1=8h4;  //A  
+        seg2=8h6;  //d  
+        seg3=8h6;  //d  
+        seg4=8hC;  //4
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -234,10 +236,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8hD;
-        seg3=8hE;
-        seg4=8h1;
+        seg1=8h5;  //S
+        seg2=8hD;  //u
+        seg3=8hE;  //b
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000001111000){
@@ -255,10 +257,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8hD;
-        seg3=8hE;
-        seg4=8hA;
+        seg1=8h5;  //S
+        seg2=8hD;  //u
+        seg3=8hE;  //b
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000010110100){
@@ -276,10 +278,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8hD;
-        seg3=8hE;
-        seg4=8hB;
+        seg1=8h5;  //S
+        seg2=8hD;  //u
+        seg3=8hE;  //b
+        seg4=8hB;  //3
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b1111111101001100){
@@ -297,10 +299,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8hD;
-        seg3=8hE;
-        seg4=8hC;
+        seg1=8h5;  //S
+        seg2=8hD;  //u
+        seg3=8hE;  //b
+        seg4=8hC;  //4
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b1111111110001000){
@@ -316,10 +318,10 @@ module autotester (
         alu.b = 16b0000000011111100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h4;
-        seg2=8hF;
-        seg3=8h6;
-        seg4=8h1;
+        seg1=8h4;  //A
+        seg2=8hF;  //n
+        seg3=8h6;  //d
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000011110000){
@@ -335,10 +337,10 @@ module autotester (
         alu.b = 16b0000000011111111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h4;
-        seg2=8hF;
-        seg3=8h6;
-        seg4=8hA;
+        seg1=8h4;  //A
+        seg2=8hF;  //n
+        seg3=8h6;  //d
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -354,10 +356,10 @@ module autotester (
         alu.b = 16b0000000011111111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h10;
-        seg2=8h11;
-        seg3=8h1;
-        seg4=8h2;
+        seg1=8h10;  //o
+        seg2=8h11;  //r
+        seg3=8h1;  //1
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000011111111){
@@ -374,10 +376,10 @@ module autotester (
         alu.b = 16b0000000000001110;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h10;
-        seg2=8h11;
-        seg3=8hA;
-        seg4=8h2;
+        seg1=8h10;  //o
+        seg2=8h11;  //r
+        seg3=8hA;  //2
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
          change_state.d=0;
         if (alu.out == 16b0000000000001111){
@@ -394,10 +396,10 @@ module autotester (
         alu.b = 16b0000000000001111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h10;
-        seg3=8h11;
-        seg4=8h1;
+        seg1=8h12;  //x
+        seg2=8h10;  //o
+        seg3=8h11;  //r  
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000001110){
@@ -414,10 +416,10 @@ module autotester (
         alu.b = 16b0000000000001111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h10;
-        seg3=8h11;
-        seg4=8hA;
+        seg1=8h12;  //x
+        seg2=8h10;  //o
+        seg3=8h11;  //r
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -434,10 +436,10 @@ module autotester (
         change_state.d = change_state.q+1;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h6;
-        seg3=8h11;
-        seg4=8h1;
+        seg1=8h9;  //L
+        seg2=8h6;  //d
+        seg3=8h11;  //r
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000000011){
@@ -454,10 +456,10 @@ module autotester (
         alu.b = 16b0000000000001111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h6;
-        seg3=8h11;
-        seg4=8hA;
+        seg1=8h9;  //L
+        seg2=8h6;  //d
+        seg3=8h11;  //r
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000011110011){
@@ -474,10 +476,10 @@ module autotester (
         alu.b = 16b0000000000001111;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h2;
-        seg2=8h2;
-        seg3=8hE;
-        seg4=8h1;
+        seg1=8h2;  //-
+        seg2=8h2;  //-
+        seg3=8hE;  //b
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000001111){
@@ -494,10 +496,10 @@ module autotester (
         alu.b = 16b0000000000001101;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h2;
-        seg2=8h2;
-        seg3=8hE;
-        seg4=8hA;
+        seg1=8h2;  //-
+        seg2=8h2;  //-
+        seg3=8hE;  //b
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
            change_state.d=0;
         if (alu.out == 16b0000000000001101){
@@ -595,10 +597,10 @@ module autotester (
         alu.b = 16b0000000000000000;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h13;
-        seg3=8h8;
-        seg4=8h1;
+        seg1=8h5;  //S
+        seg2=8h13;  //h
+        seg3=8h8;  //l
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000001111){
@@ -615,10 +617,10 @@ module autotester (
 
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h13;
-        seg3=8h8;
-        seg4=8hA;
+        seg1=8h5;  //S
+        seg2=8h13;  //h
+        seg3=8h8;  //l
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000011110000){
@@ -634,10 +636,10 @@ module autotester (
         alu.b = 16b0000000000000000;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h13;
-        seg3=8h11;
-        seg4=8h1;
+        seg1=8h5;  //S
+        seg2=8h13;  //h
+        seg3=8h11;  //r
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b0000000000001111){
@@ -653,10 +655,10 @@ module autotester (
         alu.b = 16b0000000000001000;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h13;
-        seg3=8h11;
-        seg4=8hA;
+        seg1=8h5;  //S
+        seg2=8h13;  //h
+        seg3=8h11;  //r
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
                 change_state.d=0;
         if (alu.out == 16b110111100001111){
@@ -673,10 +675,10 @@ module autotester (
         alu.b = 16b0000000000000100; //
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h11;
-        seg3=8h4;
-        seg4=8h1;
+        seg1=8h5;  //S
+        seg2=8h11;  //r
+        seg3=8h4;  //A
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b1111111011110000){
@@ -692,10 +694,10 @@ module autotester (
         alu.b = 16b0000000000000100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h5;
-        seg2=8h11;
-        seg3=8h4;
-        seg4=8hA;
+        seg1=8h5;  //S
+        seg2=8h11;  //r
+        seg3=8h4;  //A
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
          change_state.d=0;
         if (alu.out == 16b0000011011110000){
@@ -712,10 +714,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h14;
-        seg2=8h15;
-        seg3=8h1;
-        seg4=8h2;
+        seg1=8h14;  //E
+        seg2=8h15;  //q
+        seg3=8h1;  //1
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -731,10 +733,10 @@ module autotester (
         alu.b = 16b0000000000000001;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h14;
-        seg2=8h15;
-        seg3=8hA;
-        seg4=8h2;
+        seg1=8h14;  //E
+        seg2=8h15;  //q
+        seg3=8hA;  //2
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -750,10 +752,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h16;
-        seg3=8h1;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h16;  //t
+        seg3=8h1;  //1
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -769,10 +771,10 @@ module autotester (
         alu.b = 16b0000000001101110;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h16;
-        seg3=8hA;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h16;  //t
+        seg3=8hA;  //2
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -788,10 +790,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h16;
-        seg3=8hB;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h16;  //t
+        seg3=8hB;  //3
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
                         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -807,10 +809,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h14;
-        seg3=8h1;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h14;  //E
+        seg3=8h1;  //1
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
                         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -826,10 +828,10 @@ module autotester (
         alu.b = 16b0000000001101110;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h14;
-        seg3=8hA;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h14;  //E
+        seg3=8hA;  //2
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000001){
@@ -845,10 +847,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h9;
-        seg2=8h14;
-        seg3=8hB;
-        seg4=8h2;
+        seg1=8h9;  //L
+        seg2=8h14;  //E
+        seg3=8hB;  //3
+        seg4=8h2;  //-
         if(change_state.q[26]==1){
                         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -865,10 +867,10 @@ module autotester (
         alu.b = 16b0000000001100100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h2;
-        seg3=8h2;
-        seg4=8h1;
+        seg1=8h12;  //X
+        seg2=8h2;  //-
+        seg3=8h2;  //-
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
           change_state.d=0;
         if (alu.out == 16b0000000100101100){
@@ -884,10 +886,10 @@ module autotester (
         alu.b = 16b1111111110011100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h2;
-        seg3=8h2;
-        seg4=8hA;
+        seg1=8h12;  //X
+        seg2=8h2;  //-
+        seg3=8h2;  //-
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b1111111011010100){
@@ -903,10 +905,10 @@ module autotester (
         alu.b = 16b1111111110011100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h2;
-        seg3=8h2;
-        seg4=8hB;
+        seg1=8h12;  //X
+        seg2=8h2;  //-
+        seg3=8h2;  //-
+        seg4=8hB;  //3
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000100101100){
@@ -923,10 +925,10 @@ module autotester (
         alu.b = 16b0000000000000000;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h12;
-        seg2=8h2;
-        seg3=8h2;
-        seg4=8hC;
+        seg1=8h12;  //X
+        seg2=8h2;  //-
+        seg3=8h2;  //-
+        seg4=8hC;  //4
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000000000){
@@ -942,10 +944,10 @@ module autotester (
         alu.b = 16b0000000000000100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h6;
-        seg2=8h8;
-        seg3=8hD;
-        seg4=8h1;
+        seg1=8h6;  //d
+        seg2=8h8;  //I
+        seg3=8hD;  //v
+        seg4=8h1;  //1
         if(change_state.q[26]==1){
                         change_state.d=0;
         if (alu.out == 16b0000000000011001){
@@ -961,10 +963,10 @@ module autotester (
         alu.b = 16b1111111111111100;
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
-        seg1=8h6;
-        seg2=8h8;
-        seg3=8hD;
-        seg4=8hA;
+        seg1=8h6;  //d
+        seg2=8h8;  //I
+        seg3=8hD;  //v
+        seg4=8hA;  //2
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b1111111111100111){
@@ -982,10 +984,10 @@ module autotester (
         io_ledtemp = alu.out[15:8];
         io_ledtempZ = alu.out[7:0];
         change_state.d = change_state.q+1;
-        seg1=8h6;
-        seg2=8h8;
-        seg3=8hD;
-        seg4=8hB;
+        seg1=8h6;  //d
+        seg2=8h8;  //I
+        seg3=8hD;  //v
+        seg4=8hB;  //3
         if(change_state.q[26]==1){
         change_state.d=0;
         if (alu.out == 16b0000000000011001){
@@ -998,10 +1000,10 @@ module autotester (
         
         
       state.PASS:
-        seg1=8h3;
-        seg2=8h4;
-        seg3=8h5;
-        seg4=8h5;
+        seg1=8h3;  //P
+        seg2=8h4;  //A
+        seg3=8h5;  //S
+        seg4=8h5;  //S
               if(reset_button.out){
         state.d=state.IDLE;
         }
@@ -1012,118 +1014,118 @@ module autotester (
         because who doesn't like their own fail states when a test case fails? :)
         */
         state.ADD_ERR:
-        seg1=8h4;
-        seg2=8h6;
-        seg3=8h6;
-        seg4=8h14;
+        seg1=8h4;  //A  
+        seg2=8h6;  //d  
+        seg3=8h6;  //d
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
        
         state.SUB_ERR:
-        seg1=8h8;
-        seg2=8h5;
-        seg3=8hD;
-        seg4=8h14;
+        seg1=8h8;  //S  
+        seg2=8h5;  //u
+        seg3=8hD;  //b
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.AND_ERR:
-        seg1=8h4;
-        seg2=8hF;
-        seg3=8h6;
-        seg4=8h14;
+        seg1=8h4;  //A
+        seg2=8hF;  //n
+        seg3=8h6;  //d
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.OR_ERR:
-        seg1=8h10;
-        seg2=8h11;
-        seg3=8h1; 
-        seg4=8h14;
+        seg1=8h10;  //o
+        seg2=8h11;  //r
+        seg3=8h2;   //-
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
        
         state.XOR_ERR:
-        seg1=8h12;
-        seg2=8h10;
-        seg3=8h11;
-        seg4=8h14; 
+        seg1=8h12;  //X
+        seg2=8h10;  //o
+        seg3=8h11;  //r
+        seg4=8h14;   //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.LDR_ERR:
-        seg1=8h9;
-        seg2=8h6;
-        seg3=8h11;
-        seg4=8h14;
+        seg1=8h9;  //L
+        seg2=8h6;  //d
+        seg3=8h11;  //r
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.B_ERR:
-        seg1=8h2;
-        seg2=8hD;
-        seg3=8h17; 
-        seg4=8h14;
+        seg1=8h2;  //-
+        seg2=8h2;  //-
+        seg3=8hE;   //b
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.NAND_ERR:
-        seg1=8hF;
-        seg2=8h10;
-        seg3=8hF; 
-        seg4=8h14;
+        seg1=8hF;  //n
+        seg2=8h10;  //a
+        seg3=8hF;   //n
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.NOR_ERR:
-        seg1=8hF;
-        seg2=8h10;
-        seg3=8h11; 
-        seg4=8h14;
+        seg1=8hF;  //n
+        seg2=8h10;  //o
+        seg3=8h11;   //r
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
        
         state.SHF_ERR:
-        seg1=8h5;
-        seg2=8h11;
-        seg3=8h17;
-        seg4=8h14;
+        seg1=8h5;  //S
+        seg2=8h13;  //h
+        seg3=8h17;  //_
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.CMP_ERR:
-        seg1=8h14;
-        seg2=8h15;
-        seg3=8hA; 
-        seg4=8h14;
+        seg1=8h14;  //E
+        seg2=8h15;  //q
+        seg3=8hA;   //2
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.MUL_ERR:
-        seg1=8h12;
-        seg2=8h2;
-        seg3=8h2; 
-        seg4=8h14;
+        seg1=8h12;  //X
+        seg2=8h2;  //-
+        seg3=8h2;   //-
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
         
         state.DIV_ERR:
-        seg1=8h6;
-        seg2=8h8;
-        seg3=8hD; 
-        seg4=8h14;
+        seg1=8h6;  //d
+        seg2=8h8;  //I
+        seg3=8hD;   //v
+        seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;
         }
