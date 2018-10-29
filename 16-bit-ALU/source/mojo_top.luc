@@ -36,29 +36,19 @@ module mojo_top (
   
   always {
   io_seg = 8hff;          // turn segments off    
-  io_sel = 4hf;           // select no digits    
+  io_sel = 4hf;           // select no digits
+    
+  //sharing button and dip switch control with the autotester       
   auto.io_button=io_button;
-  auto.io_dip=io_dip;  
-  seg.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4};
-  io_seg=~seg.segs;
+  auto.io_dip=io_dip; 
+  seg.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4}; //assigning values to decoder
+  io_seg=~seg.segs; //wire up decoded segments to seven seg
   io_sel=~seg.sel;
   
-  //compute_button.in=io_button[];
-//  alu16bit.a=16x{0};
-//  alu16bit.b=16x{0};
-//  alu16bit.alufn=16x{0};    
-    
-  //a = 16x{0};
-  //b = 16x{0};    
-  // lookatA = 16x{0};    
+
   reset_cond.in = ~rst_n; // input raw inverted reset signal
   rst = reset_cond.out;   // conditioned reset
-//  reset_button.in=io_button[3]; //left button
-//  start_stop_button.in=io_button[4]; //right button
-//  rst=reset_button.out;
-  
-//  auto.reset=reset_button.out;
-//  auto.start_stop=start_stop_button.out;
+
   
   led = 8h00;             // turn LEDs off
   spi_miso = bz;          // not using SPI
@@ -67,12 +57,10 @@ module mojo_top (
   
   io_led = 3x{{8h00}};    // turn LEDs off
 
+   //connect the outputs from autotester to main IO shield
   io_led[1]=auto.io_ledtemp;
   io_led[0]=auto.io_ledtempZ;
   io_led[2]=auto.io_ledtempX;
-  
-    
-  // value of a
   
   }
 }
