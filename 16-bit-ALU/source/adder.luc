@@ -7,7 +7,7 @@ module adder (
     output v,
     output n
   ) {
-
+  //our adder inputs
   sig tempresult[16];
   sig xb;
   
