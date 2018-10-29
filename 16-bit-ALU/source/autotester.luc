@@ -1104,9 +1104,9 @@ module autotester (
         }
         
         state.CMP_ERR:
-        seg1=8h14;  //E
-        seg2=8h15;  //q
-        seg3=8hA;   //2
+        seg1=8h18;  //C
+        seg2=8h3;  //P
+        seg3=8h17;   //_
         seg4=8h14;  //E
         if(reset_button.out){
         state.d=state.IDLE;

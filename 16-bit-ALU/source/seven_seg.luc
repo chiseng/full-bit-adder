@@ -29,6 +29,7 @@ module seven_seg (
       21: segs = 7b1100111; //q
       22: segs = 7b1000110; //t 
       23: segs = 7b0001000; //_
+      24: segs = 7b0111001; //C
       default: segs = 7b0000000;//""
     }
   }
