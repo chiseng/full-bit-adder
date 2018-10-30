@@ -29,7 +29,6 @@ module mojo_top (
     .rst(rst){
       autotester auto;
       multi_seven_seg seg;
-      error_case err;
       
       
     }
@@ -42,9 +41,8 @@ module mojo_top (
   //sharing button and dip switch control with the autotester       
   auto.io_button=io_button;
   auto.io_dip=io_dip; 
-  err.io_dip=io_dip;
   seg.value={auto.seg1,auto.seg2,auto.seg3,auto.seg4}; //assigning values to decoder
-  seg.value={err.seg1, err.seg2, err.seg3, err.seg4};
+ 
   io_seg=~seg.segs; //wire up decoded segments to seven seg
   io_sel=~seg.sel;
   
@@ -65,8 +63,6 @@ module mojo_top (
   io_led[0]=auto.io_ledtempZ;
   io_led[2]=auto.io_ledtempX;
     
-  io_led[0]=err.tempER;
-  io_led[1]=err.tempER2;
 
   
   }
