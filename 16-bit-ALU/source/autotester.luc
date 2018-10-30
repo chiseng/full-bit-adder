@@ -35,7 +35,7 @@ module autotester (
           NAND1, NAND2, NOR1, NOR2, SHL1, SHL2, 
           SHR1, SHR2, SRA1, SRA2, CMPEQ1, CMPEQ2, CMPLT1, 
           CMPLT2, CMPLT3, CMPLE1, CMPLE2, CMPLE3, MUL1, MUL2, 
-          MUL3, MUL4, DIV1, DIV2, DIV3, PASS, ERR, FAIL, 
+          MUL3, MUL4, DIV1, DIV2, DIV3, PASS,  
         
           STOREA_ERR, STOREB_ERR, 
           COMPUTE_ERR, ADD_ERR, SUB_ERR, AND_ERR, OR_ERR, XOR_ERR, LDR_ERR,
@@ -70,7 +70,6 @@ module autotester (
 
   always {
 
-    
   sum.in=io_button[1]; //centre button
   reset_button.in=io_button[3]; //left button
   start_stop_button.in=io_button[4]; //right button
@@ -109,6 +108,7 @@ module autotester (
       if(io_dip[2][7]) //START MANUAL TESTINGGG
         state.d=state.STOREA;
       
+      
       /* Manual testing that takes in 16bit inputs, transfers them to the operation modules and returns 
         the output displayed on LED*/
       state.STOREA:
@@ -145,7 +145,7 @@ module autotester (
       seg1=8h0;
       seg2=8h3;
       seg3=8h12;
-      seg3=8h19;
+      seg3=8h12;
       io_ledtempX=8b100;              
       alu.a = afinal.q; //reading stored values
       alu.b = bfinal.q;
@@ -154,8 +154,8 @@ module autotester (
       io_ledtempZ = alu.out[7:0];
       if(reset_button.out){
           state.d=state.IDLE;
-        } 
-        
+        }
+      
       /*Test cases for each operation. We added more functions (MUL/DIV/B/NAND/NOR). Test cases include fail states
         to help catch bad operations 
         */     
