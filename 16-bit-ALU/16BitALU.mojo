@@ -5,6 +5,7 @@
     <src>boolean.luc</src>
     <src>alu.luc</src>
     <src>shifter.luc</src>
+    <src>theGame.luc</src>
     <src>seven_seg.luc</src>
     <src>compare16.luc</src>
     <src>autotester.luc</src>
@@ -13,6 +14,7 @@
     <src top="true">mojo_top.luc</src>
     <ucf lib="true">io_shield.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
+    <component>pn_gen.luc</component>
     <component>decoder.luc</component>
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>

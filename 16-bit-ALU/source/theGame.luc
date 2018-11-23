@@ -1,0 +1,23 @@
+module theGame (
+    input clk,  // clock
+    input rst,  // reset
+    
+    output out
+  ) {
+  .clk(clk){
+  dff counter[30];}
+  var i; //the row of the matrix
+  var j; //column
+  
+  pn_gen rng;
+ 
+  always {
+    out = 0;
+    counter.d=counter.q+1;
+    rng.seed=counter.q;  
+    if(counter.q[23]==1){
+      rng.next=1;
+      rng.rst=rst;
+
+  }
+}
