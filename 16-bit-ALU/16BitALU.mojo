@@ -14,6 +14,7 @@
     <src top="true">mojo_top.luc</src>
     <ucf lib="true">io_shield.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
+    <ucf>user.ucf</ucf>
     <component>pn_gen.luc</component>
     <component>decoder.luc</component>
     <component>reset_conditioner.luc</component>
