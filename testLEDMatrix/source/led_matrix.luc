@@ -1,0 +1,76 @@
+module led_matrix (
+input clk,  // clock
+  input rst,  // reset
+  input pattern[16][16], //16 sets of 16bit pattern for each row
+  output a[16], //16 anode pins
+  output c[16]  //16 cathode pins
+  ) {
+  
+      .clk(clk) {
+      .rst(rst){
+        counter slowclock(#SIZE(4),#DIV(10));  //smaller the faster the refresh
+        dff cSignal[16](.rst(rst)); //D flip-flip to store cathode signal
+        dff aSignal[16](.rst(rst)); //D flip-flip to store anode signal
+      }
+    }
+
+  always {
+    a = pattern[slowclock.value];
+      c = hFFFE;
+      aSignal.d = h0000;
+      cSignal.d = hFFFE;
+
+      case(slowclock.value) {
+        0:
+          aSignal.d = pattern[slowclock.value]; // columns, anode is ground
+          cSignal.d = hFFFE; // rows, cathode is positive
+        1:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFFD;
+        2:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFFB;
+        3:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFF7;
+        4:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFEF;
+        5:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFDF;
+        6:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFFBF;
+        7:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFF7F;
+        8:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFEFF;
+        9:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFDFF;
+        10:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hFBFF;
+        11:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hF7FF;
+        12:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hEFFF;
+        13:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hDFFF;
+        14:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = hBFFF;
+        15:
+          aSignal.d = pattern[slowclock.value];
+          cSignal.d = h7FFF;
+      }
+      a = aSignal.q;
+      c = cSignal.q;
+    }
+  }
