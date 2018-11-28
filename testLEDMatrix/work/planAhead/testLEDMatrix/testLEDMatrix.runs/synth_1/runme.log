@@ -7,12 +7,14 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/counter_3.v" into library work
-Parsing module <counter_3>.
+Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/counter_4.v" into library work
+Parsing module <counter_4>.
 Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/led_matrix_2.v" into library work
-Parsing module <led_matrix_2>.
+Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" into library work
+Parsing module <led_matrix_3>.
+Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/counter_2.v" into library work
+Parsing module <counter_2>.
 Analyzing Verilog file "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
@@ -24,9 +26,13 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <reset_conditioner_1>.
 
-Elaborating module <led_matrix_2>.
+Elaborating module <counter_2>.
 
-Elaborating module <counter_3>.
+Elaborating module <led_matrix_3>.
+
+Elaborating module <counter_4>.
+WARNING:HDLCompiler:1127 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 95: Assignment to M_state_q ignored, since the identifier is never used
+WARNING:Xst:2972 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44. All outputs of instance <slowclock> of block <counter_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -40,12 +46,13 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 54
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 54
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 54
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 54
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 54
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 54
+INFO:Xst:3210 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 68
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 68
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 68
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 68
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 68
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 68
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -57,28 +64,28 @@ Synthesizing Unit <reset_conditioner_1>.
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
-Synthesizing Unit <led_matrix_2>.
-    Related source file is "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/led_matrix_2.v".
-    Found 16-bit register for signal <M_aSignal_q>.
+Synthesizing Unit <led_matrix_3>.
+    Related source file is "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v".
     Found 16-bit register for signal <M_cSignal_q>.
-    Found 8-bit adder for signal <M_slowclock_value[3]_GND_3_o_add_32_OUT> created at line 97.
-    Found 511-bit shifter logical right for signal <n0020> created at line 97
+    Found 16-bit register for signal <M_aSignal_q>.
+    Found 8-bit adder for signal <M_slowclock_value[3]_GND_4_o_add_32_OUT> created at line 98.
+    Found 511-bit shifter logical right for signal <n0020> created at line 98
     Found 16x16-bit Read Only RAM for signal <M_cSignal_d>
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred  32 D-type flip-flop(s).
 	inferred   1 Combinational logic shifter(s).
-Unit <led_matrix_2> synthesized.
+Unit <led_matrix_3> synthesized.
 
-Synthesizing Unit <counter_3>.
-    Related source file is "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/counter_3.v".
+Synthesizing Unit <counter_4>.
+    Related source file is "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/counter_4.v".
     Found 14-bit register for signal <M_ctr_q>.
     Found 14-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  14 D-type flip-flop(s).
-Unit <counter_3> synthesized.
+Unit <counter_4> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -105,11 +112,11 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <counter_3>.
+Synthesizing (advanced) Unit <counter_4>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_3> synthesized (advanced).
+Unit <counter_4> synthesized (advanced).
 
-Synthesizing (advanced) Unit <led_matrix_2>.
+Synthesizing (advanced) Unit <led_matrix_3>.
 INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -121,7 +128,7 @@ INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <M_cSignal_d>   |          |
     -----------------------------------------------------------------------
-Unit <led_matrix_2> synthesized (advanced).
+Unit <led_matrix_3> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -143,20 +150,19 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_aSignal_q_0> has a constant value of 0 in block <led_matrix_2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_12> has a constant value of 0 in block <led_matrix_2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_13> has a constant value of 0 in block <led_matrix_2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_14> has a constant value of 0 in block <led_matrix_2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_15> has a constant value of 0 in block <led_matrix_2>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_1> in Unit <led_matrix_2> is equivalent to the following 10 FFs/Latches, which will be removed : <M_aSignal_q_2> <M_aSignal_q_3> <M_aSignal_q_4> <M_aSignal_q_5> <M_aSignal_q_6> <M_aSignal_q_7> <M_aSignal_q_8> <M_aSignal_q_9> <M_aSignal_q_10> <M_aSignal_q_11> 
+INFO:Xst:2261 - The FF/Latch <M_aSignal_q_6> in Unit <led_matrix_3> is equivalent to the following 4 FFs/Latches, which will be removed : <M_aSignal_q_7> <M_aSignal_q_8> <M_aSignal_q_10> <M_aSignal_q_11> 
+INFO:Xst:2261 - The FF/Latch <M_aSignal_q_9> in Unit <led_matrix_3> is equivalent to the following FF/Latch, which will be removed : <M_aSignal_q_13> 
+INFO:Xst:2261 - The FF/Latch <M_aSignal_q_0> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_aSignal_q_1> <M_aSignal_q_2> <M_aSignal_q_15> 
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <led_matrix_2> ...
+Optimizing unit <led_matrix_3> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 0.
+FlipFlop ld/slowclock/M_ctr_q_10 has been replicated 1 time(s)
+FlipFlop ld/slowclock/M_ctr_q_11 has been replicated 1 time(s)
 FlipFlop reset_cond/M_stage_q_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -165,8 +171,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 45
+ Flip-Flops                                            : 45
 
 =========================================================================
 
@@ -190,7 +196,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 36    |
+clk                                | BUFGP                  | 45    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -201,9 +207,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 2.743ns (Maximum Frequency: 364.564MHz)
+   Minimum period: 2.914ns (Maximum Frequency: 343.171MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 4.475ns
+   Maximum output required time after clock: 4.277ns
    Maximum combinational path delay: No path found
 
 =========================================================================

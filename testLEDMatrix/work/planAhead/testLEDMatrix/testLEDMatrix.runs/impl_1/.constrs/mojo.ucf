@@ -47,7 +47,7 @@ NET "spi_channel[3]" IOSTANDARD = LVTTL;
 
 NET "avr_tx" LOC = P55;
 NET "avr_tx" IOSTANDARD = LVTTL;
-NET "avr_rx" LOC = P59;
+NET "avr_rx" LOC = P59 | IOSTANDARD = LVTTL;
 NET "avr_rx" IOSTANDARD = LVTTL;
 NET "avr_rx_busy" LOC = P39;
 NET "avr_rx_busy" IOSTANDARD = LVTTL;

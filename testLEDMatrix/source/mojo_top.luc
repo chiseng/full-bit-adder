@@ -21,36 +21,29 @@ module mojo_top (
   sig tempColumns[16];
   var i;
 
-
-  .clk(clk) {
-    // The reset conditioner is used to synchronize the reset signal to the FPGA
-    // clock. This ensures the entire FPGA comes out of reset at the same time.
-    reset_conditioner reset_cond;
-    .rst(rst)
-    {
-      led_matrix ledM;
-    }
-  }
   
-  always {
-    
-    // for each row, display this pattern
-      for (i = 0; i < led_pattern.WIDTH[0]; i++) {
-        led_pattern[i] = h0FFE;
+    .clk(clk) {
+        reset_conditioner reset_cond;
+      // The reset conditioner is used to synchronize the reset signal to the FPGA
+      // clock. This ensures the entire FPGA comes out of reset at the same time.
+      .rst(rst){
+  
+        counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh
+      //leddisplay ld;
+      led_matrix ld;
       }
-    ledM.pattern=led_pattern;
-    
-    a=ledM.c;
-//    tempRows=ledM.c;
-    
-    c=ledM.a;
-//    tempColumns=ledM.a;
-    
-    
-    // signals to display on the matrix
-    
-    
-       
+    }
+
+    .clk(slowclock.value) {
+     fsm state (#INIT(ONE)) = {ONE,TWO, THREE};
+     dff cSignal[16](.rst(rst));
+     dff aSignal[16](.rst(rst));
+    }
+
+  
+
+      
+    always {
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     
@@ -60,6 +53,89 @@ module mojo_top (
     avr_rx = bz;            // not using serial port
     
     // checking columns
+      //a = ld.c_display;
+      //c = ld.r_display;
+    ld.pattern[15] = ~b0000000000000000;
+    ld.pattern[14] = ~16b0000000000000000;
+    ld.pattern[13] = ~16b0000000000000000;
+    ld.pattern[12] = ~h1020;
+    ld.pattern[11] = ~16b0000000000000000;
+    ld.pattern[10] = ~16b0000000000000000;
+    ld.pattern[9] =  ~16b0100000000001000;
+    ld.pattern[8] =  ~16b0100000000010000;
+    ld.pattern[7] =  ~16b0010001000100000;
+    ld.pattern[6] =  ~16b0001110111000000;
+    ld.pattern[5] =  ~16b0000000000000000;
+    ld.pattern[4] =  ~16b0000000000000000;
+    ld.pattern[3] =  ~16b0000000000000000;
+    ld.pattern[2] =  ~16b0000000000000000;
+    ld.pattern[1] =  ~16b0000000000000000;
+    ld.pattern[0] =  ~16b0000000000000000;
+    a=ld.a;
+    c=ld.c;
+    
+/*  
+      state.d=state.q;
+
+      case(state.q){
+        state.ONE:
+
+        a = h0000;
+        c = h00FF;
+
+        aSignal.d = h0000;
+        cSignal.d = hFFFF;
+
+        state.d = state.TWO;
+
+        //switch cathode selection
+        state.TWO:
+
+        if(cSignal.q == hFFFF) {
+          cSignal.d = hFFFE;
+        }
+        else if(cSignal.q == h7FFF) {
+          cSignal.d = hFFFE;
+        }
+        else {
+          cSignal.d = (cSignal.q << 1) + 1;
+        }
+
+        a = aSignal.q;
+        c = cSignal.q;
+        state.d=state.THREE;
+
+        //switch anode selection
+        state.THREE:
+
+        if(aSignal.q == h0000) {
+          aSignal.d = h0001;
+          state.d = state.THREE;
+        }
+        else if(aSignal.q == h8000) {
+          aSignal.d = h0001;
+          state.d = state.TWO;
+        }
+        else {
+          aSignal.d = (aSignal.q << 1);
+          state.d = state.THREE;
+        }
+
+
+        a = aSignal.q;
+        c = cSignal.q;
+            
+    }
+    */
+    
+//    tempColumns=ledM.a;
+    
+    
+    // signals to display on the matrix
+    
+    
+       
+    
     
   }
 }

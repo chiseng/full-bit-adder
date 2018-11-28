@@ -40,29 +40,72 @@ module mojo_top_0 (
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
   );
-  wire [16-1:0] M_ledM_a;
-  wire [16-1:0] M_ledM_c;
-  reg [256-1:0] M_ledM_pattern;
-  led_matrix_2 ledM (
+  wire [1-1:0] M_slowclock_value;
+  counter_2 slowclock (
     .clk(clk),
     .rst(rst),
-    .pattern(M_ledM_pattern),
-    .a(M_ledM_a),
-    .c(M_ledM_c)
+    .value(M_slowclock_value)
+  );
+  wire [16-1:0] M_ld_a;
+  wire [16-1:0] M_ld_c;
+  reg [256-1:0] M_ld_pattern;
+  led_matrix_3 ld (
+    .clk(clk),
+    .rst(rst),
+    .pattern(M_ld_pattern),
+    .a(M_ld_a),
+    .c(M_ld_c)
   );
   
+  localparam ONE_state = 2'd0;
+  localparam TWO_state = 2'd1;
+  localparam THREE_state = 2'd2;
+  
+  reg [1:0] M_state_d, M_state_q = ONE_state;
+  reg [15:0] M_cSignal_d, M_cSignal_q = 1'h0;
+  reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
+  
   always @* begin
-    for (i = 1'h0; i < 5'h10; i = i + 1) begin
-      led_pattern[(i)*16+15-:16] = 16'h0ffe;
-    end
-    M_ledM_pattern = led_pattern;
-    a = M_ledM_c;
-    c = M_ledM_a;
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
     led = 8'h00;
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
+    M_ld_pattern[240+15-:16] = 16'hffff;
+    M_ld_pattern[224+15-:16] = 16'hffff;
+    M_ld_pattern[208+15-:16] = 16'hffff;
+    M_ld_pattern[192+15-:16] = 16'hefdf;
+    M_ld_pattern[176+15-:16] = 16'hffff;
+    M_ld_pattern[160+15-:16] = 16'hffff;
+    M_ld_pattern[144+15-:16] = 16'hbff7;
+    M_ld_pattern[128+15-:16] = 16'hbfef;
+    M_ld_pattern[112+15-:16] = 16'hdddf;
+    M_ld_pattern[96+15-:16] = 16'he23f;
+    M_ld_pattern[80+15-:16] = 16'hffff;
+    M_ld_pattern[64+15-:16] = 16'hffff;
+    M_ld_pattern[48+15-:16] = 16'hffff;
+    M_ld_pattern[32+15-:16] = 16'hffff;
+    M_ld_pattern[16+15-:16] = 16'hffff;
+    M_ld_pattern[0+15-:16] = 16'hffff;
+    a = M_ld_a;
+    c = M_ld_c;
   end
+  
+  always @(posedge M_slowclock_value) begin
+    M_state_q <= M_state_d;
+    
+    if (rst == 1'b1) begin
+      M_aSignal_q <= 1'h0;
+    end else begin
+      M_aSignal_q <= M_aSignal_d;
+    end
+    
+    if (rst == 1'b1) begin
+      M_cSignal_q <= 1'h0;
+    end else begin
+      M_cSignal_q <= M_cSignal_d;
+    end
+  end
+  
 endmodule

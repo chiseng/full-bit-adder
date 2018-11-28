@@ -3,6 +3,7 @@
   <files>
     <src>led_matrix.luc</src>
     <src top="true">mojo_top.luc</src>
+    <src>leddisplay.luc</src>
     <ucf lib="true">mojo.ucf</ucf>
     <ucf>user.ucf</ucf>
     <component>counter.luc</component>
