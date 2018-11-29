@@ -8,7 +8,7 @@ module led_matrix (
 
     .clk(clk) {
       .rst(rst){
-        counter slowclock(#SIZE(4),#DIV(10));  //smaller the faster the refresh
+        counter slowclock(#SIZE(4),#DIV(12), #TOP(15));  //smaller the faster the refresh
         dff cSignal[16](.rst(rst)); //D flip-flip to store cathode signal
         dff aSignal[16](.rst(rst)); //D flip-flip to store anode signal
       }
@@ -19,7 +19,6 @@ module led_matrix (
       .rst(rst){
       }
     }
-
     //we scan through each row and draw the row pattern based on pattern[]
     //ie. running through 16 rows, each with different pattern and repeat
     always {
@@ -27,10 +26,11 @@ module led_matrix (
       c = hFFFF;
       aSignal.d = h0000;
       cSignal.d = hFFFF;
-
-      case(slowclock.value) {
+       case(slowclock.value){
+      //case(0) {
         0:
-          aSignal.d = pattern[slowclock.value];
+          //aSignal.d = pattern[slowclock.value];
+          aSignal.d = pattern[slowclock.value];   //8x{c{h9}};
           //cSignal.d = hFFFE;
           cSignal.d = h0001;
         1:
@@ -98,3 +98,4 @@ module led_matrix (
       c = cSignal.q;
     }
   }
+
