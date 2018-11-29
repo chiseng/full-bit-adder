@@ -72,39 +72,39 @@ module mojo_top_0 (
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
-    M_ld_pattern[240+15-:16] = 16'hffff;
-    M_ld_pattern[224+15-:16] = 16'hffff;
-    M_ld_pattern[208+15-:16] = 16'hffff;
-    M_ld_pattern[192+15-:16] = 16'hefdf;
-    M_ld_pattern[176+15-:16] = 16'hffff;
-    M_ld_pattern[160+15-:16] = 16'hffff;
-    M_ld_pattern[144+15-:16] = 16'hbff7;
-    M_ld_pattern[128+15-:16] = 16'hbfef;
-    M_ld_pattern[112+15-:16] = 16'hdddf;
-    M_ld_pattern[96+15-:16] = 16'he23f;
-    M_ld_pattern[80+15-:16] = 16'hffff;
-    M_ld_pattern[64+15-:16] = 16'hffff;
-    M_ld_pattern[48+15-:16] = 16'hffff;
-    M_ld_pattern[32+15-:16] = 16'hffff;
-    M_ld_pattern[16+15-:16] = 16'hffff;
-    M_ld_pattern[0+15-:16] = 16'hffff;
+    M_ld_pattern[240+15-:16] = 16'h9fff;
+    M_ld_pattern[224+15-:16] = 16'h9fff;
+    M_ld_pattern[208+15-:16] = 16'h9fff;
+    M_ld_pattern[192+15-:16] = 16'h9fff;
+    M_ld_pattern[176+15-:16] = 16'h9fff;
+    M_ld_pattern[160+15-:16] = 16'h9fff;
+    M_ld_pattern[144+15-:16] = 16'h9fff;
+    M_ld_pattern[128+15-:16] = 16'h9fff;
+    M_ld_pattern[112+15-:16] = 16'h6fff;
+    M_ld_pattern[96+15-:16] = 16'h77ff;
+    M_ld_pattern[80+15-:16] = 16'h7bff;
+    M_ld_pattern[64+15-:16] = 16'h7dff;
+    M_ld_pattern[48+15-:16] = 16'h7eff;
+    M_ld_pattern[32+15-:16] = 16'h7f7f;
+    M_ld_pattern[16+15-:16] = 16'h7fbf;
+    M_ld_pattern[0+15-:16] = 16'h7fdf;
     a = M_ld_a;
     c = M_ld_c;
   end
   
   always @(posedge M_slowclock_value) begin
+    if (rst == 1'b1) begin
+      M_cSignal_q <= 1'h0;
+    end else begin
+      M_cSignal_q <= M_cSignal_d;
+    end
+    
     M_state_q <= M_state_d;
     
     if (rst == 1'b1) begin
       M_aSignal_q <= 1'h0;
     end else begin
       M_aSignal_q <= M_aSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
-      M_cSignal_q <= 1'h0;
-    end else begin
-      M_cSignal_q <= M_cSignal_d;
     end
   end
   

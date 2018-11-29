@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 28 21:52:48 2018
+// Written by: Map P.20131013 on Wed Nov 28 22:07:41 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -52,15 +52,16 @@ COMP "c[13]" LOCATE = SITE "P104" LEVEL 1;
 COMP "c[14]" LOCATE = SITE "P111" LEVEL 1;
 COMP "c[15]" LOCATE = SITE "P114" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "ld/M_aSignal_q_14" BEL "ld/M_aSignal_q_12" BEL
-        "ld/M_aSignal_q_9" BEL "ld/M_aSignal_q_6" BEL "ld/M_aSignal_q_5" BEL
-        "ld/M_aSignal_q_4" BEL "ld/M_aSignal_q_3" BEL "ld/M_cSignal_q_15" BEL
-        "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12"
-        BEL "ld/M_cSignal_q_11" BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9"
-        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6"
-        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3"
-        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0"
-        BEL "ld/M_aSignal_q_0" BEL "ld/slowclock/M_ctr_q_13" BEL
+TIMEGRP clk = BEL "ld/M_aSignal_q_13" BEL "ld/M_aSignal_q_12" BEL
+        "ld/M_aSignal_q_11" BEL "ld/M_aSignal_q_10" BEL "ld/M_aSignal_q_9" BEL
+        "ld/M_aSignal_q_8" BEL "ld/M_aSignal_q_7" BEL "ld/M_aSignal_q_6" BEL
+        "ld/M_aSignal_q_5" BEL "ld/M_cSignal_q_15" BEL "ld/M_cSignal_q_14" BEL
+        "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_11"
+        BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9" BEL "ld/M_cSignal_q_8"
+        BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_5"
+        BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_2"
+        BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0" BEL "ld/M_aSignal_q_0"
+        BEL "ld/M_aSignal_q_15" BEL "ld/slowclock/M_ctr_q_13" BEL
         "ld/slowclock/M_ctr_q_12" BEL "ld/slowclock/M_ctr_q_11" BEL
         "ld/slowclock/M_ctr_q_10" BEL "ld/slowclock/M_ctr_q_9" BEL
         "ld/slowclock/M_ctr_q_8" BEL "ld/slowclock/M_ctr_q_7" BEL

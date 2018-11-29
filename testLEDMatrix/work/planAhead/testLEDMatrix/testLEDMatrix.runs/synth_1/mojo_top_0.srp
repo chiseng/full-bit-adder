@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Reading design: mojo_top_0.prj
@@ -79,7 +79,7 @@ Elaborating module <counter_2>.
 Elaborating module <led_matrix_3>.
 
 Elaborating module <counter_4>.
-WARNING:HDLCompiler:1127 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 95: Assignment to M_state_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 95: Assignment to M_cSignal_q ignored, since the identifier is never used
 WARNING:Xst:2972 - "/home/dominic/mojo/testLEDMatrix/work/planAhead/testLEDMatrix/testLEDMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44. All outputs of instance <slowclock> of block <counter_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
@@ -198,9 +198,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_6> in Unit <led_matrix_3> is equivalent to the following 4 FFs/Latches, which will be removed : <M_aSignal_q_7> <M_aSignal_q_8> <M_aSignal_q_10> <M_aSignal_q_11> 
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_9> in Unit <led_matrix_3> is equivalent to the following FF/Latch, which will be removed : <M_aSignal_q_13> 
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_0> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_aSignal_q_1> <M_aSignal_q_2> <M_aSignal_q_15> 
+INFO:Xst:2261 - The FF/Latch <M_aSignal_q_13> in Unit <led_matrix_3> is equivalent to the following FF/Latch, which will be removed : <M_aSignal_q_14> 
+INFO:Xst:2261 - The FF/Latch <M_aSignal_q_0> in Unit <led_matrix_3> is equivalent to the following 4 FFs/Latches, which will be removed : <M_aSignal_q_1> <M_aSignal_q_2> <M_aSignal_q_3> <M_aSignal_q_4> 
 
 Optimizing unit <mojo_top_0> ...
 
@@ -208,7 +207,7 @@ Optimizing unit <led_matrix_3> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 0.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 1.
 FlipFlop ld/slowclock/M_ctr_q_10 has been replicated 1 time(s)
 FlipFlop ld/slowclock/M_ctr_q_11 has been replicated 1 time(s)
 FlipFlop reset_cond/M_stage_q_3 has been replicated 1 time(s)
@@ -219,8 +218,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 45
- Flip-Flops                                            : 45
+# Registers                                            : 48
+ Flip-Flops                                            : 48
 
 =========================================================================
 
@@ -243,18 +242,18 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 71
+# BELS                             : 74
 #      GND                         : 3
-#      INV                         : 3
+#      INV                         : 4
 #      LUT1                        : 13
-#      LUT3                        : 1
-#      LUT4                        : 22
+#      LUT2                        : 1
+#      LUT4                        : 24
 #      MUXCY                       : 13
 #      VCC                         : 2
 #      XORCY                       : 14
-# FlipFlops/Latches                : 45
-#      FD                          : 1
-#      FDR                         : 39
+# FlipFlops/Latches                : 48
+#      FD                          : 2
+#      FDR                         : 41
 #      FDS                         : 5
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -270,15 +269,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              45  out of  11440     0%  
- Number of Slice LUTs:                   39  out of   5720     0%  
-    Number used as Logic:                39  out of   5720     0%  
+ Number of Slice Registers:              48  out of  11440     0%  
+ Number of Slice LUTs:                   42  out of   5720     0%  
+    Number used as Logic:                42  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     47
-   Number with an unused Flip Flop:       2  out of     47     4%  
-   Number with an unused LUT:             8  out of     47    17%  
-   Number of fully used LUT-FF pairs:    37  out of     47    78%  
+ Number of LUT Flip Flop pairs used:     51
+   Number with an unused Flip Flop:       3  out of     51     5%  
+   Number with an unused LUT:             9  out of     51    17%  
+   Number of fully used LUT-FF pairs:    39  out of     51    76%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -309,7 +308,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 45    |
+clk                                | BUFGP                  | 48    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -320,7 +319,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 2.914ns (Maximum Frequency: 343.171MHz)
+   Minimum period: 2.970ns (Maximum Frequency: 336.650MHz)
    Minimum input arrival time before clock: 3.563ns
    Maximum output required time after clock: 4.277ns
    Maximum combinational path delay: No path found
@@ -331,27 +330,26 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.914ns (frequency: 343.171MHz)
-  Total number of paths / destination ports: 263 / 83
+  Clock period: 2.970ns (frequency: 336.650MHz)
+  Total number of paths / destination ports: 273 / 88
 -------------------------------------------------------------------------
-Delay:               2.914ns (Levels of Logic = 2)
-  Source:            reset_cond/M_stage_q_3 (FF)
-  Destination:       ld/M_aSignal_q_0 (FF)
+Delay:               2.970ns (Levels of Logic = 2)
+  Source:            ld/slowclock/M_ctr_q_13 (FF)
+  Destination:       ld/M_aSignal_q_13 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: reset_cond/M_stage_q_3 to ld/M_aSignal_q_0
+  Data Path: ld/slowclock/M_ctr_q_13 to ld/M_aSignal_q_13
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             24   0.525   1.379  M_stage_q_3 (M_stage_q_3)
-     end scope: 'reset_cond:out'
-     begin scope: 'ld:rst'
-     INV:I->O              1   0.255   0.681  M_aSignal_q_0_rstpot1_INV_0 (M_aSignal_q_0_rstpot)
-     FD:D                      0.074          M_aSignal_q_0
+     FDR:C->Q             27   0.525   1.435  M_ctr_q_13 (M_ctr_q_13)
+     end scope: 'ld/slowclock:value<3>'
+     INV:I->O              1   0.255   0.681  Sh17861_INV_0 (Sh1786)
+     FDR:D                     0.074          M_aSignal_q_13
     ----------------------------------------
-    Total                      2.914ns (0.854ns logic, 2.060ns route)
-                                       (29.3% logic, 70.7% route)
+    Total                      2.970ns (0.854ns logic, 2.116ns route)
+                                       (28.7% logic, 71.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -379,17 +377,17 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
 Offset:              4.277ns (Levels of Logic = 2)
-  Source:            ld/M_aSignal_q_6 (FF)
-  Destination:       a<11> (PAD)
+  Source:            ld/M_aSignal_q_0 (FF)
+  Destination:       a<4> (PAD)
   Source Clock:      clk rising
 
-  Data Path: ld/M_aSignal_q_6 to a<11>
+  Data Path: ld/M_aSignal_q_0 to a<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              5   0.525   0.840  M_aSignal_q_6 (M_aSignal_q_6)
-     end scope: 'ld:a<10>'
-     OBUF:I->O                 2.912          a_11_OBUF (a<11>)
+     FD:C->Q               5   0.525   0.840  M_aSignal_q_0 (M_aSignal_q_0)
+     end scope: 'ld:a<0>'
+     OBUF:I->O                 2.912          a_4_OBUF (a<4>)
     ----------------------------------------
     Total                      4.277ns (3.437ns logic, 0.840ns route)
                                        (80.4% logic, 19.6% route)
@@ -404,21 +402,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.914|         |         |         |
+clk            |    2.970|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.68 secs
+Total CPU time to Xst completion: 3.63 secs
  
 --> 
 
 
-Total memory usage is 390288 kilobytes
+Total memory usage is 390300 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    8 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 
