@@ -1,0 +1,100 @@
+module led_matrix (
+  input clk,  // clock
+  input rst,  // reset
+  input pattern[16][16], //16 sets of 16bit pattern for each row
+  output a[16], //16 anode pins
+  output c[16]  //16 cathode pins
+  ) {
+
+    .clk(clk) {
+      .rst(rst){
+        counter slowclock(#SIZE(4),#DIV(12), #TOP(15));  //smaller the faster the refresh
+        dff cSignal[16](.rst(rst)); //D flip-flip to store cathode signal
+        dff aSignal[16](.rst(rst)); //D flip-flip to store anode signal
+      }
+    }
+
+    //this is not in use but left here for easy access when needed
+    .clk(slowclock.value) {
+      .rst(rst){
+      }
+    }
+    //we scan through each row and draw the row pattern based on pattern[]
+    //ie. running through 16 rows, each with different pattern and repeat
+    always {
+      a = pattern[slowclock.value];
+      c = hFFFF;
+      aSignal.d = h0000;
+      cSignal.d = hFFFF;
+       case(slowclock.value){
+      //case(0) {
+        0:
+          //aSignal.d = pattern[slowclock.value];
+          aSignal.d = pattern[slowclock.value];   //8x{c{h9}};
+          //cSignal.d = hFFFE;
+          cSignal.d = h0001;
+        1:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFFFD;
+        cSignal.d = h0002;
+        2:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFFFB;
+        cSignal.d = h0004;
+        3:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFFF7;
+        cSignal.d = h0008;
+        4:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFFEF;
+        cSignal.d = h0010;
+        5:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFFDF;
+        cSignal.d = h0020;
+        6:
+          aSignal.d = pattern[slowclock.value];
+         // cSignal.d = hFFBF;
+        cSignal.d = h0040;
+        7:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFF7F;
+        cSignal.d = h0080;
+        8:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFEFF;
+        cSignal.d = h0100;
+        9:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFDFF;
+        cSignal.d = h0200;
+        10:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hFBFF;
+        cSignal.d = h0400;
+        11:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hF7FF;
+        cSignal.d = h0800;
+        12:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hEFFF;
+        cSignal.d = h1000;
+        13:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hDFFF;
+        cSignal.d = h2000;
+        14:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = hBFFF;
+        cSignal.d = h4000;
+        15:
+          aSignal.d = pattern[slowclock.value];
+          //cSignal.d = h7FFF;
+        cSignal.d = h8000;
+      }
+      a = aSignal.q;
+      c = cSignal.q;
+    }
+  }
