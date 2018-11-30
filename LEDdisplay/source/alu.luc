@@ -1,0 +1,50 @@
+module alu (
+    input a[16],
+    input b[16],
+    input alufn[6],
+    output out[16],
+    output z,
+    output v,
+    output n
+  ) {
+  .a(a){
+    .b(b){
+    adder add;
+    boolean boole;
+    compare16 comp;
+    shifter shift;
+    multiply mult;
+    }
+  }
+  
+
+  always {
+    out = 0;
+    add.alufn=alufn[5:0];
+    mult.alufn=alufn[5:0];
+    boole.alufn=alufn[5:0];
+    comp.alufn=alufn[5:0];
+    shift.alufn=alufn[5:0];
+    z = 0;
+    v = 0;
+    n = 0;
+      
+    case(alufn[5:4]){
+        b00:
+        if((alufn[0]==0 || alufn[0]==1) && alufn[1]== 0){
+          out=add.out;
+          z = add.z;
+          v = add.v;
+          n = add.n;
+          }
+        else if(alufn[1]==1 && (alufn[0]==0||alufn[0]==1)){ out=mult.out;}
+        
+        b01:
+        out=boole.out;
+        b10: out=shift.c;
+        b11: out=comp.cmp;
+      }
+    }
+    
+    
+  }

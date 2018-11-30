@@ -1,0 +1,58 @@
+module generator_top (
+
+    // module generates the top 16 columns of the LED matrix
+    
+    
+    input clk,  // clock
+    input rst,  // reset
+    input random[4],         // random 4 bit number; since coconut can be on any of the 16 columns
+    input cols[16][14],      // column values from previous cycle
+    output colsout[16][14]   // column values for current cycle
+  ) {
+  // instantiate the alu module
+  alu alu;
+  
+  // ALUFN value for the different functions used
+  const SHL = 6b100000;
+  const ADD = 6b000000;
+  
+  
+  var i; // for loop to initialise colsout
+  
+  
+  // temp values of outputs of ALU
+  sig leftedcols[16][14];       // to save the cols after they have been shifted left by 1
+  sig temprandom[1];            // to convert binary 4 bits random number into decimals
+  // sig coconutadded[16][16];  // to save the cols after new coconut has been added
+  
+
+  always {
+  
+    // initialise rowsout values 
+    for ( i=0; i<16; i++){
+      colsout[i] = 14b0;
+    }
+    
+    
+    // shift left all columns
+    // coconuts all drop by 1 row
+    for (i=0; i<16; i++){
+      alu.a = cols[i];
+      alu.b = 1;
+      alu.alufn = SHL;
+      leftedcols[i] = alu.out;
+    }
+    
+    
+    // save the decimal value of the 4 bits random number
+    // eg. 1000 = 1*pow(2,3) = 8
+    temprandom = random[3]*$pow(2,3) + random[2]*$pow(2,2) + random[1]*2 + random[0];
+    
+    // add new coconut; randomly placed based on random number generator
+    leftedcols[temprandom] = leftedcols[temprandom] + 1 ;
+    
+    
+    // output the columns (all coconuts dropped by 1 and a new coconut is randomly added) 
+    colsout = leftedcols;
+  }
+}

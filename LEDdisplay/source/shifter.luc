@@ -1,0 +1,24 @@
+module shifter (
+    input alufn[6],
+    input a[16],
+    input b[16],
+    output c[16]
+  ) {
+
+  
+  always {
+    case (alufn[5:0]){
+      b100000:
+      // shift left
+        c = a << b[2:0];
+      b100001:
+      // shift right
+        c = a >> b[2:0];
+      b100011:
+      //shift right arithmetic
+        c = $signed(a) >>> b[2:0];
+      default:
+        c = a;
+    }  
+  }
+}

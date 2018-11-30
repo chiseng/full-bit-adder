@@ -1,0 +1,23 @@
+module compare16 (
+    input alufn[6],  // ALUFN[0:5]
+    input a[16],
+    input b[16],
+    output cmp[16]
+  ) {
+
+  always {
+    case(alufn[2:1])
+      {
+      b01: // LSB = z
+      cmp=a==b;
+      b10: // LSB = n xor v
+      cmp=a<b;
+      b11:
+      cmp=a<=b;
+      default:
+        cmp = 0;
+      
+    }
+    
+  }
+}

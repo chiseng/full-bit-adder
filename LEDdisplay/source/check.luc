@@ -1,0 +1,65 @@
+module check (
+
+    
+// module checks if a coconut has been caught by the user
+    
+    
+    input clk,  // clock
+    input rst,  // reset
+    input cols[16][14],    // column values of current cycle
+    input rows[2][16],      // row values of current cycle
+    input score,           // current score
+    output outscore        // output score
+  ) {
+  // instantiate the alu module
+  alu alu;
+  
+  
+  // ALUFN value for the different functions used
+  const AND = 6b011000;
+  const ADD = 6b000000;
+  
+  
+  // temp values
+  sig msb[16];         // most significant bits of the columns (the row closest to the user collector) 
+  sig tempcheck[16];   // temp value to store the output after AND-ing msb with user location (msb AND rows[1])) 
+  sig z;               // store z value
+  
+  
+  var i;        // for loop to get msb
+
+  always {
+    
+    //get the most significant bits from each column
+    for ( i=0; i<16; i++){
+      msb[15-i] = cols[i][13];
+    }
+    
+    // [15] =[0][13]
+    // [0] = [15][13]
+    
+    
+    // AND msb with rows[1] to check if coocnut coincides with user location
+    alu.a = msb;
+    alu.b = rows[1];
+    alu.alufn = AND;
+    tempcheck = alu.out;
+    
+    // ADD output from above with 0 to get the z value
+    alu.a = tempcheck;
+    alu.b = 16b0;
+    alu.alufn = ADD;
+    z = alu.z;
+    
+    if (z == 0){
+    // coconut is caught; add 1 to score
+      outscore = score + 1;
+    }
+    
+    else{
+    // coconut is not caught; score remains unchanged
+      outscore = score;
+    }
+    
+  }
+}

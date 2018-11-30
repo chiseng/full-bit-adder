@@ -1,0 +1,38 @@
+module boolean (
+    output out[16],
+    input alufn[6],
+    input a[16],
+    input b[16]
+    
+    
+  ) {
+
+  always {
+    // initialise output array
+    out = 16hxx;
+    case(alufn){
+    
+      b011000:   //if alufn is 011000 => return a AND b
+      out=a&b ;
+      
+      b011110:  //if alufn is 011110 => return a OR b
+      out= a|b;
+      
+      b010110:  //if alufn is 010110 => return a XOR b
+      out= a^b;
+      
+      b011010:  //if alufn is 011010 => return a
+      out=a;
+        
+      b011100:  //if alufn is 011100 => return b
+      out= b;
+      
+      b010111:  //if alufn is 010111 => return a NAND b
+      out = ~(a&b);
+        
+      b010001:  //if alufn is 010001 => return a NOR b
+      out = ~(a|b);
+      
+    }
+  }
+}

@@ -9,76 +9,171 @@ module mojo_top (
     input spi_sck,          // AVR SPI Clock
     output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
     input avr_tx,           // AVR TX (FPGA RX)
+    
+    
+    input button_onoff,            // button to on/off
+    input button_l,         // left button
+    input button_r,         // right button
+    
     output avr_rx,          // AVR RX (FPGA TX)
-    input avr_rx_busy,       // AVR RX buffer full
+    input avr_rx_busy,      // AVR RX buffer full
+    //output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    //output io_sel [4],      // Digit select on IO Shield
+    //input io_button [5],    // 5 buttons on IO Shield
+    //input io_dip [3][8]     // DIP switches on IO Shield
     output a[16],
     output c[16]
+
   ) {
   
   sig rst;                  // reset signal
-  sig led_pattern[16][16];
-  sig top_segment[16][14];
-  sig bottom_segment[2][16];
+  sig gen_botrows[2][16];          // temp storage of the rows from generator_bottom
+  sig gen_topcols[16][14];          // temp storage of the cols from generator_top
   var i;
+  
+  fsm gamefsm(.clk(clk), .rst(rst), #INIT(IDLE)) = {IDLE, STAGE1_START, STAGE1};
+   
 
-  
-    .clk(clk) {
-        reset_conditioner reset_cond;
-      // The reset conditioner is used to synchronize the reset signal to the FPGA
-      // clock. This ensures the entire FPGA comes out of reset at the same time.
-      .rst(rst){
-  
-        counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh
-      //leddisplay ld;
-      led_matrix ld;
-      leddisplay led_converter;
-      }
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    .rst(rst){
+      //multi_seven_seg seg;
+      generator_bottom generator_bottom;
+      generator_top generator_top;
+      check check;
+      //leddisplay leddisplay;
+      
+      dff score;
+      dff currentrows[2][16];
+      dff currentcols[16][14];
+     
+     
+     counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh 
+     led_matrix ld;
+     leddisplay led_converter;
     }
+  }
 
     .clk(slowclock.value) {
      fsm state (#INIT(ONE)) = {ONE,TWO, THREE};
      dff cSignal[16](.rst(rst));
      dff aSignal[16](.rst(rst));
     }
+  always {
+  
+  io_seg = 8hff;          // turn segments off    
+  a = 16b0;
+  c = 16b0;
+  
+ 
+ 
+
+  reset_cond.in = ~rst_n; // input raw inverted reset signal
+  rst = reset_cond.out;   // conditioned reset
 
   
-
+  led = 8h00;             // turn LEDs off
+  spi_miso = bz;          // not using SPI
+  spi_channel = bzzzz;    // not using flags
+  avr_rx = bz;            // not using serial port
+  
+    // initialise things
+    generator_bottom.button_l = button_l;
+    generator_bottom.button_r = button_r;
+    gen_botrows[0] = 16b0000000000000000;
+    gen_botrows[1] = 16b0000000000000000;
+    generator_bottom.rows = gen_botrows;
+    
+    led_converter.rows = gen_botrows;
+    
+    
+    for ( i=0; i<16; i++){
+          gen_topcols[i] = 14b0;
+          }
+    generator_top.cols = gen_topcols;
+    
+    led_converter.cols = gen_topcols;
+    
+    ld.pattern = led_converter.out;
+    // ****** CHANGE THIS *******
+    generator_top.random = 4b1011;
+    
+    check.cols = gen_topcols;
+    check.rows = gen_botrows;
+    check.score = score.q;
+   
+    
+    
+    case (gamefsm.q)  {
+    
+      gamefsm.IDLE:
+        // display score of last player
+        
+        if (button_onoff == 1){
+        gamefsm.d = gamefsm.STAGE1_START;
+        }
+        else{
+        gamefsm.d = gamefsm.IDLE;}
+          
+        
+      gamefsm.STAGE1_START:
       
-    always {
-    reset_cond.in = ~rst_n; // input raw inverted reset signal
-    rst = reset_cond.out;   // conditioned reset
-    
-    led = 8h00;             // turn LEDs off
-    spi_miso = bz;          // not using SPI
-    spi_channel = bzzzz;    // not using flags
-    avr_rx = bz;            // not using serial port
-    
-    led_converter.rows[1] = h01C0;
-    led_converter.rows[0] = h01C0;
-    
-    led_converter.cols[15] = h0000;
-    led_converter.cols[14] = h0100;
-    led_converter.cols[13] = h0800;
-    led_converter.cols[12] = h0080;
-    led_converter.cols[11] = h0900;
-    led_converter.cols[10] = h0000;
-    led_converter.cols[9] = h0100;
-    led_converter.cols[8] = h0010;
-    led_converter.cols[7] = h0000;
-    led_converter.cols[6] = h0000;
-    led_converter.cols[5] = h1000;
-    led_converter.cols[4] = h0000;
-    led_converter.cols[3] = h0000;
-    led_converter.cols[2] = h0000;
-    led_converter.cols[1] = h0000;
-    led_converter.cols[0] = h0000;
-    
-    
-    // invert display because when logic set to 0, grounded. causes LED to turn on and 1 causes LED to turn off.
-    ld.pattern =  ~led_converter.out;
-    a=ld.a;
-    c=ld.c;
-    
+        // initialise the playground; user in the middle
+        // no coconuts
+        gen_botrows[0] = 16b0000001110000000;
+        gen_botrows[1] = 16b0000001110000000;
+        
+        //cols[16][14]
+        for ( i=0; i<16; i++){
+          gen_topcols[i] = 14b0;
+          }
+        generator_bottom.button_l = button_l;
+        generator_bottom.button_r = button_r;
+        
+        // save the generator_bottom.rowsout
+        // display it
+        currentrows.d = generator_bottom.rowsout;
+        led_converter.rows = generator_bottom.rowsout;
+        
+        
+        generator_top.cols = gen_topcols;
+        
+        //save the generator_top.colsout;
+        // display it
+        currentcols.d = generator_top.colsout;
+        led_converter.cols = generator_top.colsout;
 
+        ld.pattern = led_converter.out;
+        a = ld.a;
+        c = ld.c;
+        gamefsm.d = gamefsm.STAGE1;
+        
+             
+      gamefsm.STAGE1:
+      
+        // pass in the prev saved rowsout & colsout
+        generator_bottom.rows = currentrows.q;
+        
+        generator_bottom.button_l = button_l;
+        generator_bottom.button_r = button_r;
+        
+        generator_top.cols = currentcols.q;
+        
+        // if timer != 0
+        //check if score + 1
+        check.cols = generator_top.colsout;
+        check.rows = generator_bottom.rowsout;
+        check.score = score.q;
+        score.d = check.outscore;
+        
+        gamefsm.d = gamefsm.STAGE1;
+        
+        //else if timer == 0
+        //state.d= = state.IDLE;
+  
   }
+}
 }
