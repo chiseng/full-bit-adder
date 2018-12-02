@@ -20,7 +20,7 @@ module mojo_top (
     //output io_led [3][8],   // LEDs on IO Shield
     output io_seg [8],      // 7-segment LEDs on IO Shield
     //output io_sel [4],      // Digit select on IO Shield
-    //input io_button [5],    // 5 buttons on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
     //input io_dip [3][8]     // DIP switches on IO Shield
     output a[16],
     output c[16]
@@ -32,13 +32,13 @@ module mojo_top (
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
   var i;
   
-  fsm gamefsm(.clk(clk), .rst(rst), #INIT(IDLE)) = {IDLE, STAGE1_START, STAGE1};
-   
-
+  fsm gamefsm(.clk(clk), .rst(rst)) = {IDLE,STAGE1_START, STAGE1};
+  
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
+    button_conditioner button_start;
     .rst(rst){
       //multi_seven_seg seg;
       generator_bottom generator_bottom;
@@ -63,13 +63,12 @@ module mojo_top (
      dff aSignal[16](.rst(rst));
     }
   always {
-  
+
+
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
-  
- 
- 
+  button_start.in=io_button[3];
 
   reset_cond.in = ~rst_n; // input raw inverted reset signal
   rst = reset_cond.out;   // conditioned reset
@@ -98,8 +97,7 @@ module mojo_top (
     led_converter.cols = gen_topcols;
     
     ld.pattern = led_converter.out;
-    // ****** CHANGE THIS *******
-    generator_top.random = 4b1011;
+    // ****** CHANGED ******    
     
     check.cols = gen_topcols;
     check.rows = gen_botrows;
@@ -112,7 +110,7 @@ module mojo_top (
       gamefsm.IDLE:
         // display score of last player
         
-        if (button_onoff == 1){
+        if (button_start.out == 1){
         gamefsm.d = gamefsm.STAGE1_START;
         }
         else{
@@ -120,7 +118,6 @@ module mojo_top (
           
         
       gamefsm.STAGE1_START:
-      
         // initialise the playground; user in the middle
         // no coconuts
         gen_botrows[0] = 16b0000001110000000;
@@ -149,7 +146,7 @@ module mojo_top (
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        gamefsm.d = gamefsm.STAGE1;
+        gamefsm.d = gamefsm.STAGE1_START;
         
              
       gamefsm.STAGE1:
