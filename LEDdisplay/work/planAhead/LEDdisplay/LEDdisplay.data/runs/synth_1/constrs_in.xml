@@ -2,18 +2,18 @@
 <DARoots Version="1" Minor="26">
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/user.ucf">
+    <File Path="$PSRCDIR/constrs_1/imports/dominic/repositories/full-bit-adder/LEDdisplay/constraint/user.ucf">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../constraint/user.ucf"/>
-        <Attr Name="ImportTime" Val="1543506821"/>
+        <Attr Name="ImportTime" Val="1543573765"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/constrs_1/imports/Mojo IDE/library/components/mojo.ucf">
+    <File Path="$PSRCDIR/constrs_1/imports/dominic/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../Program Files/Mojo IDE/library/components/mojo.ucf"/>
-        <Attr Name="ImportTime" Val="1477283388"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf"/>
+        <Attr Name="ImportTime" Val="1477337389"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
       </FileInfo>

@@ -1,8 +1,8 @@
 INTSTYLE=pa
-INFILE=C:\Users\thadd\Documents\GitHub\full-bit-adder\LEDdisplay\work\planAhead\LEDdisplay\LEDdisplay.runs\impl_1\mojo_top_0_routed.ncd
-OUTFILE=C:\Users\thadd\Documents\GitHub\full-bit-adder\LEDdisplay\work\planAhead\LEDdisplay\LEDdisplay.runs\impl_1\mojo_top_0.bit
+INFILE=/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.runs/impl_1/mojo_top_0_routed.ncd
+OUTFILE=/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.runs/impl_1/mojo_top_0.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\thadd\Documents\GitHub\full-bit-adder\LEDdisplay\work\planAhead\LEDdisplay\LEDdisplay.runs\impl_1
+WORKINGDIR=/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.runs/impl_1
 LICENSE=WebPack
-USER_INFO=211596801_0_0_030
+USER_INFO=211595384_0_0_118

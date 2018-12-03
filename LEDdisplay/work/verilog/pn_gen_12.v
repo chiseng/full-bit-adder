@@ -28,9 +28,9 @@ module pn_gen_12 (
   
   always @* begin
     M_w_d = M_w_q;
-    M_z_d = M_z_q;
-    M_y_d = M_y_q;
     M_x_d = M_x_q;
+    M_y_d = M_y_q;
+    M_z_d = M_z_q;
     
     num = M_w_q;
     t = M_x_q ^ (M_x_q << 4'hb);

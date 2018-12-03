@@ -23,7 +23,8 @@ module mojo_top (
     input io_button [5],    // 5 buttons on IO Shield
     //input io_dip [3][8]     // DIP switches on IO Shield
     output a[16],
-    output c[16]
+    output c[16],
+    input button2
 
   ) {
   
@@ -32,7 +33,7 @@ module mojo_top (
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
   var i;
   
-  fsm gamefsm(.clk(clk), .rst(rst)) = {IDLE,STAGE1_START, STAGE1};
+  fsm gamefsm(.clk(clk), .rst(rst), #INIT(STAGE1_START)) = {IDLE,STAGE1_START, STAGE1};
   
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
@@ -64,7 +65,7 @@ module mojo_top (
     }
   always {
 
-
+  generator_top.button2=button2;
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
@@ -119,36 +120,38 @@ module mojo_top (
       gamefsm.STAGE1_START:
         // initialise the playground; user in the middle
         // no coconuts
-        gen_botrows[0] = 16b0000001110000000;
-        gen_botrows[1] = 16b0000001110000000;
+        gen_botrows[0] = ~16b0000001110000000;
+        gen_botrows[1] = ~16b0000001110000000;
         generator_bottom.rows=gen_botrows;
         led_converter.rows=generator_bottom.rowsout;
         
         //cols[16][14]
         for ( i=0; i<16; i++){
-          gen_topcols[i] = 14b0;
+          gen_topcols[i] = ~14b0;
           }
         generator_bottom.button_l = button_l;
         generator_bottom.button_r = button_r;
         
+//        led_converter.cols=gen_topcols;
         // save the generator_bottom.rowsout
         // display it
-
+        
         currentrows.d = generator_bottom.rowsout;
         if(gamefsm.q!=gamefsm.STAGE1) currentrows.d=currentrows.q;
         led_converter.rows = generator_bottom.rowsout;
         
-        generator_top.cols = ~gen_topcols;
+        generator_top.cols = gen_topcols;
+        led=generator_top.led;
         
         //save the generator_top.colsout;
         // display it
         currentcols.d = generator_top.colsout;
+        if(gamefsm.q!=gamefsm.STAGE1) currentcols.d=currentcols.q;
         led_converter.cols = generator_top.colsout;
         
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        
         gamefsm.d = gamefsm.STAGE1_START;
         
              

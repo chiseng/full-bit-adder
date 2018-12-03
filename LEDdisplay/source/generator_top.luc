@@ -4,13 +4,21 @@ module generator_top (
     input clk,  // clock
     input rst,  // reset
     input cols[16][14],      // column values from previous cycle
-    output colsout[16][14]   // column values for current cycle
+    output colsout[16][14],   // column values for current cycle
+    input button2,
+    output led[8]
   ) {
   // instantiate the alu module
   alu alu;
   .clk(clk){
+    dff counts[30];
+    dff leftedcols[16][14];
+    dff temprandom[1];
+    dff cucked[30];
+    dff prng[8];
   .rst(rst){
       pn_gen rng;
+      fsm new_fsm={STATE1};
     }
   }
   // ALUFN value for the different functions used
@@ -21,18 +29,23 @@ module generator_top (
   var i; // for loop to initialise colsout
   
   // temp values of outputs of ALU
-  sig leftedcols[16][14];       // to save the cols after they have been shifted left by 1
-  sig temprandom[1];            // to convert binary 4 bits random number into decimals
+  //sig leftedcols[16][14];       // to save the cols after they have been shifted left by 1
+  //sig temprandom[1];            // to convert binary 4 bits random number into decimals
   // sig coconutadded[16][16];  // to save the cols after new coconut has been added
-  sig random[4];         // random 4 bit number; since coconut can be on any of the 16 columns
+  //sig random[4];         // random 4 bit number; since coconut can be on any of the 16 columns
+  sig random;
   
 
   always {
+    led=8h00;
     rng.seed=20;
-    rng.next=1; //always generate numbers
+    rng.next=1;
+    counts.d=counts.q+1;
+    rng.next=0;
+    //if(counts.q[20]==1) rng.next=1; //always generate numbers
     // initialise rowsout values 
     for ( i=0; i<16; i++){
-      colsout[i] = 14b0;
+      colsout[i] = ~14b0;
     }
     
     
@@ -42,19 +55,36 @@ module generator_top (
       alu.a = cols[i];
       alu.b = 1;
       alu.alufn = SHL;
-      leftedcols[i] = alu.out[13:0];
+      leftedcols.d[i] = alu.out[13:0];
     }
-    
-    random=rng.num[3:0];
+    //if (button2==0) {
+     //  
+      //led=rng.num[7:0];} 
+//    random=rng.num[3:0];
     // save the decimal value of the 4 bits random number
     // eg. 1000 = 1*pow(2,3) = 8
-    temprandom = random[3]*$pow(2,3) + random[2]*$pow(2,2) + random[1]*2 + random[0];
+    cucked.d=cucked.q+1;
+    case(new_fsm.q){
+      new_fsm.STATE1:
+     if( cucked.q[23]==1){
+     prng.d=rng.num[23:17];
+     led=prng.q;
+     random= rng.num[3]*$pow(2,3) + rng.num[2]*$pow(2,2) + rng.num[1]*2 + rng.num[0];
     
+    //led = c{rng.num[7:0]};
     // add new coconut; randomly placed based on random number generator
-    leftedcols[temprandom] = leftedcols[temprandom] + 1 ;
+    leftedcols.d[random] = leftedcols.q[random] + 1 ;
+    //leftedcols.d[6] = leftedcols.q[6] + 1 ;
     
     
     // output the columns (all coconuts dropped by 1 and a new coconut is randomly added) 
-    colsout = leftedcols;
+    colsout = leftedcols.q;
+    cucked.d=0;
+     new_fsm.d=new_fsm.STATE1;
+        }
+    else{
+          prng.d=prng.q;
+        }
+    }
   }
 }

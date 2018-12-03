@@ -1,7 +1,7 @@
-#Release 14.7 - par P.20131013 (nt)
+#Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Mon Dec 03 13:45:17 2018
+#Mon Dec  3 21:58:01 2018
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -59,7 +59,7 @@ P37,,,PROGRAM_B_2,,,,,,,,,,,,
 P38,rst_n,IOB,IO_L65N_CSO_B_2,INPUT,LVTTL,2,,,,NONE,,LOCATED,NO,NONE,
 P39,avr_rx_busy,IOB,IO_L65P_INIT_B_2,INPUT,LVTTL,2,,,,NONE,,LOCATED,NO,NONE,
 P40,,IOBS,IO_L64N_D9_2,UNUSED,,2,,,,,,,,,
-P41,,IOBM,IO_L64P_D8_2,UNUSED,,2,,,,,,,,,
+P41,button2,IOB,IO_L64P_D8_2,INPUT,LVTTL,2,,,PULLDOWN,NONE,,LOCATED,NO,NONE,
 P42,,,VCCO_2,,,2,,,,,3.30,,,,
 P43,spi_sck,IOB,IO_L62N_D6_2,INPUT,LVTTL,2,,,,NONE,,LOCATED,NO,NONE,
 P44,spi_mosi,IOB,IO_L62P_D5_2,INPUT,LVTTL,2,,,,NONE,,LOCATED,NO,NONE,
