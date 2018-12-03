@@ -7,37 +7,43 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_16.v" into library work
-Parsing module <shifter_16>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_17.v" into library work
-Parsing module <multiply_17>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_15.v" into library work
-Parsing module <compare16_15>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_14.v" into library work
-Parsing module <boolean_14>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_13.v" into library work
-Parsing module <adder_13>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_12.v" into library work
-Parsing module <counter_12>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_11.v" into library work
-Parsing module <counter_11>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_8.v" into library work
-Parsing module <alu_8>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_19.v" into library work
+Parsing module <shifter_19>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_20.v" into library work
+Parsing module <multiply_20>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_18.v" into library work
+Parsing module <compare16_18>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_17.v" into library work
+Parsing module <boolean_17>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_16.v" into library work
+Parsing module <adder_16>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_12.v" into library work
+Parsing module <pn_gen_12>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v" into library work
+Parsing module <pipeline_9>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_15.v" into library work
+Parsing module <counter_15>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_14.v" into library work
+Parsing module <counter_14>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v" into library work
+Parsing module <alu_10>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_6.v" into library work
-Parsing module <led_matrix_6>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_7.v" into library work
-Parsing module <leddisplay_7>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" into library work
-Parsing module <generator_top_3>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" into library work
-Parsing module <generator_bottom_2>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_5.v" into library work
-Parsing module <counter_5>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_4.v" into library work
-Parsing module <check_4>.
-Analyzing Verilog file "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v" into library work
+Parsing module <led_matrix_7>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" into library work
+Parsing module <leddisplay_8>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" into library work
+Parsing module <generator_top_4>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" into library work
+Parsing module <generator_bottom_3>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_6.v" into library work
+Parsing module <counter_6>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" into library work
+Parsing module <check_5>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_2.v" into library work
+Parsing module <button_conditioner_2>.
+Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -48,55 +54,66 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <reset_conditioner_1>.
 
-Elaborating module <generator_bottom_2>.
+Elaborating module <button_conditioner_2>.
 
-Elaborating module <alu_8>.
+Elaborating module <pipeline_9>.
 
-Elaborating module <adder_13>.
+Elaborating module <generator_bottom_3>.
 
-Elaborating module <boolean_14>.
+Elaborating module <alu_10>.
 
-Elaborating module <compare16_15>.
+Elaborating module <adder_16>.
 
-Elaborating module <shifter_16>.
+Elaborating module <boolean_17>.
 
-Elaborating module <multiply_17>.
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
+Elaborating module <compare16_18>.
 
-Elaborating module <generator_top_3>.
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" Line 29: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" Line 30: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" Line 31: Assignment to M_alu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" Line 52: Result of 16-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" Line 54: Result of 4-bit expression is truncated to fit in 1-bit target.
+Elaborating module <shifter_19>.
 
-Elaborating module <check_4>.
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_4.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_4.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
+Elaborating module <multiply_20>.
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
 
-Elaborating module <counter_5>.
+Elaborating module <generator_top_4>.
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 28: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 29: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 30: Assignment to M_alu_n ignored, since the identifier is never used
 
-Elaborating module <led_matrix_6>.
+Elaborating module <pn_gen_12>.
+WARNING:HDLCompiler:413 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 69: Result of 4-bit expression is truncated to fit in 1-bit target.
 
-Elaborating module <counter_11>.
+Elaborating module <check_5>.
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
 
-Elaborating module <leddisplay_7>.
+Elaborating module <counter_6>.
 
-Elaborating module <counter_12>.
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_7.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 202: Assignment to M_state_q ignored, since the identifier is never used
-WARNING:Xst:2972 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_7.v" line 20. All outputs of instance <counter_r> of block <counter_12> are unconnected in block <leddisplay_7>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 77. All outputs of instance <check> of block <check_4> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 89. All outputs of instance <slowclock> of block <counter_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+Elaborating module <led_matrix_7>.
+
+Elaborating module <counter_14>.
+
+Elaborating module <leddisplay_8>.
+
+Elaborating module <counter_15>.
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 214: Assignment to M_state_q ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 93: Net <M_currentrows_d[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 94: Net <M_currentcols_d[223]> does not have a driver.
+WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20. All outputs of instance <counter_r> of block <counter_15> are unconnected in block <leddisplay_8>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 64. All outputs of instance <generator_bottom> of block <generator_bottom_3> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 74. All outputs of instance <generator_top> of block <generator_top_4> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 84. All outputs of instance <check> of block <check_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 96. All outputs of instance <slowclock> of block <counter_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <io_button<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <io_button<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -104,63 +121,83 @@ WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_onoff> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 89: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
-    Found 32-bit register for signal <M_currentrows_q>.
-    Found 224-bit register for signal <M_currentcols_q>.
-    Found 1-bit register for signal <M_gamefsm_q>.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 123
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 123
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 123
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 123
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 123
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 123
+INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 96: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <M_currentrows_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <M_currentcols_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <M_gamefsm_q>.
+INFO:Xst:1799 - State 00 is never reached in FSM <M_gamefsm_q>.
+INFO:Xst:1799 - State 10 is never reached in FSM <M_gamefsm_q>.
+    Found finite state machine <FSM_0> for signal <M_gamefsm_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 1                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 31                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | M_reset_cond_out (positive)                    |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 01                                             |
+    | Power Up State     | 01                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 130
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 130
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 130
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 130
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 130
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 130
     Summary:
-	inferred 257 D-type flip-flop(s).
-	inferred   4 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 	inferred   6 Tristate(s).
+	inferred   1 Finite State Machine(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <reset_conditioner_1>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
-Synthesizing Unit <generator_bottom_2>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+Synthesizing Unit <button_conditioner_2>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_2.v".
+    Found 20-bit register for signal <M_ctr_q>.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_3_o_add_2_OUT> created at line 39.
     Summary:
-	inferred   3 Multiplexer(s).
-Unit <generator_bottom_2> synthesized.
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <button_conditioner_2> synthesized.
 
-Synthesizing Unit <alu_8>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_8.v".
-    Found 16-bit 4-to-1 multiplexer for signal <out> created at line 77.
+Synthesizing Unit <pipeline_9>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v".
+    Found 2-bit register for signal <M_pipe_q>.
     Summary:
-	inferred   9 Multiplexer(s).
-Unit <alu_8> synthesized.
+	inferred   2 D-type flip-flop(s).
+Unit <pipeline_9> synthesized.
 
-Synthesizing Unit <adder_13>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_13.v".
+Synthesizing Unit <alu_10>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v".
+    Summary:
+	no macro.
+Unit <alu_10> synthesized.
+
+Synthesizing Unit <adder_16>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_16.v".
     Found 16-bit subtractor for signal <n0025[15:0]> created at line 35.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 31.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   3 Multiplexer(s).
-Unit <adder_13> synthesized.
+Unit <adder_16> synthesized.
 
-Synthesizing Unit <boolean_14>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_14.v".
+Synthesizing Unit <boolean_17>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_17.v".
     Summary:
-Unit <boolean_14> synthesized.
+Unit <boolean_17> synthesized.
 
-Synthesizing Unit <compare16_15>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_15.v".
+Synthesizing Unit <compare16_18>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_18.v".
 WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 18.
@@ -170,10 +207,10 @@ WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved 
     Summary:
 	inferred   3 Comparator(s).
 	inferred   1 Multiplexer(s).
-Unit <compare16_15> synthesized.
+Unit <compare16_18> synthesized.
 
-Synthesizing Unit <shifter_16>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_16.v".
+Synthesizing Unit <shifter_19>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_19.v".
 WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[2]_shift_left_0_OUT> created at line 20
     Found 16-bit shifter logical right for signal <a[15]_b[2]_shift_right_1_OUT> created at line 23
@@ -182,99 +219,214 @@ WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and
     Summary:
 	inferred   2 Multiplexer(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <shifter_16> synthesized.
+Unit <shifter_19> synthesized.
 
-Synthesizing Unit <multiply_17>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_17.v".
+Synthesizing Unit <multiply_20>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_20.v".
     Found 16x16-bit multiplier for signal <n0010> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <multiply_17> synthesized.
+Unit <multiply_20> synthesized.
 
 Synthesizing Unit <div_16s_16s>.
     Related source file is "".
     Found 16-bit subtractor for signal <a[15]_unary_minus_1_OUT> created at line 0.
     Found 16-bit subtractor for signal <b[15]_unary_minus_3_OUT> created at line 0.
     Found 32-bit adder for signal <n1002> created at line 0.
-    Found 32-bit adder for signal <GND_11_o_b[15]_add_5_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_13_o_b[15]_add_5_OUT> created at line 0.
     Found 31-bit adder for signal <n1006> created at line 0.
-    Found 31-bit adder for signal <GND_11_o_b[15]_add_7_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_13_o_b[15]_add_7_OUT> created at line 0.
     Found 30-bit adder for signal <n1010> created at line 0.
-    Found 30-bit adder for signal <GND_11_o_b[15]_add_9_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_13_o_b[15]_add_9_OUT> created at line 0.
     Found 29-bit adder for signal <n1014> created at line 0.
-    Found 29-bit adder for signal <GND_11_o_b[15]_add_11_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_13_o_b[15]_add_11_OUT> created at line 0.
     Found 28-bit adder for signal <n1018> created at line 0.
-    Found 28-bit adder for signal <GND_11_o_b[15]_add_13_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_13_o_b[15]_add_13_OUT> created at line 0.
     Found 27-bit adder for signal <n1022> created at line 0.
-    Found 27-bit adder for signal <GND_11_o_b[15]_add_15_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_13_o_b[15]_add_15_OUT> created at line 0.
     Found 26-bit adder for signal <n1026> created at line 0.
-    Found 26-bit adder for signal <GND_11_o_b[15]_add_17_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_13_o_b[15]_add_17_OUT> created at line 0.
     Found 25-bit adder for signal <n1030> created at line 0.
-    Found 25-bit adder for signal <GND_11_o_b[15]_add_19_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_13_o_b[15]_add_19_OUT> created at line 0.
     Found 24-bit adder for signal <n1034> created at line 0.
-    Found 24-bit adder for signal <GND_11_o_b[15]_add_21_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_13_o_b[15]_add_21_OUT> created at line 0.
     Found 23-bit adder for signal <n1038> created at line 0.
-    Found 23-bit adder for signal <GND_11_o_b[15]_add_23_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_13_o_b[15]_add_23_OUT> created at line 0.
     Found 22-bit adder for signal <n1042> created at line 0.
-    Found 22-bit adder for signal <GND_11_o_b[15]_add_25_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_13_o_b[15]_add_25_OUT> created at line 0.
     Found 21-bit adder for signal <n1046> created at line 0.
-    Found 21-bit adder for signal <GND_11_o_b[15]_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <GND_13_o_b[15]_add_27_OUT> created at line 0.
     Found 20-bit adder for signal <n1050> created at line 0.
-    Found 20-bit adder for signal <GND_11_o_b[15]_add_29_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_13_o_b[15]_add_29_OUT> created at line 0.
     Found 19-bit adder for signal <n1054> created at line 0.
-    Found 19-bit adder for signal <GND_11_o_b[15]_add_31_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_13_o_b[15]_add_31_OUT> created at line 0.
     Found 18-bit adder for signal <n1058> created at line 0.
-    Found 18-bit adder for signal <GND_11_o_b[15]_add_33_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_13_o_b[15]_add_33_OUT> created at line 0.
     Found 17-bit adder for signal <n1062> created at line 0.
-    Found 17-bit adder for signal <GND_11_o_b[15]_add_35_OUT> created at line 0.
-    Found 17-bit adder for signal <GND_11_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
-    Found 32-bit comparator greater for signal <BUS_0001_INV_498_o> created at line 0
-    Found 31-bit comparator greater for signal <BUS_0002_INV_497_o> created at line 0
-    Found 30-bit comparator greater for signal <BUS_0003_INV_496_o> created at line 0
-    Found 29-bit comparator greater for signal <BUS_0004_INV_495_o> created at line 0
-    Found 28-bit comparator greater for signal <BUS_0005_INV_494_o> created at line 0
-    Found 27-bit comparator greater for signal <BUS_0006_INV_493_o> created at line 0
-    Found 26-bit comparator greater for signal <BUS_0007_INV_492_o> created at line 0
-    Found 25-bit comparator greater for signal <BUS_0008_INV_491_o> created at line 0
-    Found 24-bit comparator greater for signal <BUS_0009_INV_490_o> created at line 0
-    Found 23-bit comparator greater for signal <BUS_0010_INV_489_o> created at line 0
-    Found 22-bit comparator greater for signal <BUS_0011_INV_488_o> created at line 0
-    Found 21-bit comparator greater for signal <BUS_0012_INV_487_o> created at line 0
-    Found 20-bit comparator greater for signal <BUS_0013_INV_486_o> created at line 0
-    Found 19-bit comparator greater for signal <BUS_0014_INV_485_o> created at line 0
-    Found 18-bit comparator greater for signal <BUS_0015_INV_484_o> created at line 0
-    Found 17-bit comparator greater for signal <BUS_0016_INV_483_o> created at line 0
-    Found 16-bit comparator greater for signal <BUS_0017_INV_482_o> created at line 0
+    Found 17-bit adder for signal <GND_13_o_b[15]_add_35_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_13_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
+    Found 32-bit comparator greater for signal <BUS_0001_INV_500_o> created at line 0
+    Found 31-bit comparator greater for signal <BUS_0002_INV_499_o> created at line 0
+    Found 30-bit comparator greater for signal <BUS_0003_INV_498_o> created at line 0
+    Found 29-bit comparator greater for signal <BUS_0004_INV_497_o> created at line 0
+    Found 28-bit comparator greater for signal <BUS_0005_INV_496_o> created at line 0
+    Found 27-bit comparator greater for signal <BUS_0006_INV_495_o> created at line 0
+    Found 26-bit comparator greater for signal <BUS_0007_INV_494_o> created at line 0
+    Found 25-bit comparator greater for signal <BUS_0008_INV_493_o> created at line 0
+    Found 24-bit comparator greater for signal <BUS_0009_INV_492_o> created at line 0
+    Found 23-bit comparator greater for signal <BUS_0010_INV_491_o> created at line 0
+    Found 22-bit comparator greater for signal <BUS_0011_INV_490_o> created at line 0
+    Found 21-bit comparator greater for signal <BUS_0012_INV_489_o> created at line 0
+    Found 20-bit comparator greater for signal <BUS_0013_INV_488_o> created at line 0
+    Found 19-bit comparator greater for signal <BUS_0014_INV_487_o> created at line 0
+    Found 18-bit comparator greater for signal <BUS_0015_INV_486_o> created at line 0
+    Found 17-bit comparator greater for signal <BUS_0016_INV_485_o> created at line 0
+    Found 16-bit comparator greater for signal <BUS_0017_INV_484_o> created at line 0
     Summary:
 	inferred  35 Adder/Subtractor(s).
 	inferred  17 Comparator(s).
 	inferred 244 Multiplexer(s).
 Unit <div_16s_16s> synthesized.
 
-Synthesizing Unit <generator_top_3>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v".
-WARNING:Xst:647 - Input <cols<209:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" line 24: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" line 24: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_3.v" line 24: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
-    Found 6-bit adder for signal <n0172> created at line 55.
-    Found 14-bit adder for signal <M_alu_out[13]_GND_13_o_add_6_OUT> created at line 55.
-    Found 1x4-bit multiplier for signal <random[3]_PWR_15_o_MuLt_3_OUT> created at line 55.
-    Found 447-bit shifter logical right for signal <n0163> created at line 55
+Synthesizing Unit <pn_gen_12>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_12.v".
+    Found 1-bit register for signal <M_y_q<31>>.
+    Found 1-bit register for signal <M_y_q<30>>.
+    Found 1-bit register for signal <M_y_q<29>>.
+    Found 1-bit register for signal <M_y_q<28>>.
+    Found 1-bit register for signal <M_y_q<27>>.
+    Found 1-bit register for signal <M_y_q<26>>.
+    Found 1-bit register for signal <M_y_q<25>>.
+    Found 1-bit register for signal <M_y_q<24>>.
+    Found 1-bit register for signal <M_y_q<23>>.
+    Found 1-bit register for signal <M_y_q<22>>.
+    Found 1-bit register for signal <M_y_q<21>>.
+    Found 1-bit register for signal <M_y_q<20>>.
+    Found 1-bit register for signal <M_y_q<19>>.
+    Found 1-bit register for signal <M_y_q<18>>.
+    Found 1-bit register for signal <M_y_q<17>>.
+    Found 1-bit register for signal <M_y_q<16>>.
+    Found 1-bit register for signal <M_y_q<15>>.
+    Found 1-bit register for signal <M_y_q<14>>.
+    Found 1-bit register for signal <M_y_q<13>>.
+    Found 1-bit register for signal <M_y_q<12>>.
+    Found 1-bit register for signal <M_y_q<11>>.
+    Found 1-bit register for signal <M_y_q<10>>.
+    Found 1-bit register for signal <M_y_q<9>>.
+    Found 1-bit register for signal <M_y_q<8>>.
+    Found 1-bit register for signal <M_y_q<7>>.
+    Found 1-bit register for signal <M_y_q<6>>.
+    Found 1-bit register for signal <M_y_q<5>>.
+    Found 1-bit register for signal <M_y_q<4>>.
+    Found 1-bit register for signal <M_y_q<3>>.
+    Found 1-bit register for signal <M_y_q<2>>.
+    Found 1-bit register for signal <M_y_q<1>>.
+    Found 1-bit register for signal <M_y_q<0>>.
+    Found 1-bit register for signal <M_z_q<31>>.
+    Found 1-bit register for signal <M_z_q<30>>.
+    Found 1-bit register for signal <M_z_q<29>>.
+    Found 1-bit register for signal <M_z_q<28>>.
+    Found 1-bit register for signal <M_z_q<27>>.
+    Found 1-bit register for signal <M_z_q<26>>.
+    Found 1-bit register for signal <M_z_q<25>>.
+    Found 1-bit register for signal <M_z_q<24>>.
+    Found 1-bit register for signal <M_z_q<23>>.
+    Found 1-bit register for signal <M_z_q<22>>.
+    Found 1-bit register for signal <M_z_q<21>>.
+    Found 1-bit register for signal <M_z_q<20>>.
+    Found 1-bit register for signal <M_z_q<19>>.
+    Found 1-bit register for signal <M_z_q<18>>.
+    Found 1-bit register for signal <M_z_q<17>>.
+    Found 1-bit register for signal <M_z_q<16>>.
+    Found 1-bit register for signal <M_z_q<15>>.
+    Found 1-bit register for signal <M_z_q<14>>.
+    Found 1-bit register for signal <M_z_q<13>>.
+    Found 1-bit register for signal <M_z_q<12>>.
+    Found 1-bit register for signal <M_z_q<11>>.
+    Found 1-bit register for signal <M_z_q<10>>.
+    Found 1-bit register for signal <M_z_q<9>>.
+    Found 1-bit register for signal <M_z_q<8>>.
+    Found 1-bit register for signal <M_z_q<7>>.
+    Found 1-bit register for signal <M_z_q<6>>.
+    Found 1-bit register for signal <M_z_q<5>>.
+    Found 1-bit register for signal <M_z_q<4>>.
+    Found 1-bit register for signal <M_z_q<3>>.
+    Found 1-bit register for signal <M_z_q<2>>.
+    Found 1-bit register for signal <M_z_q<1>>.
+    Found 1-bit register for signal <M_z_q<0>>.
+    Found 1-bit register for signal <M_w_q<31>>.
+    Found 1-bit register for signal <M_w_q<30>>.
+    Found 1-bit register for signal <M_w_q<29>>.
+    Found 1-bit register for signal <M_w_q<28>>.
+    Found 1-bit register for signal <M_w_q<27>>.
+    Found 1-bit register for signal <M_w_q<26>>.
+    Found 1-bit register for signal <M_w_q<25>>.
+    Found 1-bit register for signal <M_w_q<24>>.
+    Found 1-bit register for signal <M_w_q<23>>.
+    Found 1-bit register for signal <M_w_q<22>>.
+    Found 1-bit register for signal <M_w_q<21>>.
+    Found 1-bit register for signal <M_w_q<20>>.
+    Found 1-bit register for signal <M_w_q<19>>.
+    Found 1-bit register for signal <M_w_q<18>>.
+    Found 1-bit register for signal <M_w_q<17>>.
+    Found 1-bit register for signal <M_w_q<16>>.
+    Found 1-bit register for signal <M_w_q<15>>.
+    Found 1-bit register for signal <M_w_q<14>>.
+    Found 1-bit register for signal <M_w_q<13>>.
+    Found 1-bit register for signal <M_w_q<12>>.
+    Found 1-bit register for signal <M_w_q<11>>.
+    Found 1-bit register for signal <M_w_q<10>>.
+    Found 1-bit register for signal <M_w_q<9>>.
+    Found 1-bit register for signal <M_w_q<8>>.
+    Found 1-bit register for signal <M_w_q<7>>.
+    Found 1-bit register for signal <M_w_q<6>>.
+    Found 1-bit register for signal <M_w_q<5>>.
+    Found 1-bit register for signal <M_w_q<4>>.
+    Found 1-bit register for signal <M_w_q<3>>.
+    Found 1-bit register for signal <M_w_q<2>>.
+    Found 1-bit register for signal <M_w_q<1>>.
+    Found 1-bit register for signal <M_w_q<0>>.
+    Found 1-bit register for signal <M_x_q<31>>.
+    Found 1-bit register for signal <M_x_q<30>>.
+    Found 1-bit register for signal <M_x_q<29>>.
+    Found 1-bit register for signal <M_x_q<28>>.
+    Found 1-bit register for signal <M_x_q<27>>.
+    Found 1-bit register for signal <M_x_q<26>>.
+    Found 1-bit register for signal <M_x_q<25>>.
+    Found 1-bit register for signal <M_x_q<24>>.
+    Found 1-bit register for signal <M_x_q<23>>.
+    Found 1-bit register for signal <M_x_q<22>>.
+    Found 1-bit register for signal <M_x_q<21>>.
+    Found 1-bit register for signal <M_x_q<20>>.
+    Found 1-bit register for signal <M_x_q<19>>.
+    Found 1-bit register for signal <M_x_q<18>>.
+    Found 1-bit register for signal <M_x_q<17>>.
+    Found 1-bit register for signal <M_x_q<16>>.
+    Found 1-bit register for signal <M_x_q<15>>.
+    Found 1-bit register for signal <M_x_q<14>>.
+    Found 1-bit register for signal <M_x_q<13>>.
+    Found 1-bit register for signal <M_x_q<12>>.
+    Found 1-bit register for signal <M_x_q<11>>.
+    Found 1-bit register for signal <M_x_q<10>>.
+    Found 1-bit register for signal <M_x_q<9>>.
+    Found 1-bit register for signal <M_x_q<8>>.
+    Found 1-bit register for signal <M_x_q<7>>.
+    Found 1-bit register for signal <M_x_q<6>>.
+    Found 1-bit register for signal <M_x_q<5>>.
+    Found 1-bit register for signal <M_x_q<4>>.
+    Found 1-bit register for signal <M_x_q<3>>.
+    Found 1-bit register for signal <M_x_q<2>>.
+    Found 1-bit register for signal <M_x_q<1>>.
+    Found 1-bit register for signal <M_x_q<0>>.
     Summary:
-	inferred   1 Multiplier(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred  64 Multiplexer(s).
-	inferred   1 Combinational logic shifter(s).
-Unit <generator_top_3> synthesized.
+	inferred 128 D-type flip-flop(s).
+Unit <pn_gen_12> synthesized.
 
-Synthesizing Unit <led_matrix_6>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_6.v".
-    Found 16-bit register for signal <M_cSignal_q>.
+Synthesizing Unit <led_matrix_7>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v".
     Found 16-bit register for signal <M_aSignal_q>.
-    Found 8-bit adder for signal <M_slowclock_value[3]_GND_17_o_add_32_OUT> created at line 98.
+    Found 16-bit register for signal <M_cSignal_q>.
+    Found 8-bit adder for signal <M_slowclock_value[3]_GND_20_o_add_32_OUT> created at line 98.
     Found 511-bit shifter logical right for signal <n0020> created at line 98
     Found 16x16-bit Read Only RAM for signal <M_cSignal_d>
     Summary:
@@ -282,24 +434,24 @@ Synthesizing Unit <led_matrix_6>.
 	inferred   1 Adder/Subtractor(s).
 	inferred  32 D-type flip-flop(s).
 	inferred   1 Combinational logic shifter(s).
-Unit <led_matrix_6> synthesized.
+Unit <led_matrix_7> synthesized.
 
-Synthesizing Unit <counter_11>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_11.v".
+Synthesizing Unit <counter_14>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_14.v".
     Found 16-bit register for signal <M_ctr_q>.
-    Found 16-bit adder for signal <M_ctr_q[15]_GND_18_o_add_0_OUT> created at line 35.
+    Found 16-bit adder for signal <M_ctr_q[15]_GND_21_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <counter_11> synthesized.
+Unit <counter_14> synthesized.
 
-Synthesizing Unit <leddisplay_7>.
-    Related source file is "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_7.v".
-INFO:Xst:3210 - "C:/Users/Wong/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_7.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
+Synthesizing Unit <leddisplay_8>.
+    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v".
+INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
-Unit <leddisplay_7> synthesized.
+Unit <leddisplay_8> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -307,87 +459,22 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x16-bit single-port Read Only RAM                   : 1
-# Multipliers                                          : 3
- 16x16-bit multiplier                                  : 2
- 4x1-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 78
- 14-bit adder                                          : 1
- 16-bit adder                                          : 3
- 16-bit subtractor                                     : 6
- 17-bit adder                                          : 6
- 18-bit adder                                          : 4
- 19-bit adder                                          : 4
- 20-bit adder                                          : 4
- 21-bit adder                                          : 4
- 22-bit adder                                          : 4
- 23-bit adder                                          : 4
- 24-bit adder                                          : 4
- 25-bit adder                                          : 4
- 26-bit adder                                          : 4
- 27-bit adder                                          : 4
- 28-bit adder                                          : 4
- 29-bit adder                                          : 4
- 30-bit adder                                          : 4
- 31-bit adder                                          : 4
- 32-bit adder                                          : 4
- 6-bit adder                                           : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 20-bit adder                                          : 1
  8-bit adder                                           : 1
-# Registers                                            : 7
- 1-bit register                                        : 1
+# Registers                                            : 6
  16-bit register                                       : 3
- 224-bit register                                      : 1
- 32-bit register                                       : 1
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
  4-bit register                                        : 1
-# Comparators                                          : 40
- 16-bit comparator equal                               : 2
- 16-bit comparator greater                             : 4
- 16-bit comparator lessequal                           : 2
- 17-bit comparator greater                             : 2
- 18-bit comparator greater                             : 2
- 19-bit comparator greater                             : 2
- 20-bit comparator greater                             : 2
- 21-bit comparator greater                             : 2
- 22-bit comparator greater                             : 2
- 23-bit comparator greater                             : 2
- 24-bit comparator greater                             : 2
- 25-bit comparator greater                             : 2
- 26-bit comparator greater                             : 2
- 27-bit comparator greater                             : 2
- 28-bit comparator greater                             : 2
- 29-bit comparator greater                             : 2
- 30-bit comparator greater                             : 2
- 31-bit comparator greater                             : 2
- 32-bit comparator greater                             : 2
-# Multiplexers                                         : 590
- 1-bit 2-to-1 multiplexer                              : 499
- 10-bit 2-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 1
- 12-bit 2-to-1 multiplexer                             : 1
- 13-bit 2-to-1 multiplexer                             : 1
- 14-bit 2-to-1 multiplexer                             : 51
- 16-bit 2-to-1 multiplexer                             : 15
- 16-bit 4-to-1 multiplexer                             : 6
- 17-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 5
- 4-bit 2-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 1
- 6-bit 2-to-1 multiplexer                              : 1
- 7-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 8
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
- 447-bit shifter logical right                         : 1
+# Multiplexers                                         : 3
+ 16-bit 2-to-1 multiplexer                             : 3
+# Logic shifters                                       : 1
  511-bit shifter logical right                         : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# Xors                                                 : 6
- 1-bit xor2                                            : 4
- 16-bit xor2                                           : 2
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -396,15 +483,15 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <counter_11>.
+Synthesizing (advanced) Unit <button_conditioner_2>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_11> synthesized (advanced).
+Unit <button_conditioner_2> synthesized (advanced).
 
-Synthesizing (advanced) Unit <generator_top_3>.
-	Multiplier <Mmult_random[3]_PWR_15_o_MuLt_3_OUT> in block <generator_top_3> and adder/subtractor <Madd_n0172> in block <generator_top_3> are combined into a MAC<Maddsub_random[3]_PWR_15_o_MuLt_3_OUT>.
-Unit <generator_top_3> synthesized (advanced).
+Synthesizing (advanced) Unit <counter_14>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_14> synthesized (advanced).
 
-Synthesizing (advanced) Unit <led_matrix_6>.
+Synthesizing (advanced) Unit <led_matrix_7>.
 INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -416,7 +503,7 @@ INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <M_cSignal_d>   |          |
     -----------------------------------------------------------------------
-Unit <led_matrix_6> synthesized (advanced).
+Unit <led_matrix_7> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -424,360 +511,43 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x16-bit single-port distributed Read Only RAM       : 1
-# MACs                                                 : 1
- 4x1-to-6-bit MAC                                      : 1
-# Multipliers                                          : 2
- 16x16-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 44
- 14-bit adder                                          : 1
- 16-bit adder                                          : 2
- 16-bit adder carry in                                 : 32
- 16-bit subtractor                                     : 6
- 17-bit adder                                          : 2
+# Adders/Subtractors                                   : 1
  8-bit adder                                           : 1
-# Counters                                             : 1
+# Counters                                             : 2
  16-bit up counter                                     : 1
-# Registers                                            : 293
- Flip-Flops                                            : 293
-# Comparators                                          : 40
- 16-bit comparator equal                               : 2
- 16-bit comparator greater                             : 4
- 16-bit comparator lessequal                           : 2
- 17-bit comparator greater                             : 2
- 18-bit comparator greater                             : 2
- 19-bit comparator greater                             : 2
- 20-bit comparator greater                             : 2
- 21-bit comparator greater                             : 2
- 22-bit comparator greater                             : 2
- 23-bit comparator greater                             : 2
- 24-bit comparator greater                             : 2
- 25-bit comparator greater                             : 2
- 26-bit comparator greater                             : 2
- 27-bit comparator greater                             : 2
- 28-bit comparator greater                             : 2
- 29-bit comparator greater                             : 2
- 30-bit comparator greater                             : 2
- 31-bit comparator greater                             : 2
- 32-bit comparator greater                             : 2
-# Multiplexers                                         : 589
- 1-bit 2-to-1 multiplexer                              : 499
- 10-bit 2-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 1
- 12-bit 2-to-1 multiplexer                             : 1
- 13-bit 2-to-1 multiplexer                             : 1
- 14-bit 2-to-1 multiplexer                             : 51
- 16-bit 2-to-1 multiplexer                             : 14
- 16-bit 4-to-1 multiplexer                             : 6
- 17-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 5
- 4-bit 2-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 1
- 6-bit 2-to-1 multiplexer                              : 1
- 7-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 8
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
- 447-bit shifter logical right                         : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Multiplexers                                         : 2
+ 16-bit 2-to-1 multiplexer                             : 2
+# Logic shifters                                       : 1
  511-bit shifter logical right                         : 1
-# Xors                                                 : 6
- 1-bit xor2                                            : 4
- 16-bit xor2                                           : 2
+# FSMs                                                 : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_gamefsm_q> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_223> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_222> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_221> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_220> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_219> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_218> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_217> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_216> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_215> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_214> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_213> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_212> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_211> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_210> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_209> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_208> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_207> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_206> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_205> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_204> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_203> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_202> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_201> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_200> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_199> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_198> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_197> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_196> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_195> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_194> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_193> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_192> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_191> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_190> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_189> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_188> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_187> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_186> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_185> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_184> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_183> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_182> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_181> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_180> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_179> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_178> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_177> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_176> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_175> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_174> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_173> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_172> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_171> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_170> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_169> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_168> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_167> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_166> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_165> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_164> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_163> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_162> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_161> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_160> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_159> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_158> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_157> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_156> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_155> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_154> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_153> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_152> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_151> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_150> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_149> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_148> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_147> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_146> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_145> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_144> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_143> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_142> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_141> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_140> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_139> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_138> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_137> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_136> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_135> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_134> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_133> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_132> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_131> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_130> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_129> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_128> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_127> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_126> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_125> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_124> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_123> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_122> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_121> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_120> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_119> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_118> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_117> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_116> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_115> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_114> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_113> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_112> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_111> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_110> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_109> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_108> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_107> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_106> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_105> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_104> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_103> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_102> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_101> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_100> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_99> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_98> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_97> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_96> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_95> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_94> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_93> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_92> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_91> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_90> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_89> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_88> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_87> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_86> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_85> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_84> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_83> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_82> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_81> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_80> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_79> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_78> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_77> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_76> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_75> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_74> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_73> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_72> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_71> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_70> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_69> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_68> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_67> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_66> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_65> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_64> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_63> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_62> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_61> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_60> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_59> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_58> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_57> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_56> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_55> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_54> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_53> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_52> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_51> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_50> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_49> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_48> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_47> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_46> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_45> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_44> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_43> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_42> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_41> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_40> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_39> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_38> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_37> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_36> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_35> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_34> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_33> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_32> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_31> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_30> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_29> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_28> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_27> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_26> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_25> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_24> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_23> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_22> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_21> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_20> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_19> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_18> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_17> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_16> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_15> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_14> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_13> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_12> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_11> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_10> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_9> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_8> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_7> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_6> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_5> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_4> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_3> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_2> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_1> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <M_currentcols_q_0> is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_20> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_21> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_23> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_24> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_currentrows_q_31> of sequential type is unconnected in block <mojo_top_0>.
-
-Optimizing unit <generator_top_3> ...
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <M_gamefsm_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 01
+ 00    | unreached
+ 10    | unreached
+-------------------
+WARNING:Xst:2677 - Node <button_start/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <button_start/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:1293 - FF/Latch <M_aSignal_q_7> has a constant value of 0 in block <led_matrix_7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_8> has a constant value of 0 in block <led_matrix_7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_aSignal_q_9> has a constant value of 0 in block <led_matrix_7>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <alu_8> ...
-
-Optimizing unit <div_16s_16s> ...
-
-Optimizing unit <led_matrix_6> ...
-WARNING:Xst:1293 - FF/Latch <ld/M_aSignal_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ld/M_aSignal_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_bottom/alu/mult/Mmult_n0010> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_top/alu/mult/Mmult_n0010> is unconnected in block <mojo_top_0>.
-INFO:Xst:2261 - The FF/Latch <ld/M_aSignal_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ld/M_cSignal_q_15> 
+Optimizing unit <led_matrix_7> ...
+INFO:Xst:2261 - The FF/Latch <ld/M_aSignal_q_15> in Unit <mojo_top_0> is equivalent to the following 12 FFs/Latches, which will be removed : <ld/M_aSignal_q_14> <ld/M_aSignal_q_13> <ld/M_aSignal_q_12> <ld/M_aSignal_q_11> <ld/M_aSignal_q_10> <ld/M_aSignal_q_6> <ld/M_aSignal_q_5> <ld/M_aSignal_q_4> <ld/M_aSignal_q_3> <ld/M_aSignal_q_2> <ld/M_aSignal_q_1> <ld/M_aSignal_q_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -793,8 +563,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 37
+ Flip-Flops                                            : 37
 
 =========================================================================
 
@@ -818,7 +588,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 36    |
+clk                                | BUFGP                  | 37    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -829,9 +599,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.564ns (Maximum Frequency: 219.106MHz)
+   Minimum period: 3.746ns (Maximum Frequency: 266.951MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 4.162ns
+   Maximum output required time after clock: 4.534ns
    Maximum combinational path delay: No path found
 
 =========================================================================

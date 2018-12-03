@@ -4,10 +4,9 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module generator_top_3 (
+module generator_top_4 (
     input clk,
     input rst,
-    input [3:0] random,
     input [223:0] cols,
     output reg [223:0] colsout
   );
@@ -21,7 +20,7 @@ module generator_top_3 (
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_8 alu (
+  alu_10 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),
@@ -29,6 +28,17 @@ module generator_top_3 (
     .z(M_alu_z),
     .v(M_alu_v),
     .n(M_alu_n)
+  );
+  
+  wire [32-1:0] M_rng_num;
+  reg [1-1:0] M_rng_next;
+  reg [32-1:0] M_rng_seed;
+  pn_gen_12 rng (
+    .clk(clk),
+    .rst(rst),
+    .next(M_rng_next),
+    .seed(M_rng_seed),
+    .num(M_rng_num)
   );
   
   localparam SHL = 6'h20;
@@ -41,7 +51,11 @@ module generator_top_3 (
   
   reg [0:0] temprandom;
   
+  reg [3:0] random;
+  
   always @* begin
+    M_rng_seed = 5'h14;
+    M_rng_next = 1'h1;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
       colsout[(i)*14+13-:14] = 14'h0000;
     end
@@ -49,8 +63,9 @@ module generator_top_3 (
       M_alu_a = cols[(i)*14+13-:14];
       M_alu_b = 1'h1;
       M_alu_alufn = 6'h20;
-      leftedcols[(i)*14+13-:14] = M_alu_out;
+      leftedcols[(i)*14+13-:14] = M_alu_out[0+13-:14];
     end
+    random = M_rng_num[0+3-:4];
     temprandom = random[3+0-:1] * 4'h8 + random[2+0-:1] * 3'h4 + random[1+0-:1] * 2'h2 + random[0+0-:1];
     leftedcols[(temprandom)*14+13-:14] = leftedcols[(temprandom)*14+13-:14] + 1'h1;
     colsout = leftedcols;

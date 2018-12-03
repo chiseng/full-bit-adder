@@ -1,21 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 03 00:18:47 2018
+// Written by: Map P.20131013 on Mon Dec 03 13:45:11 2018
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
-COMP "clk" LOCATE = SITE "P56" LEVEL 1;
-COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
-COMP "a[0]" LOCATE = SITE "P58" LEVEL 1;
-COMP "a[1]" LOCATE = SITE "P67" LEVEL 1;
-COMP "a[2]" LOCATE = SITE "P75" LEVEL 1;
-COMP "a[3]" LOCATE = SITE "P79" LEVEL 1;
-COMP "a[4]" LOCATE = SITE "P81" LEVEL 1;
-COMP "a[5]" LOCATE = SITE "P83" LEVEL 1;
-COMP "a[6]" LOCATE = SITE "P85" LEVEL 1;
-COMP "a[7]" LOCATE = SITE "P88" LEVEL 1;
-COMP "c[0]" LOCATE = SITE "P57" LEVEL 1;
 COMP "a[8]" LOCATE = SITE "P93" LEVEL 1;
 COMP "c[1]" LOCATE = SITE "P66" LEVEL 1;
 COMP "a[9]" LOCATE = SITE "P95" LEVEL 1;
@@ -52,13 +40,25 @@ COMP "c[13]" LOCATE = SITE "P104" LEVEL 1;
 COMP "c[14]" LOCATE = SITE "P111" LEVEL 1;
 COMP "c[15]" LOCATE = SITE "P114" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "ld/M_aSignal_q_14" BEL "ld/M_cSignal_q_14" BEL
-        "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_11"
-        BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9" BEL "ld/M_cSignal_q_8"
-        BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_5"
-        BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_2"
-        BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0" BEL
-        "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "a[0]" LOCATE = SITE "P58" LEVEL 1;
+COMP "a[1]" LOCATE = SITE "P67" LEVEL 1;
+COMP "a[2]" LOCATE = SITE "P75" LEVEL 1;
+COMP "a[3]" LOCATE = SITE "P79" LEVEL 1;
+COMP "a[4]" LOCATE = SITE "P81" LEVEL 1;
+COMP "a[5]" LOCATE = SITE "P83" LEVEL 1;
+COMP "a[6]" LOCATE = SITE "P85" LEVEL 1;
+COMP "a[7]" LOCATE = SITE "P88" LEVEL 1;
+COMP "c[0]" LOCATE = SITE "P57" LEVEL 1;
+TIMEGRP clk = BEL "ld/M_aSignal_q_15" BEL "ld/M_cSignal_q_15" BEL
+        "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12"
+        BEL "ld/M_cSignal_q_11" BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9"
+        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6"
+        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3"
+        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0"
+        BEL "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
         "ld/slowclock/M_ctr_q_13" BEL "ld/slowclock/M_ctr_q_12" BEL
         "ld/slowclock/M_ctr_q_11" BEL "ld/slowclock/M_ctr_q_10" BEL
         "ld/slowclock/M_ctr_q_9" BEL "ld/slowclock/M_ctr_q_8" BEL

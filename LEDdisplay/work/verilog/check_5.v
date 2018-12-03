@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module check_4 (
+module check_5 (
     input clk,
     input rst,
     input [223:0] cols,
@@ -22,7 +22,7 @@ module check_4 (
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_8 alu (
+  alu_10 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),

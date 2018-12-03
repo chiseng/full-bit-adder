@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (nt64)
+Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Dec 03 00:18:52 2018
+Mon Dec 03 13:45:17 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -133,7 +133,7 @@ Pinout by Pin Number:
 |P111      |c[14]      |IOB      |IO_L66N_SCP0_0            |OUTPUT   |LVTTL      |0             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P112      |a[14]      |IOB      |IO_L66P_SCP1_0            |OUTPUT   |LVTTL      |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P113      |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
-|P114      |c[15]      |IOB      |IO_L65N_SCP2_0            |OUTPUT   |LVTTL      |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
+|P114      |c[15]      |IOB      |IO_L65N_SCP2_0            |OUTPUT   |LVTTL      |0             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P115      |a[15]      |IOB      |IO_L65P_SCP3_0            |OUTPUT   |LVTTL      |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P116      |           |IOBS     |IO_L64N_SCP4_0            |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P117      |           |IOBM     |IO_L64P_SCP5_0            |UNUSED   |           |0             |          |         |           |         |       |          |           |                |

@@ -11,7 +11,7 @@
      TOP = 15
      UP = 1
 */
-module counter_12 (
+module counter_15 (
     input clk,
     input rst,
     output reg [2:0] value

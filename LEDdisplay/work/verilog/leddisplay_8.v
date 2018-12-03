@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module leddisplay_7 (
+module leddisplay_8 (
     input clk,
     input rst,
     input [223:0] cols,
@@ -17,7 +17,7 @@ module leddisplay_7 (
   localparam FLIP = 5'h10;
   
   wire [3-1:0] M_counter_r_value;
-  counter_12 counter_r (
+  counter_15 counter_r (
     .clk(clk),
     .rst(rst),
     .value(M_counter_r_value)

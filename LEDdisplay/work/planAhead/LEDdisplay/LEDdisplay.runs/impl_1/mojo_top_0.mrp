@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'mojo_top_0'
 
 Design Information
@@ -8,7 +8,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Dec 03 00:18:42 2018
+Mapped Date    : Mon Dec 03 13:45:07 2018
 
 Design Summary
 --------------
@@ -52,7 +52,7 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        56 out of     102   54%
     Number of LOCed IOBs:                       48 out of      56   85%
-    IOB Flip Flops:                             15
+    IOB Flip Flops:                             16
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -65,8 +65,8 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
-  Number of OLOGIC2/OSERDES2s:                  15 out of     200    7%
-    Number used as OLOGIC2s:                    15
+  Number of OLOGIC2/OSERDES2s:                  16 out of     200    8%
+    Number used as OLOGIC2s:                    16
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
@@ -81,11 +81,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.76
+Average Fanout of Non-Clock Nets:                2.46
 
-Peak Memory Usage:  344 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion (all processors):   4 secs 
+Peak Memory Usage:  353 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion (all processors):   5 secs 
 
 Table of Contents
 -----------------
@@ -126,14 +126,14 @@ Section 3 - Informational
 INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
-INFO:LIT:243 - Logical network button_onoff has no load.
-INFO:LIT:395 - The above info message is repeated 8 more times for the following
-   (max. 5 shown):
-   button_l,
-   button_r,
-   avr_rx_busy_IBUF,
-   spi_mosi_IBUF,
-   spi_ss_IBUF
+INFO:LIT:243 - Logical network io_button(4) has no load.
+INFO:LIT:395 - The above info message is repeated 13 more times for the
+   following (max. 5 shown):
+   io_button(3),
+   io_button(2),
+   io_button(1),
+   io_button(0),
+   button_onoff
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -234,7 +234,7 @@ Section 6 - IOB Properties
 | c[12]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
 | c[13]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
 | c[14]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
-| c[15]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| c[15]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
 | cclk                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | clk                                | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | io_seg[0]                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
