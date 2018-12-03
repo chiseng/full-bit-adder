@@ -85,7 +85,6 @@ module mojo_top (
     gen_botrows[0] = 16b0000000000000000;
     gen_botrows[1] = 16b0000000000000000;
     generator_bottom.rows = gen_botrows;
-    
     led_converter.rows = gen_botrows;
     
     
@@ -122,7 +121,9 @@ module mojo_top (
         // no coconuts
         gen_botrows[0] = 16b0000001110000000;
         gen_botrows[1] = 16b0000001110000000;
-        
+        generator_bottom.rows=gen_botrows;
+        led_converter.rows=generator_bottom.rowsout;
+        /*
         //cols[16][14]
         for ( i=0; i<16; i++){
           gen_topcols[i] = 14b0;
@@ -146,6 +147,7 @@ module mojo_top (
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
+        */
         gamefsm.d = gamefsm.STAGE1_START;
         
              
