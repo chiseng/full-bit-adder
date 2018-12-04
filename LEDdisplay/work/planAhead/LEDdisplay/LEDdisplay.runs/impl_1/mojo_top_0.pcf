@@ -1,21 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 03 21:57:55 2018
+// Written by: Map P.20131013 on Tue Dec 04 21:59:12 2018
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "c[10]" LOCATE = SITE "P97" LEVEL 1;
-COMP "led[5]" LOCATE = SITE "P126" LEVEL 1;
-COMP "c[11]" LOCATE = SITE "P99" LEVEL 1;
-COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
-COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
-COMP "c[12]" LOCATE = SITE "P101" LEVEL 1;
-COMP "led[7]" LOCATE = SITE "P123" LEVEL 1;
-COMP "c[13]" LOCATE = SITE "P104" LEVEL 1;
-COMP "c[14]" LOCATE = SITE "P111" LEVEL 1;
-COMP "button2" LOCATE = SITE "P41" LEVEL 1;
-COMP "c[15]" LOCATE = SITE "P114" LEVEL 1;
-COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
 COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
 COMP "clk" LOCATE = SITE "P56" LEVEL 1;
 COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
@@ -46,13 +34,26 @@ COMP "a[14]" LOCATE = SITE "P112" LEVEL 1;
 COMP "c[8]" LOCATE = SITE "P92" LEVEL 1;
 COMP "a[15]" LOCATE = SITE "P115" LEVEL 1;
 COMP "c[9]" LOCATE = SITE "P94" LEVEL 1;
+COMP "button_l" LOCATE = SITE "P51" LEVEL 1;
 COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
+COMP "button_r" LOCATE = SITE "P41" LEVEL 1;
 COMP "led[1]" LOCATE = SITE "P133" LEVEL 1;
 COMP "led[2]" LOCATE = SITE "P132" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "led[3]" LOCATE = SITE "P131" LEVEL 1;
 COMP "led[4]" LOCATE = SITE "P127" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "c[10]" LOCATE = SITE "P97" LEVEL 1;
+COMP "led[5]" LOCATE = SITE "P126" LEVEL 1;
+COMP "c[11]" LOCATE = SITE "P99" LEVEL 1;
+COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "c[12]" LOCATE = SITE "P101" LEVEL 1;
+COMP "led[7]" LOCATE = SITE "P123" LEVEL 1;
+COMP "c[13]" LOCATE = SITE "P104" LEVEL 1;
+COMP "c[14]" LOCATE = SITE "P111" LEVEL 1;
+COMP "c[15]" LOCATE = SITE "P114" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
 TIMEGRP clk = BEL "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_13" BEL
         "ld/M_aSignal_q_9" BEL "ld/M_cSignal_q_15" BEL "ld/M_cSignal_q_14" BEL
         "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_11"
@@ -83,7 +84,21 @@ TIMEGRP clk = BEL "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_13" BEL
         "generator_top/M_cucked_q_4" BEL "generator_top/M_cucked_q_3" BEL
         "generator_top/M_cucked_q_2" BEL "generator_top/M_cucked_q_1" BEL
         "generator_top/M_cucked_q_0" BEL "generator_top/M_leftedcols_q_27" BEL
-        "generator_top/M_leftedcols_q_0" BEL "generator_top/M_prng_q_4";
+        "generator_top/M_leftedcols_q_13" BEL
+        "generator_top/M_leftedcols_q_12" BEL
+        "generator_top/M_leftedcols_q_11" BEL
+        "generator_top/M_leftedcols_q_10" BEL "generator_top/M_leftedcols_q_9"
+        BEL "generator_top/M_leftedcols_q_8" BEL
+        "generator_top/M_leftedcols_q_7" BEL "generator_top/M_leftedcols_q_6"
+        BEL "generator_top/M_leftedcols_q_5" BEL
+        "generator_top/M_leftedcols_q_4" BEL "generator_top/M_leftedcols_q_3"
+        BEL "generator_top/M_leftedcols_q_2" BEL
+        "generator_top/M_leftedcols_q_1" BEL "generator_top/M_leftedcols_q_0"
+        BEL "generator_top/M_cucked_q_23_1" BEL
+        "generator_top/M_cucked_q_23_2" BEL "generator_top/M_cucked_q_23_3"
+        BEL "generator_bottom/M_new_fsm_q_FSM_FFd1" BEL
+        "generator_bottom/M_new_fsm_q_FSM_FFd2" BEL
+        "generator_bottom/M_xoroutput_q_0";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

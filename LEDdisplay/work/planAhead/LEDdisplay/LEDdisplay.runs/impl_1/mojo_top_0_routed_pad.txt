@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Dec  3 21:58:01 2018
+Tue Dec  4 21:59:18 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -60,7 +60,7 @@ Pinout by Pin Number:
 |P38       |rst_n      |IOB      |IO_L65N_CSO_B_2           |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P39       |avr_rx_busy|IOB      |IO_L65P_INIT_B_2          |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P40       |           |IOBS     |IO_L64N_D9_2              |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
-|P41       |button2    |IOB      |IO_L64P_D8_2              |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P41       |button_r   |IOB      |IO_L64P_D8_2              |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P42       |           |         |VCCO_2                    |         |           |2             |          |         |           |         |3.30   |          |           |                |
 |P43       |spi_sck    |IOB      |IO_L62N_D6_2              |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P44       |spi_mosi   |IOB      |IO_L62P_D5_2              |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
@@ -70,7 +70,7 @@ Pinout by Pin Number:
 |P48       |spi_ss     |IOB      |IO_L48P_D7_2              |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P49       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P50       |           |IOBS     |IO_L31N_GCLK30_D15_2      |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
-|P51       |           |IOBM     |IO_L31P_GCLK31_D14_2      |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P51       |button_l   |IOB      |IO_L31P_GCLK31_D14_2      |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P52       |           |         |VCCINT                    |         |           |              |          |         |           |         |1.2    |          |           |                |
 |P53       |           |         |VCCAUX                    |         |           |              |          |         |           |         |3.3    |          |           |                |
 |P54       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |

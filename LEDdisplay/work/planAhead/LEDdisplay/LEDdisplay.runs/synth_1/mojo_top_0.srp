@@ -119,9 +119,9 @@ Elaborating module <compare16_18>.
 Elaborating module <shifter_19>.
 
 Elaborating module <multiply_20>.
-WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 31: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 32: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 33: Assignment to M_alu_n ignored, since the identifier is never used
 
 Elaborating module <generator_top_4>.
 WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
@@ -131,6 +131,7 @@ WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay
 Elaborating module <pn_gen_12>.
 WARNING:HDLCompiler:413 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 90: Result of 4-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 102: Assignment to M_temprandom_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 85: Assignment to M_generator_top_led ignored, since the identifier is never used
 
 Elaborating module <check_5>.
 WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
@@ -146,10 +147,10 @@ Elaborating module <leddisplay_8>.
 
 Elaborating module <counter_15>.
 WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 239: Assignment to M_state_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 219: Assignment to M_state_q ignored, since the identifier is never used
 WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20. All outputs of instance <counter_r> of block <counter_15> are unconnected in block <leddisplay_8>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 89. All outputs of instance <check> of block <check_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 101. All outputs of instance <slowclock> of block <counter_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 91. All outputs of instance <check> of block <check_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 103. All outputs of instance <slowclock> of block <counter_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -166,10 +167,11 @@ WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_onoff> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 101: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 79: Output port <led> of the instance <generator_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 103: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <M_gamefsm_q>.
     Found 32-bit register for signal <M_currentrows_q>.
     Found 224-bit register for signal <M_currentcols_q>.
-    Found 2-bit register for signal <M_gamefsm_q>.
 INFO:Xst:1799 - State 00 is never reached in FSM <M_gamefsm_q>.
 INFO:Xst:1799 - State 10 is never reached in FSM <M_gamefsm_q>.
     Found finite state machine <FSM_0> for signal <M_gamefsm_q>.
@@ -186,12 +188,12 @@ INFO:Xst:1799 - State 10 is never reached in FSM <M_gamefsm_q>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 135
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 135
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 135
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 135
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 135
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 135
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 137
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 137
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 137
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 137
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 137
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 137
     Summary:
 	inferred 256 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
@@ -224,13 +226,35 @@ Unit <pipeline_9> synthesized.
 
 Synthesizing Unit <generator_bottom_3>.
     Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 25: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 25: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 25: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <M_shiftleft_q>.
+    Found 32-bit register for signal <M_shiftright_q>.
+    Found 2-bit register for signal <M_new_fsm_q>.
+    Found 16-bit register for signal <M_xoroutput_q>.
+    Found finite state machine <FSM_1> for signal <M_new_fsm_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit 4-to-1 multiplexer for signal <M_alu_a> created at line 64.
+    Found 16-bit 4-to-1 multiplexer for signal <M_alu_b> created at line 64.
+    Found 6-bit 4-to-1 multiplexer for signal <M_alu_alufn> created at line 64.
+    Found 32-bit 4-to-1 multiplexer for signal <rowsout> created at line 64.
     Summary:
-	inferred   3 Multiplexer(s).
+	inferred  80 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <generator_bottom_3> synthesized.
 
 Synthesizing Unit <alu_10>.
@@ -368,8 +392,8 @@ INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planA
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   6 Adder/Subtractor(s).
-	inferred 263 D-type flip-flop(s).
-	inferred 215 Multiplexer(s).
+	inferred 262 D-type flip-flop(s).
+	inferred 150 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 Unit <generator_top_4> synthesized.
 
@@ -382,8 +406,8 @@ Unit <pn_gen_12> synthesized.
 
 Synthesizing Unit <led_matrix_7>.
     Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v".
-    Found 16-bit register for signal <M_aSignal_q>.
     Found 16-bit register for signal <M_cSignal_q>.
+    Found 16-bit register for signal <M_aSignal_q>.
     Found 8-bit adder for signal <M_slowclock_value[3]_GND_20_o_add_32_OUT> created at line 98.
     Found 511-bit shifter logical right for signal <n0020> created at line 98
     Found 16x16-bit Read Only RAM for signal <M_cSignal_d>
@@ -443,14 +467,13 @@ Macro Statistics
  4-bit adder                                           : 3
  6-bit adder                                           : 1
  8-bit adder                                           : 1
-# Registers                                            : 13
- 1-bit register                                        : 1
- 16-bit register                                       : 3
+# Registers                                            : 15
+ 16-bit register                                       : 4
  2-bit register                                        : 1
  20-bit register                                       : 1
  224-bit register                                      : 2
  30-bit register                                       : 1
- 32-bit register                                       : 2
+ 32-bit register                                       : 4
  4-bit register                                        : 1
  8-bit register                                        : 1
 # Comparators                                          : 40
@@ -473,18 +496,20 @@ Macro Statistics
  30-bit comparator greater                             : 2
  31-bit comparator greater                             : 2
  32-bit comparator greater                             : 2
-# Multiplexers                                         : 741
- 1-bit 2-to-1 multiplexer                              : 654
+# Multiplexers                                         : 681
+ 1-bit 2-to-1 multiplexer                              : 590
  10-bit 2-to-1 multiplexer                             : 1
  11-bit 2-to-1 multiplexer                             : 1
  12-bit 2-to-1 multiplexer                             : 1
  13-bit 2-to-1 multiplexer                             : 1
  14-bit 2-to-1 multiplexer                             : 51
- 16-bit 2-to-1 multiplexer                             : 15
- 16-bit 4-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 17
+ 16-bit 4-to-1 multiplexer                             : 8
  17-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 4
- 8-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 1
+ 6-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
  9-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 8
  16-bit shifter arithmetic right                       : 2
@@ -494,7 +519,7 @@ Macro Statistics
  511-bit shifter logical right                         : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 # Xors                                                 : 6
  1-bit xor2                                            : 4
  16-bit xor2                                           : 2
@@ -556,8 +581,8 @@ Macro Statistics
  16-bit up counter                                     : 1
  20-bit up counter                                     : 1
  30-bit up counter                                     : 1
-# Registers                                            : 303
- Flip-Flops                                            : 303
+# Registers                                            : 382
+ Flip-Flops                                            : 382
 # Comparators                                          : 40
  16-bit comparator equal                               : 2
  16-bit comparator greater                             : 4
@@ -578,18 +603,20 @@ Macro Statistics
  30-bit comparator greater                             : 2
  31-bit comparator greater                             : 2
  32-bit comparator greater                             : 2
-# Multiplexers                                         : 740
- 1-bit 2-to-1 multiplexer                              : 654
+# Multiplexers                                         : 680
+ 1-bit 2-to-1 multiplexer                              : 590
  10-bit 2-to-1 multiplexer                             : 1
  11-bit 2-to-1 multiplexer                             : 1
  12-bit 2-to-1 multiplexer                             : 1
  13-bit 2-to-1 multiplexer                             : 1
  14-bit 2-to-1 multiplexer                             : 51
- 16-bit 2-to-1 multiplexer                             : 14
- 16-bit 4-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 16
+ 16-bit 4-to-1 multiplexer                             : 8
  17-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 4
- 8-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 1
+ 6-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
  9-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 8
  16-bit shifter arithmetic right                       : 2
@@ -597,7 +624,7 @@ Macro Statistics
  16-bit shifter logical right                          : 2
  447-bit shifter logical right                         : 1
  511-bit shifter logical right                         : 1
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 # Xors                                                 : 6
  1-bit xor2                                            : 4
  16-bit xor2                                           : 2
@@ -607,8 +634,31 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_new_fsm_q> has a constant value of 0 in block <generator_top_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_prng_q_7> has a constant value of 0 in block <generator_top_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_prng_q_7> has a constant value of 0 in block <generator_top_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_31 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_26 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_21 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_20 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_17 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_13 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_12 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_9 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_8 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_6 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_2 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_w_q_1 hinder the constant cleaning in the block pn_gen_12.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <M_w_q_30> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_29> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_28> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
@@ -629,6 +679,38 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_5> has a cons
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_4> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_3> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_w_q_0> has a constant value of 0 in block <pn_gen_12>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_0> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_10> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_26> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_1> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_17> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_11> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_27> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_2> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_18> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_12> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_28> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_3> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_19> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_13> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_29> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_4> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_20> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_14> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_30> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_5> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_21> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_15> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_31> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_6> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_22> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_7> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_23> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_8> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_24> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_9> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_25> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_10> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_26> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_11> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_27> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_12> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_28> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_13> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_29> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_14> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_30> 
+INFO:Xst:2261 - The FF/Latch <M_shiftright_q_15> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftright_q_31> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_0> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_1> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_17> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_2> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_18> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_3> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_19> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_4> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_20> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_5> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_21> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_6> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_22> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_7> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_23> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_8> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_24> 
+INFO:Xst:2261 - The FF/Latch <M_shiftleft_q_9> in Unit <generator_bottom_3> is equivalent to the following FF/Latch, which will be removed : <M_shiftleft_q_25> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_71> in Unit <generator_top_4> is equivalent to the following 10 FFs/Latches, which will be removed : <M_leftedcols_q_85> <M_leftedcols_q_99> <M_leftedcols_q_113> <M_leftedcols_q_127> <M_leftedcols_q_141> <M_leftedcols_q_155> <M_leftedcols_q_169> <M_leftedcols_q_183> <M_leftedcols_q_197> <M_leftedcols_q_211> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_72> in Unit <generator_top_4> is equivalent to the following 10 FFs/Latches, which will be removed : <M_leftedcols_q_86> <M_leftedcols_q_100> <M_leftedcols_q_114> <M_leftedcols_q_128> <M_leftedcols_q_142> <M_leftedcols_q_156> <M_leftedcols_q_170> <M_leftedcols_q_184> <M_leftedcols_q_198> <M_leftedcols_q_212> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_66> in Unit <generator_top_4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_leftedcols_q_80> <M_leftedcols_q_94> <M_leftedcols_q_108> <M_leftedcols_q_122> <M_leftedcols_q_136> <M_leftedcols_q_150> <M_leftedcols_q_164> <M_leftedcols_q_178> <M_leftedcols_q_192> <M_leftedcols_q_206> <M_leftedcols_q_220> 
@@ -643,6 +725,10 @@ INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_77> in Unit <generator_top_4> is eq
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_64> in Unit <generator_top_4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_leftedcols_q_78> <M_leftedcols_q_92> <M_leftedcols_q_106> <M_leftedcols_q_120> <M_leftedcols_q_134> <M_leftedcols_q_148> <M_leftedcols_q_162> <M_leftedcols_q_176> <M_leftedcols_q_190> <M_leftedcols_q_204> <M_leftedcols_q_218> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_65> in Unit <generator_top_4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_leftedcols_q_79> <M_leftedcols_q_93> <M_leftedcols_q_107> <M_leftedcols_q_121> <M_leftedcols_q_135> <M_leftedcols_q_149> <M_leftedcols_q_163> <M_leftedcols_q_177> <M_leftedcols_q_191> <M_leftedcols_q_205> <M_leftedcols_q_219> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_70> in Unit <generator_top_4> is equivalent to the following 10 FFs/Latches, which will be removed : <M_leftedcols_q_84> <M_leftedcols_q_98> <M_leftedcols_q_112> <M_leftedcols_q_126> <M_leftedcols_q_140> <M_leftedcols_q_154> <M_leftedcols_q_168> <M_leftedcols_q_182> <M_leftedcols_q_196> <M_leftedcols_q_210> 
+INFO:Xst:2261 - The FF/Latch <M_w_q_1> in Unit <pn_gen_12> is equivalent to the following 11 FFs/Latches, which will be removed : <M_w_q_2> <M_w_q_6> <M_w_q_8> <M_w_q_9> <M_w_q_12> <M_w_q_13> <M_w_q_17> <M_w_q_20> <M_w_q_21> <M_w_q_26> <M_w_q_31> 
+INFO:Xst:2261 - The FF/Latch <M_prng_q_0> in Unit <generator_top_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_prng_q_3> <M_prng_q_4> 
+INFO:Xst:2261 - The FF/Latch <M_prng_q_1> in Unit <generator_top_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_prng_q_2> <M_prng_q_5> <M_prng_q_6> 
+WARNING:Xst:1293 - FF/Latch <M_prng_q_1> has a constant value of 0 in block <generator_top_4>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <M_gamefsm_q[1:2]> with user encoding.
 -------------------
@@ -651,6 +737,15 @@ Optimizing FSM <FSM_0> on signal <M_gamefsm_q[1:2]> with user encoding.
  01    | 01
  00    | unreached
  10    | unreached
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <generator_bottom/FSM_1> on signal <M_new_fsm_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
 -------------------
 WARNING:Xst:2677 - Node <button_start/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <button_start/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
@@ -675,9 +770,9 @@ INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_25> in Unit <generator_top_4> is eq
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_26> in Unit <generator_top_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_leftedcols_q_40> <M_leftedcols_q_54> 
 INFO:Xst:2261 - The FF/Latch <M_leftedcols_q_27> in Unit <generator_top_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_leftedcols_q_41> <M_leftedcols_q_55> 
 
-Optimizing unit <pn_gen_12> ...
-
 Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <generator_bottom_3> ...
 
 Optimizing unit <alu_10> ...
 
@@ -727,31 +822,66 @@ WARNING:Xst:1426 - The value init of the FF/Latch generator_top/M_leftedcols_q_2
 WARNING:Xst:1426 - The value init of the FF/Latch generator_top/M_leftedcols_q_21 hinder the constant cleaning in the block mojo_top_0.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <generator_top/M_leftedcols_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_top/M_prng_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_top/M_prng_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_top/M_prng_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_top/M_prng_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftright_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftleft_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <generator_top/rng/M_w_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_bottom/alu/mult/Mmult_n0010> is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <generator_top/M_prng_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_top/alu/mult/Mmult_n0010> is unconnected in block <mojo_top_0>.
-INFO:Xst:2261 - The FF/Latch <generator_top/M_prng_q_4> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/M_prng_q_3> <generator_top/M_prng_q_0> 
+WARNING:Xst:1293 - FF/Latch <generator_bottom/M_xoroutput_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <generator_bottom/M_xoroutput_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <ld/M_aSignal_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ld/M_aSignal_q_14> 
-INFO:Xst:2261 - The FF/Latch <generator_top/M_leftedcols_q_27> in Unit <mojo_top_0> is equivalent to the following 28 FFs/Latches, which will be removed : <generator_top/M_leftedcols_q_26> <generator_top/M_leftedcols_q_25> <generator_top/M_leftedcols_q_24> <generator_top/M_leftedcols_q_23> <generator_top/M_leftedcols_q_22> <generator_top/M_leftedcols_q_21> <generator_top/M_leftedcols_q_20> <generator_top/M_leftedcols_q_19> <generator_top/M_leftedcols_q_18> <generator_top/M_leftedcols_q_17> <generator_top/M_leftedcols_q_16> <generator_top/M_leftedcols_q_15> <generator_top/M_leftedcols_q_13> <generator_top/M_leftedcols_q_12> <generator_top/M_leftedcols_q_11> <generator_top/M_leftedcols_q_10> <generator_top/M_leftedcols_q_9> <generator_top/M_leftedcols_q_8> <generator_top/M_leftedcols_q_7> <generator_top/M_leftedcols_q_6> <generator_top/M_leftedcols_q_5> <generator_top/M_leftedcols_q_4> <generator_top/M_leftedcols_q_3> <generator_top/M_leftedcols_q_2> <generator_top/M_leftedcols_q_1> <generator_top/rng/M_w_q_21>
-   <generator_top/rng/M_w_q_20> <generator_top/rng/M_w_q_17> 
 INFO:Xst:2261 - The FF/Latch <ld/M_aSignal_q_9> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <ld/M_aSignal_q_8> <ld/M_aSignal_q_7> 
+INFO:Xst:2261 - The FF/Latch <generator_top/M_leftedcols_q_27> in Unit <mojo_top_0> is equivalent to the following 12 FFs/Latches, which will be removed : <generator_top/M_leftedcols_q_26> <generator_top/M_leftedcols_q_25> <generator_top/M_leftedcols_q_24> <generator_top/M_leftedcols_q_23> <generator_top/M_leftedcols_q_22> <generator_top/M_leftedcols_q_21> <generator_top/M_leftedcols_q_20> <generator_top/M_leftedcols_q_19> <generator_top/M_leftedcols_q_18> <generator_top/M_leftedcols_q_17> <generator_top/M_leftedcols_q_16> <generator_top/M_leftedcols_q_15> 
 
 Mapping all equations...
+WARNING:Xst:2677 - Node <generator_bottom/alu/mult/Mmult_n0010> of sequential type is unconnected in block <mojo_top_0>.
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <ld/M_aSignal_q_13> in Unit <mojo_top_0> is equivalent to the following 10 FFs/Latches, which will be removed : <ld/M_aSignal_q_12> <ld/M_aSignal_q_11> <ld/M_aSignal_q_10> <ld/M_aSignal_q_6> <ld/M_aSignal_q_5> <ld/M_aSignal_q_4> <ld/M_aSignal_q_3> <ld/M_aSignal_q_2> <ld/M_aSignal_q_1> <ld/M_aSignal_q_0> 
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 1.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 2.
+FlipFlop generator_top/M_cucked_q_23 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -763,8 +893,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 66
- Flip-Flops                                            : 66
+# Registers                                            : 84
+ Flip-Flops                                            : 84
 
 =========================================================================
 
@@ -787,25 +917,26 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 171
+# BELS                             : 235
 #      GND                         : 4
 #      INV                         : 4
-#      LUT1                        : 38
-#      LUT2                        : 19
-#      LUT3                        : 2
-#      LUT4                        : 16
-#      LUT6                        : 6
-#      MUXCY                       : 38
+#      LUT1                        : 51
+#      LUT2                        : 31
+#      LUT4                        : 21
+#      LUT5                        : 5
+#      LUT6                        : 8
+#      MUXCY                       : 51
+#      MUXF7                       : 3
 #      VCC                         : 3
-#      XORCY                       : 41
-# FlipFlops/Latches                : 66
-#      FD                          : 19
-#      FDR                         : 43
+#      XORCY                       : 54
+# FlipFlops/Latches                : 84
+#      FD                          : 32
+#      FDR                         : 48
 #      FDS                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 55
-#      IBUF                        : 1
+# IO Buffers                       : 57
+#      IBUF                        : 3
 #      OBUF                        : 48
 #      OBUFT                       : 6
 
@@ -816,20 +947,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              66  out of  11440     0%  
- Number of Slice LUTs:                   85  out of   5720     1%  
-    Number used as Logic:                85  out of   5720     1%  
+ Number of Slice Registers:              84  out of  11440     0%  
+ Number of Slice LUTs:                  120  out of   5720     2%  
+    Number used as Logic:               120  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     90
-   Number with an unused Flip Flop:      24  out of     90    26%  
-   Number with an unused LUT:             5  out of     90     5%  
-   Number of fully used LUT-FF pairs:    61  out of     90    67%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    128
+   Number with an unused Flip Flop:      44  out of    128    34%  
+   Number with an unused LUT:             8  out of    128     6%  
+   Number of fully used LUT-FF pairs:    76  out of    128    59%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          71
- Number of bonded IOBs:                  56  out of    102    54%  
+ Number of bonded IOBs:                  58  out of    102    56%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -855,7 +986,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 66    |
+clk                                | BUFGP                  | 84    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -868,7 +999,7 @@ Speed Grade: -2
 
    Minimum period: 4.639ns (Maximum Frequency: 215.564MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 6.063ns
+   Maximum output required time after clock: 4.475ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -878,20 +1009,20 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.639ns (frequency: 215.564MHz)
-  Total number of paths / destination ports: 843 / 107
+  Total number of paths / destination ports: 1081 / 130
 -------------------------------------------------------------------------
 Delay:               4.639ns (Levels of Logic = 3)
-  Source:            ld/slowclock/M_ctr_q_14 (FF)
+  Source:            ld/slowclock/M_ctr_q_12 (FF)
   Destination:       ld/slowclock/M_ctr_q_15 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ld/slowclock/M_ctr_q_14 to ld/slowclock/M_ctr_q_15
+  Data Path: ld/slowclock/M_ctr_q_12 to ld/slowclock/M_ctr_q_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              21   0.525   1.418  M_ctr_q_14 (M_ctr_q_14)
-     LUT6:I4->O            1   0.250   0.682  M_ctr_q[15]_PWR_23_o_equal_2_o_015_SW0 (N4)
+     FD:C->Q              21   0.525   1.418  M_ctr_q_12 (M_ctr_q_12)
+     LUT6:I4->O            1   0.250   0.682  M_ctr_q[15]_PWR_23_o_equal_2_o_015_SW0 (N2)
      LUT6:I5->O           16   0.254   1.182  M_ctr_q[15]_PWR_23_o_equal_2_o_015 (M_ctr_q[15]_PWR_23_o_equal_2_o_0)
      LUT2:I1->O            1   0.254   0.000  M_ctr_q_15_rstpot (M_ctr_q_15_rstpot)
      FD:D                      0.074          M_ctr_q_15
@@ -901,7 +1032,7 @@ Delay:               4.639ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 9 / 7
 -------------------------------------------------------------------------
 Offset:              3.526ns (Levels of Logic = 3)
   Source:            rst_n (PAD)
@@ -922,24 +1053,23 @@ Offset:              3.526ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 38 / 35
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              6.063ns (Levels of Logic = 3)
-  Source:            generator_top/M_cucked_q_23 (FF)
-  Destination:       led<4> (PAD)
+Offset:              4.475ns (Levels of Logic = 2)
+  Source:            ld/M_aSignal_q_13 (FF)
+  Destination:       a<13> (PAD)
   Source Clock:      clk rising
 
-  Data Path: generator_top/M_cucked_q_23 to led<4>
+  Data Path: ld/M_aSignal_q_13 to a<13>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             31   0.525   1.611  M_cucked_q_23 (M_cucked_q_23)
-     LUT2:I0->O            3   0.250   0.765  Mmux_led11 (led<4>)
-     end scope: 'generator_top:led<4>'
-     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
+     FDR:C->Q             11   0.525   1.038  M_aSignal_q_13 (M_aSignal_q_13)
+     end scope: 'ld:a<2>'
+     OBUF:I->O                 2.912          a_0_OBUF (a<0>)
     ----------------------------------------
-    Total                      6.063ns (3.687ns logic, 2.376ns route)
-                                       (60.8% logic, 39.2% route)
+    Total                      4.475ns (3.437ns logic, 1.038ns route)
+                                       (76.8% logic, 23.2% route)
 
 =========================================================================
 
@@ -958,14 +1088,14 @@ clk            |    4.639|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.54 secs
+Total CPU time to Xst completion: 6.71 secs
  
 --> 
 
 
-Total memory usage is 412628 kilobytes
+Total memory usage is 412208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   90 (   0 filtered)
-Number of infos    :   59 (   0 filtered)
+Number of warnings :  137 (   0 filtered)
+Number of infos    :   94 (   0 filtered)
 

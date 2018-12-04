@@ -139,9 +139,8 @@ module mojo_top (
         currentrows.d = generator_bottom.rowsout;
         if(gamefsm.q!=gamefsm.STAGE1) currentrows.d=currentrows.q;
         led_converter.rows = generator_bottom.rowsout;
-        
+        led=generator_bottom.led;
         generator_top.cols = gen_topcols;
-        led=generator_top.led;
         
         //save the generator_top.colsout;
         // display it

@@ -76,9 +76,13 @@ NET "a[14]" IOSTANDARD = LVTTL;
 NET "a[15]" LOC = P115;
 NET "a[15]" IOSTANDARD = LVTTL;
 
-NET "button2" LOC = P41;
-NET "button2" IOSTANDARD = LVTTL;
-NET "button2" PULLDOWN;
+
+NET "button_l" LOC = P51;
+NET "button_l" IOSTANDARD = LVTTL;
+NET "button_l" PULLDOWN;
+NET "button_r" LOC = P41;
+NET "button_r" IOSTANDARD = LVTTL;
+NET "button_r" PULLDOWN;
 
 ####################################################################################
 # Constraints from file : 'mojo.ucf'
