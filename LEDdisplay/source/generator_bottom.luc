@@ -18,14 +18,17 @@ module generator_bottom (
   const SHL = 6b100000;
   const SHR = 6b100001;
   
+  .clk(clk){
   // temp values of outputs of ALU
-  sig xoroutput[16];       // to check if both buttons are pressed simultaneously
-  sig shiftleft[2][16];    // to save rowsout values if left is pressed
-  sig shiftright[2][16];   // to save rowsout values if right is pressed
-  
+  dff xoroutput[16];       // to check if both buttons are pressed simultaneously
+  dff shiftleft[2][16];    // to save rowsout values if left is pressed
+  dff shiftright[2][16];   // to save rowsout values if right is pressed
+  .rst(rst){
+    fsm new_fsm={IDLE, LEFT, RIGHT};
+    } 
+  }
   
   always {
-  
     // initialise rowsout values 
     rowsout[0] = 16b0;
     rowsout[1] = 16b0;
@@ -33,49 +36,56 @@ module generator_bottom (
     alu.a = button_l;      // button_l XOR button_r
     alu.b = button_r;
     alu.alufn = XOR;
-    xoroutput = alu.out;
+    xoroutput.d = alu.out;
     
     alu.a = rows[0];      // shift left row 0 by 1 
     alu.b = 1;
     alu.alufn = SHL;
-    shiftleft[0] = alu.out;
+    shiftleft.d[0] = alu.out;
     
     alu.a = rows[1];      // shift left row 1 by 1
     alu.b = 1;
     alu.alufn = SHL;
-    shiftleft[1] = alu.out;
+    shiftleft.d[1] = alu.out;
     
     alu.a = rows[0];      // shift right row 0 by 1
     alu.b = 1;
     alu.alufn = SHR;
-    shiftright[0] = alu.out;
+    shiftright.d[0] = alu.out;
     
     alu.a = rows[1];      // shift right row 1 by 1
     alu.b = 1;
     alu.alufn = SHR;
-    shiftright[1] = alu.out;
+    shiftright.d[1] = alu.out;
     
     
-    
-    
-    if (xoroutput == 16b1){   
-    // if only one button is pressed
-    
-      if (button_l == 1 && (rows[0][14] != 1)){  
-      // if left is pressed and user is not at the left edge
-      // then shift left rows by 1
-         rowsout = shiftleft;
-      }
-      else if (button_r == 1 && (rows[0][1] != 1)){  
+    case(new_fsm.q){
+      new_fsm.IDLE:
+      rowsout = rows;
+      if(button_l==1 && xoroutput.q == 16b1){
+        new_fsm.d=new_fsm.LEFT;
+        }
+      if(button_r==1 && xoroutput.q == 16b1){
+        new_fsm.d=new_fsm.RIGHT;
+        }
+      new_fsm.RIGHT:
+      if (rows[0][1] != 1){  
       // if right is pressed and user is not at the right edge
       // then shift right rows by 1
-        rowsout = shiftright;
+        rowsout = shiftright.q;
       }
-  }
-    else {
-    // do nothing; output original rows
-    rowsout = rows;
-  }
+        new_fsm.d=new_fsm.IDLE;
+        
+      new_fsm.LEFT:
+      if (rows[0][14] != 1){  
+      // if left is pressed and user is not at the left edge
+      // then shift left rows by 1
+         rowsout = shiftleft.q;
+      }
+        new_fsm.d=new_fsm.IDLE;
       
+    }
+    
+          
 }
 } 

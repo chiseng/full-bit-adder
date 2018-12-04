@@ -18,8 +18,8 @@
     <src>led_matrix.luc</src>
     <ucf>user.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
-    <component>pn_gen.luc</component>
     <component>decoder.luc</component>
+    <component>pn_gen.luc</component>
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>
     <component>button_conditioner.luc</component>
