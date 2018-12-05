@@ -9,57 +9,54 @@ module check_5 (
     input rst,
     input [223:0] cols,
     input [31:0] rows,
-    input score,
-    output reg outscore
+    input [7:0] score,
+    output reg [7:0] outscore
   );
   
   
-  
-  wire [16-1:0] M_alu_out;
-  wire [1-1:0] M_alu_z;
-  wire [1-1:0] M_alu_v;
-  wire [1-1:0] M_alu_n;
-  reg [16-1:0] M_alu_a;
-  reg [16-1:0] M_alu_b;
-  reg [6-1:0] M_alu_alufn;
-  alu_10 alu (
-    .a(M_alu_a),
-    .b(M_alu_b),
-    .alufn(M_alu_alufn),
-    .out(M_alu_out),
-    .z(M_alu_z),
-    .v(M_alu_v),
-    .n(M_alu_n)
-  );
   
   localparam AND = 6'h18;
   
   localparam ADD = 6'h00;
   
+  reg [7:0] M_score_save_d, M_score_save_q = 1'h0;
+  reg [15:0] M_tempcheck_d, M_tempcheck_q = 1'h0;
+  reg M_z_d, M_z_q = 1'h0;
+  
   reg [15:0] msb;
-  
-  reg [15:0] tempcheck;
-  
-  reg z;
   
   integer i;
   
   always @* begin
+    M_tempcheck_d = M_tempcheck_q;
+    M_z_d = M_z_q;
+    M_score_save_d = M_score_save_q;
+    
+    M_score_save_d = score;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
       msb[(4'hf - i)*1+0-:1] = cols[(i)*14+13+0-:1];
     end
-    M_alu_a = msb;
-    M_alu_b = rows[16+15-:16];
-    M_alu_alufn = 6'h18;
-    tempcheck = M_alu_out;
-    M_alu_a = tempcheck;
-    M_alu_b = 16'h0000;
-    M_alu_alufn = 6'h00;
-    z = M_alu_z;
-    if (z == 1'h0) begin
-      outscore = score + 1'h1;
+    M_tempcheck_d = msb & rows[16+15-:16];
+    M_z_d = M_tempcheck_q[0+0-:1] + M_tempcheck_q[1+0-:1] + M_tempcheck_q[2+0-:1] + M_tempcheck_q[3+0-:1] + M_tempcheck_q[4+0-:1] + M_tempcheck_q[5+0-:1] + M_tempcheck_q[6+0-:1] + M_tempcheck_q[7+0-:1] + M_tempcheck_q[8+0-:1] + M_tempcheck_q[9+0-:1] + M_tempcheck_q[10+0-:1] + M_tempcheck_q[11+0-:1] + M_tempcheck_q[12+0-:1] + M_tempcheck_q[13+0-:1] + M_tempcheck_q[14+0-:1] + M_tempcheck_q[15+0-:1];
+    if (M_z_q > 1'h0) begin
+      M_score_save_d = M_score_save_q + 8'h01;
+      outscore = M_score_save_q;
     end else begin
-      outscore = score;
+      M_score_save_d = M_score_save_q;
+      outscore = M_score_save_q;
     end
   end
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_score_save_q <= 1'h0;
+      M_tempcheck_q <= 1'h0;
+      M_z_q <= 1'h0;
+    end else begin
+      M_score_save_q <= M_score_save_d;
+      M_tempcheck_q <= M_tempcheck_d;
+      M_z_q <= M_z_d;
+    end
+  end
+  
 endmodule

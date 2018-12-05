@@ -17,7 +17,7 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 33: Assignment to <arg fmt="%s" index="1">M_alu_n</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 144: Assignment to <arg fmt="%s" index="1">M_shiftleft_q</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 152: Assignment to <arg fmt="%s" index="1">M_shiftleft_q</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Assignment to <arg fmt="%s" index="1">M_generator_bottom_led</arg> ignored, since the identifier is never used
@@ -26,37 +26,25 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/randomNumGen_13.v" Line 36: Assignment to <arg fmt="%s" index="1">sclk</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 31: Assignment to <arg fmt="%s" index="1">M_alu_v</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 32: Assignment to <arg fmt="%s" index="1">M_alu_n</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 93: Assignment to <arg fmt="%s" index="1">M_check_outscore</arg> ignored, since the identifier is never used
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" Line 23: Assignment to <arg fmt="%s" index="1">M_counter_r_value</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 163: Assignment to <arg fmt="%s" index="1">M_gamefsm_q</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 164: Assignment to <arg fmt="%s" index="1">M_gamefsm_q</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 172: Assignment to <arg fmt="%s" index="1">M_currentrows_q</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 173: Assignment to <arg fmt="%s" index="1">M_state_q</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 185: Assignment to <arg fmt="%s" index="1">M_state_q</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 190: Assignment to <arg fmt="%s" index="1">M_currentrows_q</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 95: Net &lt;<arg fmt="%s" index="1">M_score_d</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v</arg>&quot; line <arg fmt="%d" index="2">20</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">counter_r</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter_16</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">leddisplay_8</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v</arg>&quot; line <arg fmt="%d" index="2">20</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">counter_r</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter_15</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">leddisplay_8</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%d" index="2">56</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">button_start</arg>&gt; of block &lt;<arg fmt="%s" index="4">button_conditioner_2</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mojo_top_0</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%d" index="2">87</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">check</arg>&gt; of block &lt;<arg fmt="%s" index="4">check_5</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mojo_top_0</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%d" index="2">99</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">slowclock</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter_6</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mojo_top_0</arg>&gt;. Underlying logic will be removed.
@@ -98,13 +86,13 @@
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">66</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generator_bottom</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">87</arg>: Output port &lt;<arg fmt="%s" index="3">outscore</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">check</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">99</arg>: Output port &lt;<arg fmt="%s" index="3">value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slowclock</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">M_score_d</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">M_score_q</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v</arg>&quot; line <arg fmt="%s" index="2">26</arg>: Output port &lt;<arg fmt="%s" index="3">z</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">alu</arg>&gt; is unconnected or connected to loadless signal.
@@ -173,6 +161,63 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;223:223&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;12:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;26:14&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;40:28&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;54:42&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;68:56&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;82:70&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;96:84&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;110:98&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;124:112&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;138:126&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;152:140&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;166:154&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;180:168&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;194:182&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;208:196&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">cols&lt;222:210&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">rows&lt;15:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">score</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">M_tempcheck_q</arg>&lt;<arg fmt="%d" index="2">15</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">check_5</arg>&gt;.
+</msg>
+
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v</arg>&quot; line <arg fmt="%s" index="2">20</arg>: Output port &lt;<arg fmt="%s" index="3">value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter_r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
@@ -182,85 +227,31 @@
 <msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_M_cSignal_d</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">check/M_score_save_q_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_xoroutput_q_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_xoroutput_q_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_xoroutput_q_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -305,109 +296,115 @@
 <msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_xoroutput_q_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_1&gt; &lt;ld/slowclock/M_ctr_q_1&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_2&gt; &lt;ld/slowclock/M_ctr_q_2&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_3&gt; &lt;ld/slowclock/M_ctr_q_3&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_4&gt; &lt;ld/slowclock/M_ctr_q_4&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_5&gt; &lt;ld/slowclock/M_ctr_q_5&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_6&gt; &lt;ld/slowclock/M_ctr_q_6&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_7&gt; &lt;ld/slowclock/M_ctr_q_7&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_8&gt; &lt;ld/slowclock/M_ctr_q_8&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_9&gt; &lt;ld/slowclock/M_ctr_q_9&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_4&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_25&gt; &lt;generator_bottom/regs/M_regs_q_24&gt; &lt;generator_bottom/regs/M_regs_q_10&gt; &lt;generator_bottom/regs/M_regs_q_9&gt; &lt;generator_bottom/regs/M_regs_q_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/M_shiftstore_q_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_10&gt; &lt;ld/slowclock/M_ctr_q_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_11&gt; &lt;ld/slowclock/M_ctr_q_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_12&gt; &lt;ld/slowclock/M_ctr_q_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_13&gt; &lt;ld/slowclock/M_ctr_q_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_14&gt; &lt;ld/slowclock/M_ctr_q_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_15&gt; &lt;ld/slowclock/M_ctr_q_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_0&gt; &lt;ld/slowclock/M_ctr_q_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/regs/M_regs_q_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/regs/M_regs_q_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_1&gt; &lt;ld/slowclock/M_ctr_q_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_10&gt; &lt;ld/slowclock/M_ctr_q_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_2&gt; &lt;ld/slowclock/M_ctr_q_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_11&gt; &lt;ld/slowclock/M_ctr_q_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_3&gt; &lt;ld/slowclock/M_ctr_q_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_12&gt; &lt;ld/slowclock/M_ctr_q_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_4&gt; &lt;ld/slowclock/M_ctr_q_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_13&gt; &lt;ld/slowclock/M_ctr_q_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_5&gt; &lt;ld/slowclock/M_ctr_q_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_14&gt; &lt;ld/slowclock/M_ctr_q_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_6&gt; &lt;ld/slowclock/M_ctr_q_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_7&gt; &lt;ld/slowclock/M_ctr_q_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_15&gt; &lt;ld/slowclock/M_ctr_q_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_8&gt; &lt;ld/slowclock/M_ctr_q_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/slowclk/M_ctr_q_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_top/rng/slowclk/M_ctr_q_9&gt; &lt;ld/slowclock/M_ctr_q_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_bottom/M_shiftstore_q_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/M_shiftstore_q_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">generator_top/rng/slowclk/M_ctr_q_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;generator_bottom/slowclk/M_ctr_q_0&gt; &lt;ld/slowclock/M_ctr_q_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="741" delta="new" >HDL ADVISOR - A <arg fmt="%d" index="1">4</arg>-bit shift register was found for signal &lt;<arg fmt="%s" index="2">reset_cond/M_stage_q_3</arg>&gt; and currently occupies <arg fmt="%d" index="3">4</arg> logic cells (<arg fmt="%d" index="4">2</arg> slices). Removing the set/reset logic would take advantage of SRL<arg fmt="%d" index="5">32</arg> (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.

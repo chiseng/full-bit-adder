@@ -101,6 +101,8 @@ module mojo_top (
     check.cols = gen_topcols;
     check.rows = gen_botrows;
     check.score = score.q;
+//    led=generator_bottom.rowsout[1][15:8];
+    led=check.outscore;
     a=ld.a;
     c=ld.c;
    

@@ -21,7 +21,7 @@ module alu_10 (
   wire [1-1:0] M_add_v;
   wire [1-1:0] M_add_n;
   reg [6-1:0] M_add_alufn;
-  adder_17 add (
+  adder_16 add (
     .a(a),
     .b(b),
     .alufn(M_add_alufn),
@@ -32,7 +32,7 @@ module alu_10 (
   );
   wire [16-1:0] M_boole_out;
   reg [6-1:0] M_boole_alufn;
-  boolean_18 boole (
+  boolean_17 boole (
     .a(a),
     .b(b),
     .alufn(M_boole_alufn),
@@ -40,7 +40,7 @@ module alu_10 (
   );
   wire [16-1:0] M_comp_cmp;
   reg [6-1:0] M_comp_alufn;
-  compare16_19 comp (
+  compare16_18 comp (
     .a(a),
     .b(b),
     .alufn(M_comp_alufn),
@@ -48,7 +48,7 @@ module alu_10 (
   );
   wire [16-1:0] M_shift_c;
   reg [6-1:0] M_shift_alufn;
-  shifter_20 shift (
+  shifter_19 shift (
     .a(a),
     .b(b),
     .alufn(M_shift_alufn),
@@ -56,7 +56,7 @@ module alu_10 (
   );
   wire [16-1:0] M_mult_out;
   reg [6-1:0] M_mult_alufn;
-  multiply_21 mult (
+  multiply_20 mult (
     .a(a),
     .b(b),
     .alufn(M_mult_alufn),

@@ -4,24 +4,29 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module multiply_21 (
+module shifter_19 (
     input [5:0] alufn,
     input [15:0] a,
     input [15:0] b,
-    output reg [15:0] out
+    output reg [15:0] c
   );
   
   
   
   always @* begin
-    out = 1'h0;
     
     case (alufn[0+5-:6])
-      6'h02: begin
-        out = $signed(a) * $signed(b);
+      6'h20: begin
+        c = a << b[0+2-:3];
       end
-      6'h03: begin
-        out = $signed(a) / $signed(b);
+      6'h21: begin
+        c = a >> b[0+2-:3];
+      end
+      6'h23: begin
+        c = $signed(a) >>> b[0+2-:3];
+      end
+      default: begin
+        c = a;
       end
     endcase
   end

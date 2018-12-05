@@ -99,20 +99,18 @@ module generator_bottom_3 (
           M_regs_en = 1'h1;
           M_regs_data = {M_shiftstore_q, M_shiftstore_q};
         end
-        M_regs_en = 1'h0;
         rowsout = M_regs_out;
         M_new_fsm_d = SAVED_STATE_new_fsm;
       end
       RIGHT_new_fsm: begin
         if (rows[0+14+0-:1] != 1'h1) begin
+          M_regs_en = 1'h1;
           M_alu_a = M_regs_out[0+15-:16];
           M_alu_b = 1'h1;
           M_alu_alufn = 6'h21;
           M_shiftstore_d = M_alu_out;
-          M_regs_en = 1'h1;
           M_regs_data = {M_shiftstore_q, M_shiftstore_q};
         end
-        M_regs_en = 1'h0;
         rowsout = M_regs_out;
         M_new_fsm_d = SAVED_STATE_new_fsm;
       end
@@ -131,6 +129,7 @@ module generator_bottom_3 (
           end
         end
         if (button_r != 1'h1 && M_xoroutput_q != 16'h0001) begin
+          M_regs_en = 1'h0;
           rowsout = M_regs_out;
           M_new_fsm_d = SAVED_STATE_new_fsm;
         end
@@ -141,20 +140,20 @@ module generator_bottom_3 (
     endcase
   end
   
-  always @(posedge clk) begin
-    M_xoroutput_q <= M_xoroutput_d;
-    M_shiftleft_q <= M_shiftleft_d;
-    M_shiftright_q <= M_shiftright_d;
-    M_shiftstore_q <= M_shiftstore_d;
-  end
-  
-  
   always @(posedge M_slowclk_value) begin
     if (rst == 1'b1) begin
       M_new_fsm_q <= 1'h0;
     end else begin
       M_new_fsm_q <= M_new_fsm_d;
     end
+  end
+  
+  
+  always @(posedge clk) begin
+    M_xoroutput_q <= M_xoroutput_d;
+    M_shiftleft_q <= M_shiftleft_d;
+    M_shiftright_q <= M_shiftright_d;
+    M_shiftstore_q <= M_shiftstore_d;
   end
   
 endmodule

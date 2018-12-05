@@ -80,10 +80,10 @@ module mojo_top_0 (
     .cols(M_generator_top_cols),
     .colsout(M_generator_top_colsout)
   );
-  wire [1-1:0] M_check_outscore;
+  wire [8-1:0] M_check_outscore;
   reg [224-1:0] M_check_cols;
   reg [32-1:0] M_check_rows;
-  reg [1-1:0] M_check_score;
+  reg [8-1:0] M_check_score;
   check_5 check (
     .clk(clk),
     .rst(rst),
@@ -156,6 +156,7 @@ module mojo_top_0 (
     M_check_cols = gen_topcols;
     M_check_rows = gen_botrows;
     M_check_score = M_score_q;
+    led = M_check_outscore;
     a = M_ld_a;
     c = M_ld_c;
   end
@@ -169,6 +170,23 @@ module mojo_top_0 (
   end
   
   
+  always @(posedge M_slowclock_value) begin
+    M_state_q <= M_state_d;
+    
+    if (rst == 1'b1) begin
+      M_aSignal_q <= 1'h0;
+    end else begin
+      M_aSignal_q <= M_aSignal_d;
+    end
+    
+    if (rst == 1'b1) begin
+      M_cSignal_q <= 1'h0;
+    end else begin
+      M_cSignal_q <= M_cSignal_d;
+    end
+  end
+  
+  
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_score_q <= 1'h0;
@@ -178,23 +196,6 @@ module mojo_top_0 (
       M_score_q <= M_score_d;
       M_currentrows_q <= M_currentrows_d;
       M_currentcols_q <= M_currentcols_d;
-    end
-  end
-  
-  
-  always @(posedge M_slowclock_value) begin
-    M_state_q <= M_state_d;
-    
-    if (rst == 1'b1) begin
-      M_cSignal_q <= 1'h0;
-    end else begin
-      M_cSignal_q <= M_cSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
-      M_aSignal_q <= 1'h0;
-    end else begin
-      M_aSignal_q <= M_aSignal_d;
     end
   end
   

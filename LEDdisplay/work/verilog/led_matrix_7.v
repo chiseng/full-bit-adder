@@ -15,7 +15,7 @@ module led_matrix_7 (
   
   
   wire [4-1:0] M_slowclock_value;
-  counter_15 slowclock (
+  counter_14 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
