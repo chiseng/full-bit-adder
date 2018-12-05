@@ -8,46 +8,40 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Dec 05 15:17:42 2018
+Mapped Date    : Wed Dec 05 00:52:52 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                   105 out of  11,440    1%
-    Number used as Flip Flops:                 105
+  Number of Slice Registers:                    22 out of  11,440    1%
+    Number used as Flip Flops:                  22
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        209 out of   5,720    3%
-    Number used as logic:                      205 out of   5,720    3%
-      Number using O6 output only:             108
-      Number using O5 output only:              86
-      Number using O5 and O6:                   11
+  Number of Slice LUTs:                         44 out of   5,720    1%
+    Number used as logic:                       43 out of   5,720    1%
+      Number using O6 output only:              20
+      Number using O5 output only:              14
+      Number using O5 and O6:                    9
       Number used as ROM:                        0
-    Number used as Memory:                       1 out of   1,440    1%
-      Number used as Dual Port RAM:              0
-      Number used as Single Port RAM:            0
-      Number used as Shift Register:             1
-        Number using O6 output only:             1
-        Number using O5 output only:             0
-        Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      3
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:      1
       Number with same-slice register load:      0
-      Number with same-slice carry load:         3
+      Number with same-slice carry load:         1
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    65 out of   1,430    4%
-  Number of MUXCYs used:                        92 out of   2,860    3%
-  Number of LUT Flip Flop pairs used:          214
-    Number with an unused Flip Flop:           109 out of     214   50%
-    Number with an unused LUT:                   5 out of     214    2%
-    Number of fully used LUT-FF pairs:         100 out of     214   46%
-    Number of unique control sets:               6
+  Number of occupied Slices:                    19 out of   1,430    1%
+  Number of MUXCYs used:                        16 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:           49
+    Number with an unused Flip Flop:            27 out of      49   55%
+    Number with an unused LUT:                   5 out of      49   10%
+    Number of fully used LUT-FF pairs:          17 out of      49   34%
+    Number of unique control sets:               3
     Number of slice register sites lost
-      to control set restrictions:              30 out of  11,440    1%
+      to control set restrictions:              10 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -58,7 +52,7 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        58 out of     102   56%
     Number of LOCed IOBs:                       50 out of      58   86%
-    IOB Flip Flops:                             18
+    IOB Flip Flops:                             16
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -71,8 +65,8 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
-  Number of OLOGIC2/OSERDES2s:                  18 out of     200    9%
-    Number used as OLOGIC2s:                    18
+  Number of OLOGIC2/OSERDES2s:                  16 out of     200    8%
+    Number used as OLOGIC2s:                    16
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
@@ -87,11 +81,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.14
+Average Fanout of Non-Clock Nets:                2.42
 
-Peak Memory Usage:  354 MB
+Peak Memory Usage:  352 MB
 Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion (all processors):   4 secs 
+Total CPU time to MAP completion (all processors):   5 secs 
 
 Table of Contents
 -----------------
@@ -133,7 +127,7 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
 INFO:LIT:243 - Logical network button2 has no load.
-INFO:LIT:395 - The above info message is repeated 12 more times for the
+INFO:LIT:395 - The above info message is repeated 14 more times for the
    following (max. 5 shown):
    io_button(4),
    io_button(3),
@@ -159,7 +153,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   12 block(s) removed
-  12 block(s) optimized away
+   6 block(s) optimized away
    6 signal(s) removed
 
 Section 5 - Removed Logic
@@ -193,12 +187,6 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-GND 		button_left/XST_GND
-VCC 		button_left/XST_VCC
-GND 		button_left/sync/XST_GND
-VCC 		button_left/sync/XST_VCC
-GND 		generator_bottom/c/XST_GND
-VCC 		generator_bottom/c/XST_VCC
 VCC 		ld/_VCC
 GND 		ld/slowclock/XST_GND
 VCC 		ld/slowclock/XST_VCC
@@ -222,10 +210,10 @@ Section 6 - IOB Properties
 | a[5]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[6]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[7]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
-| a[8]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
+| a[8]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[9]                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[10]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
-| a[11]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
+| a[11]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[12]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[13]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | a[14]                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |

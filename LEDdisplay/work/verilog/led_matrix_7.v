@@ -15,7 +15,7 @@ module led_matrix_7 (
   
   
   wire [4-1:0] M_slowclock_value;
-  counter_15 slowclock (
+  counter_14 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
@@ -105,15 +105,15 @@ module led_matrix_7 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_cSignal_q <= 1'h0;
-    end else begin
-      M_cSignal_q <= M_cSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
       M_aSignal_q <= 1'h0;
     end else begin
       M_aSignal_q <= M_aSignal_d;
+    end
+    
+    if (rst == 1'b1) begin
+      M_cSignal_q <= 1'h0;
+    end else begin
+      M_cSignal_q <= M_cSignal_d;
     end
   end
   

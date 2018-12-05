@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Dec 05 15:17:53 2018
+Wed Dec 05 00:53:03 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -43,18 +43,18 @@ Pinout by Pin Number:
 |P21       |           |IOBS     |IO_L42N_GCLK24_3          |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |P22       |           |IOBM     |IO_L42P_GCLK25_TRDY2_3    |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |P23       |           |IOBS     |IO_L41N_GCLK26_3          |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P24       |io_seg[7]  |IOB      |IO_L41P_GCLK27_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P24       |io_seg[5]  |IOB      |IO_L41P_GCLK27_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P25       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
-|P26       |io_seg[6]  |IOB      |IO_L37N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P27       |io_seg[5]  |IOB      |IO_L37P_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P26       |io_seg[4]  |IOB      |IO_L37N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P27       |io_seg[3]  |IOB      |IO_L37P_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P28       |           |         |VCCINT                    |         |           |              |          |         |           |         |1.2    |          |           |                |
-|P29       |io_seg[4]  |IOB      |IO_L36N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P30       |io_seg[3]  |IOB      |IO_L36P_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P29       |io_seg[2]  |IOB      |IO_L36N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P30       |io_seg[1]  |IOB      |IO_L36P_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P31       |           |         |VCCO_3                    |         |           |3             |          |         |           |         |2.50   |          |           |                |
-|P32       |io_seg[2]  |IOB      |IO_L2N_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P33       |io_seg[1]  |IOB      |IO_L2P_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P32       |io_seg[0]  |IOB      |IO_L2N_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P33       |io_seg[7]  |IOB      |IO_L2P_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P34       |           |IOBS     |IO_L1N_VREF_3             |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P35       |io_seg[0]  |IOB      |IO_L1P_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P35       |io_seg[6]  |IOB      |IO_L1P_3                  |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P36       |           |         |VCCAUX                    |         |           |              |          |         |           |         |3.3    |          |           |                |
 |P37       |           |         |PROGRAM_B_2               |         |           |              |          |         |           |         |       |          |           |                |
 |P38       |rst_n      |IOB      |IO_L65N_CSO_B_2           |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
@@ -112,14 +112,14 @@ Pinout by Pin Number:
 |P90       |           |         |VCCAUX                    |         |           |              |          |         |           |         |3.3    |          |           |                |
 |P91       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P92       |c[8]       |IOB      |IO_L41N_GCLK8_1           |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
-|P93       |a[8]       |IOB      |IO_L41P_GCLK9_IRDY1_1     |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|P93       |a[8]       |IOB      |IO_L41P_GCLK9_IRDY1_1     |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P94       |c[9]       |IOB      |IO_L40N_GCLK10_1          |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P95       |a[9]       |IOB      |IO_L40P_GCLK11_1          |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P96       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P97       |c[10]      |IOB      |IO_L34N_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P98       |a[10]      |IOB      |IO_L34P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P99       |c[11]      |IOB      |IO_L33N_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
-|P100      |a[11]      |IOB      |IO_L33P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|P100      |a[11]      |IOB      |IO_L33P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P101      |c[12]      |IOB      |IO_L32N_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P102      |a[12]      |IOB      |IO_L32P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P103      |           |         |VCCO_1                    |         |           |1             |          |         |           |         |3.30   |          |           |                |

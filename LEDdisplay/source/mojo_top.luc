@@ -39,7 +39,7 @@ module mojo_top (
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
-    button_conditioner button_left;
+    button_conditioner button_start;
     .rst(rst){
       //multi_seven_seg seg;
       generator_bottom generator_bottom;
@@ -69,8 +69,7 @@ module mojo_top (
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
-  button_left.in=button_l;
-  
+  button_start.in=io_button[3];
 
   reset_cond.in = ~rst_n; // input raw inverted reset signal
   rst = reset_cond.out;   // conditioned reset
@@ -82,13 +81,12 @@ module mojo_top (
   avr_rx = bz;            // not using serial port
   
     // initialise things
-    led=generator_bottom.led;
-    generator_bottom.button_l = button_left.out;
+    generator_bottom.button_l = button_l;
     generator_bottom.button_r = button_r;
-    gen_botrows[0] = 16b0000011100000000;
-    gen_botrows[1] = 16b0000011100000000;
+    gen_botrows[0] = ~16b0000011100000000;
+    gen_botrows[1] = ~16b0000011100000000;
     generator_bottom.rows = gen_botrows;
-    led_converter.rows = ~generator_bottom.rowsout;
+    led_converter.rows = generator_bottom.rowsout;
     
     
     for ( i=0; i<16; i++){

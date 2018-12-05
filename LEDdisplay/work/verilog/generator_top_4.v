@@ -40,7 +40,7 @@ module generator_top_4 (
   wire [32-1:0] M_rng_num;
   reg [1-1:0] M_rng_next;
   reg [32-1:0] M_rng_seed;
-  pn_gen_13 rng (
+  pn_gen_12 rng (
     .clk(clk),
     .rst(rst),
     .next(M_rng_next),
@@ -70,6 +70,7 @@ module generator_top_4 (
     M_rng_seed = 5'h14;
     M_rng_next = 1'h1;
     M_counts_d = M_counts_q + 1'h1;
+    M_rng_next = 1'h0;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
       colsout[(i)*14+13-:14] = 14'h3fff;
     end
