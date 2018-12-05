@@ -12,7 +12,7 @@ module check (
     output outscore        // output score
   ) {
   // instantiate the alu module
-  alu alu;
+  //alu alu;
   
   
   // ALUFN value for the different functions used
@@ -40,18 +40,22 @@ module check (
     
     
     // AND msb with rows[1] to check if coocnut coincides with user location
+    /*
     alu.a = msb;
     alu.b = rows[1];
     alu.alufn = AND;
     tempcheck = alu.out;
+    */
     
-    // ADD output from above with 0 to get the z value
-    alu.a = tempcheck;
-    alu.b = 16b0;
-    alu.alufn = ADD;
-    z = alu.z;
+    tempcheck = msb & rows[1];
     
-    if (z == 0){
+    
+    // add up all values from AND output; ie. checking if any coconut is caught
+    // if yes, z > 0; else z = 0
+    z = tempcheck[0] + tempcheck[1] + tempcheck[2] + tempcheck[3] + tempcheck[4] + tempcheck[5] + tempcheck[6] + tempcheck[7] + tempcheck[8] + tempcheck[9] + tempcheck[10] + tempcheck[11] + tempcheck[12] + tempcheck[13] + tempcheck[14] + tempcheck[15];
+    
+    
+    if (z > 0){
     // coconut is caught; add 1 to score
       outscore = score + 1;
     }
