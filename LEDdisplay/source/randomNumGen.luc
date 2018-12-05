@@ -1,0 +1,39 @@
+module randomNumGen (
+    input clk,  // clock
+    input rst,  // reset
+    output out[4]
+  ) {
+  
+  sig sclk;
+  
+    .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.  
+    
+    .rst(rst)
+    {
+      
+      counter slowclk(#SIZE(1),#DIV(24));
+      dff temp[4];
+    }
+  }
+      .clk(clk){
+    .rst(rst){
+       pn_gen rng;
+       
+    }
+  }
+
+  always {
+    sclk = slowclk.value;
+    rng.seed = 20;
+    rng.next = 1;
+    if (slowclk.value == 1){
+      temp.d = rng.num[3:0];
+    }
+    else{
+      temp.d = temp.q;
+    }
+    out = temp.q;    
+  }
+}
