@@ -11,7 +11,7 @@ module generator_bottom_3 (
     input [0:0] button_r,
     input [31:0] rows,
     output reg [31:0] rowsout,
-    output reg led
+    output reg [7:0] led
   );
   
   
@@ -42,17 +42,25 @@ module generator_bottom_3 (
   reg [15:0] M_xoroutput_d, M_xoroutput_q = 1'h0;
   reg [31:0] M_shiftleft_d, M_shiftleft_q = 1'h0;
   reg [31:0] M_shiftright_d, M_shiftright_q = 1'h0;
+  reg [15:0] M_shiftstore_d, M_shiftstore_q = 1'h0;
+  wire [32-1:0] M_c_value;
+  reg [1-1:0] M_c_rst;
+  counter_11 c (
+    .clk(clk),
+    .rst(M_c_rst),
+    .value(M_c_value)
+  );
   localparam IDLE_new_fsm = 2'd0;
   localparam LEFT_new_fsm = 2'd1;
   localparam RIGHT_new_fsm = 2'd2;
+  localparam SAVED_STATE_new_fsm = 2'd3;
   
   reg [1:0] M_new_fsm_d, M_new_fsm_q = IDLE_new_fsm;
   
   always @* begin
     M_new_fsm_d = M_new_fsm_q;
     M_xoroutput_d = M_xoroutput_q;
-    M_shiftright_d = M_shiftright_q;
-    M_shiftleft_d = M_shiftleft_q;
+    M_shiftstore_d = M_shiftstore_q;
     
     rowsout[0+15-:16] = 16'h0000;
     rowsout[16+15-:16] = 16'h0000;
@@ -60,48 +68,60 @@ module generator_bottom_3 (
     M_alu_a = 1'h0;
     M_alu_b = 1'h0;
     M_alu_alufn = 1'h0;
-    rowsout = rows;
+    M_c_rst = rst;
+    led = rows[0+8+7-:8];
+    rowsout = {M_shiftstore_q, M_shiftstore_q};
     
     case (M_new_fsm_q)
       IDLE_new_fsm: begin
-        M_alu_a = button_l;
-        M_alu_b = button_r;
-        M_alu_alufn = 6'h16;
-        M_xoroutput_d = M_alu_out;
-        if (button_l == 1'h1 && M_xoroutput_q == 16'h0001) begin
-          M_new_fsm_d = LEFT_new_fsm;
-        end
-        if (button_r == 1'h1 && M_xoroutput_q == 16'h0001) begin
-          M_new_fsm_d = RIGHT_new_fsm;
-        end
-      end
-      RIGHT_new_fsm: begin
-        if (rows[0+1+0-:1] != 1'h1) begin
-          M_alu_a = rows[0+15-:16];
-          M_alu_b = 1'h1;
-          M_alu_alufn = 6'h21;
-          M_shiftright_d[0+15-:16] = M_alu_out;
-          M_alu_a = rows[16+15-:16];
-          M_alu_b = 1'h1;
-          M_alu_alufn = 6'h21;
-          M_shiftright_d[16+15-:16] = M_alu_out;
-          rowsout = M_shiftright_q;
-        end
-        M_new_fsm_d = IDLE_new_fsm;
+        rowsout = rows;
+        M_shiftstore_d = rows[0+15-:16];
+        M_new_fsm_d = SAVED_STATE_new_fsm;
       end
       LEFT_new_fsm: begin
         if (rows[0+14+0-:1] != 1'h1) begin
           M_alu_a = rows[0+15-:16];
           M_alu_b = 1'h1;
           M_alu_alufn = 6'h20;
-          M_shiftleft_d[0+15-:16] = M_alu_out;
-          M_alu_a = rows[16+15-:16];
-          M_alu_b = 1'h1;
-          M_alu_alufn = 6'h20;
-          M_shiftleft_d[16+15-:16] = M_alu_out;
-          rowsout = M_shiftleft_q;
         end
-        M_new_fsm_d = IDLE_new_fsm;
+        if (M_c_value == 1'h0) begin
+          M_shiftstore_d = M_alu_out;
+        end else begin
+          M_shiftstore_d = M_shiftstore_q;
+        end
+        M_new_fsm_d = LEFT_new_fsm;
+      end
+      RIGHT_new_fsm: begin
+        if (rows[0+14+0-:1] != 1'h1) begin
+          M_alu_a = rows[0+15-:16];
+          M_alu_b = 1'h1;
+          M_alu_alufn = 6'h21;
+          M_shiftstore_d = M_alu_out;
+          rowsout = {M_shiftstore_q, M_shiftstore_q};
+        end
+        M_shiftstore_d = M_shiftstore_q;
+        M_new_fsm_d = SAVED_STATE_new_fsm;
+      end
+      SAVED_STATE_new_fsm: begin
+        M_alu_a = button_l;
+        M_alu_b = button_r;
+        M_alu_alufn = 6'h16;
+        M_xoroutput_d = M_alu_out;
+        rowsout = {M_shiftstore_q, M_shiftstore_q};
+        if (button_l != 1'h1 && M_xoroutput_q != 16'h0001) begin
+          M_shiftstore_d = M_shiftstore_q;
+        end else begin
+          if (button_l == 1'h1 && M_xoroutput_q == 16'h0001) begin
+            M_new_fsm_d = LEFT_new_fsm;
+            M_c_rst = 1'h1;
+          end
+        end
+        if (button_r != 1'h1 && M_xoroutput_q != 16'h0001) begin
+          M_shiftstore_d = M_shiftstore_q;
+        end
+        if (button_r == 1'h1 && M_xoroutput_q == 16'h0001) begin
+          M_new_fsm_d = RIGHT_new_fsm;
+        end
       end
     endcase
   end
@@ -110,6 +130,7 @@ module generator_bottom_3 (
     M_xoroutput_q <= M_xoroutput_d;
     M_shiftleft_q <= M_shiftleft_d;
     M_shiftright_q <= M_shiftright_d;
+    M_shiftstore_q <= M_shiftstore_d;
     
     if (rst == 1'b1) begin
       M_new_fsm_q <= 1'h0;
