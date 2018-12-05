@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!--Product Version: PlanAhead v14.7 (64-bit)-->
+<!--Product Version: PlanAhead v14.7-->
 <Project Version="4" Minor="36">
 	<FileSet Dir="sources_1" File="fileset.xml"/>
 	<FileSet Dir="constrs_1" File="fileset.xml"/>
@@ -8,7 +8,7 @@
 	<DefaultLaunch Dir="$PRUNDIR"/>
 	<DefaultPromote Dir="$PROMOTEDIR"/>
 	<Config>
-		<Option Name="Id" Val="d3a0edf5cb674c3099c94cc51c3b6387"/>
+		<Option Name="Id" Val="aaf11cede1c74441a969c84f34c28025"/>
 		<Option Name="Part" Val="xc6slx9tqg144-2"/>
 		<Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
 		<Option Name="TargetLanguage" Val="Verilog"/>

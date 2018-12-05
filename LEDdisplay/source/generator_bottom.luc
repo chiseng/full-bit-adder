@@ -83,30 +83,30 @@ module generator_bottom (
       if (rows[0][1] != 1){  
        alu.a = rows[0];      // shift left row 0 by 1 
       alu.b = 1;
-      alu.alufn = SHL;
-      shiftleft.d[0] = alu.out;
+      alu.alufn = SHR;
+      shiftright.d[0] = alu.out;
     
       alu.a = rows[1];      // shift left row 1 by 1
       alu.b = 1;
-      alu.alufn = SHL;
-      shiftleft.d[1] = alu.out;
+      alu.alufn = SHR;
+      shiftright.d[1] = alu.out;
       // if right is pressed and user is not at the right edge
       // then shift right rows by 1
         rowsout = shiftright.q;
       }        
-        new_fsm.d=new_fsm.LEFT;
+        new_fsm.d=new_fsm.IDLE;
         
       new_fsm.LEFT:
       if (rows[0][14] != 1){  
     alu.a = rows[0];      // shift right row 0 by 1
     alu.b = 1;
-    alu.alufn = SHR;
-    shiftright.d[0] = alu.out;
+    alu.alufn = SHL;
+    shiftleft.d[0] = alu.out;
     
     alu.a = rows[1];      // shift right row 1 by 1
     alu.b = 1;
-    alu.alufn = SHR;
-    shiftright.d[1] = alu.out;
+    alu.alufn = SHL;
+    shiftleft.d[1] = alu.out;
       // if left is pressed and user is not at the left edge
       // then shift left rows by 1
          rowsout = shiftleft.q;

@@ -1,15 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Dec 04 21:59:12 2018
+// Written by: Map P.20131013 on Wed Dec 05 00:52:57 2018
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
-COMP "clk" LOCATE = SITE "P56" LEVEL 1;
-COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
-COMP "a[0]" LOCATE = SITE "P58" LEVEL 1;
-COMP "a[1]" LOCATE = SITE "P67" LEVEL 1;
-COMP "a[2]" LOCATE = SITE "P75" LEVEL 1;
 COMP "a[3]" LOCATE = SITE "P79" LEVEL 1;
 COMP "a[4]" LOCATE = SITE "P81" LEVEL 1;
 COMP "a[5]" LOCATE = SITE "P83" LEVEL 1;
@@ -54,13 +48,19 @@ COMP "c[13]" LOCATE = SITE "P104" LEVEL 1;
 COMP "c[14]" LOCATE = SITE "P111" LEVEL 1;
 COMP "c[15]" LOCATE = SITE "P114" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_13" BEL
-        "ld/M_aSignal_q_9" BEL "ld/M_cSignal_q_15" BEL "ld/M_cSignal_q_14" BEL
-        "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_11"
-        BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9" BEL "ld/M_cSignal_q_8"
-        BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_5"
-        BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_2"
-        BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0" BEL
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "a[0]" LOCATE = SITE "P58" LEVEL 1;
+COMP "a[1]" LOCATE = SITE "P67" LEVEL 1;
+COMP "a[2]" LOCATE = SITE "P75" LEVEL 1;
+TIMEGRP clk = BEL "ld/M_aSignal_q_8" BEL "ld/M_aSignal_q_0" BEL
+        "ld/M_cSignal_q_15" BEL "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_13"
+        BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_11" BEL
+        "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9" BEL "ld/M_cSignal_q_8" BEL
+        "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_5" BEL
+        "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_2" BEL
+        "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0" BEL
         "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
         "ld/slowclock/M_ctr_q_13" BEL "ld/slowclock/M_ctr_q_12" BEL
         "ld/slowclock/M_ctr_q_11" BEL "ld/slowclock/M_ctr_q_10" BEL
@@ -71,34 +71,7 @@ TIMEGRP clk = BEL "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_13" BEL
         "ld/slowclock/M_ctr_q_1" BEL "ld/slowclock/M_ctr_q_0" BEL
         "clk_BUFGP/BUFG" BEL "reset_cond/M_stage_q_3" BEL
         "reset_cond/M_stage_q_2" BEL "reset_cond/M_stage_q_1" BEL
-        "reset_cond/M_stage_q_0" BEL "generator_top/M_cucked_q_23" BEL
-        "generator_top/M_cucked_q_22" BEL "generator_top/M_cucked_q_21" BEL
-        "generator_top/M_cucked_q_20" BEL "generator_top/M_cucked_q_19" BEL
-        "generator_top/M_cucked_q_18" BEL "generator_top/M_cucked_q_17" BEL
-        "generator_top/M_cucked_q_16" BEL "generator_top/M_cucked_q_15" BEL
-        "generator_top/M_cucked_q_14" BEL "generator_top/M_cucked_q_13" BEL
-        "generator_top/M_cucked_q_12" BEL "generator_top/M_cucked_q_11" BEL
-        "generator_top/M_cucked_q_10" BEL "generator_top/M_cucked_q_9" BEL
-        "generator_top/M_cucked_q_8" BEL "generator_top/M_cucked_q_7" BEL
-        "generator_top/M_cucked_q_6" BEL "generator_top/M_cucked_q_5" BEL
-        "generator_top/M_cucked_q_4" BEL "generator_top/M_cucked_q_3" BEL
-        "generator_top/M_cucked_q_2" BEL "generator_top/M_cucked_q_1" BEL
-        "generator_top/M_cucked_q_0" BEL "generator_top/M_leftedcols_q_27" BEL
-        "generator_top/M_leftedcols_q_13" BEL
-        "generator_top/M_leftedcols_q_12" BEL
-        "generator_top/M_leftedcols_q_11" BEL
-        "generator_top/M_leftedcols_q_10" BEL "generator_top/M_leftedcols_q_9"
-        BEL "generator_top/M_leftedcols_q_8" BEL
-        "generator_top/M_leftedcols_q_7" BEL "generator_top/M_leftedcols_q_6"
-        BEL "generator_top/M_leftedcols_q_5" BEL
-        "generator_top/M_leftedcols_q_4" BEL "generator_top/M_leftedcols_q_3"
-        BEL "generator_top/M_leftedcols_q_2" BEL
-        "generator_top/M_leftedcols_q_1" BEL "generator_top/M_leftedcols_q_0"
-        BEL "generator_top/M_cucked_q_23_1" BEL
-        "generator_top/M_cucked_q_23_2" BEL "generator_top/M_cucked_q_23_3"
-        BEL "generator_bottom/M_new_fsm_q_FSM_FFd1" BEL
-        "generator_bottom/M_new_fsm_q_FSM_FFd2" BEL
-        "generator_bottom/M_xoroutput_q_0";
+        "reset_cond/M_stage_q_0";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

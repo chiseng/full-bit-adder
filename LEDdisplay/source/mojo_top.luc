@@ -83,14 +83,14 @@ module mojo_top (
     // initialise things
     generator_bottom.button_l = button_l;
     generator_bottom.button_r = button_r;
-    gen_botrows[0] = 16b0000000000000000;
-    gen_botrows[1] = 16b0000000000000000;
+    gen_botrows[0] = ~16b0000011100000000;
+    gen_botrows[1] = ~16b0000011100000000;
     generator_bottom.rows = gen_botrows;
-    led_converter.rows = gen_botrows;
+    led_converter.rows = generator_bottom.rowsout;
     
     
     for ( i=0; i<16; i++){
-          gen_topcols[i] = 14b0;
+          gen_topcols[i] = ~14b0;
           }
     generator_top.cols = gen_topcols;
     
@@ -102,9 +102,11 @@ module mojo_top (
     check.cols = gen_topcols;
     check.rows = gen_botrows;
     check.score = score.q;
+    a=ld.a;
+    c=ld.c;
    
     
-    
+    /*
     case (gamefsm.q)  {
     
       gamefsm.IDLE:
@@ -175,7 +177,8 @@ module mojo_top (
         
         //else if timer == 0
         //state.d= = state.IDLE;
+    */
   
   }
 }
-}
+

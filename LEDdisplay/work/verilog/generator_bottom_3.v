@@ -50,9 +50,9 @@ module generator_bottom_3 (
   
   always @* begin
     M_new_fsm_d = M_new_fsm_q;
-    M_shiftleft_d = M_shiftleft_q;
     M_xoroutput_d = M_xoroutput_q;
     M_shiftright_d = M_shiftright_q;
+    M_shiftleft_d = M_shiftleft_q;
     
     rowsout[0+15-:16] = 16'h0000;
     rowsout[16+15-:16] = 16'h0000;
@@ -60,6 +60,7 @@ module generator_bottom_3 (
     M_alu_a = 1'h0;
     M_alu_b = 1'h0;
     M_alu_alufn = 1'h0;
+    rowsout = rows;
     
     case (M_new_fsm_q)
       IDLE_new_fsm: begin
@@ -67,7 +68,6 @@ module generator_bottom_3 (
         M_alu_b = button_r;
         M_alu_alufn = 6'h16;
         M_xoroutput_d = M_alu_out;
-        rowsout = rows;
         if (button_l == 1'h1 && M_xoroutput_q == 16'h0001) begin
           M_new_fsm_d = LEFT_new_fsm;
         end
@@ -79,26 +79,26 @@ module generator_bottom_3 (
         if (rows[0+1+0-:1] != 1'h1) begin
           M_alu_a = rows[0+15-:16];
           M_alu_b = 1'h1;
-          M_alu_alufn = 6'h20;
-          M_shiftleft_d[0+15-:16] = M_alu_out;
-          M_alu_a = rows[16+15-:16];
-          M_alu_b = 1'h1;
-          M_alu_alufn = 6'h20;
-          M_shiftleft_d[16+15-:16] = M_alu_out;
-          rowsout = M_shiftright_q;
-        end
-        M_new_fsm_d = LEFT_new_fsm;
-      end
-      LEFT_new_fsm: begin
-        if (rows[0+14+0-:1] != 1'h1) begin
-          M_alu_a = rows[0+15-:16];
-          M_alu_b = 1'h1;
           M_alu_alufn = 6'h21;
           M_shiftright_d[0+15-:16] = M_alu_out;
           M_alu_a = rows[16+15-:16];
           M_alu_b = 1'h1;
           M_alu_alufn = 6'h21;
           M_shiftright_d[16+15-:16] = M_alu_out;
+          rowsout = M_shiftright_q;
+        end
+        M_new_fsm_d = IDLE_new_fsm;
+      end
+      LEFT_new_fsm: begin
+        if (rows[0+14+0-:1] != 1'h1) begin
+          M_alu_a = rows[0+15-:16];
+          M_alu_b = 1'h1;
+          M_alu_alufn = 6'h20;
+          M_shiftleft_d[0+15-:16] = M_alu_out;
+          M_alu_a = rows[16+15-:16];
+          M_alu_b = 1'h1;
+          M_alu_alufn = 6'h20;
+          M_shiftleft_d[16+15-:16] = M_alu_out;
           rowsout = M_shiftleft_q;
         end
         M_new_fsm_d = IDLE_new_fsm;

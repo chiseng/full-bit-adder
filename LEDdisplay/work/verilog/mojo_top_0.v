@@ -135,11 +135,6 @@ module mojo_top_0 (
   reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
   
   always @* begin
-    M_gamefsm_d = M_gamefsm_q;
-    M_currentrows_d = M_currentrows_q;
-    M_currentcols_d = M_currentcols_q;
-    M_score_d = M_score_q;
-    
     M_generator_top_button2 = button2;
     io_seg = 8'hff;
     a = 16'h0000;
@@ -153,12 +148,12 @@ module mojo_top_0 (
     avr_rx = 1'bz;
     M_generator_bottom_button_l = button_l;
     M_generator_bottom_button_r = button_r;
-    gen_botrows[0+15-:16] = 16'h0000;
-    gen_botrows[16+15-:16] = 16'h0000;
+    gen_botrows[0+15-:16] = 16'hf8ff;
+    gen_botrows[16+15-:16] = 16'hf8ff;
     M_generator_bottom_rows = gen_botrows;
-    M_led_converter_rows = gen_botrows;
+    M_led_converter_rows = M_generator_bottom_rowsout;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
-      gen_topcols[(i)*14+13-:14] = 14'h0000;
+      gen_topcols[(i)*14+13-:14] = 14'h3fff;
     end
     M_generator_top_cols = gen_topcols;
     M_led_converter_cols = gen_topcols;
@@ -166,54 +161,8 @@ module mojo_top_0 (
     M_check_cols = gen_topcols;
     M_check_rows = gen_botrows;
     M_check_score = M_score_q;
-    
-    case (M_gamefsm_q)
-      IDLE_gamefsm: begin
-        if (M_button_start_out == 1'h1) begin
-          M_gamefsm_d = STAGE1_START_gamefsm;
-        end else begin
-          M_gamefsm_d = IDLE_gamefsm;
-        end
-      end
-      STAGE1_START_gamefsm: begin
-        gen_botrows[0+15-:16] = 16'hfc7f;
-        gen_botrows[16+15-:16] = 16'hfc7f;
-        M_generator_bottom_rows = gen_botrows;
-        M_led_converter_rows = M_generator_bottom_rowsout;
-        for (i = 1'h0; i < 5'h10; i = i + 1) begin
-          gen_topcols[(i)*14+13-:14] = 14'h3fff;
-        end
-        M_generator_bottom_button_l = button_l;
-        M_generator_bottom_button_r = button_r;
-        M_currentrows_d = M_generator_bottom_rowsout;
-        if (M_gamefsm_q != STAGE1_gamefsm) begin
-          M_currentrows_d = M_currentrows_q;
-        end
-        M_led_converter_rows = M_generator_bottom_rowsout;
-        led = M_generator_bottom_led;
-        M_generator_top_cols = gen_topcols;
-        M_currentcols_d = M_generator_top_colsout;
-        if (M_gamefsm_q != STAGE1_gamefsm) begin
-          M_currentcols_d = M_currentcols_q;
-        end
-        M_led_converter_cols = M_generator_top_colsout;
-        M_ld_pattern = M_led_converter_out;
-        a = M_ld_a;
-        c = M_ld_c;
-        M_gamefsm_d = STAGE1_START_gamefsm;
-      end
-      STAGE1_gamefsm: begin
-        M_generator_bottom_rows = M_currentrows_q;
-        M_generator_bottom_button_l = button_l;
-        M_generator_bottom_button_r = button_r;
-        M_generator_top_cols = M_currentcols_q;
-        M_check_cols = M_generator_top_colsout;
-        M_check_rows = M_generator_bottom_rowsout;
-        M_check_score = M_score_q;
-        M_score_d = M_check_outscore;
-        M_gamefsm_d = STAGE1_gamefsm;
-      end
-    endcase
+    a = M_ld_a;
+    c = M_ld_c;
   end
   
   always @(posedge M_slowclock_value) begin

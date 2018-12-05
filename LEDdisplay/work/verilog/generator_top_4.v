@@ -61,10 +61,10 @@ module generator_top_4 (
   
   always @* begin
     M_new_fsm_d = M_new_fsm_q;
-    M_counts_d = M_counts_q;
-    M_leftedcols_d = M_leftedcols_q;
     M_cucked_d = M_cucked_q;
     M_prng_d = M_prng_q;
+    M_leftedcols_d = M_leftedcols_q;
+    M_counts_d = M_counts_q;
     
     led = 8'h00;
     M_rng_seed = 5'h14;
