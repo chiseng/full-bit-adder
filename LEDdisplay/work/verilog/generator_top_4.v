@@ -8,109 +8,44 @@ module generator_top_4 (
     input clk,
     input rst,
     input [223:0] cols,
-    output reg [223:0] colsout,
-    input button2,
-    output reg [7:0] led
+    output reg [223:0] colsout
   );
   
   
   
-  wire [16-1:0] M_alu_out;
-  wire [1-1:0] M_alu_z;
-  wire [1-1:0] M_alu_v;
-  wire [1-1:0] M_alu_n;
-  reg [16-1:0] M_alu_a;
-  reg [16-1:0] M_alu_b;
-  reg [6-1:0] M_alu_alufn;
-  alu_10 alu (
-    .a(M_alu_a),
-    .b(M_alu_b),
-    .alufn(M_alu_alufn),
-    .out(M_alu_out),
-    .z(M_alu_z),
-    .v(M_alu_v),
-    .n(M_alu_n)
-  );
-  
-  reg [29:0] M_counts_d, M_counts_q = 1'h0;
   reg [223:0] M_leftedcols_d, M_leftedcols_q = 1'h0;
-  reg [0:0] M_temprandom_d, M_temprandom_q = 1'h0;
-  reg [29:0] M_cucked_d, M_cucked_q = 1'h0;
-  reg [7:0] M_prng_d, M_prng_q = 1'h0;
-  wire [32-1:0] M_rng_num;
-  reg [1-1:0] M_rng_next;
-  reg [32-1:0] M_rng_seed;
-  pn_gen_12 rng (
+  reg [29:0] M_counter_d, M_counter_q = 1'h0;
+  wire [4-1:0] M_rng_out;
+  randomNumGen_13 rng (
     .clk(clk),
     .rst(rst),
-    .next(M_rng_next),
-    .seed(M_rng_seed),
-    .num(M_rng_num)
+    .out(M_rng_out)
   );
-  localparam STATE1_new_fsm = 1'd0;
-  
-  reg M_new_fsm_d, M_new_fsm_q = STATE1_new_fsm;
-  
-  localparam SHL = 6'h20;
-  
-  localparam ADD = 6'h00;
   
   integer i;
   
-  reg random;
+  reg [3:0] random;
   
   always @* begin
-    M_new_fsm_d = M_new_fsm_q;
-    M_cucked_d = M_cucked_q;
-    M_prng_d = M_prng_q;
     M_leftedcols_d = M_leftedcols_q;
-    M_counts_d = M_counts_q;
+    M_counter_d = M_counter_q;
     
-    led = 8'h00;
-    M_rng_seed = 5'h14;
-    M_rng_next = 1'h1;
-    M_counts_d = M_counts_q + 1'h1;
-    M_rng_next = 1'h0;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
-      colsout[(i)*14+13-:14] = 14'h3fff;
+      colsout[(i)*14+13-:14] = 14'h0000;
     end
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
-      M_alu_a = cols[(i)*14+13-:14];
-      M_alu_b = 1'h1;
-      M_alu_alufn = 6'h20;
-      M_leftedcols_d[(i)*14+13-:14] = M_alu_out[0+13-:14];
+      M_leftedcols_d[(i)*14+13-:14] = cols[(i)*14+13-:14] << 1'h1;
     end
-    M_cucked_d = M_cucked_q + 1'h1;
-    
-    case (M_new_fsm_q)
-      STATE1_new_fsm: begin
-        if (M_cucked_q[23+0-:1] == 1'h1) begin
-          M_prng_d = M_rng_num[17+6-:7];
-          led = M_prng_q;
-          random = M_rng_num[3+0-:1] * 4'h8 + M_rng_num[2+0-:1] * 3'h4 + M_rng_num[1+0-:1] * 2'h2 + M_rng_num[0+0-:1];
-          M_leftedcols_d[(random)*14+13-:14] = M_leftedcols_q[(random)*14+13-:14] + 1'h1;
-          colsout = M_leftedcols_q;
-          M_cucked_d = 1'h0;
-          M_new_fsm_d = STATE1_new_fsm;
-        end else begin
-          M_prng_d = M_prng_q;
-        end
-      end
-    endcase
+    M_counter_d = M_counter_q + 1'h1;
+    random = M_rng_out[0+3-:4];
+    M_leftedcols_d[(random)*14+13-:14] = M_leftedcols_q[(random)*14+13-:14] + 14'h0001;
+    colsout = M_leftedcols_q;
+    M_counter_d = 1'h0;
   end
   
   always @(posedge clk) begin
-    M_counts_q <= M_counts_d;
     M_leftedcols_q <= M_leftedcols_d;
-    M_temprandom_q <= M_temprandom_d;
-    M_cucked_q <= M_cucked_d;
-    M_prng_q <= M_prng_d;
-    
-    if (rst == 1'b1) begin
-      M_new_fsm_q <= 1'h0;
-    end else begin
-      M_new_fsm_q <= M_new_fsm_d;
-    end
+    M_counter_q <= M_counter_d;
   end
   
 endmodule

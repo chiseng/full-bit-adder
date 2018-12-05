@@ -1,11 +1,13 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
+
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.02 secs
  
---> Reading design: mojo_top_0.prj
+--> 
+Reading design: mojo_top_0.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -53,43 +55,51 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_19.v" into library work
-Parsing module <shifter_19>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_20.v" into library work
-Parsing module <multiply_20>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_18.v" into library work
-Parsing module <compare16_18>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_17.v" into library work
-Parsing module <boolean_17>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_16.v" into library work
-Parsing module <adder_16>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_12.v" into library work
-Parsing module <pn_gen_12>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_20.v" into library work
+Parsing module <shifter_20>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_23.v" into library work
+Parsing module <pn_gen_23>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_21.v" into library work
+Parsing module <multiply_21>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_22.v" into library work
+Parsing module <counter_22>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_19.v" into library work
+Parsing module <compare16_19>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_18.v" into library work
+Parsing module <boolean_18>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_17.v" into library work
+Parsing module <adder_17>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_12.v" into library work
+Parsing module <registerSetup_12>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/randomNumGen_13.v" into library work
+Parsing module <randomNumGen_13>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v" into library work
 Parsing module <pipeline_9>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_15.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_16.v" into library work
+Parsing module <counter_16>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_15.v" into library work
 Parsing module <counter_15>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_14.v" into library work
-Parsing module <counter_14>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_11.v" into library work
+Parsing module <counter_11>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v" into library work
 Parsing module <alu_10>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v" into library work
 Parsing module <led_matrix_7>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" into library work
 Parsing module <leddisplay_8>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" into library work
 Parsing module <generator_top_4>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" into library work
 Parsing module <generator_bottom_3>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_6.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_6.v" into library work
 Parsing module <counter_6>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" into library work
 Parsing module <check_5>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_2.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_2.v" into library work
 Parsing module <button_conditioner_2>.
-Analyzing Verilog file "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -103,68 +113,70 @@ Elaborating module <reset_conditioner_1>.
 Elaborating module <button_conditioner_2>.
 
 Elaborating module <pipeline_9>.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 59: Assignment to M_button_start_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 59: Assignment to M_button_start_out ignored, since the identifier is never used
 
 Elaborating module <generator_bottom_3>.
 
 Elaborating module <alu_10>.
 
-Elaborating module <adder_16>.
+Elaborating module <adder_17>.
 
-Elaborating module <boolean_17>.
+Elaborating module <boolean_18>.
 
-Elaborating module <compare16_18>.
+Elaborating module <compare16_19>.
 
-Elaborating module <shifter_19>.
+Elaborating module <shifter_20>.
 
-Elaborating module <multiply_20>.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 31: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 32: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 33: Assignment to M_alu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Assignment to M_generator_bottom_led ignored, since the identifier is never used
+Elaborating module <multiply_21>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 31: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 32: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 33: Assignment to M_alu_n ignored, since the identifier is never used
+
+Elaborating module <counter_11>.
+
+Elaborating module <registerSetup_12>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" Line 152: Assignment to M_shiftleft_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Assignment to M_generator_bottom_led ignored, since the identifier is never used
 
 Elaborating module <generator_top_4>.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
 
-Elaborating module <pn_gen_12>.
-WARNING:HDLCompiler:413 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 90: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v" Line 102: Assignment to M_temprandom_q ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 84: Assignment to M_generator_top_colsout ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 85: Assignment to M_generator_top_led ignored, since the identifier is never used
+Elaborating module <randomNumGen_13>.
+
+Elaborating module <counter_22>.
+
+Elaborating module <pn_gen_23>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/randomNumGen_13.v" Line 36: Assignment to sclk ignored, since the identifier is never used
 
 Elaborating module <check_5>.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 97: Assignment to M_check_outscore ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_5.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 93: Assignment to M_check_outscore ignored, since the identifier is never used
 
 Elaborating module <counter_6>.
 
 Elaborating module <led_matrix_7>.
 
-Elaborating module <counter_14>.
+Elaborating module <counter_15>.
 
 Elaborating module <leddisplay_8>.
 
-Elaborating module <counter_15>.
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 168: Assignment to M_state_q ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 185: Assignment to M_gamefsm_q ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 194: Assignment to M_currentrows_q ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 99: Net <M_score_d> does not have a driver.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20. All outputs of instance <counter_r> of block <counter_15> are unconnected in block <leddisplay_8>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56. All outputs of instance <button_start> of block <button_conditioner_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 79. All outputs of instance <generator_top> of block <generator_top_4> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 91. All outputs of instance <check> of block <check_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 103. All outputs of instance <slowclock> of block <counter_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+Elaborating module <counter_16>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 163: Assignment to M_gamefsm_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 172: Assignment to M_currentrows_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 185: Assignment to M_state_q ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 95: Net <M_score_d> does not have a driver.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20. All outputs of instance <counter_r> of block <counter_16> are unconnected in block <leddisplay_8>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56. All outputs of instance <button_start> of block <button_conditioner_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 87. All outputs of instance <check> of block <check_5> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 99. All outputs of instance <slowclock> of block <counter_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <io_button<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <io_button<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -174,70 +186,76 @@ WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_onoff> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56: Output port <out> of the instance <button_start> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 66: Output port <led> of the instance <generator_bottom> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 79: Output port <colsout> of the instance <generator_top> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 79: Output port <led> of the instance <generator_top> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 91: Output port <outscore> of the instance <check> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 103: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <button2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56: Output port <out> of the instance <button_start> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 66: Output port <led> of the instance <generator_bottom> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 87: Output port <outscore> of the instance <check> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 99: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <M_score_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 137
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 137
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 137
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 137
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 137
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 137
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 133
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 133
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 133
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 133
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 133
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 133
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <reset_conditioner_1>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
 Synthesizing Unit <pipeline_9>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_9.v".
     Found 1-bit register for signal <M_pipe_q<1>>.
     Found 1-bit register for signal <M_pipe_q<0>>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <pipeline_9> synthesized.
-WARNING:Xst:2972 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26. All outputs of instance <alu> of block <alu_10> are unconnected in block <generator_bottom_3>. Underlying logic will be removed.
 
 Synthesizing Unit <generator_bottom_3>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v".
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v".
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_3.v" line 26: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <M_xoroutput_q>.
+    Found 16-bit register for signal <M_shiftstore_q>.
+    Found 2-bit register for signal <M_new_fsm_q>.
+    Found 4x7-bit Read Only RAM for signal <_n0106>
+    Found 16-bit 4-to-1 multiplexer for signal <M_alu_a> created at line 86.
     Summary:
-	no macro.
+	inferred   1 RAM(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
 Unit <generator_bottom_3> synthesized.
 
 Synthesizing Unit <alu_10>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_10.v".
+    Found 16-bit 4-to-1 multiplexer for signal <out> created at line 77.
     Summary:
-	no macro.
+	inferred   9 Multiplexer(s).
 Unit <alu_10> synthesized.
 
-Synthesizing Unit <adder_16>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_16.v".
+Synthesizing Unit <adder_17>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_17.v".
     Found 16-bit subtractor for signal <n0025[15:0]> created at line 35.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 31.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   3 Multiplexer(s).
-Unit <adder_16> synthesized.
+Unit <adder_17> synthesized.
 
-Synthesizing Unit <boolean_17>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_17.v".
+Synthesizing Unit <boolean_18>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_18.v".
     Summary:
-Unit <boolean_17> synthesized.
+Unit <boolean_18> synthesized.
 
-Synthesizing Unit <compare16_18>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_18.v".
+Synthesizing Unit <compare16_19>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_19.v".
 WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 18.
@@ -247,10 +265,10 @@ WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved 
     Summary:
 	inferred   3 Comparator(s).
 	inferred   1 Multiplexer(s).
-Unit <compare16_18> synthesized.
+Unit <compare16_19> synthesized.
 
-Synthesizing Unit <shifter_19>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_19.v".
+Synthesizing Unit <shifter_20>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_20.v".
 WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[2]_shift_left_0_OUT> created at line 20
     Found 16-bit shifter logical right for signal <a[15]_b[2]_shift_right_1_OUT> created at line 23
@@ -259,14 +277,14 @@ WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and
     Summary:
 	inferred   2 Multiplexer(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <shifter_19> synthesized.
+Unit <shifter_20> synthesized.
 
-Synthesizing Unit <multiply_20>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_20.v".
+Synthesizing Unit <multiply_21>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_21.v".
     Found 16x16-bit multiplier for signal <n0010> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <multiply_20> synthesized.
+Unit <multiply_21> synthesized.
 
 Synthesizing Unit <div_16s_16s>.
     Related source file is "".
@@ -328,145 +346,85 @@ Synthesizing Unit <div_16s_16s>.
 	inferred 244 Multiplexer(s).
 Unit <div_16s_16s> synthesized.
 
-Synthesizing Unit <pn_gen_12>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_12.v".
-    Found 1-bit register for signal <M_y_q<31>>.
-    Found 1-bit register for signal <M_y_q<30>>.
-    Found 1-bit register for signal <M_y_q<29>>.
-    Found 1-bit register for signal <M_y_q<28>>.
-    Found 1-bit register for signal <M_y_q<27>>.
-    Found 1-bit register for signal <M_y_q<26>>.
-    Found 1-bit register for signal <M_y_q<25>>.
-    Found 1-bit register for signal <M_y_q<24>>.
-    Found 1-bit register for signal <M_y_q<23>>.
-    Found 1-bit register for signal <M_y_q<22>>.
-    Found 1-bit register for signal <M_y_q<21>>.
-    Found 1-bit register for signal <M_y_q<20>>.
-    Found 1-bit register for signal <M_y_q<19>>.
-    Found 1-bit register for signal <M_y_q<18>>.
-    Found 1-bit register for signal <M_y_q<17>>.
-    Found 1-bit register for signal <M_y_q<16>>.
-    Found 1-bit register for signal <M_y_q<15>>.
-    Found 1-bit register for signal <M_y_q<14>>.
-    Found 1-bit register for signal <M_y_q<13>>.
-    Found 1-bit register for signal <M_y_q<12>>.
-    Found 1-bit register for signal <M_y_q<11>>.
-    Found 1-bit register for signal <M_y_q<10>>.
-    Found 1-bit register for signal <M_y_q<9>>.
-    Found 1-bit register for signal <M_y_q<8>>.
-    Found 1-bit register for signal <M_y_q<7>>.
-    Found 1-bit register for signal <M_y_q<6>>.
-    Found 1-bit register for signal <M_y_q<5>>.
-    Found 1-bit register for signal <M_y_q<4>>.
-    Found 1-bit register for signal <M_y_q<3>>.
-    Found 1-bit register for signal <M_y_q<2>>.
-    Found 1-bit register for signal <M_y_q<1>>.
-    Found 1-bit register for signal <M_y_q<0>>.
-    Found 1-bit register for signal <M_z_q<31>>.
-    Found 1-bit register for signal <M_z_q<30>>.
-    Found 1-bit register for signal <M_z_q<29>>.
-    Found 1-bit register for signal <M_z_q<28>>.
-    Found 1-bit register for signal <M_z_q<27>>.
-    Found 1-bit register for signal <M_z_q<26>>.
-    Found 1-bit register for signal <M_z_q<25>>.
-    Found 1-bit register for signal <M_z_q<24>>.
-    Found 1-bit register for signal <M_z_q<23>>.
-    Found 1-bit register for signal <M_z_q<22>>.
-    Found 1-bit register for signal <M_z_q<21>>.
-    Found 1-bit register for signal <M_z_q<20>>.
-    Found 1-bit register for signal <M_z_q<19>>.
-    Found 1-bit register for signal <M_z_q<18>>.
-    Found 1-bit register for signal <M_z_q<17>>.
-    Found 1-bit register for signal <M_z_q<16>>.
-    Found 1-bit register for signal <M_z_q<15>>.
-    Found 1-bit register for signal <M_z_q<14>>.
-    Found 1-bit register for signal <M_z_q<13>>.
-    Found 1-bit register for signal <M_z_q<12>>.
-    Found 1-bit register for signal <M_z_q<11>>.
-    Found 1-bit register for signal <M_z_q<10>>.
-    Found 1-bit register for signal <M_z_q<9>>.
-    Found 1-bit register for signal <M_z_q<8>>.
-    Found 1-bit register for signal <M_z_q<7>>.
-    Found 1-bit register for signal <M_z_q<6>>.
-    Found 1-bit register for signal <M_z_q<5>>.
-    Found 1-bit register for signal <M_z_q<4>>.
-    Found 1-bit register for signal <M_z_q<3>>.
-    Found 1-bit register for signal <M_z_q<2>>.
-    Found 1-bit register for signal <M_z_q<1>>.
-    Found 1-bit register for signal <M_z_q<0>>.
-    Found 1-bit register for signal <M_w_q<31>>.
-    Found 1-bit register for signal <M_w_q<30>>.
-    Found 1-bit register for signal <M_w_q<29>>.
-    Found 1-bit register for signal <M_w_q<28>>.
-    Found 1-bit register for signal <M_w_q<27>>.
-    Found 1-bit register for signal <M_w_q<26>>.
-    Found 1-bit register for signal <M_w_q<25>>.
-    Found 1-bit register for signal <M_w_q<24>>.
-    Found 1-bit register for signal <M_w_q<23>>.
-    Found 1-bit register for signal <M_w_q<22>>.
-    Found 1-bit register for signal <M_w_q<21>>.
-    Found 1-bit register for signal <M_w_q<20>>.
-    Found 1-bit register for signal <M_w_q<19>>.
-    Found 1-bit register for signal <M_w_q<18>>.
-    Found 1-bit register for signal <M_w_q<17>>.
-    Found 1-bit register for signal <M_w_q<16>>.
-    Found 1-bit register for signal <M_w_q<15>>.
-    Found 1-bit register for signal <M_w_q<14>>.
-    Found 1-bit register for signal <M_w_q<13>>.
-    Found 1-bit register for signal <M_w_q<12>>.
-    Found 1-bit register for signal <M_w_q<11>>.
-    Found 1-bit register for signal <M_w_q<10>>.
-    Found 1-bit register for signal <M_w_q<9>>.
-    Found 1-bit register for signal <M_w_q<8>>.
-    Found 1-bit register for signal <M_w_q<7>>.
-    Found 1-bit register for signal <M_w_q<6>>.
-    Found 1-bit register for signal <M_w_q<5>>.
-    Found 1-bit register for signal <M_w_q<4>>.
-    Found 1-bit register for signal <M_w_q<3>>.
-    Found 1-bit register for signal <M_w_q<2>>.
-    Found 1-bit register for signal <M_w_q<1>>.
-    Found 1-bit register for signal <M_w_q<0>>.
-    Found 1-bit register for signal <M_x_q<31>>.
-    Found 1-bit register for signal <M_x_q<30>>.
-    Found 1-bit register for signal <M_x_q<29>>.
-    Found 1-bit register for signal <M_x_q<28>>.
-    Found 1-bit register for signal <M_x_q<27>>.
-    Found 1-bit register for signal <M_x_q<26>>.
-    Found 1-bit register for signal <M_x_q<25>>.
-    Found 1-bit register for signal <M_x_q<24>>.
-    Found 1-bit register for signal <M_x_q<23>>.
-    Found 1-bit register for signal <M_x_q<22>>.
-    Found 1-bit register for signal <M_x_q<21>>.
-    Found 1-bit register for signal <M_x_q<20>>.
-    Found 1-bit register for signal <M_x_q<19>>.
-    Found 1-bit register for signal <M_x_q<18>>.
-    Found 1-bit register for signal <M_x_q<17>>.
-    Found 1-bit register for signal <M_x_q<16>>.
-    Found 1-bit register for signal <M_x_q<15>>.
-    Found 1-bit register for signal <M_x_q<14>>.
-    Found 1-bit register for signal <M_x_q<13>>.
-    Found 1-bit register for signal <M_x_q<12>>.
-    Found 1-bit register for signal <M_x_q<11>>.
-    Found 1-bit register for signal <M_x_q<10>>.
-    Found 1-bit register for signal <M_x_q<9>>.
-    Found 1-bit register for signal <M_x_q<8>>.
-    Found 1-bit register for signal <M_x_q<7>>.
-    Found 1-bit register for signal <M_x_q<6>>.
-    Found 1-bit register for signal <M_x_q<5>>.
-    Found 1-bit register for signal <M_x_q<4>>.
-    Found 1-bit register for signal <M_x_q<3>>.
-    Found 1-bit register for signal <M_x_q<2>>.
-    Found 1-bit register for signal <M_x_q<1>>.
-    Found 1-bit register for signal <M_x_q<0>>.
+Synthesizing Unit <counter_11>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_11.v".
+    Found 21-bit register for signal <M_ctr_q>.
+    Found 21-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+Unit <counter_11> synthesized.
+
+Synthesizing Unit <registerSetup_12>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_12.v".
+    Found 32-bit register for signal <M_regs_q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <registerSetup_12> synthesized.
+
+Synthesizing Unit <generator_top_4>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_top_4.v".
+WARNING:Xst:647 - Input <cols<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<27:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<41:41>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<55:55>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<69:69>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<83:83>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<97:97>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<111:111>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<125:125>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<139:139>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<153:153>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<167:167>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<181:181>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<195:195>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<209:209>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cols<223:223>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 224-bit register for signal <M_leftedcols_q>.
+    Found 8-bit adder for signal <M_rng_out[3]_GND_17_o_add_2_OUT> created at line 41.
+    Found 14-bit adder for signal <M_leftedcols_q[223]_GND_17_o_add_4_OUT> created at line 41.
+    Found 4x4-bit multiplier for signal <n0713> created at line 41.
+    Found 447-bit shifter logical right for signal <n0473> created at line 41
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 224 D-type flip-flop(s).
+	inferred 237 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <generator_top_4> synthesized.
+
+Synthesizing Unit <randomNumGen_13>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/randomNumGen_13.v".
+    Found 4-bit register for signal <M_temp_q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <randomNumGen_13> synthesized.
+
+Synthesizing Unit <counter_22>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_22.v".
+    Found 25-bit register for signal <M_ctr_q>.
+    Found 25-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <counter_22> synthesized.
+
+Synthesizing Unit <pn_gen_23>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pn_gen_23.v".
+    Found 32-bit register for signal <M_y_q>.
+    Found 32-bit register for signal <M_z_q>.
+    Found 32-bit register for signal <M_w_q>.
+    Found 32-bit register for signal <M_x_q>.
     Summary:
 	inferred 128 D-type flip-flop(s).
-Unit <pn_gen_12> synthesized.
+	inferred   4 Multiplexer(s).
+Unit <pn_gen_23> synthesized.
 
 Synthesizing Unit <led_matrix_7>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_7.v".
     Found 16-bit register for signal <M_cSignal_q>.
     Found 16-bit register for signal <M_aSignal_q>.
-    Found 8-bit adder for signal <M_slowclock_value[3]_GND_20_o_add_32_OUT> created at line 98.
+    Found 8-bit adder for signal <M_slowclock_value[3]_GND_24_o_add_32_OUT> created at line 98.
     Found 511-bit shifter logical right for signal <n0020> created at line 98
     Found 16x16-bit Read Only RAM for signal <M_cSignal_d>
     Summary:
@@ -476,19 +434,19 @@ Synthesizing Unit <led_matrix_7>.
 	inferred   1 Combinational logic shifter(s).
 Unit <led_matrix_7> synthesized.
 
-Synthesizing Unit <counter_14>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_14.v".
+Synthesizing Unit <counter_15>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_15.v".
     Found 16-bit register for signal <M_ctr_q>.
-    Found 16-bit adder for signal <M_ctr_q[15]_GND_21_o_add_0_OUT> created at line 35.
+    Found 16-bit adder for signal <M_ctr_q[15]_GND_25_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <counter_14> synthesized.
+Unit <counter_15> synthesized.
 
 Synthesizing Unit <leddisplay_8>.
-    Related source file is "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v".
-INFO:Xst:3210 - "C:/Users/thadd/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v".
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_8.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <leddisplay_8> synthesized.
@@ -497,20 +455,93 @@ Unit <leddisplay_8> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
  16x16-bit single-port Read Only RAM                   : 1
-# Adders/Subtractors                                   : 2
- 16-bit adder                                          : 1
- 8-bit adder                                           : 1
-# Registers                                            : 4
- 16-bit register                                       : 3
- 4-bit register                                        : 1
-# Multiplexers                                         : 1
- 16-bit 2-to-1 multiplexer                             : 1
-# Logic shifters                                       : 1
+ 4x7-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 2
+ 16x16-bit multiplier                                  : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 43
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 3
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 3
+ 22-bit adder                                          : 2
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 25-bit adder                                          : 3
+ 26-bit adder                                          : 2
+ 27-bit adder                                          : 2
+ 28-bit adder                                          : 2
+ 29-bit adder                                          : 2
+ 30-bit adder                                          : 2
+ 31-bit adder                                          : 2
+ 32-bit adder                                          : 2
+ 8-bit adder                                           : 2
+# Registers                                            : 16
+ 16-bit register                                       : 5
+ 2-bit register                                        : 1
+ 21-bit register                                       : 1
+ 224-bit register                                      : 1
+ 25-bit register                                       : 1
+ 32-bit register                                       : 5
+ 4-bit register                                        : 2
+# Comparators                                          : 20
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 19-bit comparator greater                             : 1
+ 20-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
+ 22-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator greater                             : 1
+ 30-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 510
+ 1-bit 2-to-1 multiplexer                              : 251
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 2
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 211
+ 16-bit 2-to-1 multiplexer                             : 9
+ 16-bit 4-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 5
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 447-bit shifter logical right                         : 1
  511-bit shifter logical right                         : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
+# Xors                                                 : 5
+ 1-bit xor2                                            : 2
+ 16-bit xor2                                           : 1
+ 32-bit xor2                                           : 1
+ 32-bit xor4                                           : 1
 
 =========================================================================
 
@@ -519,9 +550,35 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <counter_14>.
+Synthesizing (advanced) Unit <counter_11>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_14> synthesized (advanced).
+Unit <counter_11> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_15>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_15> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_22>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_22> synthesized (advanced).
+
+Synthesizing (advanced) Unit <generator_bottom_3>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0106> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_new_fsm_q>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <generator_bottom_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <generator_top_4>.
+	Multiplier <Mmult_n0713> in block <generator_top_4> and adder/subtractor <Madd_M_rng_out[3]_GND_17_o_add_2_OUT> in block <generator_top_4> are combined into a MAC<Maddsub_n0713>.
+Unit <generator_top_4> synthesized (advanced).
 
 Synthesizing (advanced) Unit <led_matrix_7>.
 INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -541,32 +598,181 @@ Unit <led_matrix_7> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
  16x16-bit single-port distributed Read Only RAM       : 1
-# Adders/Subtractors                                   : 1
+ 4x7-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 4x4-to-8-bit MAC                                      : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 23
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 16-bit adder carry in                                 : 16
+ 16-bit subtractor                                     : 3
+ 17-bit adder                                          : 1
  8-bit adder                                           : 1
-# Counters                                             : 1
+# Counters                                             : 3
  16-bit up counter                                     : 1
-# Registers                                            : 36
- Flip-Flops                                            : 36
-# Logic shifters                                       : 1
+ 21-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 458
+ Flip-Flops                                            : 458
+# Comparators                                          : 20
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 19-bit comparator greater                             : 1
+ 20-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
+ 22-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator greater                             : 1
+ 30-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 509
+ 1-bit 2-to-1 multiplexer                              : 251
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 2
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 211
+ 16-bit 2-to-1 multiplexer                             : 8
+ 16-bit 4-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 5
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 447-bit shifter logical right                         : 1
  511-bit shifter logical right                         : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 2
+ 16-bit xor2                                           : 1
+ 32-bit xor2                                           : 1
+ 32-bit xor4                                           : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_8> in Unit <led_matrix_7> is equivalent to the following 2 FFs/Latches, which will be removed : <M_aSignal_q_9> <M_aSignal_q_10> 
-INFO:Xst:2261 - The FF/Latch <M_aSignal_q_0> in Unit <led_matrix_7> is equivalent to the following 12 FFs/Latches, which will be removed : <M_aSignal_q_1> <M_aSignal_q_2> <M_aSignal_q_3> <M_aSignal_q_4> <M_aSignal_q_5> <M_aSignal_q_6> <M_aSignal_q_7> <M_aSignal_q_11> <M_aSignal_q_12> <M_aSignal_q_13> <M_aSignal_q_14> <M_aSignal_q_15> 
+
+Optimizing unit <registerSetup_12> ...
 
 Optimizing unit <mojo_top_0> ...
 
+Optimizing unit <generator_bottom_3> ...
+
+Optimizing unit <alu_10> ...
+
+Optimizing unit <div_16s_16s> ...
+
+Optimizing unit <generator_top_4> ...
+
+Optimizing unit <pn_gen_23> ...
+
 Optimizing unit <led_matrix_7> ...
+WARNING:Xst:1293 - FF/Latch <generator_bottom/regs/M_regs_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_16> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/regs/M_regs_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_shiftstore_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generator_bottom/M_xoroutput_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_bottom/M_shiftstore_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <generator_bottom/M_shiftstore_q_7> is unconnected in block <mojo_top_0>.
+INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_26> in Unit <mojo_top_0> is equivalent to the following 5 FFs/Latches, which will be removed : <generator_bottom/regs/M_regs_q_25> <generator_bottom/regs/M_regs_q_24> <generator_bottom/regs/M_regs_q_10> <generator_bottom/regs/M_regs_q_9> <generator_bottom/regs/M_regs_q_8> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_10> <ld/slowclock/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_11> <ld/slowclock/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_12> <ld/slowclock/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_13> <ld/slowclock/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_14> <ld/slowclock/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_top/rng/slowclk/M_ctr_q_20> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_15> <ld/slowclock/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_top/rng/slowclk/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_top/rng/slowclk/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_top/rng/slowclk/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_top/rng/slowclk/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_0> <ld/slowclock/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_1> <ld/slowclock/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_2> <ld/slowclock/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_3> <ld/slowclock/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_4> <ld/slowclock/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_5> <ld/slowclock/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_6> <ld/slowclock/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_7> <ld/slowclock/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_8> <ld/slowclock/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <generator_bottom/slowclk/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <generator_top/rng/slowclk/M_ctr_q_9> <ld/slowclock/M_ctr_q_9> 
 
 Mapping all equations...
+WARNING:Xst:2677 - Node <generator_bottom/M_shiftstore_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <generator_bottom/M_shiftstore_q_8> of sequential type is unconnected in block <mojo_top_0>.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 0.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 21.
+FlipFlop generator_top/rng/M_temp_q_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -578,8 +784,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 38
- Flip-Flops                                            : 38
+# Registers                                            : 423
+ Flip-Flops                                            : 423
 
 =========================================================================
 
@@ -602,25 +808,29 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 90
-#      GND                         : 3
-#      INV                         : 2
-#      LUT1                        : 15
-#      LUT3                        : 1
-#      LUT4                        : 17
-#      LUT5                        : 16
-#      LUT6                        : 2
-#      MUXCY                       : 15
-#      VCC                         : 3
-#      XORCY                       : 16
-# FlipFlops/Latches                : 38
-#      FD                          : 16
-#      FDR                         : 18
+# BELS                             : 1463
+#      GND                         : 6
+#      INV                         : 3
+#      LUT1                        : 45
+#      LUT2                        : 118
+#      LUT3                        : 82
+#      LUT4                        : 106
+#      LUT5                        : 228
+#      LUT6                        : 682
+#      MUXCY                       : 65
+#      MUXF7                       : 76
+#      VCC                         : 4
+#      XORCY                       : 48
+# FlipFlops/Latches                : 423
+#      FD                          : 352
+#      FDE                         : 2
+#      FDR                         : 59
+#      FDRE                        : 6
 #      FDS                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 55
-#      IBUF                        : 1
+# IO Buffers                       : 57
+#      IBUF                        : 3
 #      OBUF                        : 48
 #      OBUFT                       : 6
 
@@ -631,20 +841,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              38  out of  11440     0%  
- Number of Slice LUTs:                   53  out of   5720     0%  
-    Number used as Logic:                53  out of   5720     0%  
+ Number of Slice Registers:             423  out of  11440     3%  
+ Number of Slice LUTs:                 1264  out of   5720    22%  
+    Number used as Logic:              1264  out of   5720    22%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     58
-   Number with an unused Flip Flop:      20  out of     58    34%  
-   Number with an unused LUT:             5  out of     58     8%  
-   Number of fully used LUT-FF pairs:    33  out of     58    56%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:   1275
+   Number with an unused Flip Flop:     852  out of   1275    66%  
+   Number with an unused LUT:            11  out of   1275     0%  
+   Number of fully used LUT-FF pairs:   412  out of   1275    32%  
+   Number of unique control sets:        11
 
 IO Utilization: 
  Number of IOs:                          71
- Number of bonded IOBs:                  56  out of    102    54%  
+ Number of bonded IOBs:                  58  out of    102    56%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -667,11 +877,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 38    |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)               | Load  |
+-----------------------------------+-------------------------------------+-------+
+clk                                | BUFGP                               | 421   |
+generator_bottom/slowclk/M_ctr_q_20| NONE(generator_bottom/M_new_fsm_q_1)| 2     |
+-----------------------------------+-------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -681,9 +893,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 3.759ns (Maximum Frequency: 266.028MHz)
-   Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 4.534ns
+   Minimum period: 15.143ns (Maximum Frequency: 66.037MHz)
+   Minimum input arrival time before clock: 3.611ns
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -692,67 +904,133 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.759ns (frequency: 266.028MHz)
-  Total number of paths / destination ports: 496 / 54
+  Clock period: 15.143ns (frequency: 66.037MHz)
+  Total number of paths / destination ports: 28725166 / 487
 -------------------------------------------------------------------------
-Delay:               3.759ns (Levels of Logic = 2)
-  Source:            ld/slowclock/M_ctr_q_14 (FF)
-  Destination:       ld/slowclock/M_ctr_q_15 (FF)
+Delay:               15.143ns (Levels of Logic = 19)
+  Source:            generator_top/rng/M_temp_q_2 (FF)
+  Destination:       generator_top/M_leftedcols_q_193 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ld/slowclock/M_ctr_q_14 to ld/slowclock/M_ctr_q_15
+  Data Path: generator_top/rng/M_temp_q_2 to generator_top/M_leftedcols_q_193
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              19   0.525   1.489  M_ctr_q_14 (M_ctr_q_14)
-     LUT4:I1->O           16   0.235   1.182  M_ctr_q[15]_PWR_23_o_equal_2_o_02 (M_ctr_q[15]_PWR_23_o_equal_2_o_02)
-     LUT5:I4->O            1   0.254   0.000  M_ctr_q_12_rstpot (M_ctr_q_12_rstpot)
-     FD:D                      0.074          M_ctr_q_12
+     FDRE:C->Q             3   0.525   0.874  M_temp_q_2 (M_temp_q_2)
+     end scope: 'generator_top/rng:out<2>'
+     LUT2:I0->O            1   0.250   0.000  Maddsub_n0713_Madd1_lut<3> (Maddsub_n0713_Madd1_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  Maddsub_n0713_Madd1_cy<3> (Maddsub_n0713_Madd1_cy<3>)
+     XORCY:CI->O           1   0.206   0.682  Maddsub_n0713_Madd1_xor<4> (Maddsub_n0713_Madd_41)
+     LUT2:I1->O            1   0.254   0.000  Maddsub_n0713_Madd2_lut<4> (Maddsub_n0713_Madd2_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  Maddsub_n0713_Madd2_cy<4> (Maddsub_n0713_Madd2_cy<4>)
+     XORCY:CI->O         405   0.206   2.448  Maddsub_n0713_Madd2_xor<5> (Maddsub_n0713_5)
+     LUT6:I5->O            1   0.254   0.958  Sh123212 (Sh123213)
+     LUT6:I2->O            2   0.254   0.726  Sh123213 (Sh12321)
+     LUT5:I4->O            1   0.254   0.682  Sh15518_SW1 (N86)
+     LUT6:I5->O            1   0.254   0.682  Sh15519 (Sh15519)
+     LUT6:I5->O            1   0.254   0.000  Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_lut<0> (Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<0> (Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<1> (Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<2> (Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_cy<2>)
+     XORCY:CI->O          23   0.206   1.634  Madd_M_leftedcols_q[223]_GND_17_o_add_4_OUT_xor<3> (M_leftedcols_q[223]_GND_17_o_add_4_OUT<3>)
+     LUT6:I2->O           12   0.254   1.069  Mmux_n026051_SW0 (Mmux_n0252511)
+     LUT6:I5->O            8   0.254   0.944  Mmux_n026051 (Mmux_n026051)
+     LUT6:I5->O            1   0.254   0.000  Mmux_n043651 (n0436<13>)
+     FD:D                      0.074          M_leftedcols_q_33
     ----------------------------------------
-    Total                      3.759ns (1.088ns logic, 2.671ns route)
-                                       (28.9% logic, 71.1% route)
+    Total                     15.143ns (4.444ns logic, 10.699ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'generator_bottom/slowclk/M_ctr_q_20'
+  Clock period: 2.070ns (frequency: 483.092MHz)
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Delay:               2.070ns (Levels of Logic = 1)
+  Source:            generator_bottom/M_new_fsm_q_0 (FF)
+  Destination:       generator_bottom/M_new_fsm_q_0 (FF)
+  Source Clock:      generator_bottom/slowclk/M_ctr_q_20 rising
+  Destination Clock: generator_bottom/slowclk/M_ctr_q_20 rising
+
+  Data Path: generator_bottom/M_new_fsm_q_0 to generator_bottom/M_new_fsm_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.525   1.236  M_new_fsm_q_0 (M_new_fsm_q_0)
+     LUT4:I1->O            1   0.235   0.000  M_new_fsm_q_0_glue_set (M_new_fsm_q_0_glue_set)
+     FDR:D                     0.074          M_new_fsm_q_0
+    ----------------------------------------
+    Total                      2.070ns (0.834ns logic, 1.236ns route)
+                                       (40.3% logic, 59.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 8 / 5
 -------------------------------------------------------------------------
-Offset:              3.526ns (Levels of Logic = 3)
-  Source:            rst_n (PAD)
-  Destination:       reset_cond/M_stage_q_3 (FF)
+Offset:              3.611ns (Levels of Logic = 7)
+  Source:            button_l (PAD)
+  Destination:       generator_bottom/M_xoroutput_q_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to reset_cond/M_stage_q_3
+  Data Path: button_l to generator_bottom/M_xoroutput_q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
-     INV:I->O              4   0.255   0.803  M_reset_cond_in1_INV_0 (M_reset_cond_in)
-     begin scope: 'reset_cond:in'
-     FDS:S                     0.459          M_stage_q_0
+     IBUF:I->O             3   1.328   0.874  button_l_IBUF (button_l_IBUF)
+     begin scope: 'generator_bottom:button_l<0>'
+     begin scope: 'generator_bottom/alu:button_l_IBUF'
+     begin scope: 'generator_bottom/alu/add:button_l_IBUF'
+     LUT4:I2->O            0   0.250   0.000  Madd_a[15]_b[15]_add_0_OUT_lut<0> (Madd_a[15]_b[15]_add_0_OUT_lut<0>)
+     XORCY:LI->O           1   0.149   0.682  Madd_a[15]_b[15]_add_0_OUT_xor<0> (a[15]_b[15]_add_0_OUT<0>)
+     end scope: 'generator_bottom/alu/add:a[15]_b[15]_add_0_OUT<0>'
+     LUT5:I4->O            1   0.254   0.000  Mmux_out39 (out<0>)
+     end scope: 'generator_bottom/alu:out<0>'
+     FDE:D                     0.074          M_xoroutput_q_0
     ----------------------------------------
-    Total                      3.526ns (2.042ns logic, 1.484ns route)
-                                       (57.9% logic, 42.1% route)
+    Total                      3.611ns (2.055ns logic, 1.556ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'generator_bottom/slowclk/M_ctr_q_20'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              2.890ns (Levels of Logic = 3)
+  Source:            button_r (PAD)
+  Destination:       generator_bottom/M_new_fsm_q_1 (FF)
+  Destination Clock: generator_bottom/slowclk/M_ctr_q_20 rising
+
+  Data Path: button_r to generator_bottom/M_new_fsm_q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.234  button_r_IBUF (button_r_IBUF)
+     begin scope: 'generator_bottom:button_r<0>'
+     LUT5:I0->O            1   0.254   0.000  M_new_fsm_q_1_glue_set (M_new_fsm_q_1_glue_set)
+     FDR:D                     0.074          M_new_fsm_q_1
+    ----------------------------------------
+    Total                      2.890ns (1.656ns logic, 1.234ns route)
+                                       (57.3% logic, 42.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              4.534ns (Levels of Logic = 2)
-  Source:            ld/M_aSignal_q_0 (FF)
+Offset:              4.118ns (Levels of Logic = 2)
+  Source:            ld/M_aSignal_q_15 (FF)
   Destination:       a<15> (PAD)
   Source Clock:      clk rising
 
-  Data Path: ld/M_aSignal_q_0 to a<15>
+  Data Path: ld/M_aSignal_q_15 to a<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             13   0.525   1.097  M_aSignal_q_0 (M_aSignal_q_0)
-     end scope: 'ld:a<0>'
+     FDR:C->Q              1   0.525   0.681  M_aSignal_q_15 (M_aSignal_q_15)
+     end scope: 'ld:a<15>'
      OBUF:I->O                 2.912          a_15_OBUF (a<15>)
     ----------------------------------------
-    Total                      4.534ns (3.437ns logic, 1.097ns route)
-                                       (75.8% logic, 24.2% route)
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
 
 =========================================================================
 
@@ -760,24 +1038,35 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    3.759|         |         |         |
----------------+---------+---------+---------+---------+
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+clk                                |   15.143|         |         |         |
+generator_bottom/slowclk/M_ctr_q_20|    4.240|         |         |         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock generator_bottom/slowclk/M_ctr_q_20
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+clk                                |    3.392|         |         |         |
+generator_bottom/slowclk/M_ctr_q_20|    2.070|         |         |         |
+-----------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.51 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.78 secs
  
 --> 
 
-Total memory usage is 271512 kilobytes
+
+Total memory usage is 430884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   39 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of warnings :  105 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
 

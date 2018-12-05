@@ -85,7 +85,7 @@ module mojo_top (
     gen_botrows[0] = 16b0000011100000000;
     gen_botrows[1] = 16b0000011100000000;
     generator_bottom.rows = gen_botrows;
-    led_converter.rows = generator_bottom.rowsout;
+    led_converter.rows = ~generator_bottom.rowsout;
     
     
     for ( i=0; i<16; i++){
@@ -93,7 +93,7 @@ module mojo_top (
           }
     generator_top.cols = gen_topcols;
     
-    led_converter.cols = gen_topcols;
+    led_converter.cols = ~generator_top.colsout;
     
     ld.pattern = led_converter.out;
     // ****** CHANGED ******    
@@ -105,7 +105,7 @@ module mojo_top (
     c=ld.c;
    
     
-    
+    /*
     case (gamefsm.q)  {
     
       gamefsm.IDLE:
@@ -176,9 +176,9 @@ module mojo_top (
         
         //else if timer == 0
         //state.d= = state.IDLE;
-    
+    */
   
-  }
+  
 }
 }
 

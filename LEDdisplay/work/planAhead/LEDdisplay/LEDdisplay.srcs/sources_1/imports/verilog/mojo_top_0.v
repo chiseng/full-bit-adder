@@ -59,7 +59,7 @@ module mojo_top_0 (
     .out(M_button_start_out)
   );
   wire [32-1:0] M_generator_bottom_rowsout;
-  wire [1-1:0] M_generator_bottom_led;
+  wire [8-1:0] M_generator_bottom_led;
   reg [1-1:0] M_generator_bottom_button_l;
   reg [1-1:0] M_generator_bottom_button_r;
   reg [32-1:0] M_generator_bottom_rows;
@@ -73,16 +73,12 @@ module mojo_top_0 (
     .led(M_generator_bottom_led)
   );
   wire [224-1:0] M_generator_top_colsout;
-  wire [8-1:0] M_generator_top_led;
   reg [224-1:0] M_generator_top_cols;
-  reg [1-1:0] M_generator_top_button2;
   generator_top_4 generator_top (
     .clk(clk),
     .rst(rst),
     .cols(M_generator_top_cols),
-    .button2(M_generator_top_button2),
-    .colsout(M_generator_top_colsout),
-    .led(M_generator_top_led)
+    .colsout(M_generator_top_colsout)
   );
   wire [1-1:0] M_check_outscore;
   reg [224-1:0] M_check_cols;
@@ -135,7 +131,6 @@ module mojo_top_0 (
   reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
   
   always @* begin
-    M_generator_top_button2 = button2;
     io_seg = 8'hff;
     a = 16'h0000;
     c = 16'h0000;
@@ -148,15 +143,15 @@ module mojo_top_0 (
     avr_rx = 1'bz;
     M_generator_bottom_button_l = button_l;
     M_generator_bottom_button_r = button_r;
-    gen_botrows[0+15-:16] = 16'hf8ff;
-    gen_botrows[16+15-:16] = 16'hf8ff;
+    gen_botrows[0+15-:16] = 16'h0700;
+    gen_botrows[16+15-:16] = 16'h0700;
     M_generator_bottom_rows = gen_botrows;
-    M_led_converter_rows = M_generator_bottom_rowsout;
+    M_led_converter_rows = ~M_generator_bottom_rowsout;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
-      gen_topcols[(i)*14+13-:14] = 14'h3fff;
+      gen_topcols[(i)*14+13-:14] = 14'h0000;
     end
     M_generator_top_cols = gen_topcols;
-    M_led_converter_cols = gen_topcols;
+    M_led_converter_cols = ~M_generator_top_colsout;
     M_ld_pattern = M_led_converter_out;
     M_check_cols = gen_topcols;
     M_check_rows = gen_botrows;
@@ -164,23 +159,6 @@ module mojo_top_0 (
     a = M_ld_a;
     c = M_ld_c;
   end
-  
-  always @(posedge M_slowclock_value) begin
-    M_state_q <= M_state_d;
-    
-    if (rst == 1'b1) begin
-      M_aSignal_q <= 1'h0;
-    end else begin
-      M_aSignal_q <= M_aSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
-      M_cSignal_q <= 1'h0;
-    end else begin
-      M_cSignal_q <= M_cSignal_d;
-    end
-  end
-  
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
@@ -200,6 +178,23 @@ module mojo_top_0 (
       M_score_q <= M_score_d;
       M_currentrows_q <= M_currentrows_d;
       M_currentcols_q <= M_currentcols_d;
+    end
+  end
+  
+  
+  always @(posedge M_slowclock_value) begin
+    M_state_q <= M_state_d;
+    
+    if (rst == 1'b1) begin
+      M_cSignal_q <= 1'h0;
+    end else begin
+      M_cSignal_q <= M_cSignal_d;
+    end
+    
+    if (rst == 1'b1) begin
+      M_aSignal_q <= 1'h0;
+    end else begin
+      M_aSignal_q <= M_aSignal_d;
     end
   end
   

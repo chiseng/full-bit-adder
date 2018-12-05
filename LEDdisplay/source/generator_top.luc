@@ -44,7 +44,7 @@ module generator_top (
     counter.d=counter.q+1;
      random= rng.out[3:0];
     // add new coconut; randomly placed based on random number generator
-    leftedcols.d[random] = leftedcols.q[random] + 1 ;
+    leftedcols.d[random] = leftedcols.q[random] + 14b1 ;
     //leftedcols.d[6] = leftedcols.q[6] + 1 ;
     
     
