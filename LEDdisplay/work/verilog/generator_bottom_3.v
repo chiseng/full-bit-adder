@@ -79,16 +79,15 @@ module generator_bottom_3 (
     M_alu_b = 1'h0;
     M_alu_alufn = 1'h0;
     led = rows[0+8+7-:8];
-    rowsout = M_regs_out;
-    M_regs_data = rows;
+    rowsout = {M_shiftstore_q, M_shiftstore_q};
     M_regs_en = 1'h0;
+    M_regs_data = rows;
     
     case (M_new_fsm_q)
       IDLE_new_fsm: begin
         rowsout = rows;
         M_regs_en = 1'h1;
         M_regs_data = rows;
-        M_shiftstore_d = rows[0+15-:16];
         M_new_fsm_d = SAVED_STATE_new_fsm;
       end
       LEFT_new_fsm: begin
@@ -124,6 +123,7 @@ module generator_bottom_3 (
         M_xoroutput_d = M_alu_out;
         M_regs_en = 1'h0;
         if (button_l != 1'h1 && M_xoroutput_q != 16'h0001) begin
+          rowsout = M_regs_out;
           M_new_fsm_d = SAVED_STATE_new_fsm;
         end else begin
           if (button_l == 1'h1 && M_xoroutput_q == 16'h0001) begin
@@ -131,6 +131,7 @@ module generator_bottom_3 (
           end
         end
         if (button_r != 1'h1 && M_xoroutput_q != 16'h0001) begin
+          rowsout = M_regs_out;
           M_new_fsm_d = SAVED_STATE_new_fsm;
         end
         if (button_r == 1'h1 && M_xoroutput_q == 16'h0001) begin
@@ -140,20 +141,20 @@ module generator_bottom_3 (
     endcase
   end
   
+  always @(posedge clk) begin
+    M_xoroutput_q <= M_xoroutput_d;
+    M_shiftleft_q <= M_shiftleft_d;
+    M_shiftright_q <= M_shiftright_d;
+    M_shiftstore_q <= M_shiftstore_d;
+  end
+  
+  
   always @(posedge M_slowclk_value) begin
     if (rst == 1'b1) begin
       M_new_fsm_q <= 1'h0;
     end else begin
       M_new_fsm_q <= M_new_fsm_d;
     end
-  end
-  
-  
-  always @(posedge clk) begin
-    M_xoroutput_q <= M_xoroutput_d;
-    M_shiftleft_q <= M_shiftleft_d;
-    M_shiftright_q <= M_shiftright_d;
-    M_shiftstore_q <= M_shiftstore_d;
   end
   
 endmodule

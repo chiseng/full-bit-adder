@@ -74,8 +74,8 @@ module generator_bottom (
     alu.alufn = 0;
     led = rows[0][15:8];
     rowsout= {shiftstore.q,shiftstore.q};
-    regs.data=rows;
     regs.en=0;
+    regs.data=rows;
     
     case(new_fsm.q){
       new_fsm.IDLE:
@@ -83,10 +83,11 @@ module generator_bottom (
         regs.en=1; //set write to be 1
         regs.data=rows; //set the data to be the original rows
         
-        shiftstore.d = rows[0];//store the rows into a register
+        //shiftstore.d = rows[0];//store the rows into a register
         new_fsm.d=new_fsm.SAVED_STATE;
         
       new_fsm.LEFT:
+        
       if (rows[0][14] != 1){
           alu.a = regs.out[0];      // shift left row 0 by 1, using the data in regs
           alu.b = 1; 
@@ -97,12 +98,13 @@ module generator_bottom (
       // if right is pressed and user is not at the right edge
       // then shift right rows by 1   
       }
-        //led = alu.out[15:8];
         regs.en=0; //set it back
+        //led = alu.out[15:8];
         rowsout=regs.out; //get the new data
         new_fsm.d=new_fsm.SAVED_STATE; //change state
         
         new_fsm.RIGHT:
+        
         if (rows[0][14] != 1){  
           alu.a = regs.out[0];      // shift right row 1 by compare16
           alu.b = 1;
@@ -113,7 +115,7 @@ module generator_bottom (
           regs.en=1;
           regs.data = {shiftstore.q,shiftstore.q};
       }
-        regs.en=0;
+        regs.en=0; //set it back
         rowsout=regs.out;
         new_fsm.d=new_fsm.SAVED_STATE;
      
@@ -124,15 +126,17 @@ module generator_bottom (
           alu.alufn = XOR;
           xoroutput.d = alu.out;
           regs.en=0;
+          
         //led=shiftstore.q[7:0];
       if(button_l!=1 && xoroutput.q != 16b0000000000000001){
-
+          rowsout=regs.out;
           new_fsm.d=new_fsm.SAVED_STATE;
         }
       else if(button_l==1 && xoroutput.q == 16b0000000000000001){
         new_fsm.d=new_fsm.LEFT;
         }
       if(button_r!=1 && xoroutput.q != 16b1){
+        rowsout=regs.out;
         new_fsm.d=new_fsm.SAVED_STATE;
         }
      if(button_r==1 && xoroutput.q == 16b1){
