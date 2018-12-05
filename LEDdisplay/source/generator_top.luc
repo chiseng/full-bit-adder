@@ -41,7 +41,7 @@ module generator_top (
     rng.seed=20;
     rng.next=1;
     counts.d=counts.q+1;
-    rng.next=0;
+    //rng.next=0;
     //if(counts.q[20]==1) rng.next=1; //always generate numbers
     // initialise rowsout values 
     for ( i=0; i<16; i++){
