@@ -1,6 +1,5 @@
 module generator_bottom (
 
-    
 // module generates the 2 rows of the LED matrix    
     
     input clk,  // clock
@@ -9,7 +8,7 @@ module generator_bottom (
     input button_r[1],        // right button from user input
     input rows[2][16],        // rows values from previous cycle
     output rowsout[2][16],     // rows values for current cycle
-    output led
+    output led[8]
   ) {
   // instantiate the alu module
   alu alu;
@@ -24,8 +23,11 @@ module generator_bottom (
   dff xoroutput[16];       // to check if both buttons are pressed simultaneously
   dff shiftleft[2][16];    // to save rowsout values if left is pressed
   dff shiftright[2][16];   // to save rowsout values if right is pressed
+  dff shiftstore[16];
+    counter c(#SIZE(32), #DIV(24));
   .rst(rst){
-    fsm new_fsm={IDLE, LEFT, RIGHT};
+    fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE};
+    
     } 
   }
   
@@ -64,55 +66,77 @@ module generator_bottom (
     alu.b = 0;
     alu.alufn = 0;
     
-    
+    c.rst = rst;
+    led = rows[0][15:8];
+    rowsout= {shiftstore.q,shiftstore.q};
     
     case(new_fsm.q){
       new_fsm.IDLE:
-    alu.a = button_l;      // button_l XOR button_r
-    alu.b = button_r;
-    alu.alufn = XOR;
-    xoroutput.d = alu.out;
-      rowsout = rows;
-      if(button_l==1 && xoroutput.q == 16b0000000000000001){
-        new_fsm.d=new_fsm.LEFT;
-        }
-      if(button_r==1 && xoroutput.q == 16b1){
-        new_fsm.d=new_fsm.RIGHT;
-        }
-      new_fsm.RIGHT:
-      if (rows[0][1] != 1){  
-       alu.a = rows[0];      // shift left row 0 by 1 
-      alu.b = 1;
-      alu.alufn = SHR;
-      shiftright.d[0] = alu.out;
-    
-      alu.a = rows[1];      // shift left row 1 by 1
-      alu.b = 1;
-      alu.alufn = SHR;
-      shiftright.d[1] = alu.out;
-      // if right is pressed and user is not at the right edge
-      // then shift right rows by 1
-        rowsout = shiftright.q;
-      }        
-        new_fsm.d=new_fsm.IDLE;
+       rowsout=rows;
+      shiftstore.d = rows[0];//store the rows into a register
         
+        new_fsm.d=new_fsm.SAVED_STATE;
+      
       new_fsm.LEFT:
       if (rows[0][14] != 1){  
-    alu.a = rows[0];      // shift right row 0 by 1
-    alu.b = 1;
-    alu.alufn = SHL;
-    shiftleft.d[0] = alu.out;
+       alu.a = rows[0];      // shift left row 0 by 1 
+      alu.b = 1;
+      alu.alufn = SHL;
+      
+
+      // if right is pressed and user is not at the right edge
+      // then shift right rows by 1
+           
+      }        
+        //shiftstore.d=shiftstore.q;
+        //new_fsm.d=new_fsm.SAVED_STATE;
+      if (c.value  == 0){
+        shiftstore.d = alu.out;
+          }
+       else{
+          shiftstore.d = shiftstore.q;
+          }
+        //led = alu.out[15:8];
+        
+        new_fsm.d=new_fsm.LEFT;
+        
+      new_fsm.RIGHT:
+      if (rows[0][14] != 1){  
     
-    alu.a = rows[1];      // shift right row 1 by 1
+    alu.a = rows[0];      // shift right row 1 by 1
     alu.b = 1;
-    alu.alufn = SHL;
-    shiftleft.d[1] = alu.out;
+    alu.alufn = SHR;
+    shiftstore.d = alu.out;
       // if left is pressed and user is not at the left edge
       // then shift left rows by 1
-         rowsout = shiftleft.q;
+         rowsout = {shiftstore.q,shiftstore.q};
       }
-        new_fsm.d=new_fsm.IDLE;
-      
+     shiftstore.d=shiftstore.q;
+     new_fsm.d=new_fsm.SAVED_STATE;
+     
+     
+         new_fsm.SAVED_STATE:
+          alu.a = button_l;      // button_l XOR button_r
+          alu.b = button_r;
+          alu.alufn = XOR;
+          xoroutput.d = alu.out;
+        rowsout={shiftstore.q,shiftstore.q};
+        //led=shiftstore.q[7:0];
+      if(button_l!=1 && xoroutput.q != 16b0000000000000001){
+        shiftstore.d=shiftstore.q;
+        }
+      else if(button_l==1 && xoroutput.q == 16b0000000000000001){
+        new_fsm.d=new_fsm.LEFT; 
+        c.rst = 1;  
+        }
+      if(button_r!=1 && xoroutput.q != 16b1){
+        shiftstore.d=shiftstore.q;
+        }
+     if(button_r==1 && xoroutput.q == 16b1){
+       new_fsm.d=new_fsm.RIGHT;
+        }
+        
+         
     }
     
           

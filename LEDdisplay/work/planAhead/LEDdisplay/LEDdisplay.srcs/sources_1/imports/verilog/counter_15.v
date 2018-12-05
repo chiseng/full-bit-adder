@@ -6,40 +6,40 @@
 
 /*
    Parameters:
-     SIZE = 3
-     DIV = FLIP
+     SIZE = 4
+     DIV = 12
      TOP = 15
      UP = 1
 */
 module counter_15 (
     input clk,
     input rst,
-    output reg [2:0] value
+    output reg [3:0] value
   );
   
-  localparam SIZE = 2'h3;
-  localparam DIV = 5'h10;
+  localparam SIZE = 3'h4;
+  localparam DIV = 4'hc;
   localparam TOP = 4'hf;
   localparam UP = 1'h1;
   
   
-  reg [18:0] M_ctr_d, M_ctr_q = 1'h0;
+  reg [15:0] M_ctr_d, M_ctr_q = 1'h0;
   
-  localparam MAX_VALUE = 20'hfffff;
+  localparam MAX_VALUE = 16'hffff;
   
   always @* begin
     M_ctr_d = M_ctr_q;
     
-    value = M_ctr_q[16+2-:3];
+    value = M_ctr_q[12+3-:4];
     if (1'h1) begin
       M_ctr_d = M_ctr_q + 1'h1;
-      if (1'h1 && M_ctr_q == 20'hfffff) begin
+      if (1'h1 && M_ctr_q == 16'hffff) begin
         M_ctr_d = 1'h0;
       end
     end else begin
       M_ctr_d = M_ctr_q - 1'h1;
       if (1'h1 && M_ctr_q == 1'h0) begin
-        M_ctr_d = 20'hfffff;
+        M_ctr_d = 16'hffff;
       end
     end
   end
