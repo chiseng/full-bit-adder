@@ -8,6 +8,7 @@
     <src top="true">mojo_top.luc</src>
     <src>leddisplay.luc</src>
     <src>timer.luc</src>
+    <src>register.luc</src>
     <src>generator_bottom.luc</src>
     <src>adder.luc</src>
     <src>multi_seven_seg.luc</src>
