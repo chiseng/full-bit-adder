@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module registerSetup_16 (
+module registerSetup_17 (
     input clk,
     input en,
     input rst,

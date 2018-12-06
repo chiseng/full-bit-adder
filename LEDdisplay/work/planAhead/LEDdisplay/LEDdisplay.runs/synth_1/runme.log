@@ -1,57 +1,59 @@
 
 *** Running xst
-    with args -ifn "mojo_top_0.xst" -ofn "mojo_top_0.srp" -intstyle ise
+    with args -ifn mojo_top_0.xst -ofn mojo_top_0.srp -intstyle ise
 
 Reading design: mojo_top_0.prj
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_23.v" into library work
-Parsing module <shifter_23>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_25.v" into library work
-Parsing module <pipeline_25>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_24.v" into library work
-Parsing module <multiply_24>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_22.v" into library work
-Parsing module <compare16_22>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_21.v" into library work
-Parsing module <boolean_21>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_20.v" into library work
-Parsing module <adder_20>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_16.v" into library work
-Parsing module <registerSetup_16>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_14.v" into library work
-Parsing module <edge_detector_14>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_19.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_24.v" into library work
+Parsing module <shifter_24>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_26.v" into library work
+Parsing module <pipeline_26>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_25.v" into library work
+Parsing module <multiply_25>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_23.v" into library work
+Parsing module <compare16_23>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_22.v" into library work
+Parsing module <boolean_22>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_21.v" into library work
+Parsing module <adder_21>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_17.v" into library work
+Parsing module <registerSetup_17>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_15.v" into library work
+Parsing module <edge_detector_15>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_20.v" into library work
+Parsing module <counter_20>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_19.v" into library work
 Parsing module <counter_19>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_18.v" into library work
-Parsing module <counter_18>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_12.v" into library work
-Parsing module <button_conditioner_12>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_11.v" into library work
-Parsing module <alu_11>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_13.v" into library work
+Parsing module <button_conditioner_13>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_12.v" into library work
+Parsing module <alu_12>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerScore_4.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerScore_4.v" into library work
 Parsing module <registerScore_4>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerCols_5.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerCols_5.v" into library work
 Parsing module <registerCols_5>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerChecker_6.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerChecker_6.v" into library work
 Parsing module <registerChecker_6>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/Levels_10.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/Levels_10.v" into library work
 Parsing module <levels_10>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_8.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_8.v" into library work
 Parsing module <led_matrix_8>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" into library work
 Parsing module <leddisplay_9>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" into library work
 Parsing module <generator_bottom_2>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_7.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_11.v" into library work
+Parsing module <edge_detector_11>.
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_7.v" into library work
 Parsing module <counter_7>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" into library work
 Parsing module <check_3>.
-Analyzing Verilog file "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -64,36 +66,38 @@ Elaborating module <reset_conditioner_1>.
 
 Elaborating module <generator_bottom_2>.
 
-Elaborating module <alu_11>.
+Elaborating module <alu_12>.
 
-Elaborating module <adder_20>.
+Elaborating module <adder_21>.
 
-Elaborating module <boolean_21>.
+Elaborating module <boolean_22>.
 
-Elaborating module <compare16_22>.
+Elaborating module <compare16_23>.
 
-Elaborating module <shifter_23>.
+Elaborating module <shifter_24>.
 
-Elaborating module <multiply_24>.
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
+Elaborating module <multiply_25>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 30: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 31: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 32: Assignment to M_alu_n ignored, since the identifier is never used
 
-Elaborating module <button_conditioner_12>.
+Elaborating module <button_conditioner_13>.
 
-Elaborating module <pipeline_25>.
+Elaborating module <pipeline_26>.
 
-Elaborating module <edge_detector_14>.
+Elaborating module <edge_detector_15>.
 
-Elaborating module <registerSetup_16>.
-WARNING:HDLCompiler:634 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 55: Net <M_shiftstore_d[15]> does not have a driver.
+Elaborating module <registerSetup_17>.
+WARNING:HDLCompiler:634 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" Line 55: Net <M_shiftstore_d[15]> does not have a driver.
 
 Elaborating module <check_3>.
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 29: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 30: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 31: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 29: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 30: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" Line 31: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 67: Assignment to M_check_changescore ignored, since the identifier is never used
 
 Elaborating module <registerScore_4>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 78: Assignment to M_regscore_out ignored, since the identifier is never used
 
 Elaborating module <registerCols_5>.
 
@@ -103,24 +107,29 @@ Elaborating module <counter_7>.
 
 Elaborating module <led_matrix_8>.
 
-Elaborating module <counter_18>.
+Elaborating module <counter_19>.
 
 Elaborating module <leddisplay_9>.
 
-Elaborating module <counter_19>.
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
+Elaborating module <counter_20>.
+WARNING:HDLCompiler:1127 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" Line 23: Assignment to M_counter_r_value ignored, since the identifier is never used
 
 Elaborating module <levels_10>.
-WARNING:HDLCompiler:1127 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 241: Assignment to M_state_q ignored, since the identifier is never used
-WARNING:Xst:2972 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" line 20. All outputs of instance <counter_r> of block <counter_19> are unconnected in block <leddisplay_9>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 109. All outputs of instance <slowclock> of block <counter_7> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+
+Elaborating module <edge_detector_11>.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" line 20. All outputs of instance <counter_r> of block <counter_20> are unconnected in block <leddisplay_9>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 62. All outputs of instance <check> of block <check_3> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 73. All outputs of instance <regscore> of block <registerScore_4> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 93. All outputs of instance <check_for_cols> of block <registerChecker_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 101. All outputs of instance <slowclock> of block <counter_7> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 145. All outputs of instance <edge_start> of block <edge_detector_11> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <io_button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -130,52 +139,50 @@ WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and 
 WARNING:Xst:647 - Input <button_onoff> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 109: Output port <value> of the instance <slowclock> is unconnected or connected to loadless signal.
-    Found 2-bit register for signal <M_gamefsm_q>.
-    Found 30-bit register for signal <M_normclock_q>.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 62: Output port <changescore> of the instance <check> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/mojo_top_0.v" line 73: Output port <out> of the instance <regscore> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <M_gamefsm_q>.
+INFO:Xst:1799 - State 010 is never reached in FSM <M_gamefsm_q>.
+INFO:Xst:1799 - State 101 is never reached in FSM <M_gamefsm_q>.
+INFO:Xst:1799 - State 011 is never reached in FSM <M_gamefsm_q>.
     Found finite state machine <FSM_0> for signal <M_gamefsm_q>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 3                                              |
-    | Inputs             | 0                                              |
-    | Outputs            | 2                                              |
+    | States             | 5                                              |
+    | Transitions        | 2                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | M_reset_cond_out (positive)                    |
     | Reset type         | synchronous                                    |
-    | Reset State        | 01                                             |
-    | Power Up State     | 01                                             |
+    | Reset State        | 001                                            |
+    | Power Up State     | 001                                            |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 30-bit adder for signal <M_normclock_q[29]_GND_1_o_add_2_OUT> created at line 185.
-    Found 6-bit adder for signal <M_check_for_cols_out[5]_GND_1_o_add_9_OUT> created at line 224.
-    Found 5-bit adder for signal <M_regscore_out[4]_GND_1_o_add_14_OUT> created at line 233.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 153
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 153
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 153
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 153
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 153
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 153
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 155
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 155
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 155
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 155
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 155
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 155
     Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred  30 D-type flip-flop(s).
-	inferred  12 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 	inferred   6 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <reset_conditioner_1>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
 Synthesizing Unit <generator_bottom_2>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v".
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v".
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/generator_bottom_2.v" line 25: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <M_shiftstore_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <M_new_fsm_q>.
     Found 16-bit 4-to-1 multiplexer for signal <M_alu_a> created at line 110.
@@ -190,29 +197,29 @@ WARNING:Xst:653 - Signal <M_shiftstore_d> is used but never assigned. This sourc
 	inferred  14 Multiplexer(s).
 Unit <generator_bottom_2> synthesized.
 
-Synthesizing Unit <alu_11>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_11.v".
+Synthesizing Unit <alu_12>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/alu_12.v".
     Found 16-bit 4-to-1 multiplexer for signal <out> created at line 77.
     Summary:
 	inferred   9 Multiplexer(s).
-Unit <alu_11> synthesized.
+Unit <alu_12> synthesized.
 
-Synthesizing Unit <adder_20>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_20.v".
+Synthesizing Unit <adder_21>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/adder_21.v".
     Found 16-bit subtractor for signal <n0025[15:0]> created at line 35.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 31.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   3 Multiplexer(s).
-Unit <adder_20> synthesized.
+Unit <adder_21> synthesized.
 
-Synthesizing Unit <boolean_21>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_21.v".
+Synthesizing Unit <boolean_22>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/boolean_22.v".
     Summary:
-Unit <boolean_21> synthesized.
+Unit <boolean_22> synthesized.
 
-Synthesizing Unit <compare16_22>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_22.v".
+Synthesizing Unit <compare16_23>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/compare16_23.v".
 WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 18.
@@ -222,10 +229,10 @@ WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved 
     Summary:
 	inferred   3 Comparator(s).
 	inferred   1 Multiplexer(s).
-Unit <compare16_22> synthesized.
+Unit <compare16_23> synthesized.
 
-Synthesizing Unit <shifter_23>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_23.v".
+Synthesizing Unit <shifter_24>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/shifter_24.v".
 WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[2]_shift_left_0_OUT> created at line 20
     Found 16-bit shifter logical right for signal <a[15]_b[2]_shift_right_1_OUT> created at line 23
@@ -234,14 +241,14 @@ WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and
     Summary:
 	inferred   2 Multiplexer(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <shifter_23> synthesized.
+Unit <shifter_24> synthesized.
 
-Synthesizing Unit <multiply_24>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_24.v".
+Synthesizing Unit <multiply_25>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/multiply_25.v".
     Found 16x16-bit multiplier for signal <n0010> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <multiply_24> synthesized.
+Unit <multiply_25> synthesized.
 
 Synthesizing Unit <div_16s_16s>.
     Related source file is "".
@@ -303,104 +310,88 @@ Synthesizing Unit <div_16s_16s>.
 	inferred 244 Multiplexer(s).
 Unit <div_16s_16s> synthesized.
 
-Synthesizing Unit <button_conditioner_12>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_12.v".
+Synthesizing Unit <button_conditioner_13>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/button_conditioner_13.v".
     Found 20-bit register for signal <M_ctr_q>.
     Found 20-bit adder for signal <M_ctr_q[19]_GND_13_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_12> synthesized.
+Unit <button_conditioner_13> synthesized.
 
-Synthesizing Unit <pipeline_25>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_25.v".
+Synthesizing Unit <pipeline_26>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/pipeline_26.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_25> synthesized.
+Unit <pipeline_26> synthesized.
 
-Synthesizing Unit <edge_detector_14>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_14.v".
+Synthesizing Unit <edge_detector_15>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_15.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_14> synthesized.
+Unit <edge_detector_15> synthesized.
 
-Synthesizing Unit <registerSetup_16>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_16.v".
+Synthesizing Unit <registerSetup_17>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerSetup_17.v".
     Found 32-bit register for signal <M_regs_q>.
     Summary:
 	inferred  32 D-type flip-flop(s).
-Unit <registerSetup_16> synthesized.
-
-Synthesizing Unit <check_3>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v".
-WARNING:Xst:647 - Input <cols<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<26:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<40:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<54:42>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<68:56>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<82:70>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<96:84>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<110:98>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<124:112>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<138:126>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<152:140>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<166:154>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<180:168>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<194:182>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<208:196>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cols<222:210>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rows<15:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" line 24: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" line 24: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/check_3.v" line 24: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
-    Found 1-bit adder for signal <n0044> created at line 55.
-    Found 1-bit adder for signal <n0047> created at line 55.
-    Found 1-bit adder for signal <n0050> created at line 55.
-    Found 1-bit adder for signal <n0053> created at line 55.
-    Found 1-bit adder for signal <n0056> created at line 55.
-    Found 1-bit adder for signal <n0059> created at line 55.
-    Found 1-bit adder for signal <n0062> created at line 55.
-    Found 1-bit adder for signal <n0065> created at line 55.
-    Found 1-bit adder for signal <n0068> created at line 55.
-    Found 1-bit adder for signal <n0071> created at line 55.
-    Found 1-bit adder for signal <n0074> created at line 55.
-    Found 1-bit adder for signal <n0077> created at line 55.
-    Found 1-bit adder for signal <n0080> created at line 55.
-    Found 1-bit adder for signal <n0083> created at line 55.
-    Found 1-bit adder for signal <z> created at line 55.
-    Found 1-bit comparator greater for signal <changescore> created at line 56
-    Summary:
-	inferred  15 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-Unit <check_3> synthesized.
-
-Synthesizing Unit <registerScore_4>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerScore_4.v".
-    Found 5-bit register for signal <M_regs_q>.
-    Summary:
-	inferred   5 D-type flip-flop(s).
-Unit <registerScore_4> synthesized.
+Unit <registerSetup_17> synthesized.
 
 Synthesizing Unit <registerCols_5>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerCols_5.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerCols_5.v".
     Found 224-bit register for signal <M_regs_q>.
     Summary:
 	inferred 224 D-type flip-flop(s).
 Unit <registerCols_5> synthesized.
 
 Synthesizing Unit <registerChecker_6>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerChecker_6.v".
-    Found 6-bit register for signal <M_regs_q>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/registerChecker_6.v".
+    Found 1-bit register for signal <M_regs_q<5>>.
+    Found 1-bit register for signal <M_regs_q<4>>.
+    Found 1-bit register for signal <M_regs_q<3>>.
+    Found 1-bit register for signal <M_regs_q<2>>.
+    Found 1-bit register for signal <M_regs_q<1>>.
+    Found 1-bit register for signal <M_regs_q<0>>.
     Summary:
 	inferred   6 D-type flip-flop(s).
 Unit <registerChecker_6> synthesized.
 
+Synthesizing Unit <counter_7>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_7.v".
+    Found 1-bit register for signal <M_ctr_q<24>>.
+    Found 1-bit register for signal <M_ctr_q<23>>.
+    Found 1-bit register for signal <M_ctr_q<22>>.
+    Found 1-bit register for signal <M_ctr_q<21>>.
+    Found 1-bit register for signal <M_ctr_q<20>>.
+    Found 1-bit register for signal <M_ctr_q<19>>.
+    Found 1-bit register for signal <M_ctr_q<18>>.
+    Found 1-bit register for signal <M_ctr_q<17>>.
+    Found 1-bit register for signal <M_ctr_q<16>>.
+    Found 1-bit register for signal <M_ctr_q<15>>.
+    Found 1-bit register for signal <M_ctr_q<14>>.
+    Found 1-bit register for signal <M_ctr_q<13>>.
+    Found 1-bit register for signal <M_ctr_q<12>>.
+    Found 1-bit register for signal <M_ctr_q<11>>.
+    Found 1-bit register for signal <M_ctr_q<10>>.
+    Found 1-bit register for signal <M_ctr_q<9>>.
+    Found 1-bit register for signal <M_ctr_q<8>>.
+    Found 1-bit register for signal <M_ctr_q<7>>.
+    Found 1-bit register for signal <M_ctr_q<6>>.
+    Found 1-bit register for signal <M_ctr_q<5>>.
+    Found 1-bit register for signal <M_ctr_q<4>>.
+    Found 1-bit register for signal <M_ctr_q<3>>.
+    Found 1-bit register for signal <M_ctr_q<2>>.
+    Found 1-bit register for signal <M_ctr_q<1>>.
+    Found 1-bit register for signal <M_ctr_q<0>>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <counter_7> synthesized.
+
 Synthesizing Unit <led_matrix_8>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_8.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/led_matrix_8.v".
     Found 16-bit register for signal <M_cSignal_q>.
     Found 16-bit register for signal <M_aSignal_q>.
     Found 8-bit adder for signal <M_slowclock_value[3]_GND_22_o_add_32_OUT> created at line 98.
@@ -413,31 +404,38 @@ Synthesizing Unit <led_matrix_8>.
 	inferred   1 Combinational logic shifter(s).
 Unit <led_matrix_8> synthesized.
 
-Synthesizing Unit <counter_18>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_18.v".
+Synthesizing Unit <counter_19>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/counter_19.v".
     Found 16-bit register for signal <M_ctr_q>.
     Found 16-bit adder for signal <M_ctr_q[15]_GND_23_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <counter_18> synthesized.
+Unit <counter_19> synthesized.
 
 Synthesizing Unit <leddisplay_9>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v".
-INFO:Xst:3210 - "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v".
+INFO:Xst:3210 - "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/leddisplay_9.v" line 20: Output port <value> of the instance <counter_r> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <leddisplay_9> synthesized.
 
 Synthesizing Unit <levels_10>.
-    Related source file is "C:/Users/It'sMine/Documents/GitHub/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/Levels_10.v".
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/Levels_10.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 64x224-bit Read Only RAM for signal <colsout>
     Summary:
 	inferred   1 RAM(s).
 Unit <levels_10> synthesized.
+
+Synthesizing Unit <edge_detector_11>.
+    Related source file is "/home/dominic/repositories/full-bit-adder/LEDdisplay/work/planAhead/LEDdisplay/LEDdisplay.srcs/sources_1/imports/verilog/edge_detector_11.v".
+    Found 1-bit register for signal <M_last_q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <edge_detector_11> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -446,88 +444,77 @@ Macro Statistics
 # RAMs                                                 : 2
  16x16-bit single-port Read Only RAM                   : 1
  64x224-bit single-port Read Only RAM                  : 1
-# Multipliers                                          : 2
- 16x16-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 96
- 1-bit adder                                           : 15
- 16-bit adder                                          : 3
- 16-bit subtractor                                     : 6
- 17-bit adder                                          : 6
- 18-bit adder                                          : 4
- 19-bit adder                                          : 4
- 20-bit adder                                          : 6
- 21-bit adder                                          : 4
- 22-bit adder                                          : 4
- 23-bit adder                                          : 4
- 24-bit adder                                          : 4
- 25-bit adder                                          : 4
- 26-bit adder                                          : 4
- 27-bit adder                                          : 4
- 28-bit adder                                          : 4
- 29-bit adder                                          : 4
- 30-bit adder                                          : 5
- 31-bit adder                                          : 4
- 32-bit adder                                          : 4
- 5-bit adder                                           : 1
- 6-bit adder                                           : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 41
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 3
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 20-bit adder                                          : 4
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 2
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 25-bit adder                                          : 2
+ 26-bit adder                                          : 2
+ 27-bit adder                                          : 2
+ 28-bit adder                                          : 2
+ 29-bit adder                                          : 2
+ 30-bit adder                                          : 2
+ 31-bit adder                                          : 2
+ 32-bit adder                                          : 2
  8-bit adder                                           : 1
-# Registers                                            : 16
+# Registers                                            : 13
  1-bit register                                        : 2
  16-bit register                                       : 3
  2-bit register                                        : 3
  20-bit register                                       : 2
  224-bit register                                      : 1
- 30-bit register                                       : 1
  32-bit register                                       : 1
  4-bit register                                        : 1
- 5-bit register                                        : 1
- 6-bit register                                        : 1
-# Comparators                                          : 41
- 1-bit comparator greater                              : 1
- 16-bit comparator equal                               : 2
- 16-bit comparator greater                             : 4
- 16-bit comparator lessequal                           : 2
- 17-bit comparator greater                             : 2
- 18-bit comparator greater                             : 2
- 19-bit comparator greater                             : 2
- 20-bit comparator greater                             : 2
- 21-bit comparator greater                             : 2
- 22-bit comparator greater                             : 2
- 23-bit comparator greater                             : 2
- 24-bit comparator greater                             : 2
- 25-bit comparator greater                             : 2
- 26-bit comparator greater                             : 2
- 27-bit comparator greater                             : 2
- 28-bit comparator greater                             : 2
- 29-bit comparator greater                             : 2
- 30-bit comparator greater                             : 2
- 31-bit comparator greater                             : 2
- 32-bit comparator greater                             : 2
-# Multiplexers                                         : 545
- 1-bit 2-to-1 multiplexer                              : 500
+# Comparators                                          : 20
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 19-bit comparator greater                             : 1
+ 20-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
+ 22-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator greater                             : 1
+ 30-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 275
+ 1-bit 2-to-1 multiplexer                              : 249
  1-bit 4-to-1 multiplexer                              : 1
- 16-bit 2-to-1 multiplexer                             : 15
- 16-bit 4-to-1 multiplexer                             : 8
- 17-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 9
+ 16-bit 4-to-1 multiplexer                             : 5
+ 17-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 2
- 30-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 5
  32-bit 4-to-1 multiplexer                             : 2
- 5-bit 2-to-1 multiplexer                              : 2
- 6-bit 2-to-1 multiplexer                              : 4
  6-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 7
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
 # FSMs                                                 : 1
-# Xors                                                 : 6
- 1-bit xor2                                            : 4
- 16-bit xor2                                           : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 16-bit xor2                                           : 1
 
 =========================================================================
 
@@ -536,13 +523,13 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <button_conditioner_12>.
+Synthesizing (advanced) Unit <button_conditioner_13>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_12> synthesized (advanced).
+Unit <button_conditioner_13> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_18>.
+Synthesizing (advanced) Unit <counter_19>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_18> synthesized (advanced).
+Unit <counter_19> synthesized (advanced).
 
 Synthesizing (advanced) Unit <led_matrix_8>.
 INFO:Xst:3231 - The small RAM <Mram_M_cSignal_d> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -579,68 +566,58 @@ Macro Statistics
 # RAMs                                                 : 2
  16x16-bit single-port distributed Read Only RAM       : 1
  64x224-bit single-port distributed Read Only RAM      : 1
-# Multipliers                                          : 2
- 16x16-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 54
- 1-bit adder                                           : 1
- 1-bit adder carry in                                  : 7
- 16-bit adder                                          : 2
- 16-bit adder carry in                                 : 32
- 16-bit subtractor                                     : 6
- 17-bit adder                                          : 2
- 30-bit adder                                          : 1
- 5-bit adder                                           : 1
- 6-bit adder                                           : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 1
+ 16-bit adder carry in                                 : 16
+ 16-bit subtractor                                     : 3
+ 17-bit adder                                          : 1
  8-bit adder                                           : 1
 # Counters                                             : 3
  16-bit up counter                                     : 1
  20-bit up counter                                     : 2
-# Registers                                            : 341
- Flip-Flops                                            : 341
-# Comparators                                          : 41
- 1-bit comparator greater                              : 1
- 16-bit comparator equal                               : 2
- 16-bit comparator greater                             : 4
- 16-bit comparator lessequal                           : 2
- 17-bit comparator greater                             : 2
- 18-bit comparator greater                             : 2
- 19-bit comparator greater                             : 2
- 20-bit comparator greater                             : 2
- 21-bit comparator greater                             : 2
- 22-bit comparator greater                             : 2
- 23-bit comparator greater                             : 2
- 24-bit comparator greater                             : 2
- 25-bit comparator greater                             : 2
- 26-bit comparator greater                             : 2
- 27-bit comparator greater                             : 2
- 28-bit comparator greater                             : 2
- 29-bit comparator greater                             : 2
- 30-bit comparator greater                             : 2
- 31-bit comparator greater                             : 2
- 32-bit comparator greater                             : 2
-# Multiplexers                                         : 544
- 1-bit 2-to-1 multiplexer                              : 500
+# Registers                                            : 300
+ Flip-Flops                                            : 300
+# Comparators                                          : 20
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 19-bit comparator greater                             : 1
+ 20-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
+ 22-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator greater                             : 1
+ 30-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 274
+ 1-bit 2-to-1 multiplexer                              : 249
  1-bit 4-to-1 multiplexer                              : 1
- 16-bit 2-to-1 multiplexer                             : 14
- 16-bit 4-to-1 multiplexer                             : 8
- 17-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 8
+ 16-bit 4-to-1 multiplexer                             : 5
+ 17-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 2
- 30-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 5
  32-bit 4-to-1 multiplexer                             : 2
- 5-bit 2-to-1 multiplexer                              : 2
- 6-bit 2-to-1 multiplexer                              : 4
  6-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 7
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 1
 # FSMs                                                 : 1
-# Xors                                                 : 6
- 1-bit xor2                                            : 4
- 16-bit xor2                                           : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 16-bit xor2                                           : 1
 
 =========================================================================
 
@@ -648,21 +625,18 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <M_gamefsm_q[1:2]> with user encoding.
+Optimizing FSM <FSM_0> on signal <M_gamefsm_q[1:1]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
- 01    | 01
- 10    | 10
- 11    | 11
+ 001   | 0
+ 010   | unreached
+ 101   | unreached
+ 011   | unreached
+ 100   | 1
 -------------------
-WARNING:Xst:2677 - Node <M_normclock_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_normclock_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_normclock_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_normclock_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_normclock_q_29> of sequential type is unconnected in block <mojo_top_0>.
 
-Optimizing unit <registerSetup_16> ...
+Optimizing unit <registerSetup_17> ...
 
 Optimizing unit <registerCols_5> ...
 
@@ -670,14 +644,81 @@ Optimizing unit <mojo_top_0> ...
 
 Optimizing unit <generator_bottom_2> ...
 
-Optimizing unit <alu_11> ...
+Optimizing unit <alu_12> ...
 
 Optimizing unit <div_16s_16s> ...
 
-Optimizing unit <check_3> ...
-
 Optimizing unit <led_matrix_8> ...
-WARNING:Xst:1293 - FF/Latch <registerCols/M_regs_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <registerCols/M_regs_q_82> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_81> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_80> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_79> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_78> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_77> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_76> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_75> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_74> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_73> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_72> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_71> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_70> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_69> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_68> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_67> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_66> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_65> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_64> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_63> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_62> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_61> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_60> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_59> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_58> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_57> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_56> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_110> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_109> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_108> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_107> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_106> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_105> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_104> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_103> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_102> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_101> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_100> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_99> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_98> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_97> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_96> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_95> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_94> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_93> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_92> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_91> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_90> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_89> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_88> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_87> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_86> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_85> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_84> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_83> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_25> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_16> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
@@ -691,7 +732,146 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <check/alu/mult/Mmult_n0010> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_55> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_54> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_53> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_52> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_51> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_50> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_49> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_48> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_47> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_46> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_45> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_44> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_43> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_42> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_41> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_40> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_39> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_38> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_37> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_35> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_34> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_33> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_32> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_195> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_194> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_193> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_192> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_191> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_190> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_189> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_188> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_187> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_186> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_185> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_184> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_183> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_181> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_180> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_179> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_178> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_177> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_176> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_175> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_174> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_173> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_172> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_171> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_170> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_169> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_168> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_167> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_223> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_222> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_221> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_220> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_219> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_218> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_217> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_216> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_215> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_214> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_213> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_212> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_211> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_210> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_209> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_208> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_207> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_206> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_205> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_204> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_203> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_202> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_201> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_200> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_199> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_198> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_197> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_196> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_138> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_137> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_136> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_135> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_134> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_133> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_132> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_131> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_130> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_129> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_128> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_127> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_126> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_125> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_124> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_123> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_122> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_121> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_120> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_119> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_118> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_117> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_116> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_115> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_114> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_113> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_112> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_111> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_166> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_165> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_164> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_163> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_162> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_161> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_160> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_159> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_158> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_157> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_156> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_155> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_154> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_153> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_152> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_151> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_150> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_149> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_148> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_147> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_146> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_145> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_144> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_143> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_142> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_141> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_140> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <registerCols/M_regs_q_139> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_4> 
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_21> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_5> 
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_0> 
@@ -708,13 +888,12 @@ INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_26> in Unit <mojo_t
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_27> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_11> 
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_28> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_12> 
 INFO:Xst:2261 - The FF/Latch <generator_bottom/regs/M_regs_q_29> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <generator_bottom/regs/M_regs_q_13> 
-INFO:Xst:3203 - The FF/Latch <M_gamefsm_q_FSM_FFd2> in Unit <mojo_top_0> is the opposite to the following FF/Latch, which will be removed : <ld/slowclock/M_ctr_q_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 25.
-FlipFlop generator_bottom/M_new_fsm_q_0 has been replicated 3 time(s)
-FlipFlop generator_bottom/M_new_fsm_q_1 has been replicated 3 time(s)
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 14.
+FlipFlop generator_bottom/M_new_fsm_q_0 has been replicated 1 time(s)
+FlipFlop generator_bottom/M_new_fsm_q_1 has been replicated 2 time(s)
 FlipFlop generator_bottom/regs/M_regs_q_16 has been replicated 3 time(s)
 FlipFlop generator_bottom/regs/M_regs_q_31 has been replicated 3 time(s)
 
@@ -730,8 +909,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 371
- Flip-Flops                                            : 371
+# Registers                                            : 123
+ Flip-Flops                                            : 123
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -757,7 +936,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 375   |
+clk                                | BUFGP                  | 127   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -768,9 +947,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 56.805ns (Maximum Frequency: 17.604MHz)
+   Minimum period: 55.603ns (Maximum Frequency: 17.985MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 60.130ns
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
 =========================================================================

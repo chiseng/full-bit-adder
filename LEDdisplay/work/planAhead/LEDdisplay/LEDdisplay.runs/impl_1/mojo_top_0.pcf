@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Dec 06 15:15:21 2018
+// Written by: Map P.20131013 on Thu Dec 06 18:12:08 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -13,10 +13,10 @@ COMP "a[4]" LOCATE = SITE "P81" LEVEL 1;
 COMP "a[5]" LOCATE = SITE "P83" LEVEL 1;
 COMP "a[6]" LOCATE = SITE "P85" LEVEL 1;
 COMP "a[7]" LOCATE = SITE "P88" LEVEL 1;
-COMP "a[8]" LOCATE = SITE "P93" LEVEL 1;
 COMP "c[0]" LOCATE = SITE "P57" LEVEL 1;
-COMP "a[9]" LOCATE = SITE "P95" LEVEL 1;
+COMP "a[8]" LOCATE = SITE "P93" LEVEL 1;
 COMP "c[1]" LOCATE = SITE "P66" LEVEL 1;
+COMP "a[9]" LOCATE = SITE "P95" LEVEL 1;
 COMP "c[2]" LOCATE = SITE "P74" LEVEL 1;
 COMP "c[3]" LOCATE = SITE "P78" LEVEL 1;
 COMP "c[4]" LOCATE = SITE "P80" LEVEL 1;
@@ -54,23 +54,11 @@ COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "button_l" LOCATE = SITE "P51" LEVEL 1;
 COMP "button_r" LOCATE = SITE "P41" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "M_normclock_q_0" BEL "M_normclock_q_1" BEL
-        "M_normclock_q_2" BEL "M_normclock_q_3" BEL "M_normclock_q_4" BEL
-        "M_normclock_q_5" BEL "M_normclock_q_6" BEL "M_normclock_q_7" BEL
-        "M_normclock_q_8" BEL "M_normclock_q_9" BEL "M_normclock_q_10" BEL
-        "M_normclock_q_11" BEL "M_normclock_q_12" BEL "M_normclock_q_13" BEL
-        "M_normclock_q_14" BEL "M_normclock_q_15" BEL "M_normclock_q_16" BEL
-        "M_normclock_q_17" BEL "M_normclock_q_18" BEL "M_normclock_q_19" BEL
-        "M_normclock_q_20" BEL "M_normclock_q_21" BEL "M_normclock_q_22" BEL
-        "M_normclock_q_23" BEL "M_normclock_q_24" BEL "M_gamefsm_q_FSM_FFd2"
-        BEL "M_gamefsm_q_FSM_FFd1" BEL "generator_bottom/M_new_fsm_q_1" BEL
-        "generator_bottom/M_new_fsm_q_0" BEL
+TIMEGRP clk = BEL "M_gamefsm_q_FSM_FFd1" BEL "generator_bottom/M_new_fsm_q_1"
+        BEL "generator_bottom/M_new_fsm_q_0" BEL
         "generator_bottom/M_new_fsm_q_1_1" BEL
         "generator_bottom/M_new_fsm_q_0_1" BEL
         "generator_bottom/M_new_fsm_q_1_2" BEL
-        "generator_bottom/M_new_fsm_q_0_2" BEL
-        "generator_bottom/M_new_fsm_q_0_3" BEL
-        "generator_bottom/M_new_fsm_q_1_3" BEL
         "generator_bottom/left_edge/M_last_q" BEL
         "generator_bottom/regs/M_regs_q_31" BEL
         "generator_bottom/regs/M_regs_q_30" BEL
@@ -141,136 +129,26 @@ TIMEGRP clk = BEL "M_normclock_q_0" BEL "M_normclock_q_1" BEL
         "generator_bottom/button_right/sync/Mshreg_M_pipe_q_1" BEL
         "clk_BUFGP/BUFG" BEL "reset_cond/M_stage_q_3" BEL
         "reset_cond/M_stage_q_2" BEL "reset_cond/M_stage_q_1" BEL
-        "reset_cond/M_stage_q_0" BEL "check_for_cols/M_regs_q_5" BEL
-        "check_for_cols/M_regs_q_4" BEL "check_for_cols/M_regs_q_3" BEL
-        "check_for_cols/M_regs_q_2" BEL "check_for_cols/M_regs_q_1" BEL
-        "check_for_cols/M_regs_q_0" BEL "regscore/M_regs_q_4" BEL
-        "regscore/M_regs_q_3" BEL "regscore/M_regs_q_2" BEL
-        "regscore/M_regs_q_1" BEL "regscore/M_regs_q_0" BEL
-        "registerCols/M_regs_q_223" BEL "registerCols/M_regs_q_222" BEL
-        "registerCols/M_regs_q_221" BEL "registerCols/M_regs_q_220" BEL
-        "registerCols/M_regs_q_219" BEL "registerCols/M_regs_q_218" BEL
-        "registerCols/M_regs_q_217" BEL "registerCols/M_regs_q_216" BEL
-        "registerCols/M_regs_q_215" BEL "registerCols/M_regs_q_214" BEL
-        "registerCols/M_regs_q_213" BEL "registerCols/M_regs_q_212" BEL
-        "registerCols/M_regs_q_211" BEL "registerCols/M_regs_q_210" BEL
-        "registerCols/M_regs_q_209" BEL "registerCols/M_regs_q_208" BEL
-        "registerCols/M_regs_q_207" BEL "registerCols/M_regs_q_206" BEL
-        "registerCols/M_regs_q_205" BEL "registerCols/M_regs_q_204" BEL
-        "registerCols/M_regs_q_203" BEL "registerCols/M_regs_q_202" BEL
-        "registerCols/M_regs_q_201" BEL "registerCols/M_regs_q_200" BEL
-        "registerCols/M_regs_q_199" BEL "registerCols/M_regs_q_198" BEL
-        "registerCols/M_regs_q_197" BEL "registerCols/M_regs_q_196" BEL
-        "registerCols/M_regs_q_195" BEL "registerCols/M_regs_q_194" BEL
-        "registerCols/M_regs_q_193" BEL "registerCols/M_regs_q_192" BEL
-        "registerCols/M_regs_q_191" BEL "registerCols/M_regs_q_190" BEL
-        "registerCols/M_regs_q_189" BEL "registerCols/M_regs_q_188" BEL
-        "registerCols/M_regs_q_187" BEL "registerCols/M_regs_q_186" BEL
-        "registerCols/M_regs_q_185" BEL "registerCols/M_regs_q_184" BEL
-        "registerCols/M_regs_q_183" BEL "registerCols/M_regs_q_182" BEL
-        "registerCols/M_regs_q_181" BEL "registerCols/M_regs_q_180" BEL
-        "registerCols/M_regs_q_179" BEL "registerCols/M_regs_q_178" BEL
-        "registerCols/M_regs_q_177" BEL "registerCols/M_regs_q_176" BEL
-        "registerCols/M_regs_q_175" BEL "registerCols/M_regs_q_174" BEL
-        "registerCols/M_regs_q_173" BEL "registerCols/M_regs_q_172" BEL
-        "registerCols/M_regs_q_171" BEL "registerCols/M_regs_q_170" BEL
-        "registerCols/M_regs_q_169" BEL "registerCols/M_regs_q_168" BEL
-        "registerCols/M_regs_q_167" BEL "registerCols/M_regs_q_166" BEL
-        "registerCols/M_regs_q_165" BEL "registerCols/M_regs_q_164" BEL
-        "registerCols/M_regs_q_163" BEL "registerCols/M_regs_q_162" BEL
-        "registerCols/M_regs_q_161" BEL "registerCols/M_regs_q_160" BEL
-        "registerCols/M_regs_q_159" BEL "registerCols/M_regs_q_158" BEL
-        "registerCols/M_regs_q_157" BEL "registerCols/M_regs_q_156" BEL
-        "registerCols/M_regs_q_155" BEL "registerCols/M_regs_q_154" BEL
-        "registerCols/M_regs_q_153" BEL "registerCols/M_regs_q_152" BEL
-        "registerCols/M_regs_q_151" BEL "registerCols/M_regs_q_150" BEL
-        "registerCols/M_regs_q_149" BEL "registerCols/M_regs_q_148" BEL
-        "registerCols/M_regs_q_147" BEL "registerCols/M_regs_q_146" BEL
-        "registerCols/M_regs_q_145" BEL "registerCols/M_regs_q_144" BEL
-        "registerCols/M_regs_q_143" BEL "registerCols/M_regs_q_142" BEL
-        "registerCols/M_regs_q_141" BEL "registerCols/M_regs_q_140" BEL
-        "registerCols/M_regs_q_139" BEL "registerCols/M_regs_q_138" BEL
-        "registerCols/M_regs_q_137" BEL "registerCols/M_regs_q_136" BEL
-        "registerCols/M_regs_q_135" BEL "registerCols/M_regs_q_134" BEL
-        "registerCols/M_regs_q_133" BEL "registerCols/M_regs_q_132" BEL
-        "registerCols/M_regs_q_131" BEL "registerCols/M_regs_q_130" BEL
-        "registerCols/M_regs_q_129" BEL "registerCols/M_regs_q_128" BEL
-        "registerCols/M_regs_q_127" BEL "registerCols/M_regs_q_126" BEL
-        "registerCols/M_regs_q_125" BEL "registerCols/M_regs_q_124" BEL
-        "registerCols/M_regs_q_123" BEL "registerCols/M_regs_q_122" BEL
-        "registerCols/M_regs_q_121" BEL "registerCols/M_regs_q_120" BEL
-        "registerCols/M_regs_q_119" BEL "registerCols/M_regs_q_118" BEL
-        "registerCols/M_regs_q_117" BEL "registerCols/M_regs_q_116" BEL
-        "registerCols/M_regs_q_115" BEL "registerCols/M_regs_q_114" BEL
-        "registerCols/M_regs_q_113" BEL "registerCols/M_regs_q_112" BEL
-        "registerCols/M_regs_q_111" BEL "registerCols/M_regs_q_110" BEL
-        "registerCols/M_regs_q_109" BEL "registerCols/M_regs_q_108" BEL
-        "registerCols/M_regs_q_107" BEL "registerCols/M_regs_q_106" BEL
-        "registerCols/M_regs_q_105" BEL "registerCols/M_regs_q_104" BEL
-        "registerCols/M_regs_q_103" BEL "registerCols/M_regs_q_102" BEL
-        "registerCols/M_regs_q_101" BEL "registerCols/M_regs_q_100" BEL
-        "registerCols/M_regs_q_99" BEL "registerCols/M_regs_q_98" BEL
-        "registerCols/M_regs_q_97" BEL "registerCols/M_regs_q_96" BEL
-        "registerCols/M_regs_q_95" BEL "registerCols/M_regs_q_94" BEL
-        "registerCols/M_regs_q_93" BEL "registerCols/M_regs_q_92" BEL
-        "registerCols/M_regs_q_91" BEL "registerCols/M_regs_q_90" BEL
-        "registerCols/M_regs_q_89" BEL "registerCols/M_regs_q_88" BEL
-        "registerCols/M_regs_q_87" BEL "registerCols/M_regs_q_86" BEL
-        "registerCols/M_regs_q_85" BEL "registerCols/M_regs_q_84" BEL
-        "registerCols/M_regs_q_83" BEL "registerCols/M_regs_q_82" BEL
-        "registerCols/M_regs_q_81" BEL "registerCols/M_regs_q_80" BEL
-        "registerCols/M_regs_q_79" BEL "registerCols/M_regs_q_78" BEL
-        "registerCols/M_regs_q_77" BEL "registerCols/M_regs_q_76" BEL
-        "registerCols/M_regs_q_75" BEL "registerCols/M_regs_q_74" BEL
-        "registerCols/M_regs_q_73" BEL "registerCols/M_regs_q_72" BEL
-        "registerCols/M_regs_q_71" BEL "registerCols/M_regs_q_70" BEL
-        "registerCols/M_regs_q_69" BEL "registerCols/M_regs_q_68" BEL
-        "registerCols/M_regs_q_67" BEL "registerCols/M_regs_q_66" BEL
-        "registerCols/M_regs_q_65" BEL "registerCols/M_regs_q_64" BEL
-        "registerCols/M_regs_q_63" BEL "registerCols/M_regs_q_62" BEL
-        "registerCols/M_regs_q_61" BEL "registerCols/M_regs_q_60" BEL
-        "registerCols/M_regs_q_59" BEL "registerCols/M_regs_q_58" BEL
-        "registerCols/M_regs_q_57" BEL "registerCols/M_regs_q_56" BEL
-        "registerCols/M_regs_q_55" BEL "registerCols/M_regs_q_54" BEL
-        "registerCols/M_regs_q_53" BEL "registerCols/M_regs_q_52" BEL
-        "registerCols/M_regs_q_51" BEL "registerCols/M_regs_q_50" BEL
-        "registerCols/M_regs_q_49" BEL "registerCols/M_regs_q_48" BEL
-        "registerCols/M_regs_q_47" BEL "registerCols/M_regs_q_46" BEL
-        "registerCols/M_regs_q_45" BEL "registerCols/M_regs_q_44" BEL
-        "registerCols/M_regs_q_43" BEL "registerCols/M_regs_q_42" BEL
-        "registerCols/M_regs_q_41" BEL "registerCols/M_regs_q_40" BEL
-        "registerCols/M_regs_q_39" BEL "registerCols/M_regs_q_38" BEL
-        "registerCols/M_regs_q_37" BEL "registerCols/M_regs_q_36" BEL
-        "registerCols/M_regs_q_35" BEL "registerCols/M_regs_q_34" BEL
-        "registerCols/M_regs_q_33" BEL "registerCols/M_regs_q_32" BEL
-        "registerCols/M_regs_q_31" BEL "registerCols/M_regs_q_30" BEL
-        "registerCols/M_regs_q_29" BEL "registerCols/M_regs_q_28" BEL
-        "registerCols/M_regs_q_27" BEL "registerCols/M_regs_q_26" BEL
-        "registerCols/M_regs_q_25" BEL "registerCols/M_regs_q_24" BEL
-        "registerCols/M_regs_q_23" BEL "registerCols/M_regs_q_22" BEL
-        "registerCols/M_regs_q_21" BEL "registerCols/M_regs_q_20" BEL
-        "registerCols/M_regs_q_19" BEL "registerCols/M_regs_q_18" BEL
-        "registerCols/M_regs_q_17" BEL "registerCols/M_regs_q_16" BEL
-        "registerCols/M_regs_q_15" BEL "registerCols/M_regs_q_14" BEL
-        "ld/M_aSignal_q_0" BEL "ld/M_aSignal_q_1" BEL "ld/M_aSignal_q_2" BEL
-        "ld/M_aSignal_q_3" BEL "ld/M_aSignal_q_4" BEL "ld/M_aSignal_q_5" BEL
-        "ld/M_aSignal_q_6" BEL "ld/M_aSignal_q_7" BEL "ld/M_aSignal_q_8" BEL
-        "ld/M_aSignal_q_9" BEL "ld/M_aSignal_q_10" BEL "ld/M_aSignal_q_11" BEL
-        "ld/M_aSignal_q_12" BEL "ld/M_aSignal_q_13" BEL "ld/M_aSignal_q_14"
-        BEL "ld/M_aSignal_q_15" BEL "ld/M_cSignal_q_10" BEL
-        "ld/M_cSignal_q_11" BEL "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_13"
-        BEL "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_15" BEL
-        "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
+        "reset_cond/M_stage_q_0" BEL "registerCols/M_regs_q_182" BEL
+        "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_14" BEL "ld/M_aSignal_q_13"
+        BEL "ld/M_aSignal_q_12" BEL "ld/M_aSignal_q_11" BEL
+        "ld/M_aSignal_q_10" BEL "ld/M_aSignal_q_9" BEL "ld/M_aSignal_q_8" BEL
+        "ld/M_aSignal_q_7" BEL "ld/M_aSignal_q_6" BEL "ld/M_aSignal_q_5" BEL
+        "ld/M_aSignal_q_4" BEL "ld/M_aSignal_q_3" BEL "ld/M_aSignal_q_2" BEL
+        "ld/M_aSignal_q_1" BEL "ld/M_aSignal_q_0" BEL "ld/M_cSignal_q_15" BEL
+        "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12"
+        BEL "ld/M_cSignal_q_11" BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9"
+        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6"
+        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3"
+        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0"
+        BEL "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
         "ld/slowclock/M_ctr_q_13" BEL "ld/slowclock/M_ctr_q_12" BEL
         "ld/slowclock/M_ctr_q_11" BEL "ld/slowclock/M_ctr_q_10" BEL
         "ld/slowclock/M_ctr_q_9" BEL "ld/slowclock/M_ctr_q_8" BEL
         "ld/slowclock/M_ctr_q_7" BEL "ld/slowclock/M_ctr_q_6" BEL
         "ld/slowclock/M_ctr_q_5" BEL "ld/slowclock/M_ctr_q_4" BEL
         "ld/slowclock/M_ctr_q_3" BEL "ld/slowclock/M_ctr_q_2" BEL
-        "ld/slowclock/M_ctr_q_1" BEL "ld/M_cSignal_q_0" BEL "ld/M_cSignal_q_1"
-        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_4"
-        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_7"
-        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_9";
+        "ld/slowclock/M_ctr_q_1" BEL "ld/slowclock/M_ctr_q_0";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

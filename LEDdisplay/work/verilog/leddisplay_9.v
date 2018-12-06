@@ -17,7 +17,7 @@ module leddisplay_9 (
   localparam FLIP = 5'h10;
   
   wire [3-1:0] M_counter_r_value;
-  counter_19 counter_r (
+  counter_20 counter_r (
     .clk(clk),
     .rst(rst),
     .value(M_counter_r_value)

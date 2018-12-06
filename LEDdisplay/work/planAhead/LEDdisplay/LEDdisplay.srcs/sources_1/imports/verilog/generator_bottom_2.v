@@ -22,7 +22,7 @@ module generator_bottom_2 (
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_11 alu (
+  alu_12 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),
@@ -40,14 +40,14 @@ module generator_bottom_2 (
   
   wire [1-1:0] M_button_left_out;
   reg [1-1:0] M_button_left_in;
-  button_conditioner_12 button_left (
+  button_conditioner_13 button_left (
     .clk(clk),
     .in(M_button_left_in),
     .out(M_button_left_out)
   );
   wire [1-1:0] M_button_right_out;
   reg [1-1:0] M_button_right_in;
-  button_conditioner_12 button_right (
+  button_conditioner_13 button_right (
     .clk(clk),
     .in(M_button_right_in),
     .out(M_button_right_out)
@@ -55,14 +55,14 @@ module generator_bottom_2 (
   reg [15:0] M_shiftstore_d, M_shiftstore_q = 1'h0;
   wire [1-1:0] M_left_edge_out;
   reg [1-1:0] M_left_edge_in;
-  edge_detector_14 left_edge (
+  edge_detector_15 left_edge (
     .clk(clk),
     .in(M_left_edge_in),
     .out(M_left_edge_out)
   );
   wire [1-1:0] M_right_edge_out;
   reg [1-1:0] M_right_edge_in;
-  edge_detector_14 right_edge (
+  edge_detector_15 right_edge (
     .clk(clk),
     .in(M_right_edge_in),
     .out(M_right_edge_out)
@@ -70,7 +70,7 @@ module generator_bottom_2 (
   wire [32-1:0] M_regs_out;
   reg [1-1:0] M_regs_en;
   reg [32-1:0] M_regs_data;
-  registerSetup_16 regs (
+  registerSetup_17 regs (
     .clk(clk),
     .rst(rst),
     .en(M_regs_en),

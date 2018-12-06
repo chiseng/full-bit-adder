@@ -15,7 +15,7 @@ module led_matrix_8 (
   
   
   wire [4-1:0] M_slowclock_value;
-  counter_18 slowclock (
+  counter_19 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
@@ -25,8 +25,8 @@ module led_matrix_8 (
   
   
   always @* begin
-    M_aSignal_d = M_aSignal_q;
     M_cSignal_d = M_cSignal_q;
+    M_aSignal_d = M_aSignal_q;
     
     a = pattern[(M_slowclock_value)*16+15-:16];
     c = 16'hffff;

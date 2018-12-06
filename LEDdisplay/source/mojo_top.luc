@@ -32,14 +32,14 @@ module mojo_top (
   const GEN_BOTROWS={16b0000011100000000,16b0000011100000000};          // temp storage of the rows from generator_bottom
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
   var i;        // used for the for loop to initialise columns
-  fsm gamefsm(.clk(clk), .rst(rst), #INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE};
+  
   
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
 //    button_conditioner button_start;
-//      edge_detector edge_start;
+      
     .rst(rst){
       //multi_seven_seg seg;
       generator_bottom generator_bottom;
@@ -52,20 +52,26 @@ module mojo_top (
       registerCols registerCols; //takes in the current cols
       registerChecker check_for_cols;
      
-     counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh 
+     counter slowclock(#SIZE(1),#DIV(24));  //smaller the faster the refresh 
      led_matrix ld;
+     fsm gamefsm(#INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
      leddisplay led_converter;
      levels nextLevel;
+     
     }
   }
-
-    .clk(slowclock.value) {
+  .clk(slowclock.value){
+    edge_detector edge_start;
+  }      
+    /*
      fsm state (#INIT(ONE)) = {ONE,TWO, THREE};
      dff cSignal[16](.rst(rst));
      dff aSignal[16](.rst(rst));
-    }
+       */
+    
   sig start;
-  always {
+  sig z[6];
+always {
 //  button_start.in=button_s;
 //    edge_detector.in=button_s.out;
 //    start=edge_detector.out;
@@ -76,6 +82,7 @@ module mojo_top (
   check_for_cols.data=0;
   nextLevel.level=0;      
   registerCols.data=nextLevel.colsout;
+  edge_start.in=slowclock.value;
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
@@ -163,32 +170,51 @@ module mojo_top (
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        gamefsm.d = gamefsm.CHECK_MOVE;
-        
-      gamefsm.CHECK_MOVE:
-        check_for_cols.en=0;
-        registerCols.en=0;
-        regscore.en=0;
-        if(normclock.q[24]==1){
-           registerCols.en=1;
+        gamefsm.d = gamefsm.TEST_SCORE;
+    /*  
+      gamefsm.TEST_SCOR
+        led=check_for_cols.out;
+        z=check_for_cols.out;           
+        if(edge_start.out==1){
+         //registerCols.en=1;
            check_for_cols.en=1;
-           check_for_cols.data=check_for_cols.out+1;
-           nextLevel.level=check_for_cols.out;
-           registerCols.data=nextLevel.colsout;
-           normclock.d=0;
+           check_for_ls.data=z+1;:
+
+          gamefsm.d=gamefsm.TEST_NEXT; 
+           //led=check_for_cols.out;
+//           normclock.d=0        }
+      gamefsm.TEST_NEXT:
+        check_forr_cols.out;           
+        gamefsm.d=gamefsm.TEST_SCORE; }
+      */
+      gamefsm.CHECK_MOVE:
+        led=check_for_cols.out;
+        z=check_for_cols.out;           
+        if(edge_start.out==1){
+         //registerCols.en=1;
+           check_for_cols.en=1;
+           check_for_cols.data=z+1;
+
         }
-        led_converter.cols=nextLevel.colsout;
-        led = nextLevel.colsout[13][7:0];
+        //led
         generator_bottom.button_l = button_l;
         generator_bottom.button_r = button_r;
-
-        gamefsm.d = gamefsm.CHECK_SCORE;
+        gamefsm.d = gamefsm.TEST_NEXT;
+        
+        gamefsm.TEST_NEXT:
+        check_for_cols.en=0;
+        led=check_for_cols.out;           
+        gamefsm.d=gamefsm.CHECK_MOVE; 
         
         //else if timer == 0
-        //state.d= = state.IDLE;
-    
-        
+       
+                 //state.d= = sECK_SCORE;
       gamefsm.CHECK_SCORE:
+        check_for_cols.en=0;
+        nextLevel.level=check_for_cols.out;
+        led_converter.cols=nextLevel.colsout;
+        gamefsm.d=gamefsm.CHECK_MOVE;
+        /*      
       if(normclock.q[24]==1){
         check_for_cols.en=1;
         registerCols.en=1;
@@ -204,11 +230,11 @@ module mojo_top (
       if(check.changescore==1){
         regscore.en=1;
         regscore.data=regscore.out+1;
-        led=regscore.out;
-        }
+        led=regscedge_start.out==1)
       gamefsm.d=gamefsm.CHECK_MOVE;
-      
+          */
+    }
   }
 }
-}
 
+        

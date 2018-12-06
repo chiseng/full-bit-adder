@@ -37,14 +37,6 @@ module mojo_top_0 (
   
   integer i;
   
-  
-  localparam IDLE_gamefsm = 2'd0;
-  localparam INIT_STAGE_gamefsm = 2'd1;
-  localparam CHECK_MOVE_gamefsm = 2'd2;
-  localparam CHECK_SCORE_gamefsm = 2'd3;
-  
-  reg [1:0] M_gamefsm_d, M_gamefsm_q = INIT_STAGE_gamefsm;
-  
   wire [1-1:0] M_reset_cond_out;
   reg [1-1:0] M_reset_cond_in;
   reset_conditioner_1 reset_cond (
@@ -121,6 +113,14 @@ module mojo_top_0 (
     .a(M_ld_a),
     .c(M_ld_c)
   );
+  localparam IDLE_gamefsm = 3'd0;
+  localparam INIT_STAGE_gamefsm = 3'd1;
+  localparam CHECK_MOVE_gamefsm = 3'd2;
+  localparam CHECK_SCORE_gamefsm = 3'd3;
+  localparam TEST_SCORE_gamefsm = 3'd4;
+  localparam TEST_NEXT_gamefsm = 3'd5;
+  
+  reg [2:0] M_gamefsm_d, M_gamefsm_q = INIT_STAGE_gamefsm;
   wire [256-1:0] M_led_converter_out;
   reg [224-1:0] M_led_converter_cols;
   reg [32-1:0] M_led_converter_rows;
@@ -140,15 +140,17 @@ module mojo_top_0 (
     .colsout(M_nextLevel_colsout)
   );
   
-  localparam ONE_state = 2'd0;
-  localparam TWO_state = 2'd1;
-  localparam THREE_state = 2'd2;
-  
-  reg [1:0] M_state_d, M_state_q = ONE_state;
-  reg [15:0] M_cSignal_d, M_cSignal_q = 1'h0;
-  reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
+  wire [1-1:0] M_edge_start_out;
+  reg [1-1:0] M_edge_start_in;
+  edge_detector_11 edge_start (
+    .clk(M_slowclock_value),
+    .in(M_edge_start_in),
+    .out(M_edge_start_out)
+  );
   
   reg start;
+  
+  reg [5:0] z;
   
   always @* begin
     M_gamefsm_d = M_gamefsm_q;
@@ -161,6 +163,7 @@ module mojo_top_0 (
     M_check_for_cols_data = 1'h0;
     M_nextLevel_level = 1'h0;
     M_registerCols_data = M_nextLevel_colsout;
+    M_edge_start_in = M_slowclock_value;
     io_seg = 8'hff;
     a = 16'h0000;
     c = 16'h0000;
@@ -197,78 +200,40 @@ module mojo_top_0 (
         M_ld_pattern = M_led_converter_out;
         a = M_ld_a;
         c = M_ld_c;
-        M_gamefsm_d = CHECK_MOVE_gamefsm;
+        M_gamefsm_d = TEST_SCORE_gamefsm;
       end
       CHECK_MOVE_gamefsm: begin
-        M_check_for_cols_en = 1'h0;
-        M_registerCols_en = 1'h0;
-        M_regscore_en = 1'h0;
-        if (M_normclock_q[24+0-:1] == 1'h1) begin
-          M_registerCols_en = 1'h1;
+        led = M_check_for_cols_out;
+        z = M_check_for_cols_out;
+        if (M_edge_start_out == 1'h1) begin
           M_check_for_cols_en = 1'h1;
-          M_check_for_cols_data = M_check_for_cols_out + 1'h1;
-          M_nextLevel_level = M_check_for_cols_out;
-          M_registerCols_data = M_nextLevel_colsout;
-          M_normclock_d = 1'h0;
+          M_check_for_cols_data = z + 1'h1;
         end
-        M_led_converter_cols = M_nextLevel_colsout;
-        led = 8'h01;
         M_generator_bottom_button_l = button_l;
         M_generator_bottom_button_r = button_r;
-        M_gamefsm_d = CHECK_SCORE_gamefsm;
+        M_gamefsm_d = TEST_NEXT_gamefsm;
+      end
+      TEST_NEXT_gamefsm: begin
+        M_check_for_cols_en = 1'h0;
+        led = M_check_for_cols_out;
+        M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
       CHECK_SCORE_gamefsm: begin
-        if (M_normclock_q[24+0-:1] == 1'h1) begin
-          M_check_for_cols_en = 1'h1;
-          M_registerCols_en = 1'h1;
-          M_check_for_cols_data = M_check_for_cols_out + 1'h1;
-          M_nextLevel_level = M_check_for_cols_out;
-          M_registerCols_data = M_nextLevel_colsout;
-          M_normclock_d = 1'h0;
-        end
-        M_check_rows = M_generator_bottom_rowsout;
-        M_check_cols = M_registerCols_out;
-        if (M_check_changescore == 1'h1) begin
-          M_regscore_en = 1'h1;
-          M_regscore_data = M_regscore_out + 1'h1;
-          led = M_regscore_out;
-        end
+        M_check_for_cols_en = 1'h0;
+        M_nextLevel_level = M_check_for_cols_out;
+        M_led_converter_cols = M_nextLevel_colsout;
         M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
     endcase
   end
   
-  always @(posedge M_slowclock_value) begin
-    M_state_q <= M_state_d;
-    
-    if (rst == 1'b1) begin
-      M_aSignal_q <= 1'h0;
-    end else begin
-      M_aSignal_q <= M_aSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
-      M_cSignal_q <= 1'h0;
-    end else begin
-      M_cSignal_q <= M_cSignal_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_gamefsm_q <= 1'h1;
-    end else begin
-      M_gamefsm_q <= M_gamefsm_d;
-    end
-  end
-  
-  
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_normclock_q <= 1'h0;
+      M_gamefsm_q <= 1'h1;
     end else begin
       M_normclock_q <= M_normclock_d;
+      M_gamefsm_q <= M_gamefsm_d;
     end
   end
   
