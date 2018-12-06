@@ -199,21 +199,22 @@ always {
       */
       gamefsm.CHECK_MOVE:
         //led = edge_start.out;
+        led=check_for_cols.out;
         z=check_for_cols.out;           
         if(edge_start.out==1){
          //registerCols.en=1;
            check_for_cols.en=1;
            check_for_cols.data=z+1;
            //led = 8h02;
-          led=check_for_cols.out;
-           //gamefsm.d=gamefsm.TEST_NEXT;
+          
+           gamefsm.d=gamefsm.TEST_NEXT;
         }
         //led = 8h03;
         gamefsm.d=gamefsm.CHECK_MOVE;
         
       gamefsm.TEST_NEXT:
         check_for_cols.en=0; 
-        led=check_for_cols.out;         
+       // led=check_for_cols.out;         
         gamefsm.d=gamefsm.CHECK_MOVE;
         
         //else if timer == 0

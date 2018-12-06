@@ -8,15 +8,9 @@ module led_matrix (
 
     .clk(clk) {
       .rst(rst){
-        counter slowclock(#SIZE(4),#DIV(12), #TOP(15));  //smaller the faster the refresh
+        counter slowclock(#SIZE(4),#DIV(12), #TOP(15)); // change DIV to speed up or slow down pattern
         dff cSignal[16](.rst(rst)); //D flip-flip to store cathode signal
         dff aSignal[16](.rst(rst)); //D flip-flip to store anode signal
-      }
-    }
-
-    //this is not in use but left here for easy access when needed
-    .clk(slowclock.value) {
-      .rst(rst){
       }
     }
     always {
@@ -24,16 +18,18 @@ module led_matrix (
       c = hFFFF;
       aSignal.d = h0000;
       cSignal.d = hFFFF;
+    
+    // slowclock used to choose which rows to light up.
        case(slowclock.value){
         0:
-          aSignal.d = pattern[slowclock.value];
-          cSignal.d = h0001;
+          aSignal.d = pattern[slowclock.value]; // get the ground pattern to turn on the correct LEDs when first row is lit
+          cSignal.d = h0001; // power to first row
         1:
-          aSignal.d = pattern[slowclock.value];
-          cSignal.d = h0002;
+          aSignal.d = pattern[slowclock.value]; // get the ground pattern to turn on the correct LEDs when second row is lit
+          cSignal.d = h0002; // power to second row
         2:
-          aSignal.d = pattern[slowclock.value];
-          cSignal.d = h0004;
+          aSignal.d = pattern[slowclock.value]; // get the ground pattern to turn on the correct LEDs when third row is lit
+          cSignal.d = h0004; // power to third row, and so on...
         3:
           aSignal.d = pattern[slowclock.value];
           cSignal.d = h0008;

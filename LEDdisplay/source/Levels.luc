@@ -7,6 +7,8 @@ module levels (
 
   always {
     
+    // case to switch between hardcoded level frames. Generated in Python.
+    // each case consists of a 16x14 2D array. This is to be rotated to illustrate how the coconut falls
     case(level) {
 0:
 	colsout[0] = 14b00000000000000;
