@@ -7,8 +7,7 @@ module generator_bottom (
     input button_l[1],        // left button from user input
     input button_r[1],        // right button from user input
     input rows[2][16],        // rows values from previous cycle
-    output rowsout[2][16],     // rows values for current cycle
-    output led[8]
+    output rowsout[2][16]     // rows values for current cycle
   ) {
   // instantiate the alu module
   alu alu;
@@ -19,7 +18,6 @@ module generator_bottom (
   const SHR = 6b100001;
   
   .clk(clk){
-
   button_conditioner button_left;
   button_conditioner button_right;
   dff shiftstore[16];
@@ -30,7 +28,6 @@ module generator_bottom (
     } 
   }
   .clk(clk){
-    
     .rst(rst){
       fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE};
     }
@@ -48,8 +45,7 @@ module generator_bottom (
     right=right_edge.out;
     // initialise rowsout values 
     rowsout[0] = 16b0;
-    rowsout[1] = 16b0;
-    led=8h00;   
+    rowsout[1] = 16b0; 
     alu.a = 0;      // button_l XOR button_r
     alu.b = 0;
     alu.alufn = 0;
@@ -57,7 +53,6 @@ module generator_bottom (
     rowsout= {shiftstore.q,shiftstore.q};
     regs.en=0;
     regs.data=rows;
-    led = new_fsm.q;
     
     
     case(new_fsm.q){
@@ -75,12 +70,12 @@ module generator_bottom (
       //new_fsm.d = new_fsm.LEFT;
       //led = new_fsm.q;
           
-      if (rows[0][15] != 1){
+      if (regs.out[0][15] != 1){
           alu.a = regs.out[0];      // shift left row 0 by 1, using the data in regs
           alu.b = 1; 
           alu.alufn = SHL;
           regs.en=1; //write
-          regs.data={alu.out,alu.out}; //write new data
+          regs.data={alu.out,alu.out};//write new data
       // if right is pressed and user is not at the right edge
       // then shift right rows by 1
       }
@@ -92,7 +87,7 @@ module generator_bottom (
         
         new_fsm.RIGHT:
         
-        if (rows[0][0] != 1){  
+        if (regs.out[0][0] != 1){  
           regs.en=1;
           alu.a = regs.out[0];      // shift right row 1 by compare16
           alu.b = 1;
@@ -115,14 +110,14 @@ module generator_bottom (
           alu.alufn = XOR;
           //xoroutput.d = alu.out;
           regs.en=0;          
-        //led=shiftstore.q[7:0];
-      if(left!=1 && alu.out != 1){
+          //led=shiftstore.q[7:0];
+          if(left!=1 && alu.out != 1){
 
           rowsout=regs.out;
           new_fsm.d=new_fsm.SAVED_STATE;
         }
       else if(left==1 && alu.out == 1){
-                new_fsm.d=new_fsm.LEFT;
+        new_fsm.d=new_fsm.LEFT;
         }
       if(right!=1 && alu.out != 1){
         regs.en=0;

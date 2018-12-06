@@ -5,6 +5,7 @@ module registerSetup
     input rst,  // reset
     input data[2][16],
     output out[2][16]
+    
   ) {
   dff regs[2][16](.clk(clk),.rst(rst));
   always {

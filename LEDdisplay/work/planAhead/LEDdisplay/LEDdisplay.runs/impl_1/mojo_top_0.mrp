@@ -8,23 +8,23 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Dec 06 12:18:41 2018
+Mapped Date    : Thu Dec 06 15:14:50 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                   458 out of  11,440    4%
-    Number used as Flip Flops:                 457
+  Number of Slice Registers:                   341 out of  11,440    2%
+    Number used as Flip Flops:                 341
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      1,323 out of   5,720   23%
-    Number used as logic:                    1,318 out of   5,720   23%
-      Number using O6 output only:             970
-      Number using O5 output only:              61
-      Number using O5 and O6:                  287
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,304 out of   5,720   22%
+    Number used as logic:                    1,298 out of   5,720   22%
+      Number using O6 output only:           1,084
+      Number using O5 output only:              78
+      Number using O5 and O6:                  136
       Number used as ROM:                        0
     Number used as Memory:                       2 out of   1,440    1%
       Number used as Dual Port RAM:              0
@@ -33,21 +33,21 @@ Slice Logic Utilization:
         Number using O6 output only:             2
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      3
+    Number used exclusively as route-thrus:      4
       Number with same-slice register load:      0
-      Number with same-slice carry load:         3
+      Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   426 out of   1,430   29%
+  Number of occupied Slices:                   382 out of   1,430   26%
   Number of MUXCYs used:                       376 out of   2,860   13%
-  Number of LUT Flip Flop pairs used:        1,331
-    Number with an unused Flip Flop:           991 out of   1,331   74%
-    Number with an unused LUT:                   8 out of   1,331    1%
-    Number of fully used LUT-FF pairs:         332 out of   1,331   24%
-    Number of unique control sets:               8
+  Number of LUT Flip Flop pairs used:        1,307
+    Number with an unused Flip Flop:           983 out of   1,307   75%
+    Number with an unused LUT:                   3 out of   1,307    1%
+    Number of fully used LUT-FF pairs:         321 out of   1,307   24%
+    Number of unique control sets:              12
     Number of slice register sites lost
-      to control set restrictions:              37 out of  11,440    1%
+      to control set restrictions:              49 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -87,11 +87,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.41
+Average Fanout of Non-Clock Nets:                4.61
 
 Peak Memory Usage:  345 MB
-Total REAL time to MAP completion:  40 secs 
-Total CPU time to MAP completion (all processors):   43 secs 
+Total REAL time to MAP completion:  31 secs 
+Total CPU time to MAP completion (all processors):   35 secs 
 
 Table of Contents
 -----------------
@@ -159,7 +159,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   12 block(s) removed
-  23 block(s) optimized away
+  24 block(s) optimized away
    6 signal(s) removed
 
 Section 5 - Removed Logic
@@ -170,8 +170,8 @@ The trimmed logic reported below is either:
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
-The signal "avr_rx" is unused and has been removed.
- Unused block "avr_rx_OBUFT" (TRI) removed.
+The signal "spi_miso" is unused and has been removed.
+ Unused block "spi_miso_OBUFT" (TRI) removed.
 The signal "spi_channel[0]" is unused and has been removed.
  Unused block "spi_channel_0_OBUFT" (TRI) removed.
 The signal "spi_channel[1]" is unused and has been removed.
@@ -180,8 +180,8 @@ The signal "spi_channel[2]" is unused and has been removed.
  Unused block "spi_channel_2_OBUFT" (TRI) removed.
 The signal "spi_channel[3]" is unused and has been removed.
  Unused block "spi_channel_3_OBUFT" (TRI) removed.
-The signal "spi_miso" is unused and has been removed.
- Unused block "spi_miso_OBUFT" (TRI) removed.
+The signal "avr_rx" is unused and has been removed.
+ Unused block "avr_rx_OBUFT" (TRI) removed.
 Unused block "avr_rx" (PAD) removed.
 Unused block "spi_channel[0]" (PAD) removed.
 Unused block "spi_channel[1]" (PAD) removed.
@@ -193,10 +193,13 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-GND 		generator_bottom/XST_GND
+VCC 		generator_bottom/XST_VCC
 GND 		generator_bottom/alu/XST_GND
+VCC 		generator_bottom/alu/XST_VCC
 GND 		generator_bottom/alu/add/XST_GND
 VCC 		generator_bottom/alu/add/XST_VCC
+GND 		generator_bottom/alu/comp/XST_GND
+VCC 		generator_bottom/alu/comp/XST_VCC
 GND 		generator_bottom/alu/mult/XST_GND
 VCC 		generator_bottom/alu/mult/XST_VCC
 GND 		generator_bottom/alu/mult/a[15]_b[15]_div_1/XST_GND
@@ -209,10 +212,8 @@ GND 		generator_bottom/button_right/XST_GND
 VCC 		generator_bottom/button_right/XST_VCC
 GND 		generator_bottom/button_right/sync/XST_GND
 VCC 		generator_bottom/button_right/sync/XST_VCC
-GND 		generator_top/XST_GND
-VCC 		generator_top/XST_VCC
-GND 		generator_top/rng/slowclk/XST_GND
-VCC 		generator_top/rng/slowclk/XST_VCC
+GND 		ld/slowclock/XST_GND
+VCC 		ld/slowclock/XST_VCC
 GND 		reset_cond/XST_GND
 
 To enable printing of redundant blocks removed and signals merged, set the

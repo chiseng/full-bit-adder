@@ -1,10 +1,18 @@
 module registerChecker (
-    input clk,  // clock
+    input clk,
+    input en,  // enable
     input rst,  // reset
-    output out
+    input data[6],
+    output out[6]
+    
   ) {
-
+  dff regs[6](.clk(clk),.rst(rst));
   always {
-    out = 0;
+    if(en==1)
+      regs.d=data;
+    else  
+      regs.d=regs.q;
+    //regs.d=data;
+    out=regs.q;
   }
 }

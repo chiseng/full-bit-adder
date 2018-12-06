@@ -31,7 +31,7 @@ module mojo_top (
   sig rst;                  // reset signal
   const GEN_BOTROWS={16b0000011100000000,16b0000011100000000};          // temp storage of the rows from generator_bottom
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
-  var i;    
+  var i;        // used for the for loop to initialise columns
   fsm gamefsm(.clk(clk), .rst(rst), #INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE};
   
   .clk(clk) {
@@ -43,18 +43,19 @@ module mojo_top (
     .rst(rst){
       //multi_seven_seg seg;
       generator_bottom generator_bottom;
-      generator_top generator_top;
+//      generator_top generator_top;      
       check check;
       //leddisplay leddisplay;
       
       dff normclock[30];
-      registerScore regscore;
-      registerScore registerCols;
-     
+      registerScore regscore; //takes in the score
+      registerCols registerCols; //takes in the current cols
+      registerChecker check_for_cols;
      
      counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh 
      led_matrix ld;
      leddisplay led_converter;
+     levels nextLevel;
     }
   }
 
@@ -71,7 +72,10 @@ module mojo_top (
   regscore.en=0;
   regscore.data=0;
   registerCols.en=0;
-  registerCols.data=0;
+  check_for_cols.en=0;
+  check_for_cols.data=0;
+  nextLevel.level=0;      
+  registerCols.data=nextLevel.colsout;
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
@@ -88,31 +92,31 @@ module mojo_top (
     // initialise things
     generator_bottom.button_l = button_l;
     generator_bottom.button_r = button_r;
-    gen_botrows[0] = 16b0000011100000000;
-    gen_botrows[1] = 16b0000011100000000;
-    generator_bottom.rows = gen_botrows;
+    generator_bottom.rows = GEN_BOTROWS;
     led_converter.rows = ~generator_bottom.rowsout;
 
-    
+    /*
     for ( i=0; i<16; i++){
           gen_topcols[i] = 14b0;
           }
-    generator_top.cols = gen_topcols;
+    registerCols.data=gen_topcols;            
+    */
     
-    led_converter.cols = ~generator_top.colsout;
+    led_converter.cols = ~nextLevel.colsout;
     
     ld.pattern = led_converter.out;
     // ****** CHANGED ******    
     
-    check.cols = generator_top.colsout;
+    check.cols = nextLevel.colsout;
     check.rows = generator_bottom.rowsout;
-    check.score = score.q;
-//    led=generator_bottom.rowsout[1][15:8];\
-    led=generator_bottom.led; //connect bottom to leds
-    //led=check.outscore;
+    regscore.en=0;
+    regscore.data=0;
+    
+//    led=generator_bottom.rowsout[1][15:8];
     generator_bottom.button_l = button_l;
     generator_bottom.button_r = button_r;
-    score.d = check.outscore;
+    normclock.d=normclock.q+1;
+//    score.d = check.outscore;
     a=ld.a;
     c=ld.c;
    
@@ -129,17 +133,21 @@ module mojo_top (
       gamefsm.INIT_STAGE:
         // initialise the playground; user in the middle
         // no coconuts
+        /*
         gen_botrows[0] = ~16b0000001110000000;
         gen_botrows[1] = ~16b0000001110000000;
-        generator_bottom.rows=gen_botrows;
+        generator_bottom.rows=gen_botrows;        
+           */
+        generator_bottom.rows=GEN_BOTROWS;
         led_converter.rows=generator_bottom.rowsout;
         
         //cols[16][14]
+        /*
         for ( i=0; i<16; i++){
           gen_topcols[i] = ~14b0;
-          }
+          }        
 
-        
+        */
 //        led_converter.cols=gen_topcols;
         // save the generator_bottom.rowsout
         // display it
@@ -147,48 +155,60 @@ module mojo_top (
 //        currentrows.d = generator_bottom.rowsout;
 //        if(gamefsm.q!=gamefsm.STAGE1) currentrows.d=currentrows.q;
         led_converter.rows = generator_bottom.rowsout;
-        led=generator_bottom.led;
         registerCols.en=1;
-        registerCols.data=gen_topcols;
-        
-        
-        //save the generator_top.colsout;
-        // display it
-        currentcols.d = generator_top.colsout;
+        registerCols.data=nextLevel.colsout;
 //        if(gamefsm.q!=gamefsm.STAGE1) currentcols.d=currentcols.q;
-        led_converter.cols = generator_top.colsout;
+        led_converter.cols = registerCols.out;
         
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
         gamefsm.d = gamefsm.CHECK_MOVE;
         
-             
       gamefsm.CHECK_MOVE:
-      
-      /*
-        // pass in the prev saved rowsout & colsout
-        generator_bottom.rows = currentrows.q;
-        
+        check_for_cols.en=0;
+        registerCols.en=0;
+        regscore.en=0;
+        if(normclock.q[24]==1){
+           registerCols.en=1;
+           check_for_cols.en=1;
+           check_for_cols.data=check_for_cols.out+1;
+           nextLevel.level=check_for_cols.out;
+           registerCols.data=nextLevel.colsout;
+           normclock.d=0;
+        }
+        led_converter.cols=nextLevel.colsout;
+        led = nextLevel.colsout[13][7:0];
         generator_bottom.button_l = button_l;
         generator_bottom.button_r = button_r;
-        
-        generator_top.cols = currentcols.q;
-        
-        // if timer != 0
-        //check if score + 1
-        check.cols = generator_top.colsout;
-        check.rows = generator_bottom.rowsout;
-        check.score = score.q;
-        score.d = check.outscore;
-        
-        gamefsm.d = gamefsm.STAGE1;
+
+        gamefsm.d = gamefsm.CHECK_SCORE;
         
         //else if timer == 0
         //state.d= = state.IDLE;
     
-        */
-  
+        
+      gamefsm.CHECK_SCORE:
+      if(normclock.q[24]==1){
+        check_for_cols.en=1;
+        registerCols.en=1;
+        
+        check_for_cols.data=check_for_cols.out+1;
+        nextLevel.level=check_for_cols.out;
+        registerCols.data=nextLevel.colsout;
+          
+        normclock.d=0;
+        }
+      check.rows=generator_bottom.rowsout;
+      check.cols=registerCols.out;
+      if(check.changescore==1){
+        regscore.en=1;
+        regscore.data=regscore.out+1;
+        led=regscore.out;
+        }
+      gamefsm.d=gamefsm.CHECK_MOVE;
+      
+  }
 }
 }
 

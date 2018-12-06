@@ -10,8 +10,7 @@ module generator_bottom_2 (
     input [0:0] button_l,
     input [0:0] button_r,
     input [31:0] rows,
-    output reg [31:0] rowsout,
-    output reg [7:0] led
+    output reg [31:0] rowsout
   );
   
   
@@ -23,7 +22,7 @@ module generator_bottom_2 (
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_8 alu (
+  alu_11 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),
@@ -39,19 +38,16 @@ module generator_bottom_2 (
   
   localparam SHR = 6'h21;
   
-  reg [15:0] M_xoroutput_d, M_xoroutput_q = 1'h0;
-  reg [31:0] M_shiftleft_d, M_shiftleft_q = 1'h0;
-  reg [31:0] M_shiftright_d, M_shiftright_q = 1'h0;
   wire [1-1:0] M_button_left_out;
   reg [1-1:0] M_button_left_in;
-  button_conditioner_9 button_left (
+  button_conditioner_12 button_left (
     .clk(clk),
     .in(M_button_left_in),
     .out(M_button_left_out)
   );
   wire [1-1:0] M_button_right_out;
   reg [1-1:0] M_button_right_in;
-  button_conditioner_9 button_right (
+  button_conditioner_12 button_right (
     .clk(clk),
     .in(M_button_right_in),
     .out(M_button_right_out)
@@ -59,28 +55,22 @@ module generator_bottom_2 (
   reg [15:0] M_shiftstore_d, M_shiftstore_q = 1'h0;
   wire [1-1:0] M_left_edge_out;
   reg [1-1:0] M_left_edge_in;
-  edge_detector_11 left_edge (
+  edge_detector_14 left_edge (
     .clk(clk),
     .in(M_left_edge_in),
     .out(M_left_edge_out)
   );
   wire [1-1:0] M_right_edge_out;
   reg [1-1:0] M_right_edge_in;
-  edge_detector_11 right_edge (
+  edge_detector_14 right_edge (
     .clk(clk),
     .in(M_right_edge_in),
     .out(M_right_edge_out)
   );
-  wire [1-1:0] M_slowclk_value;
-  counter_13 slowclk (
-    .clk(clk),
-    .rst(rst),
-    .value(M_slowclk_value)
-  );
   wire [32-1:0] M_regs_out;
   reg [1-1:0] M_regs_en;
   reg [32-1:0] M_regs_data;
-  registerSetup_14 regs (
+  registerSetup_16 regs (
     .clk(clk),
     .rst(rst),
     .en(M_regs_en),
@@ -88,13 +78,12 @@ module generator_bottom_2 (
     .out(M_regs_out)
   );
   
-  localparam IDLE_new_fsm = 3'd0;
-  localparam LEFT_new_fsm = 3'd1;
-  localparam RIGHT_new_fsm = 3'd2;
-  localparam SAVED_STATE_new_fsm = 3'd3;
-  localparam TEST_new_fsm = 3'd4;
+  localparam IDLE_new_fsm = 2'd0;
+  localparam LEFT_new_fsm = 2'd1;
+  localparam RIGHT_new_fsm = 2'd2;
+  localparam SAVED_STATE_new_fsm = 2'd3;
   
-  reg [2:0] M_new_fsm_d, M_new_fsm_q = IDLE_new_fsm;
+  reg [1:0] M_new_fsm_d, M_new_fsm_q = IDLE_new_fsm;
   
   reg left;
   
@@ -111,21 +100,14 @@ module generator_bottom_2 (
     right = M_right_edge_out;
     rowsout[0+15-:16] = 16'h0000;
     rowsout[16+15-:16] = 16'h0000;
-    led = 8'h00;
     M_alu_a = 1'h0;
     M_alu_b = 1'h0;
     M_alu_alufn = 1'h0;
     rowsout = {M_shiftstore_q, M_shiftstore_q};
     M_regs_en = 1'h0;
     M_regs_data = rows;
-    led = M_new_fsm_q;
     
     case (M_new_fsm_q)
-      TEST_new_fsm: begin
-        M_regs_en = 1'h0;
-        rowsout = M_regs_out;
-        M_new_fsm_d = TEST_new_fsm;
-      end
       IDLE_new_fsm: begin
         rowsout = rows;
         M_regs_en = 1'h1;
@@ -133,7 +115,7 @@ module generator_bottom_2 (
         M_new_fsm_d = SAVED_STATE_new_fsm;
       end
       LEFT_new_fsm: begin
-        if (rows[0+15+0-:1] != 1'h1) begin
+        if (M_regs_out[0+15+0-:1] != 1'h1) begin
           M_alu_a = M_regs_out[0+15-:16];
           M_alu_b = 1'h1;
           M_alu_alufn = 6'h20;
@@ -144,7 +126,7 @@ module generator_bottom_2 (
         M_new_fsm_d = SAVED_STATE_new_fsm;
       end
       RIGHT_new_fsm: begin
-        if (rows[0+0+0-:1] != 1'h1) begin
+        if (M_regs_out[0+0+0-:1] != 1'h1) begin
           M_regs_en = 1'h1;
           M_alu_a = M_regs_out[0+15-:16];
           M_alu_b = 1'h1;
@@ -180,19 +162,16 @@ module generator_bottom_2 (
   end
   
   always @(posedge clk) begin
+    M_shiftstore_q <= M_shiftstore_d;
+  end
+  
+  
+  always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_new_fsm_q <= 1'h0;
     end else begin
       M_new_fsm_q <= M_new_fsm_d;
     end
-  end
-  
-  
-  always @(posedge clk) begin
-    M_xoroutput_q <= M_xoroutput_d;
-    M_shiftleft_q <= M_shiftleft_d;
-    M_shiftright_q <= M_shiftright_d;
-    M_shiftstore_q <= M_shiftstore_d;
   end
   
 endmodule
