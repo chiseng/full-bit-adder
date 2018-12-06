@@ -29,17 +29,17 @@ module mojo_top (
   ) {
   
   sig rst;                  // reset signal
-  sig gen_botrows[2][16];          // temp storage of the rows from generator_bottom
+  const GEN_BOTROWS={16b0000011100000000,16b0000011100000000};          // temp storage of the rows from generator_bottom
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
-  var i;
-  
-  fsm gamefsm(.clk(clk), .rst(rst), #INIT(STAGE1_START)) = {IDLE,STAGE1_START, STAGE1};
+  var i;    
+  fsm gamefsm(.clk(clk), .rst(rst), #INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE};
   
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
-    button_conditioner button_start;
+//    button_conditioner button_start;
+//      edge_detector edge_start;
     .rst(rst){
       //multi_seven_seg seg;
       generator_bottom generator_bottom;
@@ -47,9 +47,9 @@ module mojo_top (
       check check;
       //leddisplay leddisplay;
       
-      dff score;
-      dff currentrows[2][16];
-      dff currentcols[16][14];
+      dff normclock[30];
+      registerScore regscore;
+      registerScore registerCols;
      
      
      counter slowclock(#SIZE(1),#DIV(8));  //smaller the faster the refresh 
@@ -63,12 +63,18 @@ module mojo_top (
      dff cSignal[16](.rst(rst));
      dff aSignal[16](.rst(rst));
     }
+  sig start;
   always {
-
+//  button_start.in=button_s;
+//    edge_detector.in=button_s.out;
+//    start=edge_detector.out;
+  regscore.en=0;
+  regscore.data=0;
+  registerCols.en=0;
+  registerCols.data=0;
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
-  button_start.in=io_button[3];
 
   reset_cond.in = ~rst_n; // input raw inverted reset signal
   rst = reset_cond.out;   // conditioned reset
@@ -86,7 +92,7 @@ module mojo_top (
     gen_botrows[1] = 16b0000011100000000;
     generator_bottom.rows = gen_botrows;
     led_converter.rows = ~generator_bottom.rowsout;
-    
+
     
     for ( i=0; i<16; i++){
           gen_topcols[i] = 14b0;
@@ -98,29 +104,29 @@ module mojo_top (
     ld.pattern = led_converter.out;
     // ****** CHANGED ******    
     
-    check.cols = gen_topcols;
-    check.rows = gen_botrows;
+    check.cols = generator_top.colsout;
+    check.rows = generator_bottom.rowsout;
     check.score = score.q;
-//    led=generator_bottom.rowsout[1][15:8];
-    led=check.outscore;
+//    led=generator_bottom.rowsout[1][15:8];\
+    led=generator_bottom.led; //connect bottom to leds
+    //led=check.outscore;
+    generator_bottom.button_l = button_l;
+    generator_bottom.button_r = button_r;
+    score.d = check.outscore;
     a=ld.a;
     c=ld.c;
    
     
-    /*
-    case (gamefsm.q)  {
     
+    case (gamefsm.q)  {
+    /*
       gamefsm.IDLE:
-        // display score of last player
-        
-        if (button_start.out == 1){
-        gamefsm.d = gamefsm.STAGE1_START;
+        if (start==1){
+        gamefsm.d=gamefsm.INIT_STAGE;
         }
-        else{
-        gamefsm.d = gamefsm.IDLE;}
-          
+      */    
         
-      gamefsm.STAGE1_START:
+      gamefsm.INIT_STAGE:
         // initialise the playground; user in the middle
         // no coconuts
         gen_botrows[0] = ~16b0000001110000000;
@@ -132,33 +138,35 @@ module mojo_top (
         for ( i=0; i<16; i++){
           gen_topcols[i] = ~14b0;
           }
-        generator_bottom.button_l = button_l;
-        generator_bottom.button_r = button_r;
+
         
 //        led_converter.cols=gen_topcols;
         // save the generator_bottom.rowsout
         // display it
         
-        currentrows.d = generator_bottom.rowsout;
-        if(gamefsm.q!=gamefsm.STAGE1) currentrows.d=currentrows.q;
+//        currentrows.d = generator_bottom.rowsout;
+//        if(gamefsm.q!=gamefsm.STAGE1) currentrows.d=currentrows.q;
         led_converter.rows = generator_bottom.rowsout;
         led=generator_bottom.led;
-        generator_top.cols = gen_topcols;
+        registerCols.en=1;
+        registerCols.data=gen_topcols;
+        
         
         //save the generator_top.colsout;
         // display it
         currentcols.d = generator_top.colsout;
-        if(gamefsm.q!=gamefsm.STAGE1) currentcols.d=currentcols.q;
+//        if(gamefsm.q!=gamefsm.STAGE1) currentcols.d=currentcols.q;
         led_converter.cols = generator_top.colsout;
         
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        gamefsm.d = gamefsm.STAGE1_START;
+        gamefsm.d = gamefsm.CHECK_MOVE;
         
              
-      gamefsm.STAGE1:
+      gamefsm.CHECK_MOVE:
       
+      /*
         // pass in the prev saved rowsout & colsout
         generator_bottom.rows = currentrows.q;
         
@@ -178,8 +186,8 @@ module mojo_top (
         
         //else if timer == 0
         //state.d= = state.IDLE;
-    */
-  
+    
+        */
   
 }
 }

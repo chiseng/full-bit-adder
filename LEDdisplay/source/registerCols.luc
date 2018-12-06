@@ -1,0 +1,19 @@
+module registerCols (
+input clk,
+    input en,  // enable
+    input rst,  // reset
+    input data[16][14],
+    output out[16][14]
+    
+  ) {
+  dff regs[16][14](.clk(clk),.rst(rst));
+  always {
+    if(en==1)
+      regs.d=data;
+    else  
+      regs.d=regs.q;
+    //regs.d=data;
+    out=regs.q;
+  }
+}
+

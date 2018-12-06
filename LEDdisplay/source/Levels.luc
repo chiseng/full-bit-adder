@@ -1,12 +1,13 @@
 module levels (
     input clk,  // clock
     input rst,  // reset
+    input level[6],
     output colsout[16][14]
   ) {
 
   always {
     
-    case(0) {
+    case(level) {
 0:
 	colsout[0] = 14b00000000000000;
 	colsout[1] = 14b00000000000000;

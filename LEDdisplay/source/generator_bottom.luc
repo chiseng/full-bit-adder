@@ -23,61 +23,57 @@ module generator_bottom (
   dff xoroutput[16];       // to check if both buttons are pressed simultaneously
   dff shiftleft[2][16];    // to save rowsout values if left is pressed
   dff shiftright[2][16];   // to save rowsout values if right is pressed
+
+  button_conditioner button_left;
+  button_conditioner button_right;
   dff shiftstore[16];
+  edge_detector left_edge(#RISE(1),#FALL(0));
+    edge_detector right_edge(#RISE(1),#FALL(0));
   .rst(rst){
-    counter slowclk(#SIZE(1), #DIV(20));
+    counter slowclk(#SIZE(1), #DIV(0));
     registerSetup regs;
       
     
     
     } 
   }
-  .clk(slowclk.value){
+  .clk(clk){
+    
     .rst(rst){
-      fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE};
+      fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE, TEST};
     }
   }
   
+  sig left;
+  sig right;
+  
   always {
+    button_left.in=button_l;
+    button_right.in=button_r;
+    left_edge.in=button_left.out;
+    right_edge.in=button_right.out;
+    left=left_edge.out;
+    right=right_edge.out;
     // initialise rowsout values 
     rowsout[0] = 16b0;
     rowsout[1] = 16b0;
-    led=8h00;
-    /*
-    alu.a = button_l;      // button_l XOR button_r
-    alu.b = button_r;
-    alu.alufn = XOR;
-    xoroutput.d = alu.out;
-    
-    alu.a = rows[0];      // shift left row 0 by 1 
-    alu.b = 1;
-    alu.alufn = SHL;
-    shiftleft.d[0] = alu.out;
-    
-    alu.a = rows[1];      // shift left row 1 by 1
-    alu.b = 1;
-    alu.alufn = SHL;
-    shiftleft.d[1] = alu.out;
-    
-    alu.a = rows[0];      // shift right row 0 by 1
-    alu.b = 1;
-    alu.alufn = SHR;
-    shiftright.d[0] = alu.out;
-    
-    alu.a = rows[1];      // shift right row 1 by 1
-    alu.b = 1;
-    alu.alufn = SHR;
-    shiftright.d[1] = alu.out;
-    */
+    led=8h00;   
     alu.a = 0;      // button_l XOR button_r
     alu.b = 0;
     alu.alufn = 0;
-    led = rows[0][15:8];
+    //led = rows[0][15:8];
     rowsout= {shiftstore.q,shiftstore.q};
     regs.en=0;
     regs.data=rows;
+    led = new_fsm.q;
+    
     
     case(new_fsm.q){
+      new_fsm.TEST:
+        regs.en = 0;
+        rowsout = regs.out;
+        new_fsm.d = new_fsm.TEST;
+        
       new_fsm.IDLE:
         rowsout=rows; //initialise rowsout to be the original rows
         regs.en=1; //set write to be 1
@@ -87,59 +83,66 @@ module generator_bottom (
         new_fsm.d=new_fsm.SAVED_STATE;
         
       new_fsm.LEFT:
-        
-      if (rows[0][14] != 1){
+      //regs.en = 0;
+      //rowsout = regs.out;
+      //new_fsm.d = new_fsm.LEFT;
+      //led = new_fsm.q;
+          
+      if (rows[0][15] != 1){
           alu.a = regs.out[0];      // shift left row 0 by 1, using the data in regs
           alu.b = 1; 
           alu.alufn = SHL;
-          shiftstore.d=alu.out; 
           regs.en=1; //write
-          regs.data={shiftstore.q,shiftstore.q}; //write new data
+          regs.data={alu.out,alu.out}; //write new data
       // if right is pressed and user is not at the right edge
       // then shift right rows by 1
       }
         //regs.en=0; //set it back
         //led = alu.out[15:8];
         rowsout=regs.out; //get the new data
+        //new_fsm.d = new_fsm.TEST;
         new_fsm.d=new_fsm.SAVED_STATE; //change state
         
         new_fsm.RIGHT:
         
-        if (rows[0][14] != 1){  
+        if (rows[0][0] != 1){  
           regs.en=1;
           alu.a = regs.out[0];      // shift right row 1 by compare16
           alu.b = 1;
           alu.alufn = SHR;
-          shiftstore.d=alu.out; 
-          regs.data={shiftstore.q,shiftstore.q}; //write new data
+          //shiftstore.d=alu.out; 
+          regs.data={alu.out,alu.out}; //write new data
       // if left is pressed and user is not at the left edge
       // then shift left rows by compare16
       }
 
         //regs.en=0; //set it back
         rowsout=regs.out;
-        new_fsm.d=new_fsm.SAVED_STATE;     
+        new_fsm.d=new_fsm.SAVED_STATE;  
+        
+        
+           
          new_fsm.SAVED_STATE:
-          alu.a = button_l;      // button_l XOR button_r
-          alu.b = button_r;
+          alu.a = left;      // button_l XOR button_r
+          alu.b = right;
           alu.alufn = XOR;
-          xoroutput.d = alu.out;
+          //xoroutput.d = alu.out;
           regs.en=0;          
         //led=shiftstore.q[7:0];
-      if(button_l!=1 && xoroutput.q != 16b0000000000000001){
+      if(left!=1 && alu.out != 1){
 
           rowsout=regs.out;
           new_fsm.d=new_fsm.SAVED_STATE;
         }
-      else if(button_l==1 && xoroutput.q == 16b0000000000000001){
-        new_fsm.d=new_fsm.LEFT;
+      else if(left==1 && alu.out == 1){
+                new_fsm.d=new_fsm.LEFT;
         }
-      if(button_r!=1 && xoroutput.q != 16b1){
+      if(right!=1 && alu.out != 1){
         regs.en=0;
         rowsout=regs.out;
         new_fsm.d=new_fsm.SAVED_STATE;
         }
-     if(button_r==1 && xoroutput.q == 16b1){
+     if(right==1 && alu.out == 1){
        new_fsm.d=new_fsm.RIGHT;
         }    
     }

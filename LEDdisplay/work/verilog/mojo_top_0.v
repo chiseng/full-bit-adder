@@ -51,19 +51,12 @@ module mojo_top_0 (
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
   );
-  wire [1-1:0] M_button_start_out;
-  reg [1-1:0] M_button_start_in;
-  button_conditioner_2 button_start (
-    .clk(clk),
-    .in(M_button_start_in),
-    .out(M_button_start_out)
-  );
   wire [32-1:0] M_generator_bottom_rowsout;
   wire [8-1:0] M_generator_bottom_led;
   reg [1-1:0] M_generator_bottom_button_l;
   reg [1-1:0] M_generator_bottom_button_r;
   reg [32-1:0] M_generator_bottom_rows;
-  generator_bottom_3 generator_bottom (
+  generator_bottom_2 generator_bottom (
     .clk(clk),
     .rst(rst),
     .button_l(M_generator_bottom_button_l),
@@ -74,7 +67,7 @@ module mojo_top_0 (
   );
   wire [224-1:0] M_generator_top_colsout;
   reg [224-1:0] M_generator_top_cols;
-  generator_top_4 generator_top (
+  generator_top_3 generator_top (
     .clk(clk),
     .rst(rst),
     .cols(M_generator_top_cols),
@@ -84,7 +77,7 @@ module mojo_top_0 (
   reg [224-1:0] M_check_cols;
   reg [32-1:0] M_check_rows;
   reg [8-1:0] M_check_score;
-  check_5 check (
+  check_4 check (
     .clk(clk),
     .rst(rst),
     .cols(M_check_cols),
@@ -92,11 +85,11 @@ module mojo_top_0 (
     .score(M_check_score),
     .outscore(M_check_outscore)
   );
-  reg M_score_d, M_score_q = 1'h0;
+  reg [7:0] M_score_d, M_score_q = 1'h0;
   reg [31:0] M_currentrows_d, M_currentrows_q = 1'h0;
   reg [223:0] M_currentcols_d, M_currentcols_q = 1'h0;
   wire [1-1:0] M_slowclock_value;
-  counter_6 slowclock (
+  counter_5 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
@@ -104,7 +97,7 @@ module mojo_top_0 (
   wire [16-1:0] M_ld_a;
   wire [16-1:0] M_ld_c;
   reg [256-1:0] M_ld_pattern;
-  led_matrix_7 ld (
+  led_matrix_6 ld (
     .clk(clk),
     .rst(rst),
     .pattern(M_ld_pattern),
@@ -114,7 +107,7 @@ module mojo_top_0 (
   wire [256-1:0] M_led_converter_out;
   reg [224-1:0] M_led_converter_cols;
   reg [32-1:0] M_led_converter_rows;
-  leddisplay_8 led_converter (
+  leddisplay_7 led_converter (
     .clk(clk),
     .rst(rst),
     .cols(M_led_converter_cols),
@@ -131,10 +124,11 @@ module mojo_top_0 (
   reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
   
   always @* begin
+    M_score_d = M_score_q;
+    
     io_seg = 8'hff;
     a = 16'h0000;
     c = 16'h0000;
-    M_button_start_in = io_button[3+0-:1];
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
     led = 8'h00;
@@ -153,19 +147,24 @@ module mojo_top_0 (
     M_generator_top_cols = gen_topcols;
     M_led_converter_cols = ~M_generator_top_colsout;
     M_ld_pattern = M_led_converter_out;
-    M_check_cols = gen_topcols;
-    M_check_rows = gen_botrows;
+    M_check_cols = M_generator_top_colsout;
+    M_check_rows = M_generator_bottom_rowsout;
     M_check_score = M_score_q;
-    led = M_check_outscore;
+    led = M_generator_bottom_led;
+    M_score_d = M_check_outscore;
     a = M_ld_a;
     c = M_ld_c;
   end
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_gamefsm_q <= 1'h1;
+      M_score_q <= 1'h0;
+      M_currentrows_q <= 1'h0;
+      M_currentcols_q <= 1'h0;
     end else begin
-      M_gamefsm_q <= M_gamefsm_d;
+      M_score_q <= M_score_d;
+      M_currentrows_q <= M_currentrows_d;
+      M_currentcols_q <= M_currentcols_d;
     end
   end
   
@@ -189,13 +188,9 @@ module mojo_top_0 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_score_q <= 1'h0;
-      M_currentrows_q <= 1'h0;
-      M_currentcols_q <= 1'h0;
+      M_gamefsm_q <= 1'h1;
     end else begin
-      M_score_q <= M_score_d;
-      M_currentrows_q <= M_currentrows_d;
-      M_currentcols_q <= M_currentcols_d;
+      M_gamefsm_q <= M_gamefsm_d;
     end
   end
   
