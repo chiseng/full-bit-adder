@@ -19,10 +19,6 @@ module generator_bottom (
   const SHR = 6b100001;
   
   .clk(clk){
-  // temp values of outputs of ALU
-  dff xoroutput[16];       // to check if both buttons are pressed simultaneously
-  dff shiftleft[2][16];    // to save rowsout values if left is pressed
-  dff shiftright[2][16];   // to save rowsout values if right is pressed
 
   button_conditioner button_left;
   button_conditioner button_right;
@@ -30,17 +26,13 @@ module generator_bottom (
   edge_detector left_edge(#RISE(1),#FALL(0));
     edge_detector right_edge(#RISE(1),#FALL(0));
   .rst(rst){
-    counter slowclk(#SIZE(1), #DIV(0));
     registerSetup regs;
-      
-    
-    
     } 
   }
   .clk(clk){
     
     .rst(rst){
-      fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE, TEST};
+      fsm new_fsm={IDLE, LEFT, RIGHT, SAVED_STATE};
     }
   }
   
@@ -69,11 +61,6 @@ module generator_bottom (
     
     
     case(new_fsm.q){
-      new_fsm.TEST:
-        regs.en = 0;
-        rowsout = regs.out;
-        new_fsm.d = new_fsm.TEST;
-        
       new_fsm.IDLE:
         rowsout=rows; //initialise rowsout to be the original rows
         regs.en=1; //set write to be 1
