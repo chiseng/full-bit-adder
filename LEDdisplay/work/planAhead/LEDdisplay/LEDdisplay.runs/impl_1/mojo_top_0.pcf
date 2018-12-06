@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Dec 06 18:12:08 2018
+// Written by: Map P.20131013 on Thu Dec 06 20:16:16 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -54,11 +54,12 @@ COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "button_l" LOCATE = SITE "P51" LEVEL 1;
 COMP "button_r" LOCATE = SITE "P41" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "M_gamefsm_q_FSM_FFd1" BEL "generator_bottom/M_new_fsm_q_1"
-        BEL "generator_bottom/M_new_fsm_q_0" BEL
-        "generator_bottom/M_new_fsm_q_1_1" BEL
+TIMEGRP clk = BEL "M_gamefsm_q_0" BEL "generator_bottom/M_new_fsm_q_1" BEL
+        "generator_bottom/M_new_fsm_q_0" BEL
         "generator_bottom/M_new_fsm_q_0_1" BEL
+        "generator_bottom/M_new_fsm_q_1_1" BEL
         "generator_bottom/M_new_fsm_q_1_2" BEL
+        "generator_bottom/M_new_fsm_q_0_2" BEL
         "generator_bottom/left_edge/M_last_q" BEL
         "generator_bottom/regs/M_regs_q_31" BEL
         "generator_bottom/regs/M_regs_q_30" BEL
@@ -127,28 +128,36 @@ TIMEGRP clk = BEL "M_gamefsm_q_FSM_FFd1" BEL "generator_bottom/M_new_fsm_q_1"
         "generator_bottom/button_right/M_ctr_q_0" BEL
         "generator_bottom/button_right/sync/M_pipe_q_1" BEL
         "generator_bottom/button_right/sync/Mshreg_M_pipe_q_1" BEL
-        "clk_BUFGP/BUFG" BEL "reset_cond/M_stage_q_3" BEL
+        "clk_BUFGP/BUFG" BEL "slowclock/M_ctr_q_0" BEL "slowclock/M_ctr_q_1"
+        BEL "slowclock/M_ctr_q_2" BEL "slowclock/M_ctr_q_3" BEL
+        "slowclock/M_ctr_q_4" BEL "slowclock/M_ctr_q_5" BEL
+        "slowclock/M_ctr_q_6" BEL "slowclock/M_ctr_q_7" BEL
+        "slowclock/M_ctr_q_8" BEL "slowclock/M_ctr_q_9" BEL
+        "slowclock/M_ctr_q_10" BEL "slowclock/M_ctr_q_11" BEL
+        "slowclock/M_ctr_q_12" BEL "slowclock/M_ctr_q_13" BEL
+        "slowclock/M_ctr_q_14" BEL "slowclock/M_ctr_q_15" BEL
+        "slowclock/M_ctr_q_16" BEL "slowclock/M_ctr_q_17" BEL
+        "slowclock/M_ctr_q_18" BEL "slowclock/M_ctr_q_19" BEL
+        "slowclock/M_ctr_q_20" BEL "slowclock/M_ctr_q_21" BEL
+        "slowclock/M_ctr_q_22" BEL "slowclock/M_ctr_q_23" BEL
+        "slowclock/M_ctr_q_24" BEL "reset_cond/M_stage_q_3" BEL
         "reset_cond/M_stage_q_2" BEL "reset_cond/M_stage_q_1" BEL
-        "reset_cond/M_stage_q_0" BEL "registerCols/M_regs_q_182" BEL
-        "ld/M_aSignal_q_15" BEL "ld/M_aSignal_q_14" BEL "ld/M_aSignal_q_13"
-        BEL "ld/M_aSignal_q_12" BEL "ld/M_aSignal_q_11" BEL
-        "ld/M_aSignal_q_10" BEL "ld/M_aSignal_q_9" BEL "ld/M_aSignal_q_8" BEL
-        "ld/M_aSignal_q_7" BEL "ld/M_aSignal_q_6" BEL "ld/M_aSignal_q_5" BEL
-        "ld/M_aSignal_q_4" BEL "ld/M_aSignal_q_3" BEL "ld/M_aSignal_q_2" BEL
-        "ld/M_aSignal_q_1" BEL "ld/M_aSignal_q_0" BEL "ld/M_cSignal_q_15" BEL
-        "ld/M_cSignal_q_14" BEL "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_12"
-        BEL "ld/M_cSignal_q_11" BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_9"
-        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_7" BEL "ld/M_cSignal_q_6"
-        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_4" BEL "ld/M_cSignal_q_3"
-        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_1" BEL "ld/M_cSignal_q_0"
-        BEL "ld/slowclock/M_ctr_q_15" BEL "ld/slowclock/M_ctr_q_14" BEL
-        "ld/slowclock/M_ctr_q_13" BEL "ld/slowclock/M_ctr_q_12" BEL
-        "ld/slowclock/M_ctr_q_11" BEL "ld/slowclock/M_ctr_q_10" BEL
-        "ld/slowclock/M_ctr_q_9" BEL "ld/slowclock/M_ctr_q_8" BEL
-        "ld/slowclock/M_ctr_q_7" BEL "ld/slowclock/M_ctr_q_6" BEL
-        "ld/slowclock/M_ctr_q_5" BEL "ld/slowclock/M_ctr_q_4" BEL
-        "ld/slowclock/M_ctr_q_3" BEL "ld/slowclock/M_ctr_q_2" BEL
-        "ld/slowclock/M_ctr_q_1" BEL "ld/slowclock/M_ctr_q_0";
+        "reset_cond/M_stage_q_0" BEL "ld/M_aSignal_q_0" BEL "ld/M_aSignal_q_1"
+        BEL "ld/M_aSignal_q_2" BEL "ld/M_aSignal_q_3" BEL "ld/M_aSignal_q_4"
+        BEL "ld/M_aSignal_q_5" BEL "ld/M_aSignal_q_6" BEL "ld/M_aSignal_q_7"
+        BEL "ld/M_aSignal_q_8" BEL "ld/M_aSignal_q_9" BEL "ld/M_aSignal_q_10"
+        BEL "ld/M_aSignal_q_11" BEL "ld/M_aSignal_q_12" BEL
+        "ld/M_aSignal_q_13" BEL "ld/M_aSignal_q_14" BEL "ld/M_aSignal_q_15"
+        BEL "ld/M_cSignal_q_10" BEL "ld/M_cSignal_q_11" BEL
+        "ld/M_cSignal_q_12" BEL "ld/M_cSignal_q_13" BEL "ld/M_cSignal_q_14"
+        BEL "ld/M_cSignal_q_15" BEL "ld/M_cSignal_q_0" BEL "ld/M_cSignal_q_1"
+        BEL "ld/M_cSignal_q_2" BEL "ld/M_cSignal_q_3" BEL "ld/M_cSignal_q_4"
+        BEL "ld/M_cSignal_q_5" BEL "ld/M_cSignal_q_6" BEL "ld/M_cSignal_q_7"
+        BEL "ld/M_cSignal_q_8" BEL "ld/M_cSignal_q_9" BEL
+        "check_for_cols/M_regs_q_5" BEL "check_for_cols/M_regs_q_4" BEL
+        "check_for_cols/M_regs_q_3" BEL "check_for_cols/M_regs_q_2" BEL
+        "check_for_cols/M_regs_q_1" BEL "check_for_cols/M_regs_q_0" BEL
+        "registerCols/M_regs_q_182";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

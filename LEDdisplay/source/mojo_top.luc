@@ -39,6 +39,8 @@ module mojo_top (
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
 //    button_conditioner button_start;
+    
+    
       
     .rst(rst){
       //multi_seven_seg seg;
@@ -55,14 +57,16 @@ module mojo_top (
      counter slowclock(#SIZE(1),#DIV(24));  //smaller the faster the refresh 
      led_matrix ld;
      fsm gamefsm(#INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
+
      leddisplay led_converter;
      levels nextLevel;
      
     }
-  }
+         
+  }  
   .clk(slowclock.value){
-    edge_detector edge_start;
-  }      
+  edge_detector edge_start; 
+  }
     /*
      fsm state (#INIT(ONE)) = {ONE,TWO, THREE};
      dff cSignal[16](.rst(rst));
@@ -82,7 +86,7 @@ always {
   check_for_cols.data=0;
   nextLevel.level=0;      
   registerCols.data=nextLevel.colsout;
-  edge_start.in=slowclock.value;
+  edge_start.in=slowclock.value; //get edge from slow clock
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
@@ -130,6 +134,7 @@ always {
     
     
     case (gamefsm.q)  {
+      
     /*
       gamefsm.IDLE:
         if (start==1){
@@ -138,6 +143,8 @@ always {
       */    
         
       gamefsm.INIT_STAGE:
+        
+        led = 8h02;
         // initialise the playground; user in the middle
         // no coconuts
         /*
@@ -147,6 +154,7 @@ always {
            */
         generator_bottom.rows=GEN_BOTROWS;
         led_converter.rows=generator_bottom.rowsout;
+        led = 8h04;
         
         //cols[16][14]
         /*
@@ -170,7 +178,9 @@ always {
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        gamefsm.d = gamefsm.TEST_SCORE;
+        generator_bottom.button_l = button_l;
+        generator_bottom.button_r = button_r;
+        gamefsm.d = gamefsm.CHECK_MOVE;
     /*  
       gamefsm.TEST_SCOR
         led=check_for_cols.out;
@@ -188,23 +198,23 @@ always {
         gamefsm.d=gamefsm.TEST_SCORE; }
       */
       gamefsm.CHECK_MOVE:
-        led=check_for_cols.out;
+        //led = edge_start.out;
         z=check_for_cols.out;           
         if(edge_start.out==1){
          //registerCols.en=1;
            check_for_cols.en=1;
            check_for_cols.data=z+1;
-
+           //led = 8h02;
+          led=check_for_cols.out;
+           //gamefsm.d=gamefsm.TEST_NEXT;
         }
-        //led
-        generator_bottom.button_l = button_l;
-        generator_bottom.button_r = button_r;
-        gamefsm.d = gamefsm.TEST_NEXT;
+        //led = 8h03;
+        gamefsm.d=gamefsm.CHECK_MOVE;
         
-        gamefsm.TEST_NEXT:
-        check_for_cols.en=0;
-        led=check_for_cols.out;           
-        gamefsm.d=gamefsm.CHECK_MOVE; 
+      gamefsm.TEST_NEXT:
+        check_for_cols.en=0; 
+        led=check_for_cols.out;         
+        gamefsm.d=gamefsm.CHECK_MOVE;
         
         //else if timer == 0
        

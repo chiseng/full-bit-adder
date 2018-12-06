@@ -191,8 +191,10 @@ module mojo_top_0 (
     
     case (M_gamefsm_q)
       INIT_STAGE_gamefsm: begin
+        led = 8'h02;
         M_generator_bottom_rows = 32'h07000700;
         M_led_converter_rows = M_generator_bottom_rowsout;
+        led = 8'h04;
         M_led_converter_rows = M_generator_bottom_rowsout;
         M_registerCols_en = 1'h1;
         M_registerCols_data = M_nextLevel_colsout;
@@ -200,18 +202,18 @@ module mojo_top_0 (
         M_ld_pattern = M_led_converter_out;
         a = M_ld_a;
         c = M_ld_c;
-        M_gamefsm_d = TEST_SCORE_gamefsm;
+        M_generator_bottom_button_l = button_l;
+        M_generator_bottom_button_r = button_r;
+        M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
       CHECK_MOVE_gamefsm: begin
-        led = M_check_for_cols_out;
         z = M_check_for_cols_out;
         if (M_edge_start_out == 1'h1) begin
           M_check_for_cols_en = 1'h1;
           M_check_for_cols_data = z + 1'h1;
+          led = M_check_for_cols_out;
         end
-        M_generator_bottom_button_l = button_l;
-        M_generator_bottom_button_r = button_r;
-        M_gamefsm_d = TEST_NEXT_gamefsm;
+        M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
       TEST_NEXT_gamefsm: begin
         M_check_for_cols_en = 1'h0;
