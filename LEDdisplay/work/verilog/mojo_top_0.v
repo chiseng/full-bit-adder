@@ -31,7 +31,7 @@ module mojo_top_0 (
   
   reg rst;
   
-  localparam GEN_BOTROWS = 32'h07000700;
+  localparam GEN_BOTROWS = 32'h0f800f80;
   
   reg [223:0] gen_topcols;
   
@@ -183,7 +183,7 @@ module mojo_top_0 (
     avr_rx = 1'bz;
     M_generator_bottom_button_l = button_l;
     M_generator_bottom_button_r = button_r;
-    M_generator_bottom_rows = 32'h07000700;
+    M_generator_bottom_rows = 32'h0f800f80;
     M_led_converter_rows = ~M_generator_bottom_rowsout;
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
       gen_topcols[(i)*14+13-:14] = 14'h0000;
@@ -205,7 +205,7 @@ module mojo_top_0 (
     case (M_gamefsm_q)
       INIT_STAGE_gamefsm: begin
         led = 8'h02;
-        M_generator_bottom_rows = 32'h07000700;
+        M_generator_bottom_rows = 32'h0f800f80;
         M_led_converter_rows = M_generator_bottom_rowsout;
         led = 8'h04;
         for (i = 1'h0; i < 5'h10; i = i + 1) begin

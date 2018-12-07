@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2018 12 7 10 39 11)
+      (timestamp 2018 12 7 11 2 49)
       (program "Xilinx ngc2edif" (version "P.20131013"))
       (author "Xilinx. Inc ")
       (comment "This EDIF netlist is to be used within supported synthesis tools")
@@ -14549,10 +14549,10 @@
             (port M_new_fsm_q_0
               (direction INPUT)
             )
-            (port M_button_right_out
+            (port M_last_q
               (direction INPUT)
             )
-            (port M_last_q
+            (port M_button_right_out
               (direction INPUT)
             )
             (port (rename out_6__ "out<6>")
@@ -14902,7 +14902,7 @@
               (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property PK_HLUTNM (string "___XLNM___150___generator_bottom/n0014<15>3_SW2") (owner "Xilinx"))
-              (property INIT (string "DF") (owner "Xilinx"))
+              (property INIT (string "BF") (owner "Xilinx"))
             )
             (instance Mmux_out204_SW0
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
@@ -15885,22 +15885,22 @@
                 (portRef (member Mcompar_BUS_0010_INV_489_o_cy 0) (instanceRef mult))
               )
             )
-            (net M_button_right_out
-              (joined
-                (portRef M_button_right_out)
-                (portRef I0 (instanceRef Mmux_out245_SW7))
-                (portRef I1 (instanceRef Mmux_out245_SW6))
-                (portRef I1 (instanceRef Mmux_out245_SW8))
-                (portRef I5 (instanceRef Mmux_out245_SW0))
-              )
-            )
             (net M_last_q
               (joined
                 (portRef M_last_q)
-                (portRef I1 (instanceRef Mmux_out245_SW7))
+                (portRef I0 (instanceRef Mmux_out245_SW7))
                 (portRef I4 (instanceRef Mmux_out245_SW6))
                 (portRef I4 (instanceRef Mmux_out245_SW8))
                 (portRef I1 (instanceRef Mmux_out245_SW0))
+              )
+            )
+            (net M_button_right_out
+              (joined
+                (portRef M_button_right_out)
+                (portRef I1 (instanceRef Mmux_out245_SW7))
+                (portRef I1 (instanceRef Mmux_out245_SW6))
+                (portRef I1 (instanceRef Mmux_out245_SW8))
+                (portRef I5 (instanceRef Mmux_out245_SW0))
               )
             )
             (net N283
@@ -20191,7 +20191,7 @@
             (port N86
               (direction OUTPUT)
             )
-            (port Sh17805
+            (port Sh17735
               (direction INPUT)
             )
             (port N88
@@ -20200,7 +20200,7 @@
             (port N89
               (direction OUTPUT)
             )
-            (port Sh178011
+            (port Sh177311
               (direction INPUT)
             )
             (port N91
@@ -20209,7 +20209,7 @@
             (port N92
               (direction OUTPUT)
             )
-            (port Sh17735
+            (port Sh17835
               (direction INPUT)
             )
             (port N94
@@ -20218,7 +20218,7 @@
             (port N95
               (direction OUTPUT)
             )
-            (port Sh177311
+            (port Sh178311
               (direction INPUT)
             )
             (port N97
@@ -20227,7 +20227,7 @@
             (port N98
               (direction OUTPUT)
             )
-            (port Sh17835
+            (port Sh17805
               (direction INPUT)
             )
             (port N100
@@ -20236,7 +20236,7 @@
             (port N101
               (direction OUTPUT)
             )
-            (port Sh178311
+            (port Sh178011
               (direction INPUT)
             )
             (port N103
@@ -20444,7 +20444,7 @@
             (instance (rename M_regs_data_23_1 "M_regs_data<23>1")
               (viewRef view_1 (cellRef LUT5 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "00082208") (owner "Xilinx"))
+              (property INIT (string "FFFFFDAD") (owner "Xilinx"))
             )
             (instance (rename M_regs_data_18_1 "M_regs_data<18>1")
               (viewRef view_1 (cellRef LUT5 (libraryRef UNISIMS)))
@@ -20576,42 +20576,22 @@
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
             )
-            (instance Mmux_rowsout161_SW0
+            (instance Mmux_rowsout16_SW0
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
             )
-            (instance Mmux_rowsout161_SW1
+            (instance Mmux_rowsout16_SW1
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
             )
-            (instance Mmux_rowsout161_SW2
+            (instance Mmux_rowsout16_SW2
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
             )
-            (instance Mmux_rowsout161_SW3
-              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
-            )
-            (instance Mmux_rowsout17_SW0
-              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
-            )
-            (instance Mmux_rowsout17_SW1
-              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
-            )
-            (instance Mmux_rowsout17_SW2
-              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
-            )
-            (instance Mmux_rowsout17_SW3
+            (instance Mmux_rowsout16_SW3
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
@@ -20636,25 +20616,45 @@
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "14141411BEBEBEBB") (owner "Xilinx"))
             )
+            (instance Mmux_rowsout301_SW0
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "41441141EBEEBBEB") (owner "Xilinx"))
+            )
+            (instance Mmux_rowsout301_SW1
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "14141411BEBEBEBB") (owner "Xilinx"))
+            )
+            (instance Mmux_rowsout301_SW2
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "41441141EBEEBBEB") (owner "Xilinx"))
+            )
+            (instance Mmux_rowsout301_SW3
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "14141411BEBEBEBB") (owner "Xilinx"))
+            )
             (instance Mmux_rowsout31_SW0
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
+              (property INIT (string "41441141EBEEBBEB") (owner "Xilinx"))
             )
             (instance Mmux_rowsout31_SW1
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
+              (property INIT (string "14141411BEBEBEBB") (owner "Xilinx"))
             )
             (instance Mmux_rowsout31_SW2
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "41144444EBBEEEEE") (owner "Xilinx"))
+              (property INIT (string "41441141EBEEBBEB") (owner "Xilinx"))
             )
             (instance Mmux_rowsout31_SW3
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "11144444BBBEEEEE") (owner "Xilinx"))
+              (property INIT (string "14141411BEBEBEBB") (owner "Xilinx"))
             )
             (instance Mmux_rowsout311_SW0
               (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
@@ -21077,7 +21077,7 @@
               (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property PK_HLUTNM (string "___XLNM___137___generator_bottom/M_regs_data<11>11") (owner "Xilinx"))
-              (property INIT (string "0444") (owner "Xilinx"))
+              (property INIT (string "FF2A") (owner "Xilinx"))
             )
             (instance (rename M_regs_data_10_11 "M_regs_data<10>11")
               (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
@@ -21219,7 +21219,7 @@
                 (portRef I0 (instanceRef M_regs_data_19_11))
                 (portRef I0 (instanceRef M_regs_data_13_11))
                 (portRef I0 (instanceRef M_regs_data_12_11))
-                (portRef I0 (instanceRef M_regs_data_11_11))
+                (portRef I3 (instanceRef M_regs_data_11_11))
                 (portRef I3 (instanceRef M_regs_data_10_11))
                 (portRef I3 (instanceRef M_regs_data_25_11))
                 (portRef M_regs_data_10_2 (instanceRef alu))
@@ -21232,7 +21232,7 @@
                 (portRef I1 (instanceRef Mmux_M_alu_a17))
                 (portRef I1 (instanceRef Mmux_M_alu_b111))
                 (portRef I0 (instanceRef M_alu_alufn_1_1))
-                (portRef I1 (instanceRef M_regs_data_23_1))
+                (portRef I0 (instanceRef M_regs_data_23_1))
                 (portRef I1 (instanceRef Mmux_M_alu_a61_renamed_406))
                 (portRef I1 (instanceRef Mmux_M_alu_a51_renamed_407))
                 (portRef I2 (instanceRef Mmux_rowsout101_SW0))
@@ -21255,22 +21255,22 @@
                 (portRef I3 (instanceRef Mmux_rowsout151_SW1))
                 (portRef I2 (instanceRef Mmux_rowsout151_SW2))
                 (portRef I3 (instanceRef Mmux_rowsout151_SW3))
-                (portRef I2 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I3 (instanceRef Mmux_rowsout161_SW1))
-                (portRef I2 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I3 (instanceRef Mmux_rowsout161_SW3))
-                (portRef I3 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I3 (instanceRef Mmux_rowsout17_SW1))
-                (portRef I3 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I3 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I3 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I3 (instanceRef Mmux_rowsout16_SW1))
+                (portRef I3 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I3 (instanceRef Mmux_rowsout16_SW3))
                 (portRef I4 (instanceRef Mmux_rowsout210_SW0))
                 (portRef I4 (instanceRef Mmux_rowsout210_SW1))
                 (portRef I4 (instanceRef Mmux_rowsout210_SW2))
                 (portRef I4 (instanceRef Mmux_rowsout210_SW3))
-                (portRef I2 (instanceRef Mmux_rowsout31_SW0))
-                (portRef I3 (instanceRef Mmux_rowsout31_SW1))
-                (portRef I2 (instanceRef Mmux_rowsout31_SW2))
-                (portRef I3 (instanceRef Mmux_rowsout31_SW3))
+                (portRef I4 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I4 (instanceRef Mmux_rowsout301_SW1))
+                (portRef I4 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I4 (instanceRef Mmux_rowsout301_SW3))
+                (portRef I4 (instanceRef Mmux_rowsout31_SW0))
+                (portRef I4 (instanceRef Mmux_rowsout31_SW1))
+                (portRef I4 (instanceRef Mmux_rowsout31_SW2))
+                (portRef I4 (instanceRef Mmux_rowsout31_SW3))
                 (portRef I4 (instanceRef Mmux_rowsout311_SW0))
                 (portRef I4 (instanceRef Mmux_rowsout311_SW1))
                 (portRef I4 (instanceRef Mmux_rowsout311_SW2))
@@ -21333,7 +21333,7 @@
                 (portRef I3 (instanceRef M_regs_data_14_1))
                 (portRef I2 (instanceRef M_regs_data_13_11))
                 (portRef I2 (instanceRef M_regs_data_12_11))
-                (portRef I2 (instanceRef M_regs_data_11_11))
+                (portRef I1 (instanceRef M_regs_data_11_11))
                 (portRef I1 (instanceRef M_regs_data_10_11))
                 (portRef I1 (instanceRef M_regs_data_25_11))
                 (portRef I3 (instanceRef M_regs_data_18_1))
@@ -21351,7 +21351,7 @@
                 (portRef I0 (instanceRef Mmux_M_alu_a17))
                 (portRef I0 (instanceRef Mmux_M_alu_b111))
                 (portRef I1 (instanceRef M_alu_alufn_1_1))
-                (portRef I3 (instanceRef M_regs_data_23_1))
+                (portRef I2 (instanceRef M_regs_data_23_1))
                 (portRef I3 (instanceRef Mmux_M_alu_a61_renamed_406))
                 (portRef I3 (instanceRef Mmux_M_alu_a51_renamed_407))
                 (portRef I3 (instanceRef Mmux_rowsout101_SW0))
@@ -21374,22 +21374,22 @@
                 (portRef I2 (instanceRef Mmux_rowsout151_SW1))
                 (portRef I3 (instanceRef Mmux_rowsout151_SW2))
                 (portRef I2 (instanceRef Mmux_rowsout151_SW3))
-                (portRef I3 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I2 (instanceRef Mmux_rowsout161_SW1))
-                (portRef I3 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I2 (instanceRef Mmux_rowsout161_SW3))
-                (portRef I2 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I2 (instanceRef Mmux_rowsout17_SW1))
-                (portRef I2 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I2 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I2 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I2 (instanceRef Mmux_rowsout16_SW1))
+                (portRef I2 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I2 (instanceRef Mmux_rowsout16_SW3))
                 (portRef I2 (instanceRef Mmux_rowsout210_SW0))
                 (portRef I3 (instanceRef Mmux_rowsout210_SW1))
                 (portRef I2 (instanceRef Mmux_rowsout210_SW2))
                 (portRef I3 (instanceRef Mmux_rowsout210_SW3))
-                (portRef I3 (instanceRef Mmux_rowsout31_SW0))
-                (portRef I2 (instanceRef Mmux_rowsout31_SW1))
-                (portRef I3 (instanceRef Mmux_rowsout31_SW2))
-                (portRef I2 (instanceRef Mmux_rowsout31_SW3))
+                (portRef I2 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I3 (instanceRef Mmux_rowsout301_SW1))
+                (portRef I2 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I3 (instanceRef Mmux_rowsout301_SW3))
+                (portRef I2 (instanceRef Mmux_rowsout31_SW0))
+                (portRef I3 (instanceRef Mmux_rowsout31_SW1))
+                (portRef I2 (instanceRef Mmux_rowsout31_SW2))
+                (portRef I3 (instanceRef Mmux_rowsout31_SW3))
                 (portRef I2 (instanceRef Mmux_rowsout311_SW0))
                 (portRef I3 (instanceRef Mmux_rowsout311_SW1))
                 (portRef I2 (instanceRef Mmux_rowsout311_SW2))
@@ -21456,7 +21456,7 @@
                 (portRef I1 (instanceRef M_regs_data_14_1))
                 (portRef I3 (instanceRef M_regs_data_13_11))
                 (portRef I3 (instanceRef M_regs_data_12_11))
-                (portRef I3 (instanceRef M_regs_data_11_11))
+                (portRef I2 (instanceRef M_regs_data_11_11))
                 (portRef I2 (instanceRef M_regs_data_10_11))
                 (portRef I2 (instanceRef M_regs_data_25_11))
                 (portRef I2 (instanceRef M_regs_data_18_1))
@@ -21468,7 +21468,7 @@
               (joined
                 (portRef I2 (instanceRef Mmux_M_regs_en11))
                 (portRef I3 (instanceRef Mmux_M_alu_a17))
-                (portRef I4 (instanceRef M_regs_data_23_1))
+                (portRef I3 (instanceRef M_regs_data_23_1))
                 (portRef I4 (instanceRef Mmux_M_alu_a61_renamed_406))
                 (portRef I4 (instanceRef Mmux_M_alu_a51_renamed_407))
                 (portRef I4 (instanceRef Mmux_rowsout71_SW0))
@@ -21520,13 +21520,13 @@
                 (portRef I3 (instanceRef Mmux_M_regs_en11))
                 (portRef I2 (instanceRef Mmux_M_alu_a17))
                 (portRef I2 (instanceRef Mmux_M_alu_b111))
-                (portRef I2 (instanceRef M_regs_data_23_1))
+                (portRef I1 (instanceRef M_regs_data_23_1))
                 (portRef I2 (instanceRef Mmux_M_alu_a61_renamed_406))
                 (portRef I2 (instanceRef Mmux_M_alu_a51_renamed_407))
-                (portRef I4 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I4 (instanceRef Mmux_rowsout17_SW1))
-                (portRef I4 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I4 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I4 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I4 (instanceRef Mmux_rowsout16_SW1))
+                (portRef I4 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I4 (instanceRef Mmux_rowsout16_SW3))
                 (portRef I2 (instanceRef Mmux_M_alu_a31_renamed_410))
                 (portRef I2 (instanceRef Mmux_M_alu_a41_renamed_411))
                 (portRef I2 (instanceRef Mmux_M_alu_a21_renamed_412))
@@ -21699,7 +21699,7 @@
             )
             (net (rename M_alu_out_7__ "M_alu_out<7>")
               (joined
-                (portRef I0 (instanceRef M_regs_data_23_1))
+                (portRef I4 (instanceRef M_regs_data_23_1))
                 (portRef I1 (instanceRef n0014_15_3_SW4))
                 (portRef out_7__ (instanceRef alu))
               )
@@ -21893,18 +21893,18 @@
                 (portRef I0 (instanceRef Mmux_rowsout151_SW1))
                 (portRef I0 (instanceRef Mmux_rowsout151_SW2))
                 (portRef I0 (instanceRef Mmux_rowsout151_SW3))
-                (portRef I0 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I0 (instanceRef Mmux_rowsout161_SW1))
-                (portRef I0 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I0 (instanceRef Mmux_rowsout161_SW3))
-                (portRef I0 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I0 (instanceRef Mmux_rowsout17_SW1))
-                (portRef I0 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I0 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I0 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I0 (instanceRef Mmux_rowsout16_SW1))
+                (portRef I0 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I0 (instanceRef Mmux_rowsout16_SW3))
                 (portRef I0 (instanceRef Mmux_rowsout210_SW0))
                 (portRef I0 (instanceRef Mmux_rowsout210_SW1))
                 (portRef I0 (instanceRef Mmux_rowsout210_SW2))
                 (portRef I0 (instanceRef Mmux_rowsout210_SW3))
+                (portRef I0 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I0 (instanceRef Mmux_rowsout301_SW1))
+                (portRef I0 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I0 (instanceRef Mmux_rowsout301_SW3))
                 (portRef I0 (instanceRef Mmux_rowsout31_SW0))
                 (portRef I0 (instanceRef Mmux_rowsout31_SW1))
                 (portRef I0 (instanceRef Mmux_rowsout31_SW2))
@@ -21962,18 +21962,18 @@
                 (portRef I1 (instanceRef Mmux_rowsout151_SW1))
                 (portRef I1 (instanceRef Mmux_rowsout151_SW2))
                 (portRef I1 (instanceRef Mmux_rowsout151_SW3))
-                (portRef I1 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I1 (instanceRef Mmux_rowsout161_SW1))
-                (portRef I1 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I1 (instanceRef Mmux_rowsout161_SW3))
-                (portRef I1 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I1 (instanceRef Mmux_rowsout17_SW1))
-                (portRef I1 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I1 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I1 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I1 (instanceRef Mmux_rowsout16_SW1))
+                (portRef I1 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I1 (instanceRef Mmux_rowsout16_SW3))
                 (portRef I1 (instanceRef Mmux_rowsout210_SW0))
                 (portRef I1 (instanceRef Mmux_rowsout210_SW1))
                 (portRef I1 (instanceRef Mmux_rowsout210_SW2))
                 (portRef I1 (instanceRef Mmux_rowsout210_SW3))
+                (portRef I1 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I1 (instanceRef Mmux_rowsout301_SW1))
+                (portRef I1 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I1 (instanceRef Mmux_rowsout301_SW3))
                 (portRef I1 (instanceRef Mmux_rowsout31_SW0))
                 (portRef I1 (instanceRef Mmux_rowsout31_SW1))
                 (portRef I1 (instanceRef Mmux_rowsout31_SW2))
@@ -22258,92 +22258,42 @@
                 (portRef O (instanceRef Mmux_rowsout151_SW3))
               )
             )
-            (net (rename M_regs_out_7__ "M_regs_out<7>")
+            (net Sh17735
               (joined
-                (portRef I4 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I4 (instanceRef Mmux_rowsout161_SW1))
-                (portRef I4 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I4 (instanceRef Mmux_rowsout161_SW3))
-                (portRef I0 (instanceRef Mmux_M_alu_a1411))
-                (portRef I0 (instanceRef Mmux_M_alu_a141_renamed_417))
-                (portRef M_regs_q_23 (instanceRef alu))
-                (portRef out_7__ (instanceRef regs))
-              )
-            )
-            (net Sh17805
-              (joined
-                (portRef Sh17805)
-                (portRef I5 (instanceRef Mmux_rowsout161_SW0))
-                (portRef I5 (instanceRef Mmux_rowsout161_SW1))
+                (portRef Sh17735)
+                (portRef I5 (instanceRef Mmux_rowsout16_SW0))
+                (portRef I5 (instanceRef Mmux_rowsout16_SW1))
               )
             )
             (net N88
               (joined
                 (portRef N88)
-                (portRef O (instanceRef Mmux_rowsout161_SW0))
+                (portRef O (instanceRef Mmux_rowsout16_SW0))
               )
             )
             (net N89
               (joined
                 (portRef N89)
-                (portRef O (instanceRef Mmux_rowsout161_SW1))
-              )
-            )
-            (net Sh178011
-              (joined
-                (portRef Sh178011)
-                (portRef I5 (instanceRef Mmux_rowsout161_SW2))
-                (portRef I5 (instanceRef Mmux_rowsout161_SW3))
-              )
-            )
-            (net N91
-              (joined
-                (portRef N91)
-                (portRef O (instanceRef Mmux_rowsout161_SW2))
-              )
-            )
-            (net N92
-              (joined
-                (portRef N92)
-                (portRef O (instanceRef Mmux_rowsout161_SW3))
-              )
-            )
-            (net Sh17735
-              (joined
-                (portRef Sh17735)
-                (portRef I5 (instanceRef Mmux_rowsout17_SW0))
-                (portRef I5 (instanceRef Mmux_rowsout17_SW1))
-              )
-            )
-            (net N94
-              (joined
-                (portRef N94)
-                (portRef O (instanceRef Mmux_rowsout17_SW0))
-              )
-            )
-            (net N95
-              (joined
-                (portRef N95)
-                (portRef O (instanceRef Mmux_rowsout17_SW1))
+                (portRef O (instanceRef Mmux_rowsout16_SW1))
               )
             )
             (net Sh177311
               (joined
                 (portRef Sh177311)
-                (portRef I5 (instanceRef Mmux_rowsout17_SW2))
-                (portRef I5 (instanceRef Mmux_rowsout17_SW3))
+                (portRef I5 (instanceRef Mmux_rowsout16_SW2))
+                (portRef I5 (instanceRef Mmux_rowsout16_SW3))
               )
             )
-            (net N97
+            (net N91
               (joined
-                (portRef N97)
-                (portRef O (instanceRef Mmux_rowsout17_SW2))
+                (portRef N91)
+                (portRef O (instanceRef Mmux_rowsout16_SW2))
               )
             )
-            (net N98
+            (net N92
               (joined
-                (portRef N98)
-                (portRef O (instanceRef Mmux_rowsout17_SW3))
+                (portRef N92)
+                (portRef O (instanceRef Mmux_rowsout16_SW3))
               )
             )
             (net (rename M_regs_out_26__ "M_regs_out<26>")
@@ -22365,15 +22315,15 @@
                 (portRef I5 (instanceRef Mmux_rowsout210_SW1))
               )
             )
-            (net N100
+            (net N94
               (joined
-                (portRef N100)
+                (portRef N94)
                 (portRef O (instanceRef Mmux_rowsout210_SW0))
               )
             )
-            (net N101
+            (net N95
               (joined
-                (portRef N101)
+                (portRef N95)
                 (portRef O (instanceRef Mmux_rowsout210_SW1))
               )
             )
@@ -22384,24 +22334,74 @@
                 (portRef I5 (instanceRef Mmux_rowsout210_SW3))
               )
             )
+            (net N97
+              (joined
+                (portRef N97)
+                (portRef O (instanceRef Mmux_rowsout210_SW2))
+              )
+            )
+            (net N98
+              (joined
+                (portRef N98)
+                (portRef O (instanceRef Mmux_rowsout210_SW3))
+              )
+            )
+            (net (rename M_regs_out_7__ "M_regs_out<7>")
+              (joined
+                (portRef I3 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I2 (instanceRef Mmux_rowsout301_SW1))
+                (portRef I3 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I2 (instanceRef Mmux_rowsout301_SW3))
+                (portRef I0 (instanceRef Mmux_M_alu_a1411))
+                (portRef I0 (instanceRef Mmux_M_alu_a141_renamed_417))
+                (portRef M_regs_q_23 (instanceRef alu))
+                (portRef out_7__ (instanceRef regs))
+              )
+            )
+            (net Sh17805
+              (joined
+                (portRef Sh17805)
+                (portRef I5 (instanceRef Mmux_rowsout301_SW0))
+                (portRef I5 (instanceRef Mmux_rowsout301_SW1))
+              )
+            )
+            (net N100
+              (joined
+                (portRef N100)
+                (portRef O (instanceRef Mmux_rowsout301_SW0))
+              )
+            )
+            (net N101
+              (joined
+                (portRef N101)
+                (portRef O (instanceRef Mmux_rowsout301_SW1))
+              )
+            )
+            (net Sh178011
+              (joined
+                (portRef Sh178011)
+                (portRef I5 (instanceRef Mmux_rowsout301_SW2))
+                (portRef I5 (instanceRef Mmux_rowsout301_SW3))
+              )
+            )
             (net N103
               (joined
                 (portRef N103)
-                (portRef O (instanceRef Mmux_rowsout210_SW2))
+                (portRef O (instanceRef Mmux_rowsout301_SW2))
               )
             )
             (net N104
               (joined
                 (portRef N104)
-                (portRef O (instanceRef Mmux_rowsout210_SW3))
+                (portRef O (instanceRef Mmux_rowsout301_SW3))
               )
             )
             (net (rename M_regs_out_27__ "M_regs_out<27>")
               (joined
-                (portRef I4 (instanceRef Mmux_rowsout31_SW0))
-                (portRef I4 (instanceRef Mmux_rowsout31_SW1))
-                (portRef I4 (instanceRef Mmux_rowsout31_SW2))
-                (portRef I4 (instanceRef Mmux_rowsout31_SW3))
+                (portRef I3 (instanceRef Mmux_rowsout31_SW0))
+                (portRef I2 (instanceRef Mmux_rowsout31_SW1))
+                (portRef I3 (instanceRef Mmux_rowsout31_SW2))
+                (portRef I2 (instanceRef Mmux_rowsout31_SW3))
                 (portRef I0 (instanceRef Mmux_M_alu_a31_renamed_410))
                 (portRef I0 (instanceRef Mmux_M_alu_a311))
                 (portRef M_regs_q_27 (instanceRef alu))
@@ -23371,7 +23371,7 @@
             )
             (net Mmux_out72
               (joined
-                (portRef I1 (instanceRef M_regs_data_11_11))
+                (portRef I0 (instanceRef M_regs_data_11_11))
                 (portRef Mmux_out72 (instanceRef alu))
               )
             )
@@ -58973,16 +58973,16 @@
             (port N110
               (direction INPUT)
             )
-            (port N100
+            (port N94
               (direction INPUT)
             )
-            (port N103
+            (port N97
               (direction INPUT)
             )
-            (port N101
+            (port N95
               (direction INPUT)
             )
-            (port N104
+            (port N98
               (direction INPUT)
             )
             (port N118
@@ -59009,16 +59009,16 @@
             (port N116
               (direction INPUT)
             )
-            (port N88
+            (port N100
               (direction INPUT)
             )
-            (port N91
+            (port N103
               (direction INPUT)
             )
-            (port N89
+            (port N101
               (direction INPUT)
             )
-            (port N92
+            (port N104
               (direction INPUT)
             )
             (port N82
@@ -59093,16 +59093,16 @@
             (port N152
               (direction INPUT)
             )
-            (port N94
+            (port N88
               (direction INPUT)
             )
-            (port N97
+            (port N91
               (direction INPUT)
             )
-            (port N95
+            (port N89
               (direction INPUT)
             )
-            (port N98
+            (port N92
               (direction INPUT)
             )
             (port (array (rename a "a<15:0>") 16)
@@ -65408,15 +65408,15 @@
                 (portRef O (instanceRef Sh178413_SW2))
               )
             )
-            (net N100
+            (net N94
               (joined
-                (portRef N100)
+                (portRef N94)
                 (portRef I2 (instanceRef Sh178313_SW0))
               )
             )
-            (net N103
+            (net N97
               (joined
-                (portRef N103)
+                (portRef N97)
                 (portRef I5 (instanceRef Sh178313_SW0))
               )
             )
@@ -65432,15 +65432,15 @@
                 (portRef O (instanceRef Sh178313_SW1))
               )
             )
-            (net N101
+            (net N95
               (joined
-                (portRef N101)
+                (portRef N95)
                 (portRef I2 (instanceRef Sh178313_SW2))
               )
             )
-            (net N104
+            (net N98
               (joined
-                (portRef N104)
+                (portRef N98)
                 (portRef I5 (instanceRef Sh178313_SW2))
               )
             )
@@ -65534,15 +65534,15 @@
                 (portRef O (instanceRef Sh178113_SW2))
               )
             )
-            (net N88
+            (net N100
               (joined
-                (portRef N88)
+                (portRef N100)
                 (portRef I2 (instanceRef Sh178013_SW0))
               )
             )
-            (net N91
+            (net N103
               (joined
-                (portRef N91)
+                (portRef N103)
                 (portRef I5 (instanceRef Sh178013_SW0))
               )
             )
@@ -65558,15 +65558,15 @@
                 (portRef O (instanceRef Sh178013_SW1))
               )
             )
-            (net N89
+            (net N101
               (joined
-                (portRef N89)
+                (portRef N101)
                 (portRef I2 (instanceRef Sh178013_SW2))
               )
             )
-            (net N92
+            (net N104
               (joined
-                (portRef N92)
+                (portRef N104)
                 (portRef I5 (instanceRef Sh178013_SW2))
               )
             )
@@ -65828,15 +65828,15 @@
                 (portRef O (instanceRef Sh177413_SW2))
               )
             )
-            (net N94
+            (net N88
               (joined
-                (portRef N94)
+                (portRef N88)
                 (portRef I2 (instanceRef Sh177313_SW0))
               )
             )
-            (net N97
+            (net N91
               (joined
-                (portRef N97)
+                (portRef N91)
                 (portRef I5 (instanceRef Sh177313_SW0))
               )
             )
@@ -65852,15 +65852,15 @@
                 (portRef O (instanceRef Sh177313_SW1))
               )
             )
-            (net N95
+            (net N89
               (joined
-                (portRef N95)
+                (portRef N89)
                 (portRef I2 (instanceRef Sh177313_SW2))
               )
             )
-            (net N98
+            (net N92
               (joined
-                (portRef N98)
+                (portRef N92)
                 (portRef I5 (instanceRef Sh177313_SW2))
               )
             )

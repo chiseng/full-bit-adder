@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -895,7 +895,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 55.636ns (frequency: 17.974MHz)
-  Total number of paths / destination ports: 203725773025814940000 / 1207
+  Total number of paths / destination ports: 203725773025814710000 / 1207
 -------------------------------------------------------------------------
 Delay:               55.636ns (Levels of Logic = 138)
   Source:            generator_bottom/button_left/M_ctr_q_0 (FF)
@@ -1111,12 +1111,12 @@ clk            |   55.636|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 66.00 secs
-Total CPU time to Xst completion: 65.69 secs
+Total REAL time to Xst completion: 83.00 secs
+Total CPU time to Xst completion: 83.10 secs
  
 --> 
 
-Total memory usage is 271528 kilobytes
+Total memory usage is 270440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   49 (   0 filtered)

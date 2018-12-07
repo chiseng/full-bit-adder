@@ -13,7 +13,7 @@ module randomNumGen (
     .rst(rst)
     {
       
-      counter slowclk(#SIZE(1),#DIV(24));
+      counter slowclk(#SIZE(1),#DIV(25));
       dff temp[4];
     }
   }
