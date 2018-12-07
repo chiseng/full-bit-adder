@@ -43,13 +43,12 @@ module generator_bottom (
     right_edge.in=button_right.out;
     left=left_edge.out;
     right=right_edge.out;
-    // initialise rowsout values 
+    // initialise values 
     rowsout[0] = 16b0;
     rowsout[1] = 16b0; 
-    alu.a = 0;      // button_l XOR button_r
+    alu.a = 0;      
     alu.b = 0;
     alu.alufn = 0;
-    //led = rows[0][15:8];
     rowsout= {shiftstore.q,shiftstore.q};
     regs.en=0;
     regs.data=rows;
@@ -58,47 +57,41 @@ module generator_bottom (
     case(new_fsm.q){
       new_fsm.IDLE:
         rowsout=rows; //initialise rowsout to be the original rows
-        regs.en=1; //set write to be 1
+        regs.en=1;     //set write to be 1
         regs.data=rows; //set the data to be the original rows
         
-        //shiftstore.d = rows[0];//store the rows into a register
         new_fsm.d=new_fsm.SAVED_STATE;
         
+        
+        
       new_fsm.LEFT:
-      //regs.en = 0;
-      //rowsout = regs.out;
-      //new_fsm.d = new_fsm.LEFT;
-      //led = new_fsm.q;
-          
-      if (regs.out[0][15] != 1){
+          // if left if pressed and user is not at the edge
+        if (regs.out[0][15] != 1){
           alu.a = regs.out[0];      // shift left row 0 by 1, using the data in regs
           alu.b = 1; 
           alu.alufn = SHL;
-          regs.en=1; //write
+          regs.en=1;       //write
           regs.data={alu.out,alu.out};//write new data
-      // if right is pressed and user is not at the right edge
-      // then shift right rows by 1
-      }
-        //regs.en=0; //set it back
-        //led = alu.out[15:8];
+
+          }
+
         rowsout=regs.out; //get the new data
-        //new_fsm.d = new_fsm.TEST;
         new_fsm.d=new_fsm.SAVED_STATE; //change state
         
-        new_fsm.RIGHT:
         
-        if (regs.out[0][0] != 1){  
+        
+        
+        
+        new_fsm.RIGHT:
+        // if right is pressed and user is not at the edge
+          if (regs.out[0][0] != 1){  
           regs.en=1;
-          alu.a = regs.out[0];      // shift right row 1 by compare16
+          alu.a = regs.out[0];      // shift right row by 1
           alu.b = 1;
           alu.alufn = SHR;
-          //shiftstore.d=alu.out; 
           regs.data={alu.out,alu.out}; //write new data
-      // if left is pressed and user is not at the left edge
-      // then shift left rows by compare16
       }
 
-        //regs.en=0; //set it back
         rowsout=regs.out;
         new_fsm.d=new_fsm.SAVED_STATE;  
         
@@ -108,25 +101,28 @@ module generator_bottom (
           alu.a = left;      // button_l XOR button_r
           alu.b = right;
           alu.alufn = XOR;
-          //xoroutput.d = alu.out;
           regs.en=0;          
-          //led=shiftstore.q[7:0];
+        
+        
           if(left!=1 && alu.out != 1){
-
-          rowsout=regs.out;
-          new_fsm.d=new_fsm.SAVED_STATE;
-        }
-      else if(left==1 && alu.out == 1){
-        new_fsm.d=new_fsm.LEFT;
-        }
-      if(right!=1 && alu.out != 1){
-        regs.en=0;
-        rowsout=regs.out;
-        new_fsm.d=new_fsm.SAVED_STATE;
-        }
-     if(right==1 && alu.out == 1){
-       new_fsm.d=new_fsm.RIGHT;
-        }    
+            rowsout=regs.out;
+            new_fsm.d=new_fsm.SAVED_STATE;
+          }
+          
+          else if(left==1 && alu.out == 1){
+            new_fsm.d=new_fsm.LEFT;
+          }
+      
+          if(right!=1 && alu.out != 1){
+            regs.en=0;
+            rowsout=regs.out;
+            new_fsm.d=new_fsm.SAVED_STATE;
+          }
+     
+        
+          if(right==1 && alu.out == 1){
+           new_fsm.d=new_fsm.RIGHT;
+          }    
     }
 }
 } 

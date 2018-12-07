@@ -6,10 +6,7 @@ module generator_top (
     input rst,  // reset
     input cols[16][14],      // column values from previous cycle
     output colsout[16][14]   // column values for current cycle
-    //output led[8]
   ) {
-  // instantiate the alu module
- // alu alu;
   .clk(clk){
     dff leftedcols[16][14];
     dff counter[30];
@@ -28,7 +25,6 @@ module generator_top (
 
   always {
 
-        //if(counts.q[20]==1) rng.next=1; //always generate numbers
     // initialise rowsout values 
     for ( i=0; i<16; i++){
       colsout[i] = 14b0;
@@ -45,7 +41,6 @@ module generator_top (
      random= rng.out[3:0];
     // add new coconut; randomly placed based on random number generator
     leftedcols.d[random] = leftedcols.q[random] + 14b1 ;
-    //leftedcols.d[6] = leftedcols.q[6] + 1 ;
     
     
     // output the columns (all coconuts dropped by 1 and a new coconut is randomly added) 
