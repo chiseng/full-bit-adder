@@ -15,7 +15,7 @@ module randomNumGen_19 (
   reg sclk;
   
   wire [1-1:0] M_slowclk_value;
-  counter_8 slowclk (
+  counter_30 slowclk (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk_value)
@@ -25,7 +25,7 @@ module randomNumGen_19 (
   wire [32-1:0] M_rng_num;
   reg [1-1:0] M_rng_next;
   reg [32-1:0] M_rng_seed;
-  pn_gen_30 rng (
+  pn_gen_31 rng (
     .clk(clk),
     .rst(rst),
     .next(M_rng_next),

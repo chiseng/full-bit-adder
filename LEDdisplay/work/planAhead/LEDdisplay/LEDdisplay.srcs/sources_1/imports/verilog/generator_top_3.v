@@ -27,8 +27,8 @@ module generator_top_3 (
   reg [3:0] random;
   
   always @* begin
-    M_counter_d = M_counter_q;
     M_leftedcols_d = M_leftedcols_q;
+    M_counter_d = M_counter_q;
     
     for (i = 1'h0; i < 5'h10; i = i + 1) begin
       colsout[(i)*14+13-:14] = 14'h0000;

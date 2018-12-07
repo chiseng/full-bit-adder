@@ -75,3 +75,5 @@ NET "button_l" PULLDOWN;
 NET "button_r" LOC = P41;
 NET "button_r" IOSTANDARD = LVTTL;
 NET "button_r" PULLDOWN;
+
+

@@ -162,16 +162,16 @@ module generator_bottom_2 (
   end
   
   always @(posedge clk) begin
+    M_shiftstore_q <= M_shiftstore_d;
+  end
+  
+  
+  always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_new_fsm_q <= 1'h0;
     end else begin
       M_new_fsm_q <= M_new_fsm_d;
     end
-  end
-  
-  
-  always @(posedge clk) begin
-    M_shiftstore_q <= M_shiftstore_d;
   end
   
 endmodule

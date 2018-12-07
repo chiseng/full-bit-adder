@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Dec 07 11:04:13 2018
+// Written by: Map P.20131013 on Fri Dec 07 12:59:18 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -346,6 +346,7 @@ TIMEGRP clk = BEL "M_gamefsm_q_0" BEL "generator_bottom/M_new_fsm_q_1" BEL
         "generator_top/M_leftedcols_q_99" BEL "generator_top/rng/M_temp_q_0"
         BEL "generator_top/rng/M_temp_q_1" BEL "generator_top/rng/M_temp_q_2"
         BEL "generator_top/rng/M_temp_q_3" BEL
+        "generator_top/rng/slowclk/M_ctr_q_25" BEL
         "generator_top/rng/slowclk/M_ctr_q_24" BEL
         "generator_top/rng/slowclk/M_ctr_q_23" BEL
         "generator_top/rng/slowclk/M_ctr_q_22" BEL

@@ -25,6 +25,7 @@ module mojo_top (
     output a[16],
     output c[16],
     input button2
+    //output time[1]
 
   ) {
   
@@ -55,6 +56,7 @@ module mojo_top (
       registerChecker check_for_cols;
      
      counter slowclock(#SIZE(1),#DIV(24));  //smaller the faster the refresh 
+      //counter timerclock(#SIZE(10), #DIV(25));
      led_matrix ld;
      fsm gamefsm(#INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
 
@@ -78,7 +80,9 @@ module mojo_top (
 always {
 //  button_start.in=button_s;
 //    edge_detector.in=button_s.out;
-//    start=edge_detector.out;
+//    start=edge_detector.out
+       
+    
   regscore.en=0;
   regscore.data=0;
   registerCols.en=0;
@@ -90,7 +94,6 @@ always {
   io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
-
   reset_cond.in = ~rst_n; // input raw inverted reset signal
   rst = reset_cond.out;   // conditioned reset
 
