@@ -56,10 +56,18 @@ module mojo_top_0 (
     .rows(M_generator_bottom_rows),
     .rowsout(M_generator_bottom_rowsout)
   );
+  wire [224-1:0] M_generator_top_colsout;
+  reg [224-1:0] M_generator_top_cols;
+  generator_top_3 generator_top (
+    .clk(clk),
+    .rst(rst),
+    .cols(M_generator_top_cols),
+    .colsout(M_generator_top_colsout)
+  );
   wire [1-1:0] M_check_changescore;
   reg [224-1:0] M_check_cols;
   reg [32-1:0] M_check_rows;
-  check_3 check (
+  check_4 check (
     .clk(clk),
     .rst(rst),
     .cols(M_check_cols),
@@ -70,7 +78,7 @@ module mojo_top_0 (
   wire [5-1:0] M_regscore_out;
   reg [1-1:0] M_regscore_en;
   reg [5-1:0] M_regscore_data;
-  registerScore_4 regscore (
+  registerScore_5 regscore (
     .clk(clk),
     .rst(rst),
     .en(M_regscore_en),
@@ -80,7 +88,7 @@ module mojo_top_0 (
   wire [224-1:0] M_registerCols_out;
   reg [1-1:0] M_registerCols_en;
   reg [224-1:0] M_registerCols_data;
-  registerCols_5 registerCols (
+  registerCols_6 registerCols (
     .clk(clk),
     .rst(rst),
     .en(M_registerCols_en),
@@ -90,7 +98,7 @@ module mojo_top_0 (
   wire [6-1:0] M_check_for_cols_out;
   reg [1-1:0] M_check_for_cols_en;
   reg [6-1:0] M_check_for_cols_data;
-  registerChecker_6 check_for_cols (
+  registerChecker_7 check_for_cols (
     .clk(clk),
     .rst(rst),
     .en(M_check_for_cols_en),
@@ -98,7 +106,7 @@ module mojo_top_0 (
     .out(M_check_for_cols_out)
   );
   wire [1-1:0] M_slowclock_value;
-  counter_7 slowclock (
+  counter_8 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
@@ -106,7 +114,7 @@ module mojo_top_0 (
   wire [16-1:0] M_ld_a;
   wire [16-1:0] M_ld_c;
   reg [256-1:0] M_ld_pattern;
-  led_matrix_8 ld (
+  led_matrix_9 ld (
     .clk(clk),
     .rst(rst),
     .pattern(M_ld_pattern),
@@ -124,7 +132,7 @@ module mojo_top_0 (
   wire [256-1:0] M_led_converter_out;
   reg [224-1:0] M_led_converter_cols;
   reg [32-1:0] M_led_converter_rows;
-  leddisplay_9 led_converter (
+  leddisplay_10 led_converter (
     .clk(clk),
     .rst(rst),
     .cols(M_led_converter_cols),
@@ -133,7 +141,7 @@ module mojo_top_0 (
   );
   wire [224-1:0] M_nextLevel_colsout;
   reg [6-1:0] M_nextLevel_level;
-  levels_10 nextLevel (
+  levels_11 nextLevel (
     .clk(clk),
     .rst(rst),
     .level(M_nextLevel_level),
@@ -142,7 +150,7 @@ module mojo_top_0 (
   
   wire [1-1:0] M_edge_start_out;
   reg [1-1:0] M_edge_start_in;
-  edge_detector_11 edge_start (
+  edge_detector_12 edge_start (
     .clk(M_slowclock_value),
     .in(M_edge_start_in),
     .out(M_edge_start_out)
@@ -177,7 +185,12 @@ module mojo_top_0 (
     M_generator_bottom_button_r = button_r;
     M_generator_bottom_rows = 32'h07000700;
     M_led_converter_rows = ~M_generator_bottom_rowsout;
-    M_led_converter_cols = ~M_nextLevel_colsout;
+    for (i = 1'h0; i < 5'h10; i = i + 1) begin
+      gen_topcols[(i)*14+13-:14] = 14'h0000;
+    end
+    M_registerCols_data = gen_topcols;
+    M_generator_top_cols = gen_topcols;
+    M_led_converter_cols = ~M_generator_top_colsout;
     M_ld_pattern = M_led_converter_out;
     M_check_cols = M_nextLevel_colsout;
     M_check_rows = M_generator_bottom_rowsout;
@@ -195,9 +208,13 @@ module mojo_top_0 (
         M_generator_bottom_rows = 32'h07000700;
         M_led_converter_rows = M_generator_bottom_rowsout;
         led = 8'h04;
+        for (i = 1'h0; i < 5'h10; i = i + 1) begin
+          gen_topcols[(i)*14+13-:14] = 14'h3fff;
+        end
+        M_generator_top_cols = gen_topcols;
         M_led_converter_rows = M_generator_bottom_rowsout;
         M_registerCols_en = 1'h1;
-        M_registerCols_data = M_nextLevel_colsout;
+        M_registerCols_data = M_generator_top_colsout;
         M_led_converter_cols = M_registerCols_out;
         M_ld_pattern = M_led_converter_out;
         a = M_ld_a;
@@ -207,23 +224,18 @@ module mojo_top_0 (
         M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
       CHECK_MOVE_gamefsm: begin
-        z = M_check_for_cols_out;
-        if (M_edge_start_out == 1'h1) begin
-          M_check_for_cols_en = 1'h1;
-          M_check_for_cols_data = z + 1'h1;
-          led = M_check_for_cols_out;
-        end
-        M_gamefsm_d = CHECK_MOVE_gamefsm;
-      end
-      TEST_NEXT_gamefsm: begin
-        M_check_for_cols_en = 1'h0;
-        led = M_check_for_cols_out;
+        M_generator_top_cols = M_registerCols_out;
+        M_registerCols_en = 1'h1;
+        M_registerCols_data = M_generator_top_colsout;
         M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
       CHECK_SCORE_gamefsm: begin
-        M_check_for_cols_en = 1'h0;
-        M_nextLevel_level = M_check_for_cols_out;
-        M_led_converter_cols = M_nextLevel_colsout;
+        M_check_cols = M_registerCols_out;
+        M_check_rows = M_generator_bottom_rowsout;
+        if (M_check_changescore == 1'h1) begin
+          M_regscore_en = 1'h1;
+          M_regscore_data = M_regscore_out + 1'h1;
+        end
         M_gamefsm_d = CHECK_MOVE_gamefsm;
       end
     endcase

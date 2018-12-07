@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'mojo_top_0'
 
 Design Information
@@ -8,23 +8,23 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Dec  6 20:16:03 2018
+Mapped Date    : Fri Dec 07 10:39:44 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                   110 out of  11,440    1%
-    Number used as Flip Flops:                 110
+  Number of Slice Registers:                   682 out of  11,440    5%
+    Number used as Flip Flops:                 682
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        759 out of   5,720   13%
-    Number used as logic:                      753 out of   5,720   13%
-      Number using O6 output only:             587
-      Number using O5 output only:              61
-      Number using O5 and O6:                  105
+  Number of Slice LUTs:                      2,169 out of   5,720   37%
+    Number used as logic:                    2,148 out of   5,720   37%
+      Number using O6 output only:           1,885
+      Number using O5 output only:              62
+      Number using O5 and O6:                  201
       Number used as ROM:                        0
     Number used as Memory:                       2 out of   1,440    1%
       Number used as Dual Port RAM:              0
@@ -33,21 +33,21 @@ Slice Logic Utilization:
         Number using O6 output only:             2
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      4
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:     19
+      Number with same-slice register load:     16
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   260 out of   1,430   18%
-  Number of MUXCYs used:                       364 out of   2,860   12%
-  Number of LUT Flip Flop pairs used:          764
-    Number with an unused Flip Flop:           658 out of     764   86%
-    Number with an unused LUT:                   5 out of     764    1%
-    Number of fully used LUT-FF pairs:         101 out of     764   13%
-    Number of unique control sets:              10
+  Number of occupied Slices:                   716 out of   1,430   50%
+  Number of MUXCYs used:                       392 out of   2,860   13%
+  Number of LUT Flip Flop pairs used:        2,264
+    Number with an unused Flip Flop:         1,627 out of   2,264   71%
+    Number with an unused LUT:                  95 out of   2,264    4%
+    Number of fully used LUT-FF pairs:         542 out of   2,264   23%
+    Number of unique control sets:               8
     Number of slice register sites lost
-      to control set restrictions:              40 out of  11,440    1%
+      to control set restrictions:              36 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -87,11 +87,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.64
+Average Fanout of Non-Clock Nets:                4.46
 
-Peak Memory Usage:  757 MB
-Total REAL time to MAP completion:  12 secs 
-Total CPU time to MAP completion (all processors):   14 secs 
+Peak Memory Usage:  355 MB
+Total REAL time to MAP completion:  1 mins 3 secs 
+Total CPU time to MAP completion (all processors):   1 mins 8 secs 
 
 Table of Contents
 -----------------
@@ -159,11 +159,24 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   12 block(s) removed
- 444 block(s) optimized away
-   6 signal(s) removed
+  27 block(s) optimized away
+   7 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "registerCols/Mcompar_BUS_0005_INV_494_o_lut[2]" is sourceless and
+has been removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -212,848 +225,12 @@ GND 		generator_bottom/button_right/XST_GND
 VCC 		generator_bottom/button_right/XST_VCC
 GND 		generator_bottom/button_right/sync/XST_GND
 VCC 		generator_bottom/button_right/sync/XST_VCC
-LUT6 		nextLevel/Mram_colsout1001
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1011
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1021
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1031
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1041
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1051
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1061
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1071
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1081
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1091
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1101
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout11111
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1121
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1131
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1141
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1151
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1161
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1171
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1181
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1191
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1201
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1211
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1221
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1231
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1241
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1251
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1261
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1271
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1281
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1291
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1301
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1311
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1321
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1331
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1341
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1351
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1361
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1371
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1381
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1391
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1401
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1410
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1411
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1421
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1431
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1441
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1451
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1461
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1471
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1481
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1491
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1501
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1510
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1511
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1521
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1531
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1541
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1551
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1561
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1571
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1581
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1591
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1601
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1610
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1611
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1621
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1631
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1641
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1651
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1661
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1671
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1681
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1691
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1701
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1710
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1711
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1721
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1731
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1741
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1751
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1761
-   optimized to 0
-LUT5 		nextLevel/Mram_colsout1771
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1781
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1791
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1801
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1810
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1811
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1821
-   optimized to 1
-LUT6 		nextLevel/Mram_colsout1831
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1841
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1851
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1861
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1871
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1881
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1891
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1901
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1910
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1911
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1921
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1931
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1941
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1951
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1961
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1971
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1981
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout1991
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2001
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2010
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2011
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2021
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2031
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2041
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2051
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2061
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2071
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2081
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2091
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2101
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2110
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2111
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2121
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2131
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2141
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2151
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2161
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2171
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2181
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2191
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2201
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2211
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2221
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout2231
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout224
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout231
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout241
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout251
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout261
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout271
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout281
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout291
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout301
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout311
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout321
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout331
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout341
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout351
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout361
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout371
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout381
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout391
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout401
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout411
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout421
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout431
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout441
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout451
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout461
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout471
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout481
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout491
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout501
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout511
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout521
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout531
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout541
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout551
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout561
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout571
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout581
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout591
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout601
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout611
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout621
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout631
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout641
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout651
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout661
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout671
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout681
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout691
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout701
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout711
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout721
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout731
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout741
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout751
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout761
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout771
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout781
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout791
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout801
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout811
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout821
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout831
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout841
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout851
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout861
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout871
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout881
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout891
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout901
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout911
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout921
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout931
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout941
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout951
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout961
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout971
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout981
-   optimized to 0
-LUT6 		nextLevel/Mram_colsout991
-   optimized to 0
-GND 		nextLevel/XST_GND
-FDRE 		registerCols/M_regs_q_100
-   optimized to 0
-FDRE 		registerCols/M_regs_q_101
-   optimized to 0
-FDRE 		registerCols/M_regs_q_102
-   optimized to 0
-FDRE 		registerCols/M_regs_q_103
-   optimized to 0
-FDRE 		registerCols/M_regs_q_104
-   optimized to 0
-FDRE 		registerCols/M_regs_q_105
-   optimized to 0
-FDRE 		registerCols/M_regs_q_106
-   optimized to 0
-FDRE 		registerCols/M_regs_q_107
-   optimized to 0
-FDRE 		registerCols/M_regs_q_108
-   optimized to 0
-FDRE 		registerCols/M_regs_q_109
-   optimized to 0
-FDRE 		registerCols/M_regs_q_110
-   optimized to 0
-FDRE 		registerCols/M_regs_q_111
-   optimized to 0
-FDRE 		registerCols/M_regs_q_112
-   optimized to 0
-FDRE 		registerCols/M_regs_q_113
-   optimized to 0
-FDRE 		registerCols/M_regs_q_114
-   optimized to 0
-FDRE 		registerCols/M_regs_q_115
-   optimized to 0
-FDRE 		registerCols/M_regs_q_116
-   optimized to 0
-FDRE 		registerCols/M_regs_q_117
-   optimized to 0
-FDRE 		registerCols/M_regs_q_118
-   optimized to 0
-FDRE 		registerCols/M_regs_q_119
-   optimized to 0
-FDRE 		registerCols/M_regs_q_120
-   optimized to 0
-FDRE 		registerCols/M_regs_q_121
-   optimized to 0
-FDRE 		registerCols/M_regs_q_122
-   optimized to 0
-FDRE 		registerCols/M_regs_q_123
-   optimized to 0
-FDRE 		registerCols/M_regs_q_124
-   optimized to 0
-FDRE 		registerCols/M_regs_q_125
-   optimized to 0
-FDRE 		registerCols/M_regs_q_126
-   optimized to 0
-FDRE 		registerCols/M_regs_q_127
-   optimized to 0
-FDRE 		registerCols/M_regs_q_128
-   optimized to 0
-FDRE 		registerCols/M_regs_q_129
-   optimized to 0
-FDRE 		registerCols/M_regs_q_130
-   optimized to 0
-FDRE 		registerCols/M_regs_q_131
-   optimized to 0
-FDRE 		registerCols/M_regs_q_132
-   optimized to 0
-FDRE 		registerCols/M_regs_q_133
-   optimized to 0
-FDRE 		registerCols/M_regs_q_134
-   optimized to 0
-FDRE 		registerCols/M_regs_q_135
-   optimized to 0
-FDRE 		registerCols/M_regs_q_136
-   optimized to 0
-FDRE 		registerCols/M_regs_q_137
-   optimized to 0
-FDRE 		registerCols/M_regs_q_138
-   optimized to 0
-FDRE 		registerCols/M_regs_q_139
-   optimized to 0
-FDRE 		registerCols/M_regs_q_14
-   optimized to 0
-FDRE 		registerCols/M_regs_q_140
-   optimized to 0
-FDRE 		registerCols/M_regs_q_141
-   optimized to 0
-FDRE 		registerCols/M_regs_q_142
-   optimized to 0
-FDRE 		registerCols/M_regs_q_143
-   optimized to 0
-FDRE 		registerCols/M_regs_q_144
-   optimized to 0
-FDRE 		registerCols/M_regs_q_145
-   optimized to 0
-FDRE 		registerCols/M_regs_q_146
-   optimized to 0
-FDRE 		registerCols/M_regs_q_147
-   optimized to 0
-FDRE 		registerCols/M_regs_q_148
-   optimized to 0
-FDRE 		registerCols/M_regs_q_149
-   optimized to 0
-FDRE 		registerCols/M_regs_q_15
-   optimized to 0
-FDRE 		registerCols/M_regs_q_150
-   optimized to 0
-FDRE 		registerCols/M_regs_q_151
-   optimized to 0
-FDRE 		registerCols/M_regs_q_152
-   optimized to 0
-FDRE 		registerCols/M_regs_q_153
-   optimized to 0
-FDRE 		registerCols/M_regs_q_154
-   optimized to 0
-FDRE 		registerCols/M_regs_q_155
-   optimized to 0
-FDRE 		registerCols/M_regs_q_156
-   optimized to 0
-FDRE 		registerCols/M_regs_q_157
-   optimized to 0
-FDRE 		registerCols/M_regs_q_158
-   optimized to 0
-FDRE 		registerCols/M_regs_q_159
-   optimized to 0
-FDRE 		registerCols/M_regs_q_16
-   optimized to 0
-FDRE 		registerCols/M_regs_q_160
-   optimized to 0
-FDRE 		registerCols/M_regs_q_161
-   optimized to 0
-FDRE 		registerCols/M_regs_q_162
-   optimized to 0
-FDRE 		registerCols/M_regs_q_163
-   optimized to 0
-FDRE 		registerCols/M_regs_q_164
-   optimized to 0
-FDRE 		registerCols/M_regs_q_165
-   optimized to 0
-FDRE 		registerCols/M_regs_q_166
-   optimized to 0
-FDRE 		registerCols/M_regs_q_167
-   optimized to 0
-FDRE 		registerCols/M_regs_q_168
-   optimized to 0
-FDRE 		registerCols/M_regs_q_169
-   optimized to 0
-FDRE 		registerCols/M_regs_q_17
-   optimized to 0
-FDRE 		registerCols/M_regs_q_170
-   optimized to 0
-FDRE 		registerCols/M_regs_q_171
-   optimized to 0
-FDRE 		registerCols/M_regs_q_172
-   optimized to 0
-FDRE 		registerCols/M_regs_q_173
-   optimized to 0
-FDRE 		registerCols/M_regs_q_174
-   optimized to 0
-FDRE 		registerCols/M_regs_q_175
-   optimized to 0
-FDRE 		registerCols/M_regs_q_176
-   optimized to 0
-FDRE 		registerCols/M_regs_q_177
-   optimized to 0
-FDRE 		registerCols/M_regs_q_178
-   optimized to 0
-FDRE 		registerCols/M_regs_q_179
-   optimized to 0
-FDRE 		registerCols/M_regs_q_18
-   optimized to 0
-FDRE 		registerCols/M_regs_q_180
-   optimized to 0
-FDRE 		registerCols/M_regs_q_181
-   optimized to 0
-FDRE 		registerCols/M_regs_q_183
-   optimized to 0
-FDRE 		registerCols/M_regs_q_184
-   optimized to 0
-FDRE 		registerCols/M_regs_q_185
-   optimized to 0
-FDRE 		registerCols/M_regs_q_186
-   optimized to 0
-FDRE 		registerCols/M_regs_q_187
-   optimized to 0
-FDRE 		registerCols/M_regs_q_188
-   optimized to 0
-FDRE 		registerCols/M_regs_q_189
-   optimized to 0
-FDRE 		registerCols/M_regs_q_19
-   optimized to 0
-FDRE 		registerCols/M_regs_q_190
-   optimized to 0
-FDRE 		registerCols/M_regs_q_191
-   optimized to 0
-FDRE 		registerCols/M_regs_q_192
-   optimized to 0
-FDRE 		registerCols/M_regs_q_193
-   optimized to 0
-FDRE 		registerCols/M_regs_q_194
-   optimized to 0
-FDRE 		registerCols/M_regs_q_195
-   optimized to 0
-FDRE 		registerCols/M_regs_q_196
-   optimized to 0
-FDRE 		registerCols/M_regs_q_197
-   optimized to 0
-FDRE 		registerCols/M_regs_q_198
-   optimized to 0
-FDRE 		registerCols/M_regs_q_199
-   optimized to 0
-FDRE 		registerCols/M_regs_q_20
-   optimized to 0
-FDRE 		registerCols/M_regs_q_200
-   optimized to 0
-FDRE 		registerCols/M_regs_q_201
-   optimized to 0
-FDRE 		registerCols/M_regs_q_202
-   optimized to 0
-FDRE 		registerCols/M_regs_q_203
-   optimized to 0
-FDRE 		registerCols/M_regs_q_204
-   optimized to 0
-FDRE 		registerCols/M_regs_q_205
-   optimized to 0
-FDRE 		registerCols/M_regs_q_206
-   optimized to 0
-FDRE 		registerCols/M_regs_q_207
-   optimized to 0
-FDRE 		registerCols/M_regs_q_208
-   optimized to 0
-FDRE 		registerCols/M_regs_q_209
-   optimized to 0
-FDRE 		registerCols/M_regs_q_21
-   optimized to 0
-FDRE 		registerCols/M_regs_q_210
-   optimized to 0
-FDRE 		registerCols/M_regs_q_211
-   optimized to 0
-FDRE 		registerCols/M_regs_q_212
-   optimized to 0
-FDRE 		registerCols/M_regs_q_213
-   optimized to 0
-FDRE 		registerCols/M_regs_q_214
-   optimized to 0
-FDRE 		registerCols/M_regs_q_215
-   optimized to 0
-FDRE 		registerCols/M_regs_q_216
-   optimized to 0
-FDRE 		registerCols/M_regs_q_217
-   optimized to 0
-FDRE 		registerCols/M_regs_q_218
-   optimized to 0
-FDRE 		registerCols/M_regs_q_219
-   optimized to 0
-FDRE 		registerCols/M_regs_q_22
-   optimized to 0
-FDRE 		registerCols/M_regs_q_220
-   optimized to 0
-FDRE 		registerCols/M_regs_q_221
-   optimized to 0
-FDRE 		registerCols/M_regs_q_222
-   optimized to 0
-FDRE 		registerCols/M_regs_q_223
-   optimized to 0
-FDRE 		registerCols/M_regs_q_23
-   optimized to 0
-FDRE 		registerCols/M_regs_q_24
-   optimized to 0
-FDRE 		registerCols/M_regs_q_25
-   optimized to 0
-FDRE 		registerCols/M_regs_q_26
-   optimized to 0
-FDRE 		registerCols/M_regs_q_27
-   optimized to 0
-FDRE 		registerCols/M_regs_q_28
-   optimized to 0
-FDRE 		registerCols/M_regs_q_29
-   optimized to 0
-FDRE 		registerCols/M_regs_q_30
-   optimized to 0
-FDRE 		registerCols/M_regs_q_31
-   optimized to 0
-FDRE 		registerCols/M_regs_q_32
-   optimized to 0
-FDRE 		registerCols/M_regs_q_33
-   optimized to 0
-FDRE 		registerCols/M_regs_q_34
-   optimized to 0
-FDRE 		registerCols/M_regs_q_35
-   optimized to 0
-FDRE 		registerCols/M_regs_q_36
-   optimized to 0
-FDRE 		registerCols/M_regs_q_37
-   optimized to 0
-FDRE 		registerCols/M_regs_q_38
-   optimized to 0
-FDRE 		registerCols/M_regs_q_39
-   optimized to 0
-FDRE 		registerCols/M_regs_q_40
-   optimized to 0
-FDRE 		registerCols/M_regs_q_41
-   optimized to 0
-FDRE 		registerCols/M_regs_q_42
-   optimized to 0
-FDRE 		registerCols/M_regs_q_43
-   optimized to 0
-FDRE 		registerCols/M_regs_q_44
-   optimized to 0
-FDRE 		registerCols/M_regs_q_45
-   optimized to 0
-FDRE 		registerCols/M_regs_q_46
-   optimized to 0
-FDRE 		registerCols/M_regs_q_47
-   optimized to 0
-FDRE 		registerCols/M_regs_q_48
-   optimized to 0
-FDRE 		registerCols/M_regs_q_49
-   optimized to 0
-FDRE 		registerCols/M_regs_q_50
-   optimized to 0
-FDRE 		registerCols/M_regs_q_51
-   optimized to 0
-FDRE 		registerCols/M_regs_q_52
-   optimized to 0
-FDRE 		registerCols/M_regs_q_53
-   optimized to 0
-FDRE 		registerCols/M_regs_q_54
-   optimized to 0
-FDRE 		registerCols/M_regs_q_55
-   optimized to 0
-FDRE 		registerCols/M_regs_q_56
-   optimized to 0
-FDRE 		registerCols/M_regs_q_57
-   optimized to 0
-FDRE 		registerCols/M_regs_q_58
-   optimized to 0
-FDRE 		registerCols/M_regs_q_59
-   optimized to 0
-FDRE 		registerCols/M_regs_q_60
-   optimized to 0
-FDRE 		registerCols/M_regs_q_61
-   optimized to 0
-FDRE 		registerCols/M_regs_q_62
-   optimized to 0
-FDRE 		registerCols/M_regs_q_63
-   optimized to 0
-FDRE 		registerCols/M_regs_q_64
-   optimized to 0
-FDRE 		registerCols/M_regs_q_65
-   optimized to 0
-FDRE 		registerCols/M_regs_q_66
-   optimized to 0
-FDRE 		registerCols/M_regs_q_67
-   optimized to 0
-FDRE 		registerCols/M_regs_q_68
-   optimized to 0
-FDRE 		registerCols/M_regs_q_69
-   optimized to 0
-FDRE 		registerCols/M_regs_q_70
-   optimized to 0
-FDRE 		registerCols/M_regs_q_71
-   optimized to 0
-FDRE 		registerCols/M_regs_q_72
-   optimized to 0
-FDRE 		registerCols/M_regs_q_73
-   optimized to 0
-FDRE 		registerCols/M_regs_q_74
-   optimized to 0
-FDRE 		registerCols/M_regs_q_75
-   optimized to 0
-FDRE 		registerCols/M_regs_q_76
-   optimized to 0
-FDRE 		registerCols/M_regs_q_77
-   optimized to 0
-FDRE 		registerCols/M_regs_q_78
-   optimized to 0
-FDRE 		registerCols/M_regs_q_79
-   optimized to 0
-FDRE 		registerCols/M_regs_q_80
-   optimized to 0
-FDRE 		registerCols/M_regs_q_81
-   optimized to 0
-FDRE 		registerCols/M_regs_q_82
-   optimized to 0
-FDRE 		registerCols/M_regs_q_83
-   optimized to 0
-FDRE 		registerCols/M_regs_q_84
-   optimized to 0
-FDRE 		registerCols/M_regs_q_85
-   optimized to 0
-FDRE 		registerCols/M_regs_q_86
-   optimized to 0
-FDRE 		registerCols/M_regs_q_87
-   optimized to 0
-FDRE 		registerCols/M_regs_q_88
-   optimized to 0
-FDRE 		registerCols/M_regs_q_89
-   optimized to 0
-FDRE 		registerCols/M_regs_q_90
-   optimized to 0
-FDRE 		registerCols/M_regs_q_91
-   optimized to 0
-FDRE 		registerCols/M_regs_q_92
-   optimized to 0
-FDRE 		registerCols/M_regs_q_93
-   optimized to 0
-FDRE 		registerCols/M_regs_q_94
-   optimized to 0
-FDRE 		registerCols/M_regs_q_95
-   optimized to 0
-FDRE 		registerCols/M_regs_q_96
-   optimized to 0
-FDRE 		registerCols/M_regs_q_97
-   optimized to 0
-FDRE 		registerCols/M_regs_q_98
-   optimized to 0
-FDRE 		registerCols/M_regs_q_99
-   optimized to 0
+GND 		generator_top/XST_GND
+VCC 		generator_top/XST_VCC
+GND 		generator_top/rng/slowclk/XST_GND
+VCC 		generator_top/rng/slowclk/XST_VCC
+VCC 		registerCols/XST_VCC
 GND 		reset_cond/XST_GND
-GND 		slowclock/XST_GND
-VCC 		slowclock/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
