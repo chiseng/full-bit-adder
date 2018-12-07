@@ -24,7 +24,8 @@ module mojo_top_0 (
     input [4:0] io_button,
     output reg [15:0] a,
     output reg [15:0] c,
-    input button2
+    input button2,
+    output reg [9:0] timer
   );
   
   
@@ -128,11 +129,21 @@ module mojo_top_0 (
   localparam TEST_SCORE_gamefsm = 3'd4;
   localparam TEST_NEXT_gamefsm = 3'd5;
   
-  reg [2:0] M_gamefsm_d, M_gamefsm_q = INIT_STAGE_gamefsm;
+  reg [2:0] M_gamefsm_d, M_gamefsm_q = CHECK_SCORE_gamefsm;
+  wire [1-1:0] M_counts_out;
+  wire [10-1:0] M_counts_timebar;
+  wire [1-1:0] M_counts_final;
+  timer_10 counts (
+    .clk(clk),
+    .rst(rst),
+    .out(M_counts_out),
+    .timebar(M_counts_timebar),
+    .final(M_counts_final)
+  );
   wire [256-1:0] M_led_converter_out;
   reg [224-1:0] M_led_converter_cols;
   reg [32-1:0] M_led_converter_rows;
-  leddisplay_10 led_converter (
+  leddisplay_11 led_converter (
     .clk(clk),
     .rst(rst),
     .cols(M_led_converter_cols),
@@ -141,7 +152,7 @@ module mojo_top_0 (
   );
   wire [224-1:0] M_nextLevel_colsout;
   reg [6-1:0] M_nextLevel_level;
-  levels_11 nextLevel (
+  levels_12 nextLevel (
     .clk(clk),
     .rst(rst),
     .level(M_nextLevel_level),
@@ -150,7 +161,7 @@ module mojo_top_0 (
   
   wire [1-1:0] M_edge_start_out;
   reg [1-1:0] M_edge_start_in;
-  edge_detector_12 edge_start (
+  edge_detector_13 edge_start (
     .clk(M_slowclock_value),
     .in(M_edge_start_in),
     .out(M_edge_start_out)
@@ -170,6 +181,7 @@ module mojo_top_0 (
     M_check_for_cols_en = 1'h0;
     M_check_for_cols_data = 1'h0;
     M_nextLevel_level = 1'h0;
+    timer = M_counts_timebar;
     M_registerCols_data = M_nextLevel_colsout;
     M_edge_start_in = M_slowclock_value;
     io_seg = 8'hff;
@@ -236,7 +248,8 @@ module mojo_top_0 (
           M_regscore_en = 1'h1;
           M_regscore_data = M_regscore_out + 1'h1;
         end
-        M_gamefsm_d = CHECK_MOVE_gamefsm;
+        led = M_regscore_out;
+        M_gamefsm_d = CHECK_SCORE_gamefsm;
       end
     endcase
   end
@@ -244,7 +257,7 @@ module mojo_top_0 (
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_normclock_q <= 1'h0;
-      M_gamefsm_q <= 1'h1;
+      M_gamefsm_q <= 2'h3;
     end else begin
       M_normclock_q <= M_normclock_d;
       M_gamefsm_q <= M_gamefsm_d;

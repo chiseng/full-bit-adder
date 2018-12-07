@@ -24,7 +24,8 @@ module mojo_top (
     //input io_dip [3][8]     // DIP switches on IO Shield
     output a[16],
     output c[16],
-    input button2
+    input button2,
+    output timer[10]
 
   ) {
   
@@ -56,8 +57,8 @@ module mojo_top (
      
      counter slowclock(#SIZE(1),#DIV(24));  //smaller the faster the refresh 
      led_matrix ld;
-     fsm gamefsm(#INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
-
+     fsm gamefsm(#INIT(CHECK_SCORE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
+     timer counts;
      leddisplay led_converter;
      levels nextLevel;
      
@@ -75,6 +76,7 @@ module mojo_top (
     
   sig start;
   sig z[6];
+
 always {
 //  button_start.in=button_s;
 //    edge_detector.in=button_s.out;
@@ -84,7 +86,8 @@ always {
   registerCols.en=0;
   check_for_cols.en=0;
   check_for_cols.data=0;
-  nextLevel.level=0;      
+  nextLevel.level=0;
+  timer=counts.timebar;      
   registerCols.data=nextLevel.colsout;
   edge_start.in=slowclock.value; //get edge from slow clock
   io_seg = 8hff;          // turn segments off    
@@ -230,8 +233,9 @@ always {
           regscore.en = 1;
           regscore.data = regscore.out + 1;
         }
+        led=regscore.out;
          
-        gamefsm.d=gamefsm.CHECK_MOVE;
+        gamefsm.d=gamefsm.CHECK_SCORE;
         /*      
       if(normclock.q[24]==1){
         check_for_cols.en=1;

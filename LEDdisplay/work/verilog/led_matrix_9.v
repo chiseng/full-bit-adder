@@ -15,7 +15,7 @@ module led_matrix_9 (
   
   
   wire [4-1:0] M_slowclock_value;
-  counter_21 slowclock (
+  counter_22 slowclock (
     .clk(clk),
     .rst(rst),
     .value(M_slowclock_value)
@@ -24,8 +24,8 @@ module led_matrix_9 (
   reg [15:0] M_aSignal_d, M_aSignal_q = 1'h0;
   
   always @* begin
-    M_aSignal_d = M_aSignal_q;
     M_cSignal_d = M_cSignal_q;
+    M_aSignal_d = M_aSignal_q;
     
     a = pattern[(M_slowclock_value)*16+15-:16];
     c = 16'hffff;
@@ -104,15 +104,15 @@ module led_matrix_9 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_aSignal_q <= 1'h0;
-    end else begin
-      M_aSignal_q <= M_aSignal_d;
-    end
-    
-    if (rst == 1'b1) begin
       M_cSignal_q <= 1'h0;
     end else begin
       M_cSignal_q <= M_cSignal_d;
+    end
+    
+    if (rst == 1'b1) begin
+      M_aSignal_q <= 1'h0;
+    end else begin
+      M_aSignal_q <= M_aSignal_d;
     end
   end
   
