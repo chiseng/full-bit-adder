@@ -18,7 +18,7 @@ module mojo_top (
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,      // AVR RX buffer full
     //output io_led [3][8],   // LEDs on IO Shield
-    output io_seg [8],      // 7-segment LEDs on IO Shield
+    //output io_seg [8],      // 7-segment LEDs on IO Shield
     //output io_sel [4],      // Digit select on IO Shield
     input io_button [5],    // 5 buttons on IO Shield
     //input io_dip [3][8]     // DIP switches on IO Shield
@@ -57,7 +57,7 @@ module mojo_top (
      
      counter slowclock(#SIZE(1),#DIV(24));  //smaller the faster the refresh 
      led_matrix ld;
-     fsm gamefsm(#INIT(CHECK_SCORE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
+     fsm gamefsm(#INIT(INIT_STAGE)) = {IDLE, INIT_STAGE, CHECK_MOVE, CHECK_SCORE, TEST_SCORE, TEST_NEXT};
      timer counts;
      leddisplay led_converter;
      levels nextLevel;
@@ -90,7 +90,7 @@ always {
   timer=counts.timebar;      
   registerCols.data=nextLevel.colsout;
   edge_start.in=slowclock.value; //get edge from slow clock
-  io_seg = 8hff;          // turn segments off    
+  //io_seg = 8hff;          // turn segments off    
   a = 16b0;
   c = 16b0;
 
@@ -184,8 +184,7 @@ always {
         ld.pattern = led_converter.out;
         a = ld.a;
         c = ld.c;
-        generator_bottom.button_l = button_l;
-        generator_bottom.button_r = button_r;
+
         gamefsm.d = gamefsm.CHECK_MOVE;
     /*  
       gamefsm.TEST_SCOR
@@ -221,7 +220,7 @@ always {
          
         
         //led = 8h03;
-        gamefsm.d=gamefsm.CHECK_MOVE;
+        gamefsm.d=gamefsm.CHECK_SCORE;
        
        
         
@@ -235,7 +234,7 @@ always {
         }
         led=regscore.out;
          
-        gamefsm.d=gamefsm.CHECK_SCORE;
+        gamefsm.d=gamefsm.CHECK_MOVE;
         /*      
       if(normclock.q[24]==1){
         check_for_cols.en=1;
