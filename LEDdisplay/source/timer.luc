@@ -2,45 +2,46 @@ module timer (
     input clk,  // clock
     input rst,  // reset
     output out,
-    output health[8],
+    output timebar[10],
     output final
   ) {
     .clk(clk){
   .rst(rst){
       dff countdown[30];
 
-      fsm newfsm={FIRST_ITR,SECOND_ITR, FINAL_ITR};
+      fsm newfsm={FIRST_ITR,SECOND_ITR};//, FINAL_ITR};
     }
-          dff healthbar[8];
+          dff time_store[10];
 
   }
 
   always {
     out = 0;
     final=0;
-    health=healthbar.q;
+    timebar=time_store.q;
        countdown.d=countdown.q+1;
       case(newfsm.q){
       newfsm.FIRST_ITR:
-        healthbar.d=8b11111111;
+        time_store.d=10b1111111111;
         newfsm.d=newfsm.SECOND_ITR;
       newfsm.SECOND_ITR:
         if(countdown.q==299999999){
-        healthbar.d=healthbar.q<<1;
-        health=healthbar.q;
+        time_store.d=time_store.q<<1;
+        timebar=time_store.q;
         countdown.d=0;
         }
           
         else{
-        healthbar.d=healthbar.q;
+        time_store.d=time_store.q;
         }
+        /*
         if(healthbar.q==8b0)
          newfsm.d=newfsm.FINAL_ITR;
-      newfsm.FINAL_ITR:
-        final=8b10101010;
+        */
+//      newfsm.FINAL_ITR:
+//        final=8b10101010;
       }
     
   }
     
  }
-

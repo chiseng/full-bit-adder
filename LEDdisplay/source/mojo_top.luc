@@ -29,7 +29,7 @@ module mojo_top (
   ) {
   
   sig rst;                  // reset signal
-  const GEN_BOTROWS={16b0000011100000000,16b0000011100000000};          // temp storage of the rows from generator_bottom
+  const GEN_BOTROWS={16b0000111110000000,16b0000111110000000};          // temp storage of the rows from generator_bottom
   sig gen_topcols[16][14];          // temp storage of the cols from generator_top
   var i;        // used for the for loop to initialise columns
   
